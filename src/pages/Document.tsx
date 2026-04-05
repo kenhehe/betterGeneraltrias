@@ -3,7 +3,7 @@ import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
 import { Banner } from '@bettergov/kapwa/banner';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
@@ -146,6 +146,8 @@ export default function Document({
 
   if (nestedIndex) {
     const nestedPages: Subcategory[] = nestedIndex.pages;
+    const sectionHref =
+      categoryType === 'government' ? '/government' : '/services';
     return (
       <>
         <SEO
@@ -165,35 +167,47 @@ export default function Document({
           {nestedIndex.layout === 'grid' ? (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {nestedPages.map((page, i) => (
-                <Card hoverable key={page.slug ?? i} className="h-full">
-                  <CardContent>
-                    <h4 className="text-lg font-medium text-gray-900">
-                      {page.name}
-                    </h4>
-                    {page.description && (
-                      <p className="mt-2 text-sm text-gray-600">
-                        {page.description}
-                      </p>
-                    )}
-                  </CardContent>
-                </Card>
+                <Link
+                  key={page.slug ?? i}
+                  to={`${sectionHref}/${documentSlug}/${page.slug}`}
+                  className="block h-full"
+                >
+                  <Card hoverable className="h-full">
+                    <CardContent>
+                      <h4 className="text-lg font-medium text-gray-900">
+                        {page.name}
+                      </h4>
+                      {page.description && (
+                        <p className="mt-2 text-sm text-gray-600">
+                          {page.description}
+                        </p>
+                      )}
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           ) : (
             <div className="space-y-4">
               {nestedPages.map((page, i) => (
-                <Card key={page.slug ?? i} className="mb-4">
-                  <CardContent>
-                    <h4 className="text-lg font-medium text-gray-900">
-                      {page.name}
-                    </h4>
-                    {page.description && (
-                      <p className="mt-2 text-sm text-gray-600">
-                        {page.description}
-                      </p>
-                    )}
-                  </CardContent>
-                </Card>
+                <Link
+                  key={page.slug ?? i}
+                  to={`${sectionHref}/${documentSlug}/${page.slug}`}
+                  className="block"
+                >
+                  <Card hoverable className="mb-4">
+                    <CardContent>
+                      <h4 className="text-lg font-medium text-gray-900">
+                        {page.name}
+                      </h4>
+                      {page.description && (
+                        <p className="mt-2 text-sm text-gray-600">
+                          {page.description}
+                        </p>
+                      )}
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           )}
