@@ -59,11 +59,11 @@ export default function StatsSection() {
                 {value}
               </div>
               {label && (
-                <div className="text-sm font-semibold text-gray-700">
+                <div className="text-sm font-semibold text-gray-800">
                   {label}
                 </div>
               )}
-              <div className="text-xs text-gray-400 mt-0.5">{description}</div>
+              <div className="text-xs text-gray-600 mt-0.5">{description}</div>
             </div>
           ))}
         </div>

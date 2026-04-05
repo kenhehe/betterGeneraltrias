@@ -1,4 +1,4 @@
-import { Facebook, Github, Heart } from 'lucide-react';
+import { Facebook, Github, Heart, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -48,9 +48,9 @@ export default function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               {t('footer.mission')}
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-3 mb-6">
               <a
-                href="https://www.facebook.com/TagaytayCityGovernment"
+                href="https://web.facebook.com/bettertagaytay"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-500 hover:text-white transition-colors"
@@ -59,7 +59,7 @@ export default function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/iyanski/betterlocalgov"
+                href="https://github.com/Arlovzki/bettertagaytay"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-500 hover:text-white transition-colors"
@@ -67,7 +67,29 @@ export default function Footer() {
               >
                 <Github className="h-5 w-5" />
               </a>
+              <a
+                href="https://discord.gg/bettergovph"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-500 hover:text-white transition-colors"
+                aria-label="Discord"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </a>
             </div>
+            {/* BetterGov.ph logo */}
+            <a
+              href="https://bettergov.ph"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block opacity-50 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="https://bettersolano.org/assets/images/logo/bettergov-footer.svg"
+                alt="BetterGov.ph"
+                className="h-10 w-auto brightness-0 invert"
+              />
+            </a>
           </div>
 
           {/* Quick Links */}
@@ -117,7 +139,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-2">
               <a
-                href="https://github.com/iyanski/betterlocalgov"
+                href="https://github.com/Arlovzki/bettertagaytay"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 text-sm font-semibold text-white bg-primary-700 hover:bg-primary-600 px-4 py-2.5 rounded-lg transition-colors"
@@ -126,7 +148,7 @@ export default function Footer() {
                 {t('footer.volunteer')}
               </a>
               <a
-                href="https://github.com/iyanski/betterlocalgov"
+                href="https://github.com/Arlovzki/bettertagaytay"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 text-sm font-semibold text-gray-300 bg-gray-800 hover:bg-gray-700 px-4 py-2.5 rounded-lg transition-colors"
