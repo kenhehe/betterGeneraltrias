@@ -7,6 +7,7 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
+import TouristSpots from './pages/TouristSpots';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/services/:category" element={<Services />} />
               <Route path="/services" element={<Services />} />
+              <Route
+                path="/services/tourism/explore-tourist-spots"
+                element={<TouristSpots />}
+              />
               <Route
                 path="/services/:category/:documentSlug"
                 element={<Document categoryType="service" />}

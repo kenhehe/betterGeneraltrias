@@ -173,9 +173,6 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left — headline + CTAs */}
           <div>
-            <p className="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-3">
-              Tagaytay City, Cavite
-            </p>
             <p className="text-blue-100 text-sm font-medium uppercase tracking-widest mb-1">
               {t('hero.welcome', 'WELCOME TO')}
             </p>
