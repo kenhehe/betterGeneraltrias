@@ -30,9 +30,9 @@ export const mainNavigation: NavigationItem[] = [
         translationKey: 'nav.departments',
       },
       {
-        label: 'City Council',
-        href: '/government/departments/legislative',
-        translationKey: 'nav.cityCouncil',
+        label: 'Legislative (City Council)',
+        href: '/government/legislative',
+        translationKey: 'nav.legislative',
       },
       {
         label: 'Local Officials',
