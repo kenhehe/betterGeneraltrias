@@ -5,9 +5,6 @@ pages:
   - name: 'Executive'
     slug: 'executive'
     description: "Find out about the Mayor and Vice Mayor of Tagaytay City, including the Mayor's programs, mayoral history, and key roles in the city government."
-  - name: 'Legislative'
-    slug: 'legislative'
-    description: 'The Sangguniang Panlungsod (City Council) of Tagaytay City has 10 elected councilors, with the Vice Mayor as the presiding officer.'
   - name: 'Local Officials Directory'
     slug: 'officials'
     description: 'Full directory of elected officials, city councilors, and department contacts for Tagaytay City.'

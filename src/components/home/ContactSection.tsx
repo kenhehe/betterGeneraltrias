@@ -74,7 +74,7 @@ export default function ContactSection() {
                   <Icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">
+                  <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-0.5">
                     {t(labelKey)}
                   </p>
                   <p
@@ -84,7 +84,7 @@ export default function ContactSection() {
                       ? t('contact.addressLine1')
                       : primary}
                   </p>
-                  <p className="text-xs text-gray-400 mt-0.5">
+                  <p className="text-xs text-gray-600 mt-0.5">
                     {t(secondaryKey)}
                   </p>
                 </div>

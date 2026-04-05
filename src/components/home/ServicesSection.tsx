@@ -29,16 +29,16 @@ const CATEGORY_COLORS: {
     title: 'text-red-700',
   },
   {
-    border: 'border-blue-400',
-    icon: 'text-blue-600',
-    iconBg: 'bg-blue-50',
-    title: 'text-blue-700',
+    border: 'border-violet-400',
+    icon: 'text-violet-600',
+    iconBg: 'bg-violet-50',
+    title: 'text-violet-700',
   },
   {
-    border: 'border-amber-400',
-    icon: 'text-amber-600',
-    iconBg: 'bg-amber-50',
-    title: 'text-amber-700',
+    border: 'border-lime-500',
+    icon: 'text-lime-700',
+    iconBg: 'bg-lime-50',
+    title: 'text-lime-700',
   },
   {
     border: 'border-purple-400',
@@ -65,10 +65,10 @@ const CATEGORY_COLORS: {
     title: 'text-teal-700',
   },
   {
-    border: 'border-emerald-400',
-    icon: 'text-emerald-600',
-    iconBg: 'bg-emerald-50',
-    title: 'text-emerald-700',
+    border: 'border-green-500',
+    icon: 'text-green-700',
+    iconBg: 'bg-green-50',
+    title: 'text-green-700',
   },
   {
     border: 'border-rose-400',
@@ -83,10 +83,10 @@ const CATEGORY_COLORS: {
     title: 'text-indigo-700',
   },
   {
-    border: 'border-cyan-400',
-    icon: 'text-cyan-600',
-    iconBg: 'bg-cyan-50',
-    title: 'text-cyan-700',
+    border: 'border-pink-400',
+    icon: 'text-pink-600',
+    iconBg: 'bg-pink-50',
+    title: 'text-pink-700',
   },
 ];
 

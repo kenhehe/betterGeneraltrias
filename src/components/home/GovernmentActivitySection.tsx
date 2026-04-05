@@ -15,46 +15,60 @@ interface Category {
 }
 
 const CATEGORY_COLORS: {
-  border: string;
+  card: string;
   icon: string;
   iconBg: string;
   title: string;
+  desc: string;
 }[] = [
   {
-    border: 'border-primary-500',
-    icon: 'text-primary-700',
-    iconBg: 'bg-primary-50',
-    title: 'text-primary-800',
+    card: 'bg-indigo-50 border-indigo-200 hover:bg-indigo-100',
+    icon: 'text-indigo-600',
+    iconBg: 'bg-indigo-100',
+    title: 'text-indigo-800',
+    desc: 'text-indigo-700/80',
   },
   {
-    border: 'border-amber-400',
+    card: 'bg-blue-50 border-blue-200 hover:bg-blue-100',
+    icon: 'text-blue-600',
+    iconBg: 'bg-blue-100',
+    title: 'text-blue-800',
+    desc: 'text-blue-700/80',
+  },
+  {
+    card: 'bg-amber-50 border-amber-200 hover:bg-amber-100',
     icon: 'text-amber-600',
-    iconBg: 'bg-amber-50',
-    title: 'text-amber-700',
+    iconBg: 'bg-amber-100',
+    title: 'text-amber-800',
+    desc: 'text-amber-700/80',
   },
   {
-    border: 'border-green-400',
+    card: 'bg-green-50 border-green-200 hover:bg-green-100',
     icon: 'text-green-600',
-    iconBg: 'bg-green-50',
-    title: 'text-green-700',
+    iconBg: 'bg-green-100',
+    title: 'text-green-800',
+    desc: 'text-green-700/80',
   },
   {
-    border: 'border-purple-400',
+    card: 'bg-purple-50 border-purple-200 hover:bg-purple-100',
     icon: 'text-purple-600',
-    iconBg: 'bg-purple-50',
-    title: 'text-purple-700',
+    iconBg: 'bg-purple-100',
+    title: 'text-purple-800',
+    desc: 'text-purple-700/80',
   },
   {
-    border: 'border-rose-400',
+    card: 'bg-rose-50 border-rose-200 hover:bg-rose-100',
     icon: 'text-rose-600',
-    iconBg: 'bg-rose-50',
-    title: 'text-rose-700',
+    iconBg: 'bg-rose-100',
+    title: 'text-rose-800',
+    desc: 'text-rose-700/80',
   },
   {
-    border: 'border-teal-400',
+    card: 'bg-teal-50 border-teal-200 hover:bg-teal-100',
     icon: 'text-teal-600',
-    iconBg: 'bg-teal-50',
-    title: 'text-teal-700',
+    iconBg: 'bg-teal-100',
+    title: 'text-teal-800',
+    desc: 'text-teal-700/80',
   },
 ];
 
@@ -92,7 +106,7 @@ export default function GovernmentActivitySection({
             <Link
               key={category.slug}
               to={`/government/${category.slug}`}
-              className={`group block bg-white rounded-xl border-t-4 ${colors.border} border border-gray-100 hover:shadow-md transition-all duration-200 p-5`}
+              className={`group block rounded-xl border ${colors.card} shadow-sm hover:shadow-md transition-all duration-200 p-5`}
             >
               <div
                 className={`${colors.iconBg} ${colors.icon} w-10 h-10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}
@@ -105,7 +119,7 @@ export default function GovernmentActivitySection({
                   category.category
                 )}
               </h3>
-              <p className="text-xs text-gray-600 leading-relaxed">
+              <p className={`text-xs leading-relaxed ${colors.desc}`}>
                 {t(
                   `governmentActivity.categories.${category.slug}.description`,
                   category.description
