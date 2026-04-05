@@ -1,0 +1,14 @@
+# Guides and Regulations - Tagaytay City
+layout: grid
+title: 'Guides and Regulations'
+description: 'City ordinances, Sangguniang Panlungsod resolutions, and regulatory guides for residents and businesses.'
+pages:
+  - name: 'City Ordinances'
+    slug: 'ordinances'
+    description: 'Local laws enacted by the Sangguniang Panlungsod of Tagaytay City.'
+  - name: 'Sangguniang Panlungsod Resolutions'
+    slug: 'resolutions'
+    description: 'Official resolutions adopted by the Tagaytay City Council.'
+  - name: "Citizen's Charter"
+    slug: 'citizens-charter'
+    description: "The city government's service standards, processing times, and fees for all public-facing transactions."

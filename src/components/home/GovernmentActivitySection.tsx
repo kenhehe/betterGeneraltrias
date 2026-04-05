@@ -66,10 +66,18 @@ export default function GovernmentActivitySection({
                   </div>
 
                   <h3 className="text-lg font-semibold mb-4 text-gray-900 self-center">
-                    {category.category}
+                    {t(
+                      `governmentActivity.categories.${category.slug}.name`,
+                      category.category
+                    )}
                   </h3>
                 </div>
-                <Text className="text-gray-800">{category.description}</Text>
+                <Text className="text-gray-800">
+                  {t(
+                    `governmentActivity.categories.${category.slug}.description`,
+                    category.description
+                  )}
+                </Text>
               </CardContent>
             </Link>
           </Card>

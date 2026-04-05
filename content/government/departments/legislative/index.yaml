@@ -1,9 +1,10 @@
-# legislative Department Pages
-# This file contains all the pages/governments/departments/legislative available under the Department
-#
+# Legislative Department Pages
+# Sangguniang Panlungsod of Tagaytay City
+
 layout: grid
-title: 'Legislative Department'
-description: 'Page Description'
+title: 'Sangguniang Panlungsod'
+description: 'The City Council of Tagaytay City — the legislative body responsible for passing ordinances and resolutions for the benefit of the city.'
 pages:
-  - name: 'Councilor A'
-    description: 'Description'
+  - name: 'City Council Overview'
+    slug: 'city-council'
+    description: 'Overview of the Sangguniang Panlungsod, its members, and legislative functions.'

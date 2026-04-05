@@ -1,98 +1,93 @@
-# Go to the Local Hospital for Treatment or Confinement — Lapu-Lapu City
+# Go to the Hospital for Treatment or Confinement — Tagaytay City
 
-This guide covers **where to go**, **what to bring**, and **how admission works** at local hospitals in Lapu-Lapu City, including the city-run facility and nearby private hospitals.
+This guide covers **where to go**, **what to bring**, and **how admission works** at hospitals serving Tagaytay City residents.
 
 ---
 
-## A) Government Hospital (City-Run)
+## A) Government Hospital
 
-### Sta. Rosa Community Hospital (Lapu-Lapu City)
+### Ospital ng Tagaytay
+
+The **Ospital ng Tagaytay** is the city-run public hospital serving residents of Tagaytay City.
+
+**Contact:**
+
+- **Tel:** (046) 423-3195 / (046) 483-2160
+- **Address:** Tagaytay City, Cavite
 
 **Services & Hours**
 
-- **Emergency (Medical & Medico-legal):** 24/7
+- **Emergency (ER):** 24/7
 - **Ward (In-patient confinement):** 24/7
-- **Out-Patient:** Mon–Fri, 8:00 AM–5:00 PM (except holidays)
+- **Out-Patient:** Monday–Friday, 8:00 AM–5:00 PM (except holidays)
 
-**Emergency (Medical cases) – Quick Steps**
-| Step | What you do | Hospital does | Typical time |
-|---|---|---|---|
-| 1 | Seek care at ER | Triage, vitals, initial MD orders | ~10–25 min |
-| 2 | Sign consent (treatment/admission if needed) | Prepare meds/tests; set for transfer to ward if admitted | ~20–25 min |
-| 3 | Transfer to ward (if for confinement) | ER endorses to Ward Nurse on duty | ~10 min |
+**Emergency – Quick Steps**
 
-**Requirements (bring if available):** Registration data sheet (onsite), **PhilHealth ID/MDR (optional)**, doctor’s referral/admitting orders (if coming from clinic).
+| Step | What you do                    | Hospital does                                | Typical time |
+| ---- | ------------------------------ | -------------------------------------------- | ------------ |
+| 1    | Go to the ER                   | Triage, vitals, initial MD orders            | ~10–25 min   |
+| 2    | Sign consent form              | Prepare meds/tests; set for ward if admitted | ~20–25 min   |
+| 3    | Transfer to ward (if admitted) | ER endorses to Ward Nurse on duty            | ~10 min      |
 
-**Ward (In-patient) – What to expect**
-
-- Follow doctor’s orders; nurses administer meds/tests; dietary issued as ordered.
-- For discharge: instructions & schedule for follow-ups are given; proceed to Billing for clearance; release at Ward/Nurse station.
-- **Fees:** Posted at Billing.
-- **Note:** If not enrolled in PhilHealth, staff will guide processing if a relative can provide documents.
+**Requirements (bring if available):** Valid ID, **PhilHealth ID/MDR (optional)**, doctor's referral or admitting orders (if coming from a clinic).
 
 ---
 
-## B) Private Hospitals Nearby
+## B) City Health Office
 
-| Hospital                                     | Where                 | Beds/Notes                            | Admissions basics                                                                                                                     |
-| -------------------------------------------- | --------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Mactan Doctors’ Hospital (CebuDoc Group)** | Basak, Lapu-Lapu City | **151-bed tertiary** private hospital | Bring valid ID; company/HMO authorization if applicable; PhilHealth forms; fill out admission forms and submit to Admissions/Billing. |
-| **ARC Hospitals**                            | Lapu-Lapu City        | **~100-bed** private hospital         | Standard private-hospital admission flow; coordinate with Admissions/HMO/PhilHealth desk.                                             |
+The **City Health Office (CHO)** of Tagaytay City provides primary health care, vaccinations, maternal care, and basic medicines for residents.
 
-> Private hospitals typically require **initial deposits** (varies by case/room) unless fully covered by HMO/PhilHealth arrangements. Confirm at the **Billing/Admissions** desk.
+**Contact:** (046) 483-0604
+
+For minor health concerns, visit the City Health Office before going to the hospital.
 
 ---
 
-## C) What to Bring (All Hospitals)
+## C) Emergency Contacts
 
-- **Valid ID** (with photo & signature)
-- **PhilHealth** ID and **MDR** (Member Data Record); if a dependent, bring proof of dependency
-- **Doctor’s referral/admitting order** (if elective admission)
-- **HMO/Company**: LOA/guarantee letter, membership/ID cards (if applicable)
+| Service                   | Contact                         |
+| ------------------------- | ------------------------------- |
+| Ospital ng Tagaytay       | (046) 423-3195 / (046) 483-2160 |
+| City Health Office        | (046) 483-0604                  |
+| City Rescue / CDRRMO      | (046) 483-0446                  |
+| Tagaytay PNP              | (046) 413-1282 / 0915-913-7693  |
+| Bureau of Fire Protection | (046) 483-1193 / (046) 471-3747 |
+| City Hall                 | (046) 888-9500                  |
+
+---
+
+## D) What to Bring (All Hospitals)
+
+- **Valid government ID** (with photo & signature)
+- **PhilHealth ID and MDR** (Member Data Record); if a dependent, bring proof of dependency
+- **Doctor's referral/admitting order** (if elective admission)
+- **HMO/Company authorization** (LOA/guarantee letter, if applicable)
 - **Personal necessities** (for confinement)
 
 ---
 
-## D) Costs & PhilHealth Coverage
+## E) Costs & PhilHealth Coverage
 
-- **City hospital:** Fees are posted at **Billing**; **PhilHealth** benefits may apply at admission/discharge processing.
-- **No Balance Billing (NBB):** For **indigent/sponsored**, **senior citizens**, and certain categories in **government hospitals**, no other fees beyond PhilHealth package should be charged during confinement (subject to policy and facility capacity).
+- **City hospital fees** are posted at the Billing desk.
+- **PhilHealth** benefits may apply at admission/discharge processing.
+- **No Balance Billing (NBB)** applies for indigent/sponsored members, senior citizens, and certain categories in government hospitals — no additional fees beyond the PhilHealth package should be charged.
 
 ---
 
-## E) How to Avail — At a Glance
+## F) How to Avail — At a Glance
 
 ### Emergency (any hospital)
 
-1. **Go straight to ER** (24/7).
-2. **Triage & initial orders** → stabilization/tests.
+1. **Go straight to the ER** (24/7).
+2. **Triage & initial orders** → stabilization and tests.
 3. **If admitted:** sign consent → transfer to ward → submit IDs/PhilHealth/HMO at Admissions/Billing.
 
-### Elective Admission (planned confinement/procedure)
+### Elective Admission (planned confinement or procedure)
 
-1. Obtain **doctor’s admitting order** & **referral**.
-2. Prepare **IDs, PhilHealth, HMO/LOA** (if any).
-3. Proceed to **Admissions** for room assignment, forms, and initial billing arrangements.
-
----
-
-## F) Useful Contacts
-
-- **Lapu-Lapu City Hospital / District Hospital (Gov’t)**
-  - A. Tumulak St., Gun-ob, Lapu-Lapu City
-  - **Tel:** (032) 340-0249 / 340-0248
-  - **Email:** lapulapucityhospital@yahoo.com
-
-- **Mactan Doctors’ Hospital (Private, CebuDoc Group)**
-  - Basak, Lapu-Lapu City
-  - **Trunkline:** +63 (32) 239-7002 to 7016
-
-- **ARC Hospitals (Private)**
-  - Lapu-Lapu City (100-bed facility)
+1. Obtain a **doctor's admitting order and referral**.
+2. Prepare your **IDs, PhilHealth documents, HMO/LOA** (if any).
+3. Proceed to **Admissions** for room assignment, forms, and initial billing.
 
 ---
 
-### Notes
-
-- Bring your **PhilHealth** documents even for emergencies; if unavailable, the hospital can guide you on follow-up submission.
-- Schedules and processes can change; confirm by calling the hospital **Admissions/Billing** desk before a planned confinement.
+_Bring your PhilHealth documents even for emergencies. If unavailable, hospital staff can guide you on follow-up submission. Schedules and processes may change — confirm by calling the Admissions/Billing desk before a planned confinement._

@@ -1,20 +1,20 @@
-# Apply for Local Scholarships — Lapu-Lapu City
+# Apply for Local Scholarships — Tagaytay City
 
-Use this guide to find **City/LGU**, **Congressional/partner**, **local college**, and **national** scholarship options you can apply for while based in **Lapu-Lapu City**.
+Use this guide to find **City/LGU**, **Congressional/partner**, **local college**, and **national** scholarship options you can apply for while based in **Tagaytay City**.
 
 ---
 
 ## 1) City/LGU Scholarship Programs
 
-| Program                                           | Who it’s for                                                                                           | What it covers\*                                                          | Where to apply                  | Notes                                                                                                                                                                                                         |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Lapu-Lapu City Government College Scholarship** | Lapu-Lapu City residents (typically Senior High / incoming college; priority to low-income households) | Tuition/fees or full scholarship, depending on intake and partner schools | City Hall / posted online calls | The city has historically opened slots for poor residents and tied these to local HEIs during certain intakes. Check latest calls from City Hall / Office of the Mayor. :contentReference[oaicite:0]{index=0} |
+| Program                                          | Who it’s for                                                                                          | What it covers\*                                                          | Where to apply                  | Notes                                                                                                                                                                                                         |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tagaytay City Government College Scholarship** | Tagaytay City residents (typically Senior High / incoming college; priority to low-income households) | Tuition/fees or full scholarship, depending on intake and partner schools | City Hall / posted online calls | The city has historically opened slots for poor residents and tied these to local HEIs during certain intakes. Check latest calls from City Hall / Office of the Mayor. :contentReference[oaicite:0]{index=0} |
 
 \*Coverage varies by year/partner school; always verify the current announcement.
 
 **How to apply (typical flow)**
 
-1. Watch for the **official call for applications** from the **Lapu-Lapu City Government** (FB/website or City Information Office). :contentReference[oaicite:1]{index=1}
+1. Watch for the **official call for applications** from the **Tagaytay City Government** (FB/website or City Information Office). :contentReference[oaicite:1]{index=1}
 2. Prepare documents (see **Common Requirements** below).
 3. Submit your application at the designated **LGU window/online form** and attend evaluation/orientation if shortlisted.
 
@@ -31,23 +31,23 @@ Use this guide to find **City/LGU**, **Congressional/partner**, **local college*
 
 ## 3) Local Colleges & Their In-House Scholarships
 
-| School                                         | Scholarship page/info                                                        | Notes                                                                                                                                 |
-| ---------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Lapu-Lapu City College (LLCC)**              | School site lists contacts; ask registrar/scholarship desk for current slots | City college; scholarship rules and timing set per semester. :contentReference[oaicite:4]{index=4}                                    |
-| **University of Cebu** (Mactan/Main system)    | Public scholarship lists & requirements                                      | UC posts scholarship requirements (e.g., academic honors, docs). Availability varies by campus. :contentReference[oaicite:5]{index=5} |
-| **LCIC (Lapulapu-Cebu International College)** | Scholarship page with program specifics                                      | Has its own discounts/scholarships; separate from LGU. :contentReference[oaicite:6]{index=6}                                          |
+| School                                           | Scholarship page/info                                                        | Notes                                                                                                                                 |
+| ------------------------------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tagaytay City College (LLCC)**                 | School site lists contacts; ask registrar/scholarship desk for current slots | City college; scholarship rules and timing set per semester. :contentReference[oaicite:4]{index=4}                                    |
+| **Cavite State University** (Mactan/Main system) | Public scholarship lists & requirements                                      | UC posts scholarship requirements (e.g., academic honors, docs). Availability varies by campus. :contentReference[oaicite:5]{index=5} |
+| **LCIC (Lapulapu-Cebu International College)**   | Scholarship page with program specifics                                      | Has its own discounts/scholarships; separate from LGU. :contentReference[oaicite:6]{index=6}                                          |
 
 > Tip: Even if you’re targeting an **LGU scholarship**, apply to your target school’s **in-house scholarship** too. Slots stack or complement depending on rules.
 
 ---
 
-## 4) National Programs You Can Apply For While Based in Lapu-Lapu
+## 4) National Programs You Can Apply For While Based in Tagaytay City
 
-| Program                                                             | Who it’s for                                                  | Typical coverage                                          | Where to file                                                                                                               |
-| ------------------------------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **CHED Merit Scholarship (CMSP)**                                   | Incoming/continuing college with merit + income criteria      | Stipend + book/tuition assistance (per CHED rules)        | CHED’s official calls/portals (watch national page) :contentReference[oaicite:7]{index=7}                                   |
-| **OWWA EDSP/ODSP** (for OFW dependents)                             | Qualified dependents of active OWWA members                   | EDSP up to ₱60k/yr; ODSP up to ₱20k/yr (amounts per call) | OWWA Scholarship portal; local **PESO Lapu-Lapu** often posts the call window :contentReference[oaicite:8]{index=8}         |
-| **Cebu Province scholarships** (if eligible as provincial resident) | Cebu Province residents (check city/province residency rules) | Tuition/stipend per program                               | Province announcements; verify residency eligibility vs. highly urbanized city status :contentReference[oaicite:9]{index=9} |
+| Program                                                               | Who it’s for                                                    | Typical coverage                                          | Where to file                                                                                                               |
+| --------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **CHED Merit Scholarship (CMSP)**                                     | Incoming/continuing college with merit + income criteria        | Stipend + book/tuition assistance (per CHED rules)        | CHED’s official calls/portals (watch national page) :contentReference[oaicite:7]{index=7}                                   |
+| **OWWA EDSP/ODSP** (for OFW dependents)                               | Qualified dependents of active OWWA members                     | EDSP up to ₱60k/yr; ODSP up to ₱20k/yr (amounts per call) | OWWA Scholarship portal; local **PESO Tagaytay City** often posts the call window :contentReference[oaicite:8]{index=8}     |
+| **Cavite Province scholarships** (if eligible as provincial resident) | Cavite Province residents (check city/province residency rules) | Tuition/stipend per program                               | Province announcements; verify residency eligibility vs. highly urbanized city status :contentReference[oaicite:9]{index=9} |
 
 ---
 
@@ -90,8 +90,8 @@ Use this guide to find **City/LGU**, **Congressional/partner**, **local college*
 ## Where to Watch for Announcements
 
 - LCIC’s website → “Scholarship” section
-- University of Cebu’s “Scholarship & Study Grants” page
-- DepEd Lapu-Lapu City’s official site / memorandums
+- Cavite State University’s “Scholarship & Study Grants” page
+- DepEd Tagaytay City’s official site / memorandums
 - City Government announcements (City Hall / Information Office)
 
 ---
@@ -100,8 +100,8 @@ Use this guide to find **City/LGU**, **Congressional/partner**, **local college*
 
 - [LCIC Scholarship Page](https://lcic.edu.ph/scholarship.html)
 - [UC Scholarships & Study Grants](https://www.universityofcebu.net/p/scholarship.html)
-- [DOST-SEI S&T Scholarship (Grade 12 applicants)](https://depedlapulapu.net.ph/download/dm-no-723-s-2024-2025-dost-sei-s-t-undergraduate-scholarship-applications-for-grade-12-senior-high-school-students/)
-- [English Access Program (DepEd Lapu-Lapu)](https://depedlapulapu.net.ph/download/dm-no-064-s-2025-english-access-scholarship-program/)
+- [DOST-SEI S&T Scholarship (Grade 12 applicants)](https://deped.tagaytay.gov.ph/download/dm-no-723-s-2024-2025-dost-sei-s-t-undergraduate-scholarship-applications-for-grade-12-senior-high-school-students/)
+- [English Access Program (DepEd Tagaytay City)](https://deped.tagaytay.gov.ph/download/dm-no-064-s-2025-english-access-scholarship-program/)
 
 ---
 

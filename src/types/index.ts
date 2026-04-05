@@ -15,5 +15,6 @@ export type LanguageType =
 export interface NavigationItem {
   label: string;
   href: string;
+  translationKey?: string;
   children?: NavigationItem[];
 }
