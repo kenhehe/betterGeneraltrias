@@ -6,15 +6,15 @@ Use this guide to find **City/LGU**, **Congressional/partner**, **local college*
 
 ## 1) City/LGU Scholarship Programs
 
-| Program                                          | Who it’s for                                                                                          | What it covers\*                                                          | Where to apply                  | Notes                                                                                                                                                                                                         |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Tagaytay City Government College Scholarship** | Tagaytay City residents (typically Senior High / incoming college; priority to low-income households) | Tuition/fees or full scholarship, depending on intake and partner schools | City Hall / posted online calls | The city has historically opened slots for poor residents and tied these to local HEIs during certain intakes. Check latest calls from City Hall / Office of the Mayor. :contentReference[oaicite:0]{index=0} |
+| Program                                          | Who it’s for                                                                                          | What it covers\*                                                          | Where to apply                  | Notes                                                                                                                                                                   |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tagaytay City Government College Scholarship** | Tagaytay City residents (typically Senior High / incoming college; priority to low-income households) | Tuition/fees or full scholarship, depending on intake and partner schools | City Hall / posted online calls | The city has historically opened slots for poor residents and tied these to local HEIs during certain intakes. Check latest calls from City Hall / Office of the Mayor. |
 
 \*Coverage varies by year/partner school; always verify the current announcement.
 
 **How to apply (typical flow)**
 
-1. Watch for the **official call for applications** from the **Tagaytay City Government** (FB/website or City Information Office). :contentReference[oaicite:1]{index=1}
+1. Watch for the **official call for applications** from the **Tagaytay City Government** (FB/website or City Information Office).
 2. Prepare documents (see **Common Requirements** below).
 3. Submit your application at the designated **LGU window/online form** and attend evaluation/orientation if shortlisted.
 
@@ -22,20 +22,20 @@ Use this guide to find **City/LGU**, **Congressional/partner**, **local college*
 
 ## 2) Congressional / Partner Scholarship Slots
 
-| Program                                                                                       | Who it’s for                                   | What it covers                                          | Where to apply                                                                   | Notes                                                                                                                |
-| --------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Mayor Junard “Ahong” Chan & First Lady Ma. Cynthia King-Chan Scholarship** (periodic calls) | City residents, course/partner-school specific | Tuition assistance/full scholarship depending on cohort | Calls posted by the **Office of the Mayor** / **Office of Rep. Cindi King-Chan** | Look for official FB announcements with the **requirements and deadlines**. :contentReference[oaicite:2]{index=2}    |
-| **International/partner school opportunities**                                                | Senior High/college grads                      | Tuition discounts/scholarships via MOUs                 | Via partner school announcements & City coordination                             | Example: Taiwan partner university opportunities highlighted by city partners. :contentReference[oaicite:3]{index=3} |
+| Program                                                                                       | Who it’s for                                   | What it covers                                          | Where to apply                                                                   | Notes                                                                          |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Mayor Junard “Ahong” Chan & First Lady Ma. Cynthia King-Chan Scholarship** (periodic calls) | City residents, course/partner-school specific | Tuition assistance/full scholarship depending on cohort | Calls posted by the **Office of the Mayor** / **Office of Rep. Cindi King-Chan** | Look for official FB announcements with the **requirements and deadlines**.    |
+| **International/partner school opportunities**                                                | Senior High/college grads                      | Tuition discounts/scholarships via MOUs                 | Via partner school announcements & City coordination                             | Example: Taiwan partner university opportunities highlighted by city partners. |
 
 ---
 
 ## 3) Local Colleges & Their In-House Scholarships
 
-| School                                           | Scholarship page/info                                                        | Notes                                                                                                                                 |
-| ------------------------------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Tagaytay City College (LLCC)**                 | School site lists contacts; ask registrar/scholarship desk for current slots | City college; scholarship rules and timing set per semester. :contentReference[oaicite:4]{index=4}                                    |
-| **Cavite State University** (Mactan/Main system) | Public scholarship lists & requirements                                      | UC posts scholarship requirements (e.g., academic honors, docs). Availability varies by campus. :contentReference[oaicite:5]{index=5} |
-| **LCIC (Lapulapu-Cebu International College)**   | Scholarship page with program specifics                                      | Has its own discounts/scholarships; separate from LGU. :contentReference[oaicite:6]{index=6}                                          |
+| School                                           | Scholarship page/info                                                        | Notes                                                                                           |
+| ------------------------------------------------ | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Tagaytay City College (LLCC)**                 | School site lists contacts; ask registrar/scholarship desk for current slots | City college; scholarship rules and timing set per semester.                                    |
+| **Cavite State University** (Mactan/Main system) | Public scholarship lists & requirements                                      | UC posts scholarship requirements (e.g., academic honors, docs). Availability varies by campus. |
+| **LCIC (Lapulapu-Cebu International College)**   | Scholarship page with program specifics                                      | Has its own discounts/scholarships; separate from LGU.                                          |
 
 > Tip: Even if you’re targeting an **LGU scholarship**, apply to your target school’s **in-house scholarship** too. Slots stack or complement depending on rules.
 
@@ -43,11 +43,11 @@ Use this guide to find **City/LGU**, **Congressional/partner**, **local college*
 
 ## 4) National Programs You Can Apply For While Based in Tagaytay City
 
-| Program                                                               | Who it’s for                                                    | Typical coverage                                          | Where to file                                                                                                               |
-| --------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **CHED Merit Scholarship (CMSP)**                                     | Incoming/continuing college with merit + income criteria        | Stipend + book/tuition assistance (per CHED rules)        | CHED’s official calls/portals (watch national page) :contentReference[oaicite:7]{index=7}                                   |
-| **OWWA EDSP/ODSP** (for OFW dependents)                               | Qualified dependents of active OWWA members                     | EDSP up to ₱60k/yr; ODSP up to ₱20k/yr (amounts per call) | OWWA Scholarship portal; local **PESO Tagaytay City** often posts the call window :contentReference[oaicite:8]{index=8}     |
-| **Cavite Province scholarships** (if eligible as provincial resident) | Cavite Province residents (check city/province residency rules) | Tuition/stipend per program                               | Province announcements; verify residency eligibility vs. highly urbanized city status :contentReference[oaicite:9]{index=9} |
+| Program                                                               | Who it’s for                                                    | Typical coverage                                          | Where to file                                                                         |
+| --------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **CHED Merit Scholarship (CMSP)**                                     | Incoming/continuing college with merit + income criteria        | Stipend + book/tuition assistance (per CHED rules)        | CHED’s official calls/portals (watch national page)                                   |
+| **OWWA EDSP/ODSP** (for OFW dependents)                               | Qualified dependents of active OWWA members                     | EDSP up to ₱60k/yr; ODSP up to ₱20k/yr (amounts per call) | OWWA Scholarship portal; local **PESO Tagaytay City** often posts the call window     |
+| **Cavite Province scholarships** (if eligible as provincial resident) | Cavite Province residents (check city/province residency rules) | Tuition/stipend per program                               | Province announcements; verify residency eligibility vs. highly urbanized city status |
 
 ---
 

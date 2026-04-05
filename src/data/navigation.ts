@@ -129,7 +129,7 @@ export const footerNavigation = {
   socialLinks: [
     {
       label: 'Facebook',
-      href: 'https://www.facebook.com/TagaytayCityGovernment',
+      href: 'https://web.facebook.com/bettertagaytay',
     },
   ],
 };

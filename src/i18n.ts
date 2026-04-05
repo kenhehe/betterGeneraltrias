@@ -21,6 +21,8 @@ i18n
       escapeValue: false,
     },
 
+    lng: 'en',
+
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],

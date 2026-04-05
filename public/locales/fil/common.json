@@ -1,7 +1,6 @@
 {
   "site_name": "BetterTagaytay",
   "site_description": "Isang portal ng transparency para sa Lungsod ng Tagaytay, Cavite — hanapin ang mga serbisyo ng pamahalaan, opisyal, badyet, at pampublikong impormasyon.",
-
   "nav": {
     "home": "Tahanan",
     "services": "Mga Serbisyo",
@@ -20,7 +19,6 @@
     "annualReport": "Taunang Ulat",
     "infrastructureProjects": "Mga Proyektong Imprastraktura"
   },
-
   "hotlines": {
     "police": "Pulis",
     "hospital": "Ospital",
@@ -29,7 +27,6 @@
     "cho": "CHO",
     "cswdo": "CSWDO"
   },
-
   "hero": {
     "title": "BetterTagaytay",
     "welcome": "Maligayang pagdating sa",
@@ -43,12 +40,10 @@
     "birthCertificate": "Sertipiko ng Kapanganakan",
     "businessRegistration": "Pagpaparehistro ng Negosyo"
   },
-
   "infobar": {
     "usd": "1 USD =",
     "location": "Tagaytay"
   },
-
   "services": {
     "title": "Mga Serbisyo at Impormasyon",
     "governmentServices": "Mga Serbisyo ng Pamahalaan",
@@ -102,7 +97,6 @@
       }
     }
   },
-
   "governmentActivity": {
     "title": "Pamahalaan ng Lungsod",
     "description": "Manatiling updated sa pinakabagong balita, mga departamento, at mga aktibidad ng Pamahalaan ng Lungsod ng Tagaytay.",
@@ -133,19 +127,26 @@
       }
     }
   },
-
   "stats": {
     "title": "Tagaytay sa Isang Tingin",
     "viewProfile": "Tingnan ang Profil ng Lungsod →",
-    "population": { "label": "Populasyon", "desc": "Senso 2020 (PSA)" },
-    "barangays": { "label": "Mga Barangay", "desc": "Mga sangkap na barangay" },
-    "classification": { "label": "Lungsod", "desc": "Lalawigan ng Cavite" },
+    "population": {
+      "label": "Populasyon",
+      "desc": "Senso 2020 (PSA)"
+    },
+    "barangays": {
+      "label": "Mga Barangay",
+      "desc": "Mga sangkap na barangay"
+    },
+    "classification": {
+      "label": "Lungsod",
+      "desc": "Lalawigan ng Cavite"
+    },
     "area": {
       "label": "km² Lawak ng Lupa",
       "desc": "Kabuuang lawak ng lungsod"
     }
   },
-
   "weatherMap": {
     "title": "Panahon at Mapa ng Tagaytay",
     "location": "Lungsod ng Tagaytay, Cavite",
@@ -154,9 +155,14 @@
     "wind": "km/h",
     "climate": "Malamig na klima",
     "elevation": "~600m taas",
-    "mapTitle": "Mapa ng Lungsod ng Tagaytay"
+    "mapTitle": "Mapa ng Lungsod ng Tagaytay",
+    "clear": "Maliwanag",
+    "partlyCloudy": "May ulap",
+    "foggy": "Maulap",
+    "rainy": "Maulan",
+    "showers": "Ambon",
+    "thunderstorm": "Bagyo"
   },
-
   "history": {
     "title": "Maikling Kasaysayan ng Lungsod ng Tagaytay",
     "charteredYear": "Taon ng Pagkakatatag",
@@ -201,7 +207,6 @@
       }
     }
   },
-
   "leadership": {
     "title": "Pamunuan ng Lungsod",
     "viewAll": "Tingnan ang Lahat ng Opisyal →",
@@ -211,7 +216,6 @@
     "cityViceMayor": "Bise-Alkalde ng Lungsod",
     "viewProfile": "Tingnan ang profil"
   },
-
   "contact": {
     "title": "Impormasyon sa Pakikipag-ugnayan",
     "viewAll": "Tingnan ang Lahat ng Contacts →",
@@ -223,19 +227,15 @@
     "addressLine1": "Akle St., Kaybagal South",
     "addressLine2": "Lungsod ng Tagaytay, Cavite 4120"
   },
-
   "weather": {
     "title": "Panahon sa Tagaytay"
   },
-
   "forex": {
     "title": "Mga Palitan ng Pera"
   },
-
   "news": {
     "title": "Pinakabagong Balita at Anunsyo"
   },
-
   "footer": {
     "mission": "Pinapalakas ang mga mamamayan ng Tagaytay sa pamamagitan ng transparent na access sa mga serbisyo, programa, at pampublikong pondo ng pamahalaan.",
     "quickLinks": "Mabilis na Mga Link",
@@ -245,14 +245,12 @@
     "contribute": "Mag-ambag ng code",
     "copyright": "© 2026 BetterTagaytay.ph  MIT | CC BY 4.0  Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan."
   },
-
   "navbar": {
     "government": "Pamahalaan",
     "services": "Mga Serbisyo",
     "hotlines": "Mga Hotline",
     "holidays": "Mga Pista Opisyal"
   },
-
   "document": {
     "loading": "Naglo-load ng dokumento...",
     "notFound": "Hindi Nahanap ang Dokumento",
@@ -261,7 +259,6 @@
     "services": "Mga Serbisyo",
     "government": "Pamahalaan"
   },
-
   "joinUs": {
     "stripTitle": "🚀 Sumali sa #CivicTech Revolution",
     "stripSubtitle": "Tulungan na itayo ang kinabukasan ng Pilipinas at pamamahala sa pamamagitan ng teknolohiya",

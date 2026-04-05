@@ -1,7 +1,6 @@
 {
   "site_name": "BetterTagaytay",
   "site_description": "A community transparency portal for Tagaytay City, Cavite — find government services, officials, budgets, and public information.",
-
   "nav": {
     "home": "Home",
     "services": "Services",
@@ -20,7 +19,6 @@
     "annualReport": "Annual Report",
     "infrastructureProjects": "Infrastructure Projects"
   },
-
   "hotlines": {
     "police": "Police",
     "hospital": "Hospital",
@@ -29,7 +27,6 @@
     "cho": "CHO",
     "cswdo": "CSWDO"
   },
-
   "hero": {
     "title": "BetterTagaytay",
     "welcome": "Welcome to",
@@ -43,12 +40,10 @@
     "birthCertificate": "Birth Certificate",
     "businessRegistration": "Business Registration"
   },
-
   "infobar": {
     "usd": "1 USD =",
     "location": "Tagaytay"
   },
-
   "services": {
     "title": "Services & Information",
     "governmentServices": "Government Services",
@@ -102,7 +97,6 @@
       }
     }
   },
-
   "governmentActivity": {
     "title": "City Government",
     "description": "Stay updated with the latest news, departments, and activities of the Tagaytay City Government.",
@@ -133,16 +127,26 @@
       }
     }
   },
-
   "stats": {
     "title": "Tagaytay at a Glance",
     "viewProfile": "View City Profile →",
-    "population": { "label": "Population", "desc": "2020 Census (PSA)" },
-    "barangays": { "label": "Barangays", "desc": "Component barangays" },
-    "classification": { "label": "City", "desc": "Province of Cavite" },
-    "area": { "label": "km² Land Area", "desc": "Total city land area" }
+    "population": {
+      "label": "Population",
+      "desc": "2020 Census (PSA)"
+    },
+    "barangays": {
+      "label": "Barangays",
+      "desc": "Component barangays"
+    },
+    "classification": {
+      "label": "City",
+      "desc": "Province of Cavite"
+    },
+    "area": {
+      "label": "km² Land Area",
+      "desc": "Total city land area"
+    }
   },
-
   "weatherMap": {
     "title": "Weather and Map of Tagaytay",
     "location": "Tagaytay City, Cavite",
@@ -151,9 +155,14 @@
     "wind": "km/h",
     "climate": "Cool climate",
     "elevation": "~600m elevation",
-    "mapTitle": "Map of Tagaytay City"
+    "mapTitle": "Map of Tagaytay City",
+    "clear": "Clear sky",
+    "partlyCloudy": "Partly cloudy",
+    "foggy": "Foggy",
+    "rainy": "Rainy",
+    "showers": "Showers",
+    "thunderstorm": "Thunderstorm"
   },
-
   "history": {
     "title": "Brief History of Tagaytay City",
     "charteredYear": "Year Chartered",
@@ -198,7 +207,6 @@
       }
     }
   },
-
   "leadership": {
     "title": "City Leadership",
     "viewAll": "View All Officials →",
@@ -208,7 +216,6 @@
     "cityViceMayor": "City Vice Mayor",
     "viewProfile": "View profile"
   },
-
   "contact": {
     "title": "Contact Information",
     "viewAll": "View All Contacts →",
@@ -220,19 +227,15 @@
     "addressLine1": "Akle St., Kaybagal South",
     "addressLine2": "Tagaytay City, Cavite 4120"
   },
-
   "weather": {
     "title": "Weather in Tagaytay"
   },
-
   "forex": {
     "title": "Foreign Exchange Rates"
   },
-
   "news": {
     "title": "Latest News & Announcements"
   },
-
   "footer": {
     "mission": "Empowering the people of Tagaytay with transparent access to government services, programs, and public funds.",
     "quickLinks": "Quick Links",
@@ -242,14 +245,12 @@
     "contribute": "Contribute code with us",
     "copyright": "© 2026 BetterTagaytay.ph  MIT | CC BY 4.0  All public information sourced from official government portals."
   },
-
   "navbar": {
     "government": "Government",
     "services": "Services",
     "hotlines": "Hotlines",
     "holidays": "Holidays"
   },
-
   "document": {
     "loading": "Loading document...",
     "notFound": "Document Not Found",
@@ -258,7 +259,6 @@
     "services": "Services",
     "government": "Government"
   },
-
   "joinUs": {
     "stripTitle": "🚀 Join the #CivicTech Revolution",
     "stripSubtitle": "Help build the future of the Philippines and governance through technology",
