@@ -1,4 +1,4 @@
-# Access Educational Support Programs from the LGU — Lapu-Lapu City
+# Access Educational Support Programs from the LGU — Tagaytay City
 
 Below are **city-led** or **LGU-facilitated** programs you can use for study support: free school supplies, e-library access, student employment (SPES) via PESO, scholarships, and cash/education assistance. Links point to official pages or recent announcements.
 
@@ -12,13 +12,13 @@ Below are **city-led** or **LGU-facilitated** programs you can use for study sup
 
 **How to access**
 
-1. Watch your school’s advisory and the **DepEd Lapu-Lapu** Division memos for **distribution schedules**.
+1. Watch your school’s advisory and the **DepEd Tagaytay City** Division memos for **distribution schedules**.
 2. Learners (with parent/guardian) claim supplies at the school on the announced date.
 
 **Links**
 
-- DepEd Lapu-Lapu memo: **Distribution of School Supplies (SEF)** (2025 schedule) — depedlapulapu.net.ph
-- News: **City to distribute free school supplies** — SunStar Cebu (June 7, 2025)
+- DepEd Tagaytay City memo: **Distribution of School Supplies (SEF)** (2025 schedule) — deped.tagaytay.gov.ph
+- News: **City to distribute free school supplies** — Tagaytay City Official Sources (June 7, 2025)
 - City info posts often echo the distribution dates via DepEd/City channels.
 
 ---
@@ -27,22 +27,22 @@ Below are **city-led** or **LGU-facilitated** programs you can use for study sup
 
 **What it is**
 
-- A **government-run e-Library** offering **free internet, computer use, and printing** for students; open **daily 8:00 a.m.–12:00 midnight** at **Hoops Dome, Brgy. Gun-ob**.
+- A **government-run e-Library** offering **free internet, computer use, and printing** for students; open **daily 8:00 a.m.–12:00 midnight** at **Tagaytay City Sports Complex, Brgy. Kaybagal South**.
 
 **How to access**
 
-1. Go to the **Lapu-Lapu City e-Library (Hoops Dome)** during operating hours.
+1. Go to the **Tagaytay City e-Library (Tagaytay City Sports Complex)** during operating hours.
 2. Sign the logbook; follow usage limits (to give everyone a turn).
 
 **Links**
 
 - SunStar: **E-Library reopens; open daily 8 a.m.–12 midnight** (July 26, 2025)
 - The POST: **City library reopens, free digital access & printing** (July 28, 2025)
-- Background: **City launched first gov’t e-Library** (2019) — Cebu Daily News
+- Background: **City launched first gov’t e-Library** (2019) — Official Government Sources
 
 ---
 
-## 3) Student Employment (SPES) via PESO Lapu-Lapu
+## 3) Student Employment (SPES) via PESO Tagaytay City
 
 **What it is**
 
@@ -51,13 +51,13 @@ Below are **city-led** or **LGU-facilitated** programs you can use for study sup
 
 **How to access**
 
-1. Follow **PESO Lapu-Lapu City** on Facebook for **SPES application windows** and job fair advisories.
+1. Follow **PESO Tagaytay City** on Facebook for **SPES application windows** and job fair advisories.
 2. Prepare IDs, school docs, and income/indigency proofs per announcement.
 3. Submit online or at the PESO office; attend orientation when shortlisted.
 
 **Links**
 
-- **PESO Lapu-Lapu City** Facebook page (official announcements)
+- **PESO Tagaytay City** Facebook page (official announcements)
 - DepEd/BLSS-YFD: **SPES 2025 guidelines & timelines**
 - City press: **PESO career fair / youth employment events** — City Information Office
 
@@ -71,12 +71,12 @@ Below are **city-led** or **LGU-facilitated** programs you can use for study sup
 
 **How to access**
 
-1. Monitor the **Lapu-Lapu City Government / City Information Office** and the **Office of the Mayor / Congresswoman** for official **calls**.
+1. Monitor the **Tagaytay City Government / City Information Office** and the **Office of the Mayor / Congresswoman** for official **calls**.
 2. Prepare residency and academic documents; submit by deadline; attend screening/orientation.
 
 **Links (examples & history)**
 
-- News: **Lapu-Lapu City offers college scholarship to poor residents** — The Freeman/Philstar (program history)
+- News: **Tagaytay City offers college scholarship to poor residents** — The Freeman/Philstar (program history)
 - Sample: **Cindi “Skwela” Scholarship** highlights via official pages (video updates)
 - Also check school-based options in-city (e.g., **LCIC scholarships**, **UC scholarships**) which can complement LGU aid.
 
@@ -90,22 +90,22 @@ Below are **city-led** or **LGU-facilitated** programs you can use for study sup
 
 **How to access**
 
-1. Watch announcements from **DSWD-7** and the **City Information Office** for **Lapu-Lapu payout schedules**.
+1. Watch announcements from **DSWD-7** and the **City Information Office** for **Tagaytay City payout schedules**.
 2. Bring student ID, enrollment proof, and required forms on your assigned date.
 
 **Links (context)**
 
-- SunStar Cebu: **Education assistance payout in Lapu-Lapu** (local coverage)
-- Cebu Daily News: **DSWD-7 educational assistance** (program overview & amounts)
+- Tagaytay City Official Sources: **Education assistance payout in Tagaytay City** (local coverage)
+- Official Government Sources: **DSWD-7 educational assistance** (program overview & amounts)
 
 ---
 
 ## Quick Directory
 
-- **City Information Office (Lapu-Lapu City)** — city-wide program announcements
-- **PESO Lapu-Lapu City** — SPES, job fairs, recruitment & youth work programs
-- **DepEd Lapu-Lapu Division** — school memos (SEF supplies, schedules)
-- **Lapu-Lapu City e-Library (Hoops Dome, Gun-ob)** — free study space & digital access
+- **City Information Office (Tagaytay City)** — city-wide program announcements
+- **PESO Tagaytay City** — SPES, job fairs, recruitment & youth work programs
+- **DepEd Tagaytay City Division** — school memos (SEF supplies, schedules)
+- **Tagaytay City e-Library (Tagaytay City Sports Complex, Kaybagal South)** — free study space & digital access
 
 ---
 

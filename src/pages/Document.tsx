@@ -5,6 +5,7 @@ import { Text } from '../components/ui/Text';
 import { Banner } from '@bettergov/kapwa/banner';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import {
@@ -34,6 +35,8 @@ export default function Document({
   categoryType,
 }: DocumentProps) {
   const { documentSlug, category } = useParams();
+  const { i18n } = useTranslation('common');
+  const lang = i18n.language;
   const [markdownContent, setMarkdownContent] =
     useState<MarkdownContent | null>(null);
   const [nestedIndex, setNestedIndex] = useState<CategoryIndex | null>(null);
@@ -90,7 +93,8 @@ export default function Document({
         const content = await loadMarkdownContent(
           documentSlug,
           category,
-          categoryType
+          categoryType,
+          lang
         );
         setMarkdownContent(content);
 
@@ -116,7 +120,7 @@ export default function Document({
     };
 
     loadContent();
-  }, [documentSlug, category, categoryType]);
+  }, [documentSlug, category, categoryType, lang]);
 
   if (loading) {
     return (
@@ -214,6 +218,13 @@ export default function Document({
       />
       <Section className="p-3 mb-12">
         <Breadcrumbs className="mb-8" items={breadcrumbs} />
+        {markdownContent.isFallbackLang && (
+          <Banner
+            type="info"
+            description="Ang pahinang ito ay hindi pa naisasalin sa Filipino. Ang nilalaman ay nasa Ingles."
+            className="mb-4"
+          />
+        )}
         <Card className="mb-8 markdown-content">
           <CardHeader>
             {markdownContent.description && (

@@ -1,10 +1,13 @@
 # Department Pages
-# This file contains all the pages/governments available under the Department
+# Government departments and offices of Tagaytay City
 
 pages:
   - name: 'Executive'
     slug: 'executive'
-    description: "Find out about your Mayor and Vice Mayor, including upcoming events, the Mayor's Community Assistance Program, mayoral history, and information about other historic roles in the local government unit."
+    description: "Find out about the Mayor and Vice Mayor of Tagaytay City, including the Mayor's programs, mayoral history, and key roles in the city government."
   - name: 'Legislative'
     slug: 'legislative'
-    description: 'As of the 2025–2028 term, the Sangguniang Panlungsod (City Council) of Lapu-Lapu City has 12 elected councilors, with the Vice Mayor as the presiding officer of the council.'
+    description: 'The Sangguniang Panlungsod (City Council) of Tagaytay City has 10 elected councilors, with the Vice Mayor as the presiding officer.'
+  - name: 'Local Officials Directory'
+    slug: 'officials'
+    description: 'Full directory of elected officials, city councilors, and department contacts for Tagaytay City.'

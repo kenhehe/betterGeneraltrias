@@ -1,0 +1,278 @@
+{
+  "site_name": "BetterTagaytay",
+  "site_description": "Isang portal ng transparency para sa Lungsod ng Tagaytay, Cavite — hanapin ang mga serbisyo ng pamahalaan, opisyal, badyet, at pampublikong impormasyon.",
+
+  "nav": {
+    "home": "Tahanan",
+    "services": "Mga Serbisyo",
+    "government": "Pamahalaan",
+    "transparency": "Transparency",
+    "statistics": "Istatistika",
+    "contact": "Makipag-ugnayan",
+    "departments": "Mga Departamento at Opisyal",
+    "cityCouncil": "Lupon ng Lungsod",
+    "localOfficials": "Direktoryo ng mga Lokal na Opisyal",
+    "fullDisclosure": "Buong Pagbubunyag",
+    "annualBudget": "Taunang Badyet",
+    "saln": "SALN",
+    "foiReleases": "Mga Rekord ng FOI",
+    "cityProfile": "Profil ng Lungsod",
+    "annualReport": "Taunang Ulat",
+    "infrastructureProjects": "Mga Proyektong Imprastraktura"
+  },
+
+  "hotlines": {
+    "police": "Pulis",
+    "hospital": "Ospital",
+    "fire": "Bumbero",
+    "cdrrmo": "CDRRMO",
+    "cho": "CHO",
+    "cswdo": "CSWDO"
+  },
+
+  "hero": {
+    "title": "BetterTagaytay",
+    "welcome": "Maligayang pagdating sa",
+    "subtitle": "I-access ang mga serbisyo ng pamahalaan, impormasyon, at mapagkukunan para sa mga mamamayan ng Lungsod ng Tagaytay, Cavite.",
+    "browseServices": "Tingnan ang Mga Serbisyo",
+    "contactUs": "Makipag-ugnayan",
+    "findService": "Maghanap ng Serbisyo",
+    "searchPlaceholder": "hal., permit sa negosyo, serbisyong pangkalusugan",
+    "popular": "Sikat",
+    "nationalId": "National ID",
+    "birthCertificate": "Sertipiko ng Kapanganakan",
+    "businessRegistration": "Pagpaparehistro ng Negosyo"
+  },
+
+  "infobar": {
+    "usd": "1 USD =",
+    "location": "Tagaytay"
+  },
+
+  "services": {
+    "title": "Mga Serbisyo at Impormasyon",
+    "governmentServices": "Mga Serbisyo ng Pamahalaan",
+    "description": "I-access ang mga opisyal na serbisyo ng pamahalaan ng Lungsod ng Tagaytay nang mabilis at madali. Hanapin ang kailangan mo para sa pagkamamamayan, negosyo, kalusugan, edukasyon, at iba pa.",
+    "viewAll": "Tingnan ang Lahat ng Serbisyo",
+    "viewAllCategory": "Tingnan ang Lahat",
+    "categories": {
+      "health-services": {
+        "name": "Mga Serbisyong Pangkalusugan",
+        "description": "Kung saan makakakuha ng libreng check-up, bakuna, at gamot, aling mga ospital ang available, at mga detalye ng mga programang pangkalusugan sa inyong lugar."
+      },
+      "education": {
+        "name": "Edukasyon",
+        "description": "Kung saan magpapatala ng bata sa daycare o preschool, paano mag-apply ng scholarship, at anong suporta sa edukasyon ang inaalok ng LGU."
+      },
+      "business": {
+        "name": "Negosyo at Kabuhayan",
+        "description": "Anong mga permit at clearance ang kailangan, kung saan magbabayad ng buwis o mag-renew ng permit, at anong mga oportunidad sa kabuhayan ang inaalok."
+      },
+      "social-welfare": {
+        "name": "Pangkapakananang Panlipunan",
+        "description": "Anong tulong ang available para sa matatanda, PWD, solo parents, at mga indigent na pamilya, kasama ang mga detalye ng relief goods at livelihood aid."
+      },
+      "agriculture-fisheries": {
+        "name": "Agrikultura at Pangisdaan",
+        "description": "Anong suporta sa pagsasaka o pangingisda ang available, kasama ang binhi, pataba, veterinary care, at kung saan sumali sa pagsasanay o humiram ng kagamitan."
+      },
+      "infrastructure-public-works": {
+        "name": "Imprastraktura at Pampublikong Gawain",
+        "description": "Paano mag-ulat ng sirang kalsada o drainage, kung saan humiling ng suplay ng tubig, at paano ma-access ang mga pampublikong pasilidad at palengke."
+      },
+      "garbage-waste-disposal": {
+        "name": "Basura at Pagtatapon ng Basura",
+        "description": "Mga iskedyul ng koleksyon ng basura, mga alituntunin sa pagtatapon ng basura, at paano wastong itapon ang iba't ibang uri ng basura."
+      },
+      "environment": {
+        "name": "Kapaligiran",
+        "description": "Mga aktibidad sa paglilinis o pagtatanim ng puno, mga panuntunan sa pangangalaga ng kapaligiran, at mga programang pangkalikasan."
+      },
+      "disaster-preparedness": {
+        "name": "Paghahanda sa Sakuna",
+        "description": "Mga plano sa paghahanda sa sakuna, impormasyon sa emergency response, at mga pamamaraan ng paglikas."
+      },
+      "housing-land-use": {
+        "name": "Pabahay at Paggamit ng Lupa",
+        "description": "Paano mag-apply para sa mga proyektong pabahay, anong mga permit sa zoning at konstruksyon ang kailangan, at kung saan makikita ang mga relocation site."
+      },
+      "tourism": {
+        "name": "Turismo",
+        "description": "Mga tourist spot, permit para sa mga negosyong may kaugnayan sa turismo, akreditasyon, at impormasyon para sa mga bisita ng Lungsod ng Tagaytay."
+      }
+    }
+  },
+
+  "governmentActivity": {
+    "title": "Pamahalaan ng Lungsod",
+    "description": "Manatiling updated sa pinakabagong balita, mga departamento, at mga aktibidad ng Pamahalaan ng Lungsod ng Tagaytay.",
+    "categories": {
+      "departments": {
+        "name": "Mga Departamento",
+        "description": "Tuklasin ang mga departamento, ahensya, at opisina ng lokal na pamahalaan kasama ang kanilang mga mandato, serbisyo, at contact details."
+      },
+      "news": {
+        "name": "Balita",
+        "description": "Manatiling updated sa pinakabagong balita, anunsyo, at mga pagbabago sa patakaran ng lokal na pamahalaan."
+      },
+      "guides-and-regulations": {
+        "name": "Mga Gabay at Regulasyon",
+        "description": "I-access ang mga alituntunin, regulasyon, at sunud-sunod na instruksyon para sa mga proseso ng lokal na pamahalaan."
+      },
+      "reports-and-statistics": {
+        "name": "Mga Ulat at Istatistika",
+        "description": "I-access ang mga ulat ng lokal na pamahalaan, datos ng istatistika, at mga sukatan ng pagganap."
+      },
+      "public-consultations": {
+        "name": "Mga Pampublikong Konsultasyon",
+        "description": "Lumahok sa mga pampublikong konsultasyon at magbigay ng feedback sa mga desisyon ng lokal na pamahalaan."
+      },
+      "transparency-documents": {
+        "name": "Mga Dokumento ng Transparency",
+        "description": "I-access ang mga rekord ng Freedom of Information at mga dokumento ng transparency para sa pananagutan ng lokal na pamahalaan."
+      }
+    }
+  },
+
+  "stats": {
+    "title": "Tagaytay sa Isang Tingin",
+    "viewProfile": "Tingnan ang Profil ng Lungsod →",
+    "population": { "label": "Populasyon", "desc": "Senso 2020 (PSA)" },
+    "barangays": { "label": "Mga Barangay", "desc": "Mga sangkap na barangay" },
+    "classification": { "label": "Lungsod", "desc": "Lalawigan ng Cavite" },
+    "area": {
+      "label": "km² Lawak ng Lupa",
+      "desc": "Kabuuang lawak ng lungsod"
+    }
+  },
+
+  "weatherMap": {
+    "title": "Panahon at Mapa ng Tagaytay",
+    "location": "Lungsod ng Tagaytay, Cavite",
+    "defaultCondition": "Malamig at kasiya-siya",
+    "loading": "Naglo-load ng live na panahon…",
+    "wind": "km/h",
+    "climate": "Malamig na klima",
+    "elevation": "~600m taas",
+    "mapTitle": "Mapa ng Lungsod ng Tagaytay"
+  },
+
+  "history": {
+    "title": "Maikling Kasaysayan ng Lungsod ng Tagaytay",
+    "charteredYear": "Taon ng Pagkakatatag",
+    "charteredDesc": "Ang Tagaytay ay isa sa mga pinakamaagang lungsod na itinatag sa Pilipinas, na itinayo sa ilalim ng Commonwealth Act No. 338 ni Pangulong Manuel L. Quezon.",
+    "elevationLabel": "Taas sa Antas ng Dagat",
+    "elevationDesc": "Ang Tagaytay ay nakaupo sa tuktok ng isang bangin sa humigit-kumulang 600–700 metro sa antas ng dagat, na nagbibigay sa kanya ng isa sa pinakamalalamig na klima sa Luzon at ang iconic na tanawin ng Bulkang Taal.",
+    "events": {
+      "precolonial": {
+        "year": "Prekolonyal",
+        "title": "Mga Pamayanan ng Tagalog",
+        "text": "Ang taluktok ng Tagaytay ay tinitirhan ng mga Tagalog; ang mataas na lupain na nagmamalapit sa Lawa ng Taal ay nagsilbing likas na tanglaw at matatabang lupang pangsakahan."
+      },
+      "spanish": {
+        "year": "1630s",
+        "title": "Panahon ng Kastila",
+        "text": "Ang mga misyonerong Kastila ay nagtatag ng mga pamayanan sa matataas na lugar ng Cavite. Ang lugar ng Tagaytay ay naging bahagi ng sistemang encomienda ng Cavite sa ilalim ng kolonyal na pamamahala."
+      },
+      "charter": {
+        "year": "1938",
+        "title": "Karta ng Lungsod",
+        "text": "Ang Commonwealth Act No. 338 ay nilagdaan ni Pangulong Manuel L. Quezon noong Hulyo 27, 1938, na nagtatag sa Tagaytay bilang isang lungsod — isa sa mga pinakamaaga sa Pilipinas."
+      },
+      "summer": {
+        "year": "1948",
+        "title": "Kabisera ng Tag-init",
+        "text": "Ang Tagaytay ay itinakda bilang 'Kabisera ng Tag-init ng Pilipinas' dahil sa malamig nitong klima, maselyong hanging bundok, at panoramikong tanawin ng Bulkang Taal at Lawa."
+      },
+      "capital": {
+        "year": "1975",
+        "title": "Panukala sa Kabisera",
+        "text": "Pinag-isipan ng administrasyong Marcos ang paglipat ng pambansang kabisera sa Tagaytay. Ang panukala, na hinimok ng estratehikong taas at klima nito, ay hindi naisagawa."
+      },
+      "eruption": {
+        "year": "2020",
+        "title": "Pagsabog ng Taal",
+        "text": "Sumabog ang Bulkang Taal noong Enero 12, 2020, na nag-udyok ng malawakang paglikas ng mga mamamayan ng Lungsod ng Tagaytay at pansamantalang pagsasara ng mahalagang sektor ng turismo."
+      },
+      "leadership": {
+        "year": "2022",
+        "title": "Bagong Pamunuan at Pagbabago",
+        "text": "Nahalal si Mayor Aizack Brent D. Tolentino. Patuloy ang pagbabago ng lungsod at pag-unlad ng imprastraktura ng turismo, kasama ang pagkumpleto ng world-class na Tagaytay City Velodrome."
+      }
+    }
+  },
+
+  "leadership": {
+    "title": "Pamunuan ng Lungsod",
+    "viewAll": "Tingnan ang Lahat ng Opisyal →",
+    "electedMayor": "Inihalal na Alkalde",
+    "electedViceMayor": "Inihalal na Bise-Alkalde",
+    "cityMayor": "Alkalde ng Lungsod",
+    "cityViceMayor": "Bise-Alkalde ng Lungsod",
+    "viewProfile": "Tingnan ang profil"
+  },
+
+  "contact": {
+    "title": "Impormasyon sa Pakikipag-ugnayan",
+    "viewAll": "Tingnan ang Lahat ng Contacts →",
+    "phone": "Telepono",
+    "email": "Email",
+    "address": "Address",
+    "phoneHours": "Lun–Biy  8:00 AM – 5:00 PM",
+    "emailResponse": "Tugon sa loob ng 24 na oras",
+    "addressLine1": "Akle St., Kaybagal South",
+    "addressLine2": "Lungsod ng Tagaytay, Cavite 4120"
+  },
+
+  "weather": {
+    "title": "Panahon sa Tagaytay"
+  },
+
+  "forex": {
+    "title": "Mga Palitan ng Pera"
+  },
+
+  "news": {
+    "title": "Pinakabagong Balita at Anunsyo"
+  },
+
+  "footer": {
+    "mission": "Pinapalakas ang mga mamamayan ng Tagaytay sa pamamagitan ng transparent na access sa mga serbisyo, programa, at pampublikong pondo ng pamahalaan.",
+    "quickLinks": "Mabilis na Mga Link",
+    "resources": "Mga Mapagkukunan",
+    "cost": "Gastos sa mga Mamamayan ng Tagaytay = ₱0",
+    "volunteer": "Maging boluntaryo",
+    "contribute": "Mag-ambag ng code",
+    "copyright": "© 2026 BetterTagaytay.ph  MIT | CC BY 4.0  Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan."
+  },
+
+  "navbar": {
+    "government": "Pamahalaan",
+    "services": "Mga Serbisyo",
+    "hotlines": "Mga Hotline",
+    "holidays": "Mga Pista Opisyal"
+  },
+
+  "document": {
+    "loading": "Naglo-load ng dokumento...",
+    "notFound": "Hindi Nahanap ang Dokumento",
+    "fallbackNotice": "Ang pahinang ito ay hindi pa naisasalin sa Filipino. Ang nilalaman ay nasa Ingles.",
+    "home": "Tahanan",
+    "services": "Mga Serbisyo",
+    "government": "Pamahalaan"
+  },
+
+  "joinUs": {
+    "stripTitle": "🚀 Sumali sa #CivicTech Revolution",
+    "stripSubtitle": "Tulungan na itayo ang kinabukasan ng Pilipinas at pamamahala sa pamamagitan ng teknolohiya",
+    "joinNow": "Sumali Na",
+    "discord": "Discord",
+    "bannerTitle": "Sumali sa #CivicTech Revolution",
+    "bannerSubtitle": "Tulungan na itayo ang kinabukasan ng Pilipinas at pamamahala sa pamamagitan ng teknolohiya.",
+    "bannerHighlight": "Pinamumunuan ng mga boluntaryo. Open source. Pinapatakbo ng komunidad.",
+    "joinMovement": "Samahan ang Aming Kilusan",
+    "or": "o",
+    "joinDiscord": "Sumali sa Discord",
+    "features": "🚀 Imprastraktura • 💡 Mentorship • 🤝 Komunidad • 🏢 Espasyo sa Opisina"
+  }
+}

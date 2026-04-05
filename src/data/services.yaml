@@ -63,4 +63,10 @@ categories:
     slug: 'housing-land-use'
     description: 'How to apply for housing projects, what zoning and building permits are needed, and where relocation sites are available.'
     icon: 'Home'
+
+  # Tourism Services
+  - category: 'Tourism'
+    slug: 'tourism'
+    description: 'Tourist spots, permits for tourism-related businesses, accreditation, and visitor information for Tagaytay City.'
+    icon: 'MapPin'
   

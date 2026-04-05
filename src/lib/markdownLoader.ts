@@ -1,10 +1,8 @@
 /**
- * Utility to load markdown content dynamically based on slug
+ * Utility to load markdown content dynamically based on slug.
+ * Supports language-specific files: {slug}.fil.md falls back to {slug}.md.
  */
 
-/**
- * Replaces {PLACEHOLDER} tokens using JSON data first, then VITE_ env vars.
- */
 function interpolate(
   content: string,
   data: Record<string, unknown> = {}
@@ -21,49 +19,68 @@ export interface MarkdownContent {
   title?: string;
   description?: string;
   data?: Record<string, unknown>;
+  isFallbackLang?: boolean;
 }
 
 /**
  * Loads markdown content from the appropriate content directory.
- * Also attempts to load a companion JSON file (same slug) for template
- * variable substitution and structured data.
- * @param documentSlug - The document slug (filename without .md extension)
- * @param categorySlug - The category slug (parent directory)
- * @param categoryType - Whether this is a 'service' or 'government' document
+ * For non-English languages, tries a language-specific file first
+ * (e.g. executive.fil.md), then falls back to the English version.
  */
 export async function loadMarkdownContent(
   documentSlug: string,
   categorySlug: string,
-  categoryType: 'service' | 'government'
+  categoryType: 'service' | 'government',
+  lang = 'en'
 ): Promise<MarkdownContent> {
+  const dir = categoryType === 'government' ? 'government' : 'services';
+
+  // Try to load companion JSON for template data
+  let data: Record<string, unknown> = {};
   try {
-    const dir = categoryType === 'government' ? 'government' : 'services';
+    const jsonModule = await import(
+      `../../content/${dir}/${categorySlug}/${documentSlug}.json`
+    );
+    data = jsonModule.default;
+  } catch {
+    // No companion JSON — that's fine
+  }
 
-    // Try to load companion JSON for template data
-    let data: Record<string, unknown> = {};
+  // For non-English: try language-specific file first
+  if (lang !== 'en') {
     try {
-      const jsonModule = await import(
-        `../../content/${dir}/${categorySlug}/${documentSlug}.json`
+      const langModule = await import(
+        `../../content/${dir}/${categorySlug}/${documentSlug}.${lang}.md?raw`
       );
-      data = jsonModule.default;
+      const content = interpolate(langModule.default, data);
+      const titleMatch = content.match(/^#\s+(.+)$/m);
+      const descMatch = content.match(/^#\s+.+$\n\n(.+?)(?:\n\n|$)/s);
+      return {
+        content,
+        title: titleMatch?.[1],
+        description: descMatch?.[1].replace(/^>\s*/, '').trim(),
+        data,
+        isFallbackLang: false,
+      };
     } catch {
-      // No companion JSON — that's fine
+      // No language-specific file — fall through to English
     }
+  }
 
+  try {
     const module = await import(
       `../../content/${dir}/${categorySlug}/${documentSlug}.md?raw`
     );
     const content = interpolate(module.default, data);
-
     const titleMatch = content.match(/^#\s+(.+)$/m);
-    const title = titleMatch ? titleMatch[1] : undefined;
-
-    const descriptionMatch = content.match(/^#\s+.+$\n\n(.+?)(?:\n\n|$)/s);
-    const description = descriptionMatch
-      ? descriptionMatch[1].replace(/^>\s*/, '').trim()
-      : undefined;
-
-    return { content, title, description, data };
+    const descMatch = content.match(/^#\s+.+$\n\n(.+?)(?:\n\n|$)/s);
+    return {
+      content,
+      title: titleMatch?.[1],
+      description: descMatch?.[1].replace(/^>\s*/, '').trim(),
+      data,
+      isFallbackLang: lang !== 'en',
+    };
   } catch (error) {
     console.error(
       `Failed to load markdown content for document: ${documentSlug}`,
