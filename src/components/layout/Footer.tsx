@@ -169,6 +169,18 @@ export default function Footer() {
             <span className="mx-2 opacity-40">|</span>
             All public information sourced from official government portals.
           </span>
+          <span className="flex items-center gap-1.5 text-gray-500">
+            Developed with{' '}
+            <Heart className="h-3 w-3 text-red-400 fill-red-400 inline" /> by{' '}
+            <a
+              href="https://www.arloubeloria.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-white transition-colors underline underline-offset-2"
+            >
+              Arlou
+            </a>
+          </span>
           <span className="flex items-center gap-1.5 opacity-60">
             <svg
               className="h-3.5 w-3.5"

@@ -85,10 +85,16 @@ export default function Hero() {
   const [query, setQuery] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
   const [allServices, setAllServices] = useState<ServicePage[]>([]);
+  const [mounted, setMounted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const { t } = useTranslation('common');
+
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   // Build search index from category index.yaml files
   useEffect(() => {
@@ -173,26 +179,57 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left — headline + CTAs */}
           <div>
-            <p className="text-blue-100 text-sm font-medium uppercase tracking-widest mb-1">
+            <p
+              className="text-blue-100 text-sm font-medium uppercase tracking-widest mb-1"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? 'translateX(0)' : 'translateX(-20px)',
+                transition: 'opacity 0.6s ease 0ms, transform 0.6s ease 0ms',
+              }}
+            >
               {t('hero.welcome', 'WELCOME TO')}
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-4">
+            <h1
+              className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-4"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? 'translateX(0)' : 'translateX(-24px)',
+                transition:
+                  'opacity 0.6s ease 100ms, transform 0.6s ease 100ms',
+              }}
+            >
               BetterTagaytay.org
             </h1>
-            <p className="text-blue-100 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+            <p
+              className="text-blue-100 text-base md:text-lg leading-relaxed mb-8 max-w-md"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? 'translateY(0)' : 'translateY(16px)',
+                transition:
+                  'opacity 0.6s ease 200ms, transform 0.6s ease 200ms',
+              }}
+            >
               {t('hero.subtitle')}
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div
+              className="flex flex-wrap gap-3"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? 'translateY(0)' : 'translateY(16px)',
+                transition:
+                  'opacity 0.6s ease 320ms, transform 0.6s ease 320ms',
+              }}
+            >
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-primary-700 font-bold text-sm rounded-lg hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-primary-700 font-bold text-sm rounded-lg hover:bg-blue-50 hover:scale-105 active:scale-95 transition-all duration-200"
               >
                 <ArrowRight className="h-4 w-4" />
                 {t('hero.browseServices', 'Browse Services')}
               </Link>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white text-white font-bold text-sm rounded-lg hover:bg-white/10 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white text-white font-bold text-sm rounded-lg hover:bg-white/10 hover:scale-105 active:scale-95 transition-all duration-200"
               >
                 <Users className="h-4 w-4" />
                 {t('hero.contactUs', 'Contact Us')}
@@ -201,7 +238,13 @@ export default function Hero() {
           </div>
 
           {/* Right — search card */}
-          <div>
+          <div
+            style={{
+              opacity: mounted ? 1 : 0,
+              transform: mounted ? 'translateX(0)' : 'translateX(32px)',
+              transition: 'opacity 0.7s ease 150ms, transform 0.7s ease 150ms',
+            }}
+          >
             <div className="bg-white rounded-2xl p-6 shadow-2xl">
               <p className="text-gray-800 font-bold text-base mb-3">
                 {t('hero.findService', 'Search Services')}

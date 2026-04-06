@@ -5,6 +5,7 @@ import { Text } from '../ui/Text';
 import { useTranslation } from '../../hooks/useTranslation';
 import { Link } from 'react-router-dom';
 import { Camera, Sunrise, Utensils, Mountain } from 'lucide-react';
+import { useInView } from '../../hooks/useInView';
 
 import { serviceCategories } from '../../data/yamlLoader';
 
@@ -98,6 +99,7 @@ export default function ServicesSection({
   description?: string;
 }) {
   const { t } = useTranslation();
+  const { ref, inView } = useInView<HTMLDivElement>();
 
   const getIcon = (iconName: string) => {
     const IconComponent = LucideIcons[
@@ -116,7 +118,15 @@ export default function ServicesSection({
       </Text>
 
       {/* Tourism Spotlight */}
-      <div className="mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-700 via-teal-700 to-cyan-800 text-white shadow-lg">
+      <div
+        ref={ref}
+        className="mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-700 via-teal-700 to-cyan-800 text-white shadow-lg"
+        style={{
+          opacity: inView ? 1 : 0,
+          transform: inView ? 'translateY(0)' : 'translateY(24px)',
+          transition: 'opacity 0.6s ease, transform 0.6s ease',
+        }}
+      >
         <div className="flex flex-col md:flex-row items-stretch">
           <div className="flex-1 p-6 md:p-8">
             <span className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wide">
@@ -181,7 +191,12 @@ export default function ServicesSection({
             <Link
               key={category.slug}
               to={`/services/${category.slug}`}
-              className={`group block bg-white rounded-xl border-t-4 ${colors.border} border border-gray-100 hover:shadow-md transition-all duration-200 p-5`}
+              className={`group block bg-white rounded-xl border-t-4 ${colors.border} border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-200 p-5`}
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? 'translateY(0)' : 'translateY(24px)',
+                transition: `opacity 0.5s ease ${idx * 60}ms, transform 0.5s ease ${idx * 60}ms, box-shadow 0.2s, translate 0.2s`,
+              }}
             >
               <div
                 className={`${colors.iconBg} ${colors.icon} w-10 h-10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}

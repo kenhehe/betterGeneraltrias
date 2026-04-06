@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Wind, Droplets, Thermometer, Cloud } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useInView } from '../../hooks/useInView';
 
 interface WeatherData {
   temp: number;
@@ -21,6 +22,7 @@ function getWeatherLabel(code: number, t: (k: string) => string): string {
 export default function WeatherMapSection() {
   const { t } = useTranslation('common');
   const [weather, setWeather] = useState<WeatherData | null>(null);
+  const { ref, inView } = useInView<HTMLDivElement>();
 
   useEffect(() => {
     const cached = localStorage.getItem('bt_weather_full');
@@ -61,9 +63,16 @@ export default function WeatherMapSection() {
         <h2 className="text-xl font-black text-gray-900 mb-6">
           {t('weatherMap.title')}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Weather widget */}
-          <div className="bg-primary-700 rounded-2xl p-6 text-white flex flex-col justify-between min-h-[220px]">
+          <div
+            className="bg-primary-700 rounded-2xl p-6 text-white flex flex-col justify-between min-h-[220px]"
+            style={{
+              opacity: inView ? 1 : 0,
+              transform: inView ? 'translateX(0)' : 'translateX(-32px)',
+              transition: 'opacity 0.6s ease 0ms, transform 0.6s ease 0ms',
+            }}
+          >
             <div>
               <p className="text-blue-200 text-sm font-semibold mb-1">
                 {t('weatherMap.location')}
@@ -107,7 +116,14 @@ export default function WeatherMapSection() {
           </div>
 
           {/* OpenStreetMap */}
-          <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm min-h-[220px]">
+          <div
+            className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm min-h-[220px]"
+            style={{
+              opacity: inView ? 1 : 0,
+              transform: inView ? 'translateX(0)' : 'translateX(32px)',
+              transition: 'opacity 0.6s ease 150ms, transform 0.6s ease 150ms',
+            }}
+          >
             <iframe
               title={t('weatherMap.mapTitle')}
               src="https://www.openstreetmap.org/export/embed.html?bbox=120.9221%2C14.0853%2C121.0021%2C14.1453&layer=mapnik&marker=14.1153%2C120.9621"
