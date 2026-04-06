@@ -135,7 +135,8 @@ export default function Footer() {
           {/* Cost + CTAs */}
           <div>
             <div className="inline-flex items-center gap-2 bg-green-900/40 text-green-400 border border-green-800 rounded-full px-3 py-1.5 text-xs font-bold mb-5">
-              {t('footer.cost')}
+              {t('footer.costLabel')}{' '}
+              <span className="text-yellow-300">₱0</span>
             </div>
             <div className="flex flex-col gap-2">
               <a
@@ -167,20 +168,22 @@ export default function Footer() {
             <span className="mx-2 opacity-40">|</span>
             MIT | CC BY 4.0
             <span className="mx-2 opacity-40">|</span>
-            All public information sourced from official government portals.
+            {t('footer.attribution')}
           </span>
-          <span className="flex items-center gap-1.5 text-gray-500">
-            Developed with{' '}
-            <Heart className="h-3 w-3 text-red-400 fill-red-400 inline" /> by{' '}
-            <a
-              href="https://www.arloubeloria.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-400 hover:text-white transition-colors underline underline-offset-2"
-            >
-              Arlou
-            </a>
-          </span>
+          <a
+            href="https://www.arloubeloria.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 text-gray-600 hover:text-gray-300 transition-colors group"
+          >
+            <Heart className="h-3 w-3 text-gray-600 group-hover:text-red-400 group-hover:fill-red-400 transition-colors" />
+            <span>
+              {t('footer.builtBy')}{' '}
+              <span className="text-gray-400 group-hover:text-white transition-colors font-medium">
+                Arlou Beloria
+              </span>
+            </span>
+          </a>
           <span className="flex items-center gap-1.5 opacity-60">
             <svg
               className="h-3.5 w-3.5"

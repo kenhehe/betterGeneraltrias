@@ -252,9 +252,12 @@
     "quickLinks": "Mabilis na Mga Link",
     "resources": "Mga Mapagkukunan",
     "cost": "Gastos sa mga Mamamayan ng Tagaytay = ₱0",
+    "costLabel": "Gastos sa mga Mamamayan ng Tagaytay =",
     "volunteer": "Maging boluntaryo",
     "contribute": "Mag-ambag ng code",
-    "copyright": "© 2026 BetterTagaytay.ph  MIT | CC BY 4.0  Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan."
+    "copyright": "© 2026 BetterTagaytay.ph  MIT | CC BY 4.0  Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan.",
+    "attribution": "Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan.",
+    "builtBy": "Ginawa ni"
   },
   "navbar": {
     "government": "Pamahalaan",

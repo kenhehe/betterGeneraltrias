@@ -252,9 +252,12 @@
     "quickLinks": "Quick Links",
     "resources": "Resources",
     "cost": "Cost to the People of Tagaytay = ₱0",
+    "costLabel": "Cost to the People of Tagaytay =",
     "volunteer": "Volunteer with us",
     "contribute": "Contribute code with us",
-    "copyright": "© 2026 BetterTagaytay.ph  MIT | CC BY 4.0  All public information sourced from official government portals."
+    "copyright": "© 2026 BetterTagaytay.ph  MIT | CC BY 4.0  All public information sourced from official government portals.",
+    "attribution": "All public information sourced from official government portals.",
+    "builtBy": "Built by"
   },
   "navbar": {
     "government": "Government",
