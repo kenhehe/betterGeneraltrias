@@ -4,6 +4,7 @@ import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
 import { useTranslation } from '../../hooks/useTranslation';
 import { Link } from 'react-router-dom';
+import { useInView } from '../../hooks/useInView';
 
 import { governmentCategories } from '../../data/yamlLoader';
 
@@ -82,6 +83,7 @@ export default function GovernmentActivitySection({
   description,
 }: GovernmentActivitySectionProps = {}) {
   const { t } = useTranslation();
+  const { ref, inView } = useInView<HTMLDivElement>();
 
   const getIcon = (iconName: string) => {
     const IconComponent = LucideIcons[
@@ -99,14 +101,22 @@ export default function GovernmentActivitySection({
         {description || t('governmentActivity.description')}
       </Text>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div
+        ref={ref}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+      >
         {displayedCategories.map((category, idx) => {
           const colors = CATEGORY_COLORS[idx % CATEGORY_COLORS.length];
           return (
             <Link
               key={category.slug}
               to={`/government/${category.slug}`}
-              className={`group block rounded-xl border ${colors.card} shadow-sm hover:shadow-md transition-all duration-200 p-5`}
+              className={`group block rounded-xl border ${colors.card} shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 p-5`}
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? 'translateY(0)' : 'translateY(24px)',
+                transition: `opacity 0.5s ease ${idx * 60}ms, transform 0.5s ease ${idx * 60}ms, box-shadow 0.2s, translate 0.2s`,
+              }}
             >
               <div
                 className={`${colors.iconBg} ${colors.icon} w-10 h-10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}

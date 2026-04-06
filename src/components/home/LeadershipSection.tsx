@@ -1,9 +1,11 @@
 import { Phone, Mail, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useInView } from '../../hooks/useInView';
 
 export default function LeadershipSection() {
   const { t } = useTranslation('common');
+  const { ref, inView } = useInView<HTMLDivElement>();
 
   const OFFICIALS = [
     {
@@ -40,11 +42,16 @@ export default function LeadershipSection() {
             {t('leadership.viewAll')}
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {OFFICIALS.map(official => (
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {OFFICIALS.map((official, idx) => (
             <div
               key={official.name}
-              className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+              className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? 'translateY(0)' : 'translateY(24px)',
+                transition: `opacity 0.55s ease ${idx * 120}ms, transform 0.55s ease ${idx * 120}ms, box-shadow 0.2s, translate 0.2s`,
+              }}
             >
               <div className="h-1.5 bg-primary-700" />
               <div className="p-5 flex gap-4">

@@ -1,9 +1,11 @@
 import { Users, MapPin, Building2, Map } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useInView } from '../../hooks/useInView';
 
 export default function StatsSection() {
   const { t } = useTranslation('common');
+  const { ref, inView } = useInView<HTMLDivElement>();
 
   const STATS = [
     {
@@ -46,11 +48,16 @@ export default function StatsSection() {
             {t('stats.viewProfile')}
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {STATS.map(({ icon: Icon, value, label, description }) => (
+        <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {STATS.map(({ icon: Icon, value, label, description }, idx) => (
             <div
               key={description}
-              className="bg-gray-50 rounded-xl p-5 border border-gray-100"
+              className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-200"
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? 'translateY(0)' : 'translateY(24px)',
+                transition: `opacity 0.5s ease ${idx * 100}ms, transform 0.5s ease ${idx * 100}ms, box-shadow 0.2s, translate 0.2s`,
+              }}
             >
               <div className="bg-primary-100 text-primary-700 w-9 h-9 rounded-lg flex items-center justify-center mb-3">
                 <Icon className="h-4 w-4" />
