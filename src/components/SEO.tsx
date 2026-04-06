@@ -19,7 +19,7 @@ export default function SEO({
   type = 'website',
   siteName = import.meta.env.VITE_GOVERNMENT_NAME || 'Local Government Website',
 }: SEOProps) {
-  const defaultTitle = `${siteName} - Official Government Website`;
+  const defaultTitle = 'BetterTagaytay.org | Transparency Portal';
   const defaultDescription =
     import.meta.env.VITE_SITE_DESCRIPTION ||
     `Official website of ${siteName}. Access government services, information, and resources.`;

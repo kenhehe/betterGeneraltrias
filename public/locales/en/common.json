@@ -9,6 +9,7 @@
     "statistics": "Statistics",
     "contact": "Contact",
     "departments": "Departments & Officials",
+    "legislative": "Legislative (City Council)",
     "cityCouncil": "City Council",
     "localOfficials": "Local Officials Directory",
     "fullDisclosure": "Full Disclosure",
@@ -95,6 +96,16 @@
         "name": "Tourism",
         "description": "Tourist spots, permits for tourism-related businesses, accreditation, and visitor information for Tagaytay City."
       }
+    },
+    "tourismSpotlight": {
+      "badge": "Tourism Spotlight",
+      "title": "Discover Tagaytay City",
+      "description": "Tagaytay is the second highest city in the Philippines, offering breathtaking views of Taal Volcano, fresh highland cuisine, and year-round cool weather.",
+      "cta": "Explore Tourism Services",
+      "taal": "Taal Volcano",
+      "ridge": "Scenic Ridges",
+      "food": "Bulalo & More",
+      "spots": "Photo Spots"
     }
   },
   "governmentActivity": {

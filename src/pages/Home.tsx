@@ -11,7 +11,6 @@ const Home: React.FC = () => {
   return (
     <>
       <SEO
-        title="Home"
         description="BetterTagaytay — a community transparency portal for Tagaytay City, Cavite. Access government services, officials, budgets, and public information."
         keywords="Tagaytay City, Cavite, government, services, transparency, officials, budget"
       />

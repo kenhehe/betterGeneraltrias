@@ -9,6 +9,7 @@
     "statistics": "Istatistika",
     "contact": "Makipag-ugnayan",
     "departments": "Mga Departamento at Opisyal",
+    "legislative": "Lehislatibo (Lupon ng Lungsod)",
     "cityCouncil": "Lupon ng Lungsod",
     "localOfficials": "Direktoryo ng mga Lokal na Opisyal",
     "fullDisclosure": "Buong Pagbubunyag",
@@ -95,6 +96,16 @@
         "name": "Turismo",
         "description": "Mga tourist spot, permit para sa mga negosyong may kaugnayan sa turismo, akreditasyon, at impormasyon para sa mga bisita ng Lungsod ng Tagaytay."
       }
+    },
+    "tourismSpotlight": {
+      "badge": "Tampok sa Turismo",
+      "title": "Tuklasin ang Lungsod ng Tagaytay",
+      "description": "Ang Tagaytay ay ang pangalawang pinakamataas na lungsod sa Pilipinas, na nag-aalok ng kamangha-manghang tanawin ng Bulkang Taal, sariwang lutong bundok, at malamig na panahon buong taon.",
+      "cta": "Tuklasin ang mga Serbisyong Pangturismo",
+      "taal": "Bulkang Taal",
+      "ridge": "Magagandang Bangin",
+      "food": "Bulalo at Iba Pa",
+      "spots": "Mga Photo Spot"
     }
   },
   "governmentActivity": {
