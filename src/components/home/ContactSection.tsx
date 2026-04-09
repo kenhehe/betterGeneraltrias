@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useInView } from '../../hooks/useInView';
@@ -11,12 +11,9 @@ export default function ContactSection() {
     {
       icon: Phone,
       labelKey: 'contact.phone',
-      primaryKey: 'contact.phone',
       primary: '(046) 884-5768',
       secondaryKey: 'contact.phoneHours',
       href: 'tel:0468845768',
-      color: 'text-primary-700',
-      bg: 'bg-primary-50',
     },
     {
       icon: Mail,
@@ -24,8 +21,6 @@ export default function ContactSection() {
       primary: 'info@generaltrias.gov.ph',
       secondaryKey: 'contact.emailResponse',
       href: 'mailto:info@generaltrias.gov.ph',
-      color: 'text-green-700',
-      bg: 'bg-green-50',
     },
     {
       icon: MapPin,
@@ -33,60 +28,71 @@ export default function ContactSection() {
       primary: null,
       secondaryKey: 'contact.addressLine2',
       href: 'https://maps.google.com/?q=General+Trias+City+Hall+Cavite',
-      color: 'text-orange-700',
-      bg: 'bg-orange-50',
     },
   ];
 
   return (
-    <section id="contact" className="bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl font-black text-gray-900">
-            {t('contact.title')}
-          </h2>
+    <section
+      id="contact"
+      className="relative py-16 overflow-hidden"
+      style={{
+        background:
+          'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)',
+      }}
+    >
+      {/* Decorative circles */}
+      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white/[0.03] pointer-events-none" />
+      <div className="absolute -bottom-32 -left-16 w-72 h-72 rounded-full bg-white/[0.03] pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Header */}
+        <div className="flex items-end justify-between mb-10">
+          <div>
+            <p className="text-xs font-bold text-green-400 uppercase tracking-widest mb-1">
+              Get In Touch
+            </p>
+            <h2 className="text-2xl font-black text-white">
+              {t('contact.title')}
+            </h2>
+            <div className="mt-2 h-1 w-12 bg-green-400 rounded-full" />
+          </div>
           <Link
             to="/government/departments"
-            className="text-sm font-semibold text-primary-700 hover:text-primary-800 transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-green-300 hover:text-white transition-colors"
           >
             {t('contact.viewAll')}
+            <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
+
         <div ref={ref} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {CONTACTS.map(
-            (
-              { icon: Icon, labelKey, primary, secondaryKey, href, color, bg },
-              idx
-            ) => (
+            ({ icon: Icon, labelKey, primary, secondaryKey, href }, idx) => (
               <a
                 key={labelKey}
                 href={href}
                 target={labelKey === 'contact.address' ? '_blank' : undefined}
                 rel="noreferrer"
-                className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex gap-4 hover:shadow-md hover:-translate-y-1 transition-all duration-200 group"
+                className="group bg-white/8 border border-white/12 hover:bg-white/15 hover:border-white/25 rounded-2xl p-6 flex flex-col gap-4 transition-all duration-200"
                 style={{
                   opacity: inView ? 1 : 0,
                   transform: inView ? 'translateY(0)' : 'translateY(24px)',
-                  transition: `opacity 0.5s ease ${idx * 100}ms, transform 0.5s ease ${idx * 100}ms, box-shadow 0.2s, translate 0.2s`,
+                  transition: `opacity 0.5s ease ${idx * 100}ms, transform 0.5s ease ${idx * 100}ms`,
                 }}
               >
-                <div
-                  className={`shrink-0 w-11 h-11 rounded-xl ${bg} ${color} flex items-center justify-center`}
-                >
-                  <Icon className="h-5 w-5" />
+                <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                  <Icon className="h-5 w-5 text-green-300" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-0.5">
+                  <p className="text-[10px] font-bold text-green-400 uppercase tracking-widest mb-1.5">
                     {t(labelKey)}
                   </p>
-                  <p
-                    className={`font-bold text-sm ${color} group-hover:underline`}
-                  >
+                  <p className="font-bold text-white text-sm group-hover:text-green-100 transition-colors">
                     {labelKey === 'contact.address'
                       ? t('contact.addressLine1')
                       : primary}
                   </p>
-                  <p className="text-xs text-gray-600 mt-0.5">
+                  <p className="text-xs text-green-300/80 mt-1">
                     {t(secondaryKey)}
                   </p>
                 </div>
