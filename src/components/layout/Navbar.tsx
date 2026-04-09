@@ -1,26 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { X, Menu, ChevronDown, Phone, Thermometer, Clock } from 'lucide-react';
+import React, { useState } from 'react';
+import { X, Menu, ChevronDown, Phone } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
-function formatDatetime(): string {
-  const now = new Date();
-  const date = now.toLocaleDateString('en-PH', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-    timeZone: 'Asia/Manila',
-  });
-  const time = now.toLocaleTimeString('en-PH', {
-    hour: 'numeric',
-    minute: '2-digit',
-    hour12: true,
-    timeZone: 'Asia/Manila',
-  });
-  return `${date} · ${time} PHT`;
-}
+import InfoBar from './InfoBar';
 
 const HOTLINES = [
   { labelKey: 'hotlines.police', number: '(046) 884-1555', tel: '0468841555' },
@@ -66,92 +50,6 @@ const Navbar: React.FC = () => {
       onClose?.();
     }
   };
-
-  const CURRENCIES = ['USD', 'EUR', 'JPY', 'GBP', 'SGD'] as const;
-  const CURRENCY_SYMBOLS: Record<string, string> = {
-    USD: '$',
-    EUR: '€',
-    JPY: '¥',
-    GBP: '£',
-    SGD: 'S$',
-  };
-  const [rates, setRates] = useState<Record<string, string>>({});
-  const [currencyIdx, setCurrencyIdx] = useState(0);
-  const [forexVisible, setForexVisible] = useState(true);
-  const [temp, setTemp] = useState('--');
-  const [datetime, setDatetime] = useState(formatDatetime());
-
-  const activeCurrency = CURRENCIES[currencyIdx];
-  const forexDisplay = rates[activeCurrency]
-    ? `${CURRENCY_SYMBOLS[activeCurrency]}1 ${activeCurrency} = ₱${rates[activeCurrency]}`
-    : `1 ${activeCurrency} = ₱--`;
-
-  useEffect(() => {
-    const timer = setInterval(() => setDatetime(formatDatetime()), 60_000);
-
-    // Fetch all rates at once from USD base, then derive cross rates
-    const cached = localStorage.getItem('bt_rates');
-    const cachedTime = localStorage.getItem('bt_rates_time');
-    if (cached && cachedTime && Date.now() - parseInt(cachedTime) < 3_600_000) {
-      setRates(JSON.parse(cached));
-    } else {
-      fetch('https://open.er-api.com/v6/latest/PHP')
-        .then(r => r.json())
-        .then(data => {
-          if (data?.rates) {
-            const phpRates = data.rates as Record<string, number>;
-            const computed: Record<string, string> = {};
-            for (const cur of ['USD', 'EUR', 'JPY', 'GBP', 'SGD']) {
-              if (phpRates[cur]) {
-                computed[cur] = (1 / phpRates[cur]).toFixed(2);
-              }
-            }
-            localStorage.setItem('bt_rates', JSON.stringify(computed));
-            localStorage.setItem('bt_rates_time', String(Date.now()));
-            setRates(computed);
-          }
-        })
-        .catch(() => {});
-    }
-
-    // Rotate currency every 3 seconds with fade
-    const currencyTimer = setInterval(() => {
-      setForexVisible(false);
-      setTimeout(() => {
-        setCurrencyIdx(i => (i + 1) % CURRENCIES.length);
-        setForexVisible(true);
-      }, 300);
-    }, 3_000);
-
-    const cachedTemp = localStorage.getItem('bt_temp');
-    const cachedTempTime = localStorage.getItem('bt_temp_time');
-    if (
-      cachedTemp &&
-      cachedTempTime &&
-      Date.now() - parseInt(cachedTempTime) < 1_800_000
-    ) {
-      setTemp(cachedTemp);
-    } else {
-      fetch(
-        'https://api.open-meteo.com/v1/forecast?latitude=14.3833&longitude=120.8833&current_weather=true'
-      )
-        .then(r => r.json())
-        .then(data => {
-          if (data?.current_weather?.temperature !== undefined) {
-            const t = `${Math.round(data.current_weather.temperature)}°C`;
-            localStorage.setItem('bt_temp', t);
-            localStorage.setItem('bt_temp_time', String(Date.now()));
-            setTemp(t);
-          }
-        })
-        .catch(() => {});
-    }
-
-    return () => {
-      clearInterval(timer);
-      clearInterval(currencyTimer);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setIsOpen(prev => !prev);
@@ -202,30 +100,8 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Info Bar: forex / weather / datetime */}
-      <div className="bg-primary-900 text-white text-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-end gap-6">
-          <span className="flex items-center gap-1.5 opacity-90">
-            <span
-              className="font-semibold transition-opacity duration-300"
-              style={{ opacity: forexVisible ? 1 : 0 }}
-            >
-              {forexDisplay}
-            </span>
-          </span>
-          <span className="text-gray-600 hidden sm:inline">|</span>
-          <span className="hidden sm:flex items-center gap-1.5 opacity-90">
-            <Thermometer className="h-3 w-3 opacity-70" />
-            <span className="text-gray-300">General Trias</span>
-            <span className="font-semibold">{temp}</span>
-          </span>
-          <span className="text-gray-600 hidden sm:inline">|</span>
-          <span className="hidden md:flex items-center gap-1.5 opacity-90">
-            <Clock className="h-3 w-3 opacity-70" />
-            <span className="font-semibold">{datetime}</span>
-          </span>
-        </div>
-      </div>
+      {/* Quick Access Bar */}
+      <InfoBar />
 
       {/* Main Navbar */}
       <div className="bg-white shadow-sm border-b border-gray-100">

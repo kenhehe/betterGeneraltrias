@@ -1,7 +1,7 @@
 import Hero from '../components/sections/Hero';
 import ServicesSection from '../components/home/ServicesSection';
 import StatsSection from '../components/home/StatsSection';
-import WeatherMapSection from '../components/home/WeatherMapSection';
+import GovernmentQuickLinks from '../components/home/GovernmentQuickLinks';
 import HistorySection from '../components/home/HistorySection';
 import LeadershipSection from '../components/home/LeadershipSection';
 import ContactSection from '../components/home/ContactSection';
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
         <Hero />
         <ServicesSection />
         <StatsSection />
-        <WeatherMapSection />
+        <GovernmentQuickLinks />
         <HistorySection />
         <LeadershipSection />
         <ContactSection />
