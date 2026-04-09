@@ -14,7 +14,7 @@ export default function LeadershipSection() {
       titleKey: 'leadership.cityMayor',
       badgeKey: 'leadership.electedMayor',
       phone: '(046) 884-5768',
-      email: 'mayor@generaltrias.gov.ph',
+      email: null,
       tel: '0468845768',
     },
     {
