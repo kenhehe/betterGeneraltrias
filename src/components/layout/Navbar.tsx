@@ -1,30 +1,75 @@
-import React, { useState } from 'react';
-import { X, Menu, ChevronDown, Phone } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import {
+  X,
+  Menu,
+  ChevronDown,
+  AlertTriangle,
+  FileText,
+  Briefcase,
+  MessageSquare,
+  ExternalLink,
+  ShieldAlert,
+} from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import InfoBar from './InfoBar';
 
 const HOTLINES = [
-  { labelKey: 'hotlines.police', number: '(046) 884-1555', tel: '0468841555' },
-  {
-    labelKey: 'hotlines.hospital',
-    number: '(046) 884-5800',
-    tel: '0468845800',
-  },
-  { labelKey: 'hotlines.fire', number: '(046) 884-5700', tel: '0468845700' },
-  { labelKey: 'hotlines.cdrrmo', number: '(046) 884-5600', tel: '0468845600' },
-  { labelKey: 'hotlines.cho', number: '(046) 884-5768', tel: '0468845768' },
-  { labelKey: 'hotlines.cswdo', number: '(046) 884-5400', tel: '0468845400' },
+  { label: 'Police', number: '(046) 884-1555', tel: '0468841555' },
+  { label: 'Hospital', number: '(046) 884-5800', tel: '0468845800' },
+  { label: 'Fire', number: '(046) 884-5700', tel: '0468845700' },
+  { label: 'CDRRMO', number: '(046) 884-5600', tel: '0468845600' },
+  { label: 'City Health', number: '(046) 884-5768', tel: '0468845768' },
+  { label: 'CSWDO', number: '(046) 884-5400', tel: '0468845400' },
 ];
+
+const QUICK_ACTIONS = [
+  {
+    icon: FileText,
+    label: 'FOI Request',
+    href: 'https://www.foi.gov.ph',
+    external: true,
+  },
+  {
+    icon: Briefcase,
+    label: 'Business Permits',
+    href: '/services/business',
+    external: false,
+  },
+  {
+    icon: FileText,
+    label: 'Full Disclosure',
+    href: '/government/transparency-documents/full-disclosure',
+    external: false,
+  },
+  {
+    icon: MessageSquare,
+    label: 'Contact City Hall',
+    href: '/#contact',
+    external: false,
+  },
+];
+
+const SMART_BAR_KEY = 'gentri_smartbar_dismissed';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [barDismissed, setBarDismissed] = useState(false);
+  const [emergencyOpen, setEmergencyOpen] = useState(false);
   const { t, i18n } = useTranslation('common');
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    setBarDismissed(localStorage.getItem(SMART_BAR_KEY) === '1');
+  }, []);
+
+  const dismissBar = () => {
+    setBarDismissed(true);
+    localStorage.setItem(SMART_BAR_KEY, '1');
+  };
 
   const handleNavClick = (
     e: React.MouseEvent,
@@ -76,44 +121,129 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="sticky top-0 z-50">
-      {/* Emergency Hotlines Bar */}
-      <div className="bg-red-600 text-white overflow-x-auto whitespace-nowrap">
-        <div className="flex items-center px-6 py-2.5 min-w-max mx-auto gap-1">
-          <Phone className="h-3.5 w-3.5 mr-3 shrink-0 opacity-90" />
-          <span className="text-xs font-bold uppercase tracking-wide opacity-80 mr-3">
-            Emergency Hotlines
-          </span>
-          {HOTLINES.map((h, i) => (
-            <React.Fragment key={h.labelKey}>
-              <a
-                href={`tel:${h.tel}`}
-                className="hover:underline transition-opacity hover:opacity-80 px-4 py-1 text-xs"
+      {/* Smart Info Bar */}
+      {!barDismissed && (
+        <div className="bg-primary-950 text-white text-xs border-b border-primary-800 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-1.5 flex items-center justify-between gap-2 overflow-x-auto whitespace-nowrap">
+            {/* Left: Emergency pill */}
+            <div className="relative shrink-0">
+              <button
+                onClick={() => setEmergencyOpen(prev => !prev)}
+                className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-red-600 hover:bg-red-700 text-white font-bold text-[11px] transition-colors"
               >
-                <span className="font-bold">{t(h.labelKey)}:</span>{' '}
-                <span className="opacity-90">{h.number}</span>
-              </a>
-              {i < HOTLINES.length - 1 && (
-                <span className="opacity-30 select-none mx-0.5">|</span>
+                <ShieldAlert className="h-3 w-3" />
+                Emergency
+                <ChevronDown
+                  className={`h-3 w-3 transition-transform duration-150 ${emergencyOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {emergencyOpen && (
+                <div className="absolute top-full left-0 mt-1.5 bg-white rounded-xl shadow-xl border border-gray-100 z-50 min-w-[240px] p-3">
+                  <p className="text-[10px] font-black text-red-600 uppercase tracking-widest mb-2 flex items-center gap-1.5">
+                    <AlertTriangle className="h-3 w-3" />
+                    Emergency Hotlines
+                  </p>
+                  <div className="space-y-1.5">
+                    {HOTLINES.map(h => (
+                      <a
+                        key={h.tel}
+                        href={`tel:${h.tel}`}
+                        className="flex items-center justify-between group hover:bg-red-50 rounded-lg px-2 py-1.5 transition-colors"
+                      >
+                        <span className="text-xs font-bold text-gray-700 group-hover:text-red-700">
+                          {h.label}
+                        </span>
+                        <span className="text-xs text-gray-500 group-hover:text-red-600 font-mono">
+                          {h.number}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
               )}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
+            </div>
 
-      {/* Quick Access Bar */}
-      <InfoBar />
+            {/* Right: Quick actions */}
+            <div className="flex items-center gap-0.5 ml-auto">
+              {QUICK_ACTIONS.map((action, i) => {
+                const Icon = action.icon;
+                const inner = (
+                  <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-md hover:bg-white/10 transition-colors text-green-300 hover:text-white font-medium text-[11px]">
+                    <Icon className="h-3 w-3 shrink-0 opacity-70" />
+                    {action.label}
+                    {action.external && (
+                      <ExternalLink className="h-2.5 w-2.5 opacity-50" />
+                    )}
+                  </span>
+                );
+                return (
+                  <span key={action.label} className="flex items-center">
+                    {i > 0 && (
+                      <span className="text-primary-700 mx-0.5 select-none">
+                        |
+                      </span>
+                    )}
+                    {action.external ? (
+                      <a href={action.href} target="_blank" rel="noreferrer">
+                        {inner}
+                      </a>
+                    ) : (
+                      <Link
+                        to={action.href}
+                        onClick={e =>
+                          action.href === '/#contact'
+                            ? handleNavClick(e, action.href)
+                            : undefined
+                        }
+                      >
+                        {inner}
+                      </Link>
+                    )}
+                  </span>
+                );
+              })}
+            </div>
+
+            {/* Dismiss button */}
+            <button
+              onClick={dismissBar}
+              className="shrink-0 ml-2 p-1 rounded hover:bg-white/10 text-green-400 hover:text-white transition-colors"
+              aria-label="Dismiss"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          </div>
+
+          {/* Emergency dropdown backdrop */}
+          {emergencyOpen && (
+            <div
+              className="fixed inset-0 z-40"
+              onClick={() => setEmergencyOpen(false)}
+            />
+          )}
+        </div>
+      )}
 
       {/* Main Navbar */}
       <div className="bg-white shadow-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center shrink-0">
+            {/* Logo + Wordmark */}
+            <Link to="/" className="flex items-center gap-3 shrink-0">
               <img
                 src="/betterGeneraltrias-logo.png"
                 alt="BetterGenTri"
-                className="h-16 w-auto"
+                className="h-14 w-auto"
               />
+              <div className="hidden sm:flex flex-col leading-none">
+                <span className="text-[11px] font-black text-primary-700 uppercase tracking-widest">
+                  Better
+                </span>
+                <span className="text-base font-black text-gray-900 leading-tight">
+                  GeneralTrias
+                  <span className="text-primary-600 font-black">.org</span>
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Nav */}

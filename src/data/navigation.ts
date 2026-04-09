@@ -66,6 +66,11 @@ export const mainNavigation: NavigationItem[] = [
         href: '/government/transparency-documents/foi-releases',
         translationKey: 'nav.foiReleases',
       },
+      {
+        label: 'Planning Docs & Downloads',
+        href: '/government/transparency-documents/downloads',
+        translationKey: 'nav.downloads',
+      },
     ],
   },
   {
