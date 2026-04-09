@@ -3,12 +3,11 @@ import {
   X,
   Menu,
   ChevronDown,
-  AlertTriangle,
+  Phone,
   FileText,
   Briefcase,
   MessageSquare,
   ExternalLink,
-  ShieldAlert,
 } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
@@ -45,7 +44,7 @@ const QUICK_ACTIONS = [
   },
   {
     icon: MessageSquare,
-    label: 'Contact City Hall',
+    label: 'Contact',
     href: '/#contact',
     external: false,
   },
@@ -57,7 +56,6 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [barDismissed, setBarDismissed] = useState(false);
-  const [emergencyOpen, setEmergencyOpen] = useState(false);
   const { t, i18n } = useTranslation('common');
   const navigate = useNavigate();
   const location = useLocation();
@@ -121,67 +119,53 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="sticky top-0 z-50">
-      {/* Smart Info Bar */}
+      {/* Smart Bar — single line, dismissable */}
       {!barDismissed && (
-        <div className="bg-primary-950 text-white text-xs border-b border-primary-800 relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-1.5 flex items-center justify-between gap-2 overflow-x-auto whitespace-nowrap">
-            {/* Left: Emergency pill */}
-            <div className="relative shrink-0">
-              <button
-                onClick={() => setEmergencyOpen(prev => !prev)}
-                className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-red-600 hover:bg-red-700 text-white font-bold text-[11px] transition-colors"
-              >
-                <ShieldAlert className="h-3 w-3" />
-                Emergency
-                <ChevronDown
-                  className={`h-3 w-3 transition-transform duration-150 ${emergencyOpen ? 'rotate-180' : ''}`}
-                />
-              </button>
-              {emergencyOpen && (
-                <div className="absolute top-full left-0 mt-1.5 bg-white rounded-xl shadow-xl border border-gray-100 z-50 min-w-[240px] p-3">
-                  <p className="text-[10px] font-black text-red-600 uppercase tracking-widest mb-2 flex items-center gap-1.5">
-                    <AlertTriangle className="h-3 w-3" />
-                    Emergency Hotlines
-                  </p>
-                  <div className="space-y-1.5">
-                    {HOTLINES.map(h => (
-                      <a
-                        key={h.tel}
-                        href={`tel:${h.tel}`}
-                        className="flex items-center justify-between group hover:bg-red-50 rounded-lg px-2 py-1.5 transition-colors"
-                      >
-                        <span className="text-xs font-bold text-gray-700 group-hover:text-red-700">
-                          {h.label}
-                        </span>
-                        <span className="text-xs text-gray-500 group-hover:text-red-600 font-mono">
-                          {h.number}
-                        </span>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              )}
+        <div
+          className="text-white text-[11px] overflow-x-auto whitespace-nowrap"
+          style={{ background: '#061a0f' }}
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 h-8 flex items-center gap-3 min-w-max">
+            {/* Emergency hotlines */}
+            <span className="flex items-center gap-1.5 text-red-400 font-black uppercase tracking-wider shrink-0">
+              <Phone className="h-3 w-3" />
+              Emergency:
+            </span>
+            <div className="flex items-center gap-0 shrink-0">
+              {HOTLINES.map((h, i) => (
+                <React.Fragment key={h.tel}>
+                  {i > 0 && <span className="text-white/20 mx-1.5">·</span>}
+                  <a
+                    href={`tel:${h.tel}`}
+                    className="text-white/60 hover:text-white transition-colors"
+                  >
+                    <span className="font-semibold text-white/80">{h.label}</span>{' '}
+                    {h.number}
+                  </a>
+                </React.Fragment>
+              ))}
             </div>
 
-            {/* Right: Quick actions */}
-            <div className="flex items-center gap-0.5 ml-auto">
+            {/* Divider */}
+            <span className="text-white/15 mx-1 shrink-0">|</span>
+
+            {/* Quick links */}
+            <div className="flex items-center gap-0 shrink-0">
               {QUICK_ACTIONS.map((action, i) => {
                 const Icon = action.icon;
                 const inner = (
-                  <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-md hover:bg-white/10 transition-colors text-green-300 hover:text-white font-medium text-[11px]">
-                    <Icon className="h-3 w-3 shrink-0 opacity-70" />
+                  <span className="flex items-center gap-1 px-2 py-0.5 rounded hover:bg-white/10 text-green-300 hover:text-white transition-colors font-medium">
+                    <Icon className="h-2.5 w-2.5 opacity-70 shrink-0" />
                     {action.label}
                     {action.external && (
-                      <ExternalLink className="h-2.5 w-2.5 opacity-50" />
+                      <ExternalLink className="h-2 w-2 opacity-40" />
                     )}
                   </span>
                 );
                 return (
                   <span key={action.label} className="flex items-center">
                     {i > 0 && (
-                      <span className="text-primary-700 mx-0.5 select-none">
-                        |
-                      </span>
+                      <span className="text-white/15 mx-0.5">|</span>
                     )}
                     {action.external ? (
                       <a href={action.href} target="_blank" rel="noreferrer">
@@ -204,62 +188,58 @@ const Navbar: React.FC = () => {
               })}
             </div>
 
-            {/* Dismiss button */}
+            {/* Spacer + dismiss */}
             <button
               onClick={dismissBar}
-              className="shrink-0 ml-2 p-1 rounded hover:bg-white/10 text-green-400 hover:text-white transition-colors"
+              className="ml-auto shrink-0 p-1 rounded text-white/30 hover:text-white hover:bg-white/10 transition-colors"
               aria-label="Dismiss"
             >
-              <X className="h-3.5 w-3.5" />
+              <X className="h-3 w-3" />
             </button>
           </div>
-
-          {/* Emergency dropdown backdrop */}
-          {emergencyOpen && (
-            <div
-              className="fixed inset-0 z-40"
-              onClick={() => setEmergencyOpen(false)}
-            />
-          )}
         </div>
       )}
 
-      {/* Main Navbar */}
-      <div className="bg-white shadow-sm border-b border-gray-100">
+      {/* Main Navbar — dark green */}
+      <div
+        className="border-b border-white/10 shadow-lg shadow-black/20"
+        style={{ background: '#0a2e18' }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-18 py-2">
             {/* Logo + Wordmark */}
             <Link to="/" className="flex items-center gap-3 shrink-0">
               <img
                 src="/betterGeneraltrias-logo.png"
                 alt="BetterGenTri"
-                className="h-14 w-auto"
+                className="h-13 w-auto"
+                style={{ height: '52px' }}
               />
               <div className="hidden sm:flex flex-col leading-none">
-                <span className="text-[11px] font-black text-primary-700 uppercase tracking-widest">
+                <span className="text-[10px] font-black text-green-400 uppercase tracking-widest">
                   Better
                 </span>
-                <span className="text-base font-black text-gray-900 leading-tight">
+                <span className="text-[15px] font-black text-white leading-tight">
                   GeneralTrias
-                  <span className="text-primary-600 font-black">.org</span>
+                  <span className="text-green-400">.org</span>
                 </span>
               </div>
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-0.5">
               {mainNavigation.map(item => (
                 <div key={item.label} className="relative group">
                   {item.children ? (
                     <>
-                      <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-700 rounded-md hover:bg-primary-50 transition-colors">
+                      <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white/80 hover:text-white rounded-md hover:bg-white/10 transition-colors">
                         {item.translationKey
                           ? t(item.translationKey, item.label)
                           : item.label}
                         <ChevronDown className="h-3.5 w-3.5 opacity-60 group-hover:rotate-180 transition-transform duration-200" />
                       </button>
-                      <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
-                        <div className="py-1">
+                      <div className="absolute top-full left-0 mt-1 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+                        <div className="py-1.5">
                           {item.children.map(child => (
                             <Link
                               key={child.label}
@@ -280,8 +260,8 @@ const Navbar: React.FC = () => {
                       onClick={e => handleNavClick(e, item.href)}
                       className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                         isActive(item.href)
-                          ? 'text-primary-700 bg-primary-50'
-                          : 'text-gray-700 hover:text-primary-700 hover:bg-primary-50'
+                          ? 'text-white bg-white/15'
+                          : 'text-white/80 hover:text-white hover:bg-white/10'
                       }`}
                     >
                       {item.translationKey
@@ -296,16 +276,16 @@ const Navbar: React.FC = () => {
             {/* Language + Mobile toggle */}
             <div className="flex items-center gap-2">
               {/* Language toggle */}
-              <div className="hidden sm:flex items-center border border-gray-200 rounded-md overflow-hidden">
+              <div className="hidden sm:flex items-center border border-white/20 rounded-md overflow-hidden">
                 {(['en', 'fil'] as LanguageType[]).map((lang, idx) => (
                   <button
                     key={lang}
                     onClick={() => changeLanguage(lang)}
                     className={`px-3 py-1.5 text-xs font-bold uppercase transition-colors ${
                       i18n.language === lang
-                        ? 'bg-primary-700 text-white'
-                        : 'bg-white text-gray-600 hover:bg-gray-50'
-                    } ${idx === 0 ? '' : 'border-l border-gray-200'}`}
+                        ? 'bg-green-600 text-white'
+                        : 'bg-transparent text-white/60 hover:text-white hover:bg-white/10'
+                    } ${idx === 0 ? '' : 'border-l border-white/20'}`}
                   >
                     {lang === 'en' ? 'EN' : 'FIL'}
                   </button>
@@ -315,7 +295,7 @@ const Navbar: React.FC = () => {
               {/* Mobile hamburger */}
               <button
                 onClick={toggleMenu}
-                className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
+                className="lg:hidden p-2 rounded-md text-white/80 hover:text-white hover:bg-white/10 transition-colors"
                 aria-label="Toggle menu"
               >
                 {isOpen ? (
@@ -330,7 +310,10 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden border-t border-gray-100 bg-white">
+          <div
+            className="lg:hidden border-t border-white/10"
+            style={{ background: '#0a2e18' }}
+          >
             <div className="px-4 py-3 space-y-1">
               {mainNavigation.map(item => (
                 <div key={item.label}>
@@ -338,7 +321,7 @@ const Navbar: React.FC = () => {
                     <>
                       <button
                         onClick={() => toggleSubmenu(item.label)}
-                        className="w-full flex justify-between items-center px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-md"
+                        className="w-full flex justify-between items-center px-3 py-2.5 text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                       >
                         {item.translationKey
                           ? t(item.translationKey, item.label)
@@ -348,13 +331,13 @@ const Navbar: React.FC = () => {
                         />
                       </button>
                       {activeMenu === item.label && (
-                        <div className="ml-4 mt-1 space-y-1">
+                        <div className="ml-4 mt-1 space-y-0.5">
                           {item.children.map(child => (
                             <Link
                               key={child.label}
                               to={child.href}
                               onClick={closeMenu}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-700 hover:bg-primary-50 rounded-md"
+                              className="block px-3 py-2 text-sm text-white/60 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                             >
                               {child.translationKey
                                 ? t(child.translationKey, child.label)
@@ -368,7 +351,7 @@ const Navbar: React.FC = () => {
                     <Link
                       to={item.href}
                       onClick={e => handleNavClick(e, item.href, closeMenu)}
-                      className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-md"
+                      className="block px-3 py-2.5 text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                     >
                       {item.translationKey
                         ? t(item.translationKey, item.label)
@@ -377,15 +360,15 @@ const Navbar: React.FC = () => {
                   )}
                 </div>
               ))}
-              <div className="pt-2 border-t border-gray-100 flex gap-2">
+              <div className="pt-2 border-t border-white/10 flex gap-2">
                 {(['en', 'fil'] as LanguageType[]).map(lang => (
                   <button
                     key={lang}
                     onClick={() => changeLanguage(lang)}
                     className={`px-4 py-1.5 text-xs font-bold uppercase rounded border transition-colors ${
                       i18n.language === lang
-                        ? 'bg-primary-700 text-white border-primary-700'
-                        : 'bg-white text-gray-600 border-gray-300'
+                        ? 'bg-green-600 text-white border-green-600'
+                        : 'bg-transparent text-white/60 border-white/20 hover:text-white'
                     }`}
                   >
                     {lang === 'en' ? 'EN' : 'FIL'}

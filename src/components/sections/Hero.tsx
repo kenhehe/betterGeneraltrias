@@ -216,7 +216,7 @@ export default function Hero() {
                   color: '#72cc9d',
                 }}
               >
-                GenTri.ph
+                GeneralTrias.org
               </span>
             </h1>
 
