@@ -1,4 +1,4 @@
-import { Users, MapPin, Building2, Map } from 'lucide-react';
+import { Users, MapPin, Building2, Map, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useInView } from '../../hooks/useInView';
@@ -35,44 +35,64 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="bg-white border-b border-gray-100 py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl font-black text-gray-900">
-            {t('stats.title')}
-          </h2>
-          <Link
-            to="/government/reports-and-statistics/city-profile"
-            className="text-sm font-semibold text-primary-700 hover:text-primary-800 flex items-center gap-1 transition-colors"
-          >
-            {t('stats.viewProfile')}
-          </Link>
-        </div>
-        <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <section
+      className="relative py-10 overflow-hidden"
+      style={{
+        background:
+          'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)',
+      }}
+    >
+      {/* Subtle pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.05]"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle, rgba(255,255,255,1) 1px, transparent 1px)',
+          backgroundSize: '32px 32px',
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+        <div
+          ref={ref}
+          className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10"
+        >
           {STATS.map(({ icon: Icon, value, label, description }, idx) => (
             <div
               key={description}
-              className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-200"
+              className="flex flex-col items-center text-center px-6 py-8"
               style={{
                 opacity: inView ? 1 : 0,
-                transform: inView ? 'translateY(0)' : 'translateY(24px)',
-                transition: `opacity 0.5s ease ${idx * 100}ms, transform 0.5s ease ${idx * 100}ms, box-shadow 0.2s, translate 0.2s`,
+                transform: inView ? 'translateY(0)' : 'translateY(20px)',
+                transition: `opacity 0.5s ease ${idx * 100}ms, transform 0.5s ease ${idx * 100}ms`,
               }}
             >
-              <div className="bg-primary-100 text-primary-700 w-9 h-9 rounded-lg flex items-center justify-center mb-3">
-                <Icon className="h-4 w-4" />
+              <div className="bg-white/10 rounded-xl p-2.5 mb-4">
+                <Icon className="h-5 w-5 text-green-300" />
               </div>
-              <div className="text-2xl font-black text-gray-900 leading-none mb-1">
+              <div className="text-3xl sm:text-4xl font-black text-white leading-none mb-1">
                 {value}
               </div>
               {label && (
-                <div className="text-sm font-semibold text-gray-800">
+                <div className="text-sm font-bold text-green-200 mb-1">
                   {label}
                 </div>
               )}
-              <div className="text-xs text-gray-600 mt-0.5">{description}</div>
+              <div className="text-xs text-green-400 leading-relaxed">
+                {description}
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="border-t border-white/10 pt-4 pb-2 flex justify-center">
+          <Link
+            to="/government/reports-and-statistics/city-profile"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-green-300 hover:text-white transition-colors uppercase tracking-wide"
+          >
+            {t('stats.viewProfile')}
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
         </div>
       </div>
     </section>
