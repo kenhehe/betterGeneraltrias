@@ -1,4 +1,3 @@
-# Transparency Documents - General Trias City
 layout: grid
 title: 'Transparency Documents'
 description: 'Mandated disclosure documents under the Full Disclosure Policy (DILG), Freedom of Information, and other transparency laws.'
@@ -6,12 +5,19 @@ pages:
   - name: 'Full Disclosure Policy Documents'
     slug: 'full-disclosure'
     description: 'DILG-mandated budget, financial, and procurement documents required for public posting.'
+
   - name: 'Annual Budget'
     slug: 'annual-budget'
     description: 'General Trias City annual appropriations and budget breakdown by department and program.'
-  - name: 'Statement of Assets, Liabilities and Net Worth (SALN)'
+
+  - name: 'SALN — Statement of Assets, Liabilities & Net Worth'
     slug: 'saln'
     description: 'SALN filings of General Trias City elected officials and key government employees.'
+
   - name: 'Freedom of Information (FOI) Releases'
     slug: 'foi-releases'
     description: 'Documents and data released in response to Freedom of Information requests.'
+
+  - name: 'Official Planning Documents & Downloads'
+    slug: 'downloads'
+    description: 'Download the CLUP 2022–2030, Comprehensive Development Plan 2020–2029, ELA 2022–2025, and zoning maps.'

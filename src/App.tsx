@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
 import TouristSpots from './pages/TouristSpots';
+import CityProfile from './pages/CityProfile';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -32,6 +33,10 @@ function App() {
               />
               <Route path="/government/:category" element={<Government />} />
               <Route path="/government" element={<Government />} />
+              <Route
+                path="/government/reports-and-statistics/city-profile"
+                element={<CityProfile />}
+              />
               <Route
                 path="/government/:category/:documentSlug"
                 element={<Document categoryType="government" />}
