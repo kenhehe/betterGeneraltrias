@@ -175,7 +175,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gray-800 mt-2 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
           <span>
-            © {new Date().getFullYear()} BetterGenTri.ph
+            © {new Date().getFullYear()} BetterGeneralTrias.org
             <span className="mx-2 opacity-40">|</span>
             MIT | CC BY 4.0
             <span className="mx-2 opacity-40">|</span>
