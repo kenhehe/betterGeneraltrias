@@ -2,9 +2,17 @@
 # Information for tourists and tourism-related businesses
 
 pages:
-  - name: 'Explore tourist spots in General Trias City'
+  - name: 'Must-See Places in General Trias City'
     slug: 'explore-tourist-spots'
-    description: 'Discover the top tourist destinations in General Trias City, including Taal Volcano, Peoples Park in the Sky, and more.'
+    description: 'Discover the official tourist destinations of General Trias City — from century-old churches and a heritage museum to championship golf and scenic public parks.'
+
+  - name: 'Where to Stay'
+    slug: 'where-to-stay'
+    description: 'Find hotels, private resorts, and accommodations in General Trias City for your visit or weekend getaway.'
+
+  - name: 'Local Products & Souvenirs'
+    slug: 'local-products-and-souvenirs'
+    description: 'Support local businesses — shop for carabao milk dairy products, pastillas, handmade bags, paintings, and other authentic GenTri products.'
 
   - name: 'Apply for tourism-related business permits'
     slug: 'tourism-business-permits'
