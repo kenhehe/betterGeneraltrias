@@ -1,5 +1,5 @@
 {
-  "name": "betterlocalgov",
+  "name": "bettergentri",
   "private": true,
   "version": "0.2.0",
   "type": "module",
@@ -16,8 +16,7 @@
     "preview": "vite preview",
     "prepare": "husky",
     "convert-yaml": "node scripts/yaml-to-json.js",
-    "dev:yaml": "npm run convert-yaml && npm run dev",
-    "setup": "node scripts/setup-starter-kit.js"
+    "dev:yaml": "npm run convert-yaml && npm run dev"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

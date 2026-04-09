@@ -169,10 +169,9 @@ export default function Hero() {
     <div
       className="relative text-white overflow-hidden"
       style={{
-        backgroundColor: '#003087',
+        backgroundColor: '#16643c',
         backgroundImage:
-          'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)',
-        backgroundSize: '24px 24px',
+          'repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 24px)',
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
@@ -180,7 +179,7 @@ export default function Hero() {
           {/* Left — headline + CTAs */}
           <div>
             <p
-              className="text-blue-100 text-sm font-medium uppercase tracking-widest mb-1"
+              className="text-green-100 text-sm font-medium uppercase tracking-widest mb-1"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? 'translateX(0)' : 'translateX(-20px)',
@@ -198,10 +197,10 @@ export default function Hero() {
                   'opacity 0.6s ease 100ms, transform 0.6s ease 100ms',
               }}
             >
-              BetterTagaytay.org
+              BetterGenTri.ph
             </h1>
             <p
-              className="text-blue-100 text-base md:text-lg leading-relaxed mb-8 max-w-md"
+              className="text-green-100 text-base md:text-lg leading-relaxed mb-8 max-w-md"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? 'translateY(0)' : 'translateY(16px)',
@@ -222,7 +221,7 @@ export default function Hero() {
             >
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-primary-700 font-bold text-sm rounded-lg hover:bg-blue-50 hover:scale-105 active:scale-95 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-primary-700 font-bold text-sm rounded-lg hover:bg-green-50 hover:scale-105 active:scale-95 transition-all duration-200"
               >
                 <ArrowRight className="h-4 w-4" />
                 {t('hero.browseServices', 'Browse Services')}

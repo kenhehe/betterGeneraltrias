@@ -1,6 +1,6 @@
 # Report Illegal Logging, Quarrying, or Fishing
 
-Tagaytay City enforces environmental laws to protect its forests, Taal Lake, and natural resources. Residents are encouraged to report any illegal activities threatening the city's environment.
+General Trias City enforces environmental laws to protect its forests, Taal Lake, and natural resources. Residents are encouraged to report any illegal activities threatening the city's environment.
 
 ## What Can You Report?
 
@@ -15,13 +15,13 @@ Tagaytay City enforces environmental laws to protect its forests, Taal Lake, and
 ### Option 1 — Visit the Office
 
 **City Environment and Natural Resources Office (CENRO)**
-Tagaytay City Hall, Akle St., Kaybagal South
+General Trias City Hall, Akle St., Kaybagal South
 Telephone: (046) 413-1220
 
 ### Option 2 — Call Directly
 
 - **CENRO:** (046) 413-1220
-- **PNP Tagaytay:** (046) 413-1282
+- **PNP General Trias:** (046) 413-1282
 - **DENR Region IV-A (CALABARZON):** (049) 536-4997 (DOST Regional)
 
 ### Option 3 — Report to Your Barangay
@@ -49,4 +49,4 @@ Violations are prosecuted under:
 - Republic Act No. 9175 (Chainsaw Act)
 - Republic Act No. 7586 (NIPAS Act)
 - Republic Act No. 8550 (Philippine Fisheries Code)
-- Local ordinances of Tagaytay City
+- Local ordinances of General Trias City

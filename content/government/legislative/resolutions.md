@@ -1,6 +1,6 @@
-# City Council Resolutions — Tagaytay City
+# City Council Resolutions — General Trias City
 
-Resolutions are official declarations or expressions of intent by the **Sangguniang Panlungsod ng Tagaytay City**. Unlike ordinances, resolutions are typically one-time acts that do not carry the force of permanent law.
+Resolutions are official declarations or expressions of intent by the **Sangguniang Panlungsod ng General Trias City**. Unlike ordinances, resolutions are typically one-time acts that do not carry the force of permanent law.
 
 ---
 
@@ -28,7 +28,7 @@ Resolutions are recorded in the official **legislative records** of the Sangguni
 
 **Contact:**
 Sangguniang Panlungsod Secretariat
-City Hall, Akle St., Kaybagal South, Tagaytay City
+City Hall, Akle St., Kaybagal South, General Trias City
 Telephone: (046) 888-9500
 
-For resolutions posted online, visit the [Guides and Regulations](/government/guides-and-regulations/resolutions) section or https://www.tagaytay.gov.ph.
+For resolutions posted online, visit the [Guides and Regulations](/government/guides-and-regulations/resolutions) section or https://www.generaltrias.gov.ph.

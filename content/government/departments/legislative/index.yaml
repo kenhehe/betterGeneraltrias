@@ -1,9 +1,9 @@
 # Legislative Department Pages
-# Sangguniang Panlungsod of Tagaytay City
+# Sangguniang Panlungsod of General Trias City
 
 layout: grid
 title: 'Sangguniang Panlungsod'
-description: 'The City Council of Tagaytay City — the legislative body responsible for passing ordinances and resolutions for the benefit of the city.'
+description: 'The City Council of General Trias City — the legislative body responsible for passing ordinances and resolutions for the benefit of the city.'
 pages:
   - name: 'City Council Members'
     slug: 'city-council'
@@ -15,12 +15,12 @@ pages:
 
   - name: 'City Ordinances'
     slug: 'ordinances'
-    description: 'Local laws and ordinances enacted by the Sangguniang Panlungsod of Tagaytay City.'
+    description: 'Local laws and ordinances enacted by the Sangguniang Panlungsod of General Trias City.'
 
   - name: 'City Council Resolutions'
     slug: 'resolutions'
-    description: 'Official resolutions adopted by the Tagaytay City Council on matters of public concern.'
+    description: 'Official resolutions adopted by the General Trias City Council on matters of public concern.'
 
   - name: 'Public Sessions'
     slug: 'public-sessions'
-    description: 'Schedule and information on public City Council sessions open to Tagaytay City residents.'
+    description: 'Schedule and information on public City Council sessions open to General Trias City residents.'

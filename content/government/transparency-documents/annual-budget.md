@@ -1,4 +1,4 @@
-# Annual Budget — Tagaytay City
+# Annual Budget — General Trias City
 
 The **Annual Budget** (also called the **Annual Appropriations Ordinance**) is the city's spending plan for the fiscal year, enacted by the **Sangguniang Panlungsod** and signed by the **Mayor**.
 
@@ -8,7 +8,7 @@ Under the **Full Disclosure Policy**, the city is required to post the approved 
 
 ## Budget Sources
 
-Tagaytay City's budget is funded from:
+General Trias City's budget is funded from:
 
 | Source                               | Description                                                        |
 | ------------------------------------ | ------------------------------------------------------------------ |
@@ -26,7 +26,7 @@ The city budget is allocated across the following major areas:
 | Expenditure Type            | Description                                                |
 | --------------------------- | ---------------------------------------------------------- |
 | **General Public Services** | City administration, legislative, finance, legal           |
-| **Health Services**         | City Health Office, Ospital ng Tagaytay operations         |
+| **Health Services**         | City Health Office, Ospital ng General Trias operations         |
 | **Education**               | Special Education Fund (SEF), scholarship programs         |
 | **Social Services**         | CSWDO programs for seniors, PWDs, indigent families        |
 | **Economic Services**       | Agriculture, business development, tourism                 |
@@ -43,12 +43,12 @@ The city budget is allocated across the following major areas:
 The full **Annual Appropriations Ordinance** and **Annual Investment Program (AIP)** are available at:
 
 - **DILG Full Disclosure Policy Portal:** https://fdpp.blgs.gov.ph
-  - Search: "Tagaytay City" → Annual Budget
-- **Official Website:** https://www.tagaytay.gov.ph (Downloads section)
-- **City Hall** (hard copies): Office of the City Budget Officer, Tagaytay City Hall
+  - Search: "General Trias City" → Annual Budget
+- **Official Website:** https://www.generaltrias.gov.ph (Downloads section)
+- **City Hall** (hard copies): Office of the City Budget Officer, General Trias City Hall
 
 **Contact — City Budget Officer:**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+General Trias City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 Tel: (046) 888-9500
 
 ---

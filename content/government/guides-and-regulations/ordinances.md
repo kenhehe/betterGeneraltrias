@@ -1,6 +1,6 @@
-# City Ordinances — Tagaytay City
+# City Ordinances — General Trias City
 
-**Ordinances** are local laws enacted by the **Sangguniang Panlungsod** (City Council) of Tagaytay City. They have the force of law within the city and are signed by the **Mayor** before taking effect.
+**Ordinances** are local laws enacted by the **Sangguniang Panlungsod** (City Council) of General Trias City. They have the force of law within the city and are signed by the **Mayor** before taking effect.
 
 ---
 
@@ -63,14 +63,14 @@
 
 ## Where to Access Ordinances
 
-Full texts of Tagaytay City ordinances are available at:
+Full texts of General Trias City ordinances are available at:
 
-- **Sangguniang Panlungsod Office**, Tagaytay City Hall — request certified true copies
-- **Official Website:** https://www.tagaytay.gov.ph
+- **Sangguniang Panlungsod Office**, General Trias City Hall — request certified true copies
+- **Official Website:** https://www.generaltrias.gov.ph
 - **FOI Request:** https://www.foi.gov.ph (for documents not yet online)
 
 **Contact — Sangguniang Panlungsod:**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+General Trias City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 Tel: (046) 888-9500
 
 ---
@@ -80,6 +80,6 @@ Tel: (046) 888-9500
 To report violations of city ordinances, contact:
 
 - **Office of the Mayor:** (046) 888-9500
-- **Tagaytay PNP:** (046) 413-1282
+- **General Trias PNP:** (046) 413-1282
 - **Bureau of Fire Protection:** (046) 483-1193 (fire-related ordinance violations)
 - **City Environment and Natural Resources Office (CENRO):** (046) 888-9500 (environmental violations)

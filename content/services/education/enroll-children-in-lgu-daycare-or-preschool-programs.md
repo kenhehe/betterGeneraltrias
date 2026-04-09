@@ -1,6 +1,6 @@
-# Enroll Children in LGU Daycare or Preschool Programs — Tagaytay City
+# Enroll Children in LGU Daycare or Preschool Programs — General Trias City
 
-The Tagaytay City Government, through the **City Social Welfare and Development Office (CSWDO)** and barangays, operates **daycare centers** and supports **public preschool education**.
+The General Trias City Government, through the **City Social Welfare and Development Office (CSWDO)** and barangays, operates **daycare centers** and supports **public preschool education**.
 
 ---
 
@@ -67,7 +67,7 @@ The Tagaytay City Government, through the **City Social Welfare and Development 
 
 - **Barangay Daycare Centers** — Enrollment schedules and requirements are usually announced by barangay officials.
 - **City Social Welfare and Development Office (CSWDO)** — Oversees daycare programs.
-- **DepEd Tagaytay City Division** — Manages public kindergarten enrollment.
+- **DepEd General Trias City Division** — Manages public kindergarten enrollment.
 
 ---
 

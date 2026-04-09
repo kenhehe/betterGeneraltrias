@@ -1,11 +1,11 @@
-# Full Disclosure Policy Documents — Tagaytay City
+# Full Disclosure Policy Documents — General Trias City
 
 Under **DILG Memorandum Circular 2013-140** and subsequent issuances, all local government units are required to post key fiscal and financial documents in publicly accessible locations and on their official website.
 
-Tagaytay City complies with the **Full Disclosure Policy (FDP)** by publishing these documents at:
+General Trias City complies with the **Full Disclosure Policy (FDP)** by publishing these documents at:
 
-- City Hall bulletin boards (Akle St., Kaybagal South, Tagaytay City)
-- The official website: https://www.tagaytay.gov.ph
+- City Hall bulletin boards (Akle St., Kaybagal South, General Trias City)
+- The official website: https://www.generaltrias.gov.ph
 - The DILG FDP Portal: https://fdpp.blgs.gov.ph
 
 ---
@@ -54,7 +54,7 @@ Tagaytay City complies with the **Full Disclosure Policy (FDP)** by publishing t
 
 If documents are not yet posted online, residents may file a **Freedom of Information (FOI) request**:
 
-1. Visit the **City Hall** (Akle St., Kaybagal South, Tagaytay City)
+1. Visit the **City Hall** (Akle St., Kaybagal South, General Trias City)
 2. Submit a written request at the **Office of the City Administrator** or the relevant department
 3. Or file online at: https://www.foi.gov.ph
 
@@ -64,6 +64,6 @@ If documents are not yet posted online, residents may file a **Freedom of Inform
 
 ## Transparency Seal
 
-Tagaytay City holds the **Transparency Seal**, awarded to LGUs that comply with public disclosure requirements. The seal is displayed on the official website.
+General Trias City holds the **Transparency Seal**, awarded to LGUs that comply with public disclosure requirements. The seal is displayed on the official website.
 
-_Documents linked above are sourced from the official Tagaytay City government website and the DILG Full Disclosure Policy Portal. For the most current versions, visit https://www.tagaytay.gov.ph or https://fdpp.blgs.gov.ph._
+_Documents linked above are sourced from the official General Trias City government website and the DILG Full Disclosure Policy Portal. For the most current versions, visit https://www.generaltrias.gov.ph or https://fdpp.blgs.gov.ph._

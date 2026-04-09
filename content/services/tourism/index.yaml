@@ -1,15 +1,15 @@
-# Tourism Services - Tagaytay City
+# Tourism Services - General Trias City
 # Information for tourists and tourism-related businesses
 
 pages:
-  - name: 'Explore tourist spots in Tagaytay City'
+  - name: 'Explore tourist spots in General Trias City'
     slug: 'explore-tourist-spots'
-    description: 'Discover the top tourist destinations in Tagaytay City, including Taal Volcano, Peoples Park in the Sky, and more.'
+    description: 'Discover the top tourist destinations in General Trias City, including Taal Volcano, Peoples Park in the Sky, and more.'
 
   - name: 'Apply for tourism-related business permits'
     slug: 'tourism-business-permits'
-    description: 'How to apply for permits, accreditation, and clearances for tourism-related businesses in Tagaytay City.'
+    description: 'How to apply for permits, accreditation, and clearances for tourism-related businesses in General Trias City.'
 
   - name: 'Emergency contacts and visitor safety'
     slug: 'visitor-safety'
-    description: 'Emergency hotlines and safety information for visitors to Tagaytay City.'
+    description: 'Emergency hotlines and safety information for visitors to General Trias City.'

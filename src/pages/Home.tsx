@@ -11,8 +11,8 @@ const Home: React.FC = () => {
   return (
     <>
       <SEO
-        description="BetterTagaytay — a community transparency portal for Tagaytay City, Cavite. Access government services, officials, budgets, and public information."
-        keywords="Tagaytay City, Cavite, government, services, transparency, officials, budget"
+        description="BetterGenTri — a community transparency portal for General Trias City, Cavite. Access government services, officials, budgets, and public information."
+        keywords="General Trias City, Cavite, GenTri, government, services, transparency, officials, budget"
       />
       <main>
         <Hero />

@@ -1,6 +1,6 @@
 # Apply for Senior Citizen, Solo Parent, or PWD Assistance
 
-The City Social Welfare and Development Office (CSWDO) of Tagaytay City provides assistance programs for senior citizens, solo parents, and persons with disabilities (PWDs).
+The City Social Welfare and Development Office (CSWDO) of General Trias City provides assistance programs for senior citizens, solo parents, and persons with disabilities (PWDs).
 
 ## Senior Citizens (60 years old and above)
 
@@ -65,9 +65,9 @@ The City Social Welfare and Development Office (CSWDO) of Tagaytay City provides
 ## Where to Go
 
 **City Social Welfare and Development Office (CSWDO)**
-Tagaytay City Hall, Akle St., Kaybagal South
+General Trias City Hall, Akle St., Kaybagal South
 Telephone: (046) 483-0494
 
 **Office of Senior Citizens Affairs (OSCA)**
-Tagaytay City Hall
+General Trias City Hall
 Telephone: (046) 413-1220

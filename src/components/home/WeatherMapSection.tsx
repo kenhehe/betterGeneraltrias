@@ -39,7 +39,7 @@ export default function WeatherMapSection() {
     }
 
     fetch(
-      'https://api.open-meteo.com/v1/forecast?latitude=14.1153&longitude=120.9621&current_weather=true&timezone=Asia%2FManila'
+      'https://api.open-meteo.com/v1/forecast?latitude=14.3833&longitude=120.8833&current_weather=true&timezone=Asia%2FManila'
     )
       .then(r => r.json())
       .then(data => {
@@ -74,7 +74,7 @@ export default function WeatherMapSection() {
             }}
           >
             <div>
-              <p className="text-blue-200 text-sm font-semibold mb-1">
+              <p className="text-green-200 text-sm font-semibold mb-1">
                 {t('weatherMap.location')}
               </p>
               <div className="flex items-end gap-3 mb-2">
@@ -85,30 +85,30 @@ export default function WeatherMapSection() {
                   C
                 </span>
               </div>
-              <p className="text-blue-100 text-base font-medium">
+              <p className="text-green-100 text-base font-medium">
                 {weather
                   ? getWeatherLabel(weather.weathercode, t)
                   : t('weatherMap.defaultCondition')}
               </p>
             </div>
             <div className="flex gap-6 mt-6 pt-4 border-t border-white/20">
-              <span className="flex items-center gap-1.5 text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 text-sm text-green-100">
                 <Wind className="h-4 w-4 opacity-70" />
                 {weather
                   ? `${weather.windspeed} ${t('weatherMap.wind')}`
                   : `-- ${t('weatherMap.wind')}`}
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 text-sm text-green-100">
                 <Thermometer className="h-4 w-4 opacity-70" />
                 {t('weatherMap.climate')}
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-blue-100">
+              <span className="flex items-center gap-1.5 text-sm text-green-100">
                 <Droplets className="h-4 w-4 opacity-70" />
                 {t('weatherMap.elevation')}
               </span>
             </div>
             {!weather && (
-              <div className="mt-3 flex items-center gap-2 text-blue-200 text-xs">
+              <div className="mt-3 flex items-center gap-2 text-green-200 text-xs">
                 <Cloud className="h-3.5 w-3.5 animate-pulse" />
                 {t('weatherMap.loading')}
               </div>
@@ -126,7 +126,7 @@ export default function WeatherMapSection() {
           >
             <iframe
               title={t('weatherMap.mapTitle')}
-              src="https://www.openstreetmap.org/export/embed.html?bbox=120.9221%2C14.0853%2C121.0021%2C14.1453&layer=mapnik&marker=14.1153%2C120.9621"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=120.8333%2C14.3333%2C120.9333%2C14.4333&layer=mapnik&marker=14.3833%2C120.8833"
               className="w-full h-full min-h-[220px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

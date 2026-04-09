@@ -1,14 +1,14 @@
-# Reports and Statistics - Tagaytay City
+# Reports and Statistics - General Trias City
 layout: grid
 title: 'Reports and Statistics'
 description: 'Annual accomplishment reports, city profile data, infrastructure project updates, and performance metrics.'
 pages:
   - name: 'Annual Accomplishment Report'
     slug: 'annual-report'
-    description: 'Year-end report on the programs, projects, and activities completed by the Tagaytay City Government.'
+    description: 'Year-end report on the programs, projects, and activities completed by the General Trias City Government.'
   - name: 'City Profile and Statistics'
     slug: 'city-profile'
-    description: 'Demographic data, economic indicators, land area, barangay information, and key statistics for Tagaytay City.'
+    description: 'Demographic data, economic indicators, land area, barangay information, and key statistics for General Trias City.'
   - name: 'Infrastructure Projects'
     slug: 'infrastructure-projects'
     description: 'Status and details of ongoing and completed infrastructure projects funded by the city government.'

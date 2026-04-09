@@ -1,6 +1,6 @@
-# Annual Accomplishment Report — Tagaytay City
+# Annual Accomplishment Report — General Trias City
 
-The **Annual Accomplishment Report** summarizes the programs, projects, and activities (PPAs) completed by the City Government of Tagaytay during the fiscal year. It is a key accountability document that shows residents how their tax money was spent and what was delivered.
+The **Annual Accomplishment Report** summarizes the programs, projects, and activities (PPAs) completed by the City Government of General Trias during the fiscal year. It is a key accountability document that shows residents how their tax money was spent and what was delivered.
 
 ---
 
@@ -8,8 +8,8 @@ The **Annual Accomplishment Report** summarizes the programs, projects, and acti
 
 Annual reports are submitted to the **Sangguniang Panlungsod** and published as required under the Local Government Code:
 
-- **Official Website:** https://www.tagaytay.gov.ph (Downloads section)
-- **City Hall:** Office of the City Administrator, Tagaytay City Hall
+- **Official Website:** https://www.generaltrias.gov.ph (Downloads section)
+- **City Hall:** Office of the City Administrator, General Trias City Hall
 - **DILG FDP Portal:** https://fdpp.blgs.gov.ph
 
 ---
@@ -24,11 +24,11 @@ Projects typically reported include:
 - Drainage and flood control improvements
 - Public market upgrades
 - City hall and public building improvements
-- Sports and recreational facilities (e.g., Tagaytay City Velodrome)
+- Sports and recreational facilities (e.g., General Trias City Velodrome)
 
 ### 2. Health Services
 
-- Number of patients served at the Ospital ng Tagaytay and City Health Office
+- Number of patients served at the Ospital ng General Trias and City Health Office
 - Vaccination and immunization coverage
 - Maternal and child health program outcomes
 - Medical missions and outreach activities
@@ -73,13 +73,13 @@ Projects typically reported include:
 
 The Mayor delivers an annual **State of the City Address (SOCA)** to the Sangguniang Panlungsod, which serves as a public summary of the city government's accomplishments and plans. SOCA transcripts and videos are typically available at:
 
-- Official Tagaytay City Facebook Page
-- Official Website: https://www.tagaytay.gov.ph
+- Official General Trias City Facebook Page
+- Official Website: https://www.generaltrias.gov.ph
 
 ---
 
 ## Contact
 
 **Office of the City Administrator**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+General Trias City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 Tel: (046) 888-9500

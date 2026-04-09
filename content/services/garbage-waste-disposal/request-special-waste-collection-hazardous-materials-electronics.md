@@ -1,4 +1,4 @@
-# Request Special Collection Services for Hazardous Waste & E-Waste — Tagaytay City
+# Request Special Collection Services for Hazardous Waste & E-Waste — General Trias City
 
 Hazardous and electronic wastes (e-waste) cannot be disposed of with regular garbage. The City Environment and Natural Resources Office (CENRO) and barangays coordinate **special collection drives** and drop-off services for these items.
 
@@ -44,9 +44,9 @@ Hazardous and electronic wastes (e-waste) cannot be disposed of with regular gar
 ## 4) Contact Information
 
 - **City Environment and Natural Resources Office (CENRO)**  
-  Tagaytay City Hall, Government Complex, Brgy. Pajo  
+  General Trias City Hall, Government Complex, Brgy. Pajo  
   Phone: (046) 888-9500 (City Hall trunkline, ask for CENRO)  
-  Updates: [Tagaytay City Government Facebook Page](https://www.www.facebook.com/TagaytayCityGovernment)
+  Updates: [General Trias City Government Facebook Page](https://www.facebook.com/GeneralTriasCityGovernment)
 
 - **Barangay Halls** — Environment/Solid Waste desk for barangay-level pickup scheduling.
 

@@ -1,4 +1,4 @@
-# Sangguniang Panlungsod Resolutions — Tagaytay City
+# Sangguniang Panlungsod Resolutions — General Trias City
 
 **Resolutions** are formal expressions of the sense or opinion of the **Sangguniang Panlungsod** (City Council). Unlike ordinances, resolutions do not have the force of law — they express the council's position, authorize specific actions, or convey requests to other government bodies.
 
@@ -32,12 +32,12 @@
 
 Certified true copies of Sangguniang Panlungsod resolutions are available at:
 
-- **Sangguniang Panlungsod Office**, Tagaytay City Hall
-- **Official Website:** https://www.tagaytay.gov.ph (when posted)
+- **Sangguniang Panlungsod Office**, General Trias City Hall
+- **Official Website:** https://www.generaltrias.gov.ph (when posted)
 - **FOI Request:** https://www.foi.gov.ph
 
 **Contact — Sangguniang Panlungsod Secretary:**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+General Trias City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 Tel: (046) 888-9500
 
 ---
@@ -48,7 +48,7 @@ The Sangguniang Panlungsod regularly passes resolutions covering:
 
 - Endorsement of infrastructure projects for national funding (DPWH, DILG)
 - Authorization for the Mayor to sign contracts for city projects
-- Recognition of outstanding Tagaytay City residents, athletes, and organizations
+- Recognition of outstanding General Trias City residents, athletes, and organizations
 - Disaster declarations and emergency authorizations (e.g., Taal Volcano eruption responses)
 - Endorsement of scholarship recipients
 - Acceptance of donations and grants for city programs

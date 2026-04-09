@@ -1,9 +1,9 @@
-# Sangguniang Panlungsod ng Tagaytay
+# Sangguniang Panlungsod ng General Trias
 
-The City Council (Sangguniang Panlungsod) is the legislative body of Tagaytay City, responsible for enacting ordinances and resolutions for the general welfare of the city and its residents.
+The City Council (Sangguniang Panlungsod) is the legislative body of General Trias City, responsible for enacting ordinances and resolutions for the general welfare of the city and its residents.
 
 **Contact:** (046) 483-0729 / 0927-449-9128
-**Office:** Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City
+**Office:** General Trias City Hall, Akle St., Kaybagal South, General Trias City
 
 ---
 
@@ -12,7 +12,7 @@ The City Council (Sangguniang Panlungsod) is the legislative body of Tagaytay Ci
 - Enact ordinances, approve resolutions, and appropriate funds
 - Conduct public hearings on issues affecting the city
 - Review and approve the Annual Investment Plan and budget
-- Represent the interests of Tagaytay City residents
+- Represent the interests of General Trias City residents
 
 ## Legislative Records
 
@@ -34,6 +34,6 @@ The Sangguniang Panlungsod operates through several standing committees includin
 
 ## Public Sessions
 
-City Council sessions are generally held twice a month and are open to the public. Check the official Tagaytay City website or the Sangguniang Panlungsod office for the current session schedule.
+City Council sessions are generally held twice a month and are open to the public. Check the official General Trias City website or the Sangguniang Panlungsod office for the current session schedule.
 
 For the full list of city council members, visit the [Local Officials](/government/departments/officials) page.

@@ -1,6 +1,6 @@
 # Ask About Available Relocation Sites in Case of Demolition
 
-If you or your family is facing demolition due to government infrastructure projects, road widening, danger zone clearing, or other public works, Tagaytay City is obligated to provide relocation assistance under Republic Act No. 7279 (Urban Development and Housing Act).
+If you or your family is facing demolition due to government infrastructure projects, road widening, danger zone clearing, or other public works, General Trias City is obligated to provide relocation assistance under Republic Act No. 7279 (Urban Development and Housing Act).
 
 ## Your Rights
 
@@ -15,7 +15,7 @@ Under RA 7279, no demolition may proceed without:
 
 Ask the City Social Welfare and Development Office (CSWDO) or City Planning and Development Office (CPDO) about:
 
-- Available relocation sites within or near Tagaytay City
+- Available relocation sites within or near General Trias City
 - NHA-managed resettlement areas in Cavite
 - Ongoing community-based relocation programs
 
@@ -40,8 +40,8 @@ Ask the City Social Welfare and Development Office (CSWDO) or City Planning and 
 Telephone: (046) 483-0494
 
 **City Planning and Development Office (CPDO)**
-Tagaytay City Hall, Akle St., Kaybagal South
+General Trias City Hall, Akle St., Kaybagal South
 Telephone: (046) 413-1220
 
-**Public Attorney's Office (PAO) — MTCC Tagaytay**
+**Public Attorney's Office (PAO) — MTCC General Trias**
 Telephone: (046) 413-1225

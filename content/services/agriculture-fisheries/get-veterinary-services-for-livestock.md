@@ -1,6 +1,6 @@
 # Get Veterinary Services for Livestock
 
-The Tagaytay City Agriculture Office provides free and subsidized veterinary services for livestock and poultry to support the city's farmers and backyard raisers.
+The General Trias City Agriculture Office provides free and subsidized veterinary services for livestock and poultry to support the city's farmers and backyard raisers.
 
 ## Services Available
 
@@ -12,14 +12,14 @@ The Tagaytay City Agriculture Office provides free and subsidized veterinary ser
 
 ## Who Can Avail
 
-- Tagaytay City residents with livestock or poultry
+- General Trias City residents with livestock or poultry
 - Registered farmers and backyard animal raisers
 - Pet owners (for rabies vaccination campaigns)
 
 ## Requirements
 
 - Valid government-issued ID
-- Proof of residence in Tagaytay City
+- Proof of residence in General Trias City
 
 ## How to Avail
 
@@ -30,7 +30,7 @@ The Tagaytay City Agriculture Office provides free and subsidized veterinary ser
 ## Where to Go
 
 **City Agriculture Office**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City
+General Trias City Hall, Akle St., Kaybagal South, General Trias City
 Telephone: (046) 413-1220
 
 ## Schedule

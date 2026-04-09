@@ -1,6 +1,6 @@
 # Get Family and Community Welfare Support
 
-The City Social Welfare and Development Office (CSWDO) of Tagaytay City provides family and community welfare services to residents in need of social assistance, counseling, and protection.
+The City Social Welfare and Development Office (CSWDO) of General Trias City provides family and community welfare services to residents in need of social assistance, counseling, and protection.
 
 ## Services Available
 
@@ -42,7 +42,7 @@ Requirements vary per program. Bring a valid ID and barangay certificate of resi
 ## Where to Go
 
 **City Social Welfare and Development Office (CSWDO)**
-Tagaytay City Hall, Akle St., Kaybagal South
+General Trias City Hall, Akle St., Kaybagal South
 Telephone: (046) 483-0494
 
 Office hours: Monday–Friday, 8:00 AM – 5:00 PM

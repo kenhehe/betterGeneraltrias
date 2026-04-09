@@ -1,4 +1,4 @@
-# Statement of Assets, Liabilities and Net Worth (SALN) — Tagaytay City
+# Statement of Assets, Liabilities and Net Worth (SALN) — General Trias City
 
 The **SALN** is a sworn declaration that all government officials and employees are required to file annually under **Republic Act 6713** (Code of Conduct and Ethical Standards for Public Officials and Employees) and **Republic Act 3019** (Anti-Graft and Corrupt Practices Act).
 
@@ -8,7 +8,7 @@ SALNs promote transparency and accountability by disclosing the financial intere
 
 ## Who Must File
 
-All **elected officials**, **department heads**, and **government employees** of Tagaytay City are required to file a SALN, including:
+All **elected officials**, **department heads**, and **government employees** of General Trias City are required to file a SALN, including:
 
 - Mayor
 - Vice Mayor
@@ -46,14 +46,14 @@ Under **Executive Order 2 (2016)** (Freedom of Information), SALNs of government
 
 **Request a copy:**
 
-1. File a written request at the **Office of the Human Resource Management Officer (HRMO)**, Tagaytay City Hall
+1. File a written request at the **Office of the Human Resource Management Officer (HRMO)**, General Trias City Hall
 2. Specify the name of the official and the year(s) requested
 3. Or file via the national FOI portal: https://www.foi.gov.ph
 
 **Ombudsman SALN Portal (for national officials):** https://www.ombudsman.gov.ph
 
 **Contact — City HRMO:**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+General Trias City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 Tel: (046) 888-9500
 
 ---

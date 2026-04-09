@@ -1,6 +1,6 @@
 # Borrow Farm Tools or Equipment from the LGU
 
-Tagaytay City provides registered farmers access to farm tools and equipment through a lending program managed by the City Agriculture Office.
+General Trias City provides registered farmers access to farm tools and equipment through a lending program managed by the City Agriculture Office.
 
 ## Equipment Available for Borrowing
 
@@ -12,7 +12,7 @@ Tagaytay City provides registered farmers access to farm tools and equipment thr
 
 ## Who Can Borrow
 
-- Registered farmers in Tagaytay City
+- Registered farmers in General Trias City
 - Members of accredited farmers' associations or cooperatives
 - Priority given to small-scale and subsistence farmers
 
@@ -24,7 +24,7 @@ Tagaytay City provides registered farmers access to farm tools and equipment thr
 
 ## How to Borrow
 
-1. Visit the City Agriculture Office at Tagaytay City Hall
+1. Visit the City Agriculture Office at General Trias City Hall
 2. Fill out the Equipment Loan Request Form
 3. Sign the borrower's agreement
 4. Coordinate the pickup and return schedule
@@ -38,5 +38,5 @@ Tagaytay City provides registered farmers access to farm tools and equipment thr
 ## Where to Go
 
 **City Agriculture Office**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City
+General Trias City Hall, Akle St., Kaybagal South, General Trias City
 Telephone: (046) 413-1220

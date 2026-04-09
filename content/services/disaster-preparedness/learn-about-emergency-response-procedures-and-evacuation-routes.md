@@ -1,24 +1,24 @@
 # Learn About Emergency Response Procedures and Evacuation Routes
 
-Tagaytay City has established emergency response procedures and evacuation routes due to its location near Taal Volcano. Knowing these procedures can save lives during disasters.
+General Trias City has established emergency response procedures and evacuation routes due to its location near Taal Volcano. Knowing these procedures can save lives during disasters.
 
 ## Emergency Contacts
 
 | Office                    | Number                          |
 | ------------------------- | ------------------------------- |
 | CDRRMO (24/7)             | (046) 483-0446                  |
-| PNP Tagaytay              | (046) 413-1282                  |
-| Ospital ng Tagaytay       | (046) 423-3195 / (046) 413-9001 |
+| PNP General Trias              | (046) 413-1282                  |
+| Ospital ng General Trias       | (046) 423-3195 / (046) 413-9001 |
 | Bureau of Fire Protection | (046) 483-1193                  |
 | City Health Office        | (046) 483-0604                  |
 | City Hall (main line)     | (046) 888-9500                  |
 
 ## Evacuation Routes
 
-Main evacuation routes from Tagaytay City lead to:
+Main evacuation routes from General Trias City lead to:
 
 - **Silang, Cavite** — via Emilio Aguinaldo Highway going north
-- **Alfonso, Cavite** — via the Alfonso-Tagaytay Road
+- **Alfonso, Cavite** — via the Alfonso-General Trias Road
 - **Amadeo** — via the interior roads
 
 **Avoid routes going toward Taal Lake** during volcanic alerts.
@@ -45,4 +45,4 @@ Main evacuation routes from Tagaytay City lead to:
 
 - **PHIVOLCS:** (046) 483-1401 / (046) 413-1785
 - **PAGASA:** For weather updates during disasters
-- Follow **Tagaytay City Official** social media for real-time updates
+- Follow **General Trias City Official** social media for real-time updates

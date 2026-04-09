@@ -1,10 +1,10 @@
 # Department Pages
-# Government departments and offices of Tagaytay City
+# Government departments and offices of General Trias City
 
 pages:
   - name: 'Executive'
     slug: 'executive'
-    description: "Find out about the Mayor and Vice Mayor of Tagaytay City, including the Mayor's programs, mayoral history, and key roles in the city government."
+    description: "Find out about the Mayor and Vice Mayor of General Trias City, including the Mayor's programs, mayoral history, and key roles in the city government."
   - name: 'Local Officials Directory'
     slug: 'officials'
-    description: 'Full directory of elected officials, city councilors, and department contacts for Tagaytay City.'
+    description: 'Full directory of elected officials, city councilors, and department contacts for General Trias City.'

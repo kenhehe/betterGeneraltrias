@@ -1,22 +1,22 @@
 # Request Access to Barangay Water Supply Systems
 
-Tagaytay City residents without access to private water connections may request connection to barangay-level water supply systems or seek assistance from the Local Water Utilities Administration (LWUA) and the City Government.
+General Trias City residents without access to private water connections may request connection to barangay-level water supply systems or seek assistance from the Local Water Utilities Administration (LWUA) and the City Government.
 
 ## Options for Water Access
 
 ### 1. Barangay Waterworks System
 
-Many barangays in Tagaytay operate their own waterworks. Contact your barangay hall to:
+Many barangays in General Trias operate their own waterworks. Contact your barangay hall to:
 
 - Apply for a water connection
 - Report water supply interruptions
 - Request repair of water pipes or meters
 
-### 2. Tagaytay City Water District
+### 2. General Trias City Water District
 
 The city water district provides piped water to residential and commercial establishments.
 
-**Tagaytay City Water District**
+**General Trias City Water District**
 Telephone: Contact the City Hall at (046) 888-9500 for referral
 
 ### 3. Deep Well / Alternative Sources
@@ -43,5 +43,5 @@ For barangays not covered by piped water:
 ## Where to Go
 
 **City Hall — General Services Office**
-Akle St., Kaybagal South, Tagaytay City
+Akle St., Kaybagal South, General Trias City
 Telephone: (046) 888-9500 / (046) 413-1220

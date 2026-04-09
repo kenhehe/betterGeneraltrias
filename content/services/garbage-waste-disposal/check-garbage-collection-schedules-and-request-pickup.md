@@ -1,6 +1,6 @@
-# Check Garbage Collection Schedules and Request Pickup — Tagaytay City
+# Check Garbage Collection Schedules and Request Pickup — General Trias City
 
-The City Government of Tagaytay City manages **regular garbage collection** through the **City Environment and Natural Resources Office (CENRO)** and barangays. Residents and business owners are encouraged to follow the schedule and proper segregation rules.
+The City Government of General Trias City manages **regular garbage collection** through the **City Environment and Natural Resources Office (CENRO)** and barangays. Residents and business owners are encouraged to follow the schedule and proper segregation rules.
 
 ---
 
@@ -44,7 +44,7 @@ For **bulk waste** (e.g., furniture, appliances, construction debris, yard trimm
 ## 3) Contact Information
 
 - **City Environment and Natural Resources Office (CENRO)**  
-  Tagaytay City Hall, Government Complex, Brgy. Pajo  
+  General Trias City Hall, Government Complex, Brgy. Pajo  
   Phone: (046) 888-9500 (City Hall trunkline, ask for CENRO)  
   Updates: via **City Information Office** FB page
 

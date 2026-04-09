@@ -1,12 +1,12 @@
-# City Ordinances — Tagaytay City
+# City Ordinances — General Trias City
 
-City ordinances are local laws enacted by the **Sangguniang Panlungsod ng Tagaytay City**. They govern matters of public policy, public order, and the general welfare of the city's residents and visitors.
+City ordinances are local laws enacted by the **Sangguniang Panlungsod ng General Trias City**. They govern matters of public policy, public order, and the general welfare of the city's residents and visitors.
 
 ---
 
 ## What is a City Ordinance?
 
-An ordinance is a formal piece of legislation passed by the City Council (Sangguniang Panlungsod) and signed into law by the **City Mayor**. Ordinances are binding on all residents, businesses, and visitors within Tagaytay City's jurisdiction.
+An ordinance is a formal piece of legislation passed by the City Council (Sangguniang Panlungsod) and signed into law by the **City Mayor**. Ordinances are binding on all residents, businesses, and visitors within General Trias City's jurisdiction.
 
 ---
 
@@ -28,7 +28,7 @@ The full text of city ordinances is on file at the **Sangguniang Panlungsod Secr
 
 **Contact:**
 Sangguniang Panlungsod Office
-City Hall, Akle St., Kaybagal South, Tagaytay City
+City Hall, Akle St., Kaybagal South, General Trias City
 Telephone: (046) 888-9500
 
-For ordinances available online, visit the [Guides and Regulations](/government/guides-and-regulations/ordinances) section or the official Tagaytay City website at https://www.tagaytay.gov.ph.
+For ordinances available online, visit the [Guides and Regulations](/government/guides-and-regulations/ordinances) section or the official General Trias City website at https://www.generaltrias.gov.ph.

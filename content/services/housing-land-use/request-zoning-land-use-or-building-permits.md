@@ -1,6 +1,6 @@
 # Request Zoning, Land Use, or Building Permits
 
-Before constructing, renovating, or using land in Tagaytay City, you are required to secure the appropriate permits from the City Planning and Development Office (CPDO) and the Office of the Building Official (OBO).
+Before constructing, renovating, or using land in General Trias City, you are required to secure the appropriate permits from the City Planning and Development Office (CPDO) and the Office of the Building Official (OBO).
 
 ## Types of Permits
 
@@ -22,7 +22,7 @@ Required before constructing, renovating, or demolishing any structure.
 - Sanitary/Plumbing Permit (NBC Form A-05)
 - Fencing Permit (if applicable)
 
-> Download forms at: [tagaytay.gov.ph/downloads.html](https://www.tagaytay.gov.ph/downloads.html)
+> Download forms at: [generaltrias.gov.ph/downloads.html](https://www.generaltrias.gov.ph/downloads.html)
 
 ## Requirements for Building Permit
 
@@ -44,10 +44,10 @@ Required before constructing, renovating, or demolishing any structure.
 
 **City Planning and Development Office (CPDO)**
 **Office of the Building Official (OBO)**
-Tagaytay City Hall, Akle St., Kaybagal South
+General Trias City Hall, Akle St., Kaybagal South
 Telephone: (046) 413-1220 / (046) 888-9500
 
 ## Reference Documents
 
-- [Zoning Ordinance](https://www.tagaytay.gov.ph/downloads.html)
-- [Comprehensive Land Use Plan (CLUP)](https://www.tagaytay.gov.ph/downloads.html)
+- [Zoning Ordinance](https://www.generaltrias.gov.ph/downloads.html)
+- [Comprehensive Land Use Plan (CLUP)](https://www.generaltrias.gov.ph/downloads.html)

@@ -1,6 +1,6 @@
-# Apply for Tourism-Related Business Permits — Tagaytay City
+# Apply for Tourism-Related Business Permits — General Trias City
 
-Tagaytay City is a premier tourist destination. If you are setting up a tourism-related business (hotel, resort, restaurant, tour operator, souvenir shop, etc.), you need to secure the proper permits and accreditations from the city government.
+General Trias City is a premier tourist destination. If you are setting up a tourism-related business (hotel, resort, restaurant, tour operator, souvenir shop, etc.), you need to secure the proper permits and accreditations from the city government.
 
 ---
 
@@ -19,9 +19,9 @@ Before going to the City Hall, obtain a **Barangay Business Clearance** from the
 
 ## Step 2: Apply for a Mayor's Business Permit (BPLO)
 
-Go to the **Business Permit and Licensing Office (BPLO)** at Tagaytay City Hall.
+Go to the **Business Permit and Licensing Office (BPLO)** at General Trias City Hall.
 
-**Location:** Akle St., Kaybagal South, Tagaytay City, Cavite
+**Location:** Akle St., Kaybagal South, General Trias City, Cavite
 **Contact:** (046) 888-9500
 **Hours:** Monday–Friday, 8:00 AM–5:00 PM
 
@@ -45,7 +45,7 @@ Go to the **Business Permit and Licensing Office (BPLO)** at Tagaytay City Hall.
 
 Before your Mayor's Permit can be released, the **Bureau of Fire Protection (BFP)** must inspect your premises.
 
-**Contact (BFP Tagaytay):** (046) 483-1193 / (046) 471-3747
+**Contact (BFP General Trias):** (046) 483-1193 / (046) 471-3747
 
 ---
 
@@ -74,9 +74,9 @@ Annual renewal is required before **January 20** of each year to avoid penalties
 ## Contact
 
 **Business Permit and Licensing Office (BPLO)**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+General Trias City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 Tel: (046) 888-9500
-Website: https://www.tagaytay.gov.ph
+Website: https://www.generaltrias.gov.ph
 
 **Bureau of Fire Protection (BFP)**
 Tel: (046) 483-1193 / (046) 471-3747

@@ -2,13 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const EVENT_KEYS = [
-  'precolonial',
-  'spanish',
-  'charter',
-  'summer',
-  'capital',
-  'eruption',
-  'leadership',
+  'founded',
+  'revolution',
+  'independence',
+  'renamed',
+  'growth',
+  'cityhood',
+  'recognition',
 ] as const;
 
 function TimelineItem({
@@ -90,23 +90,23 @@ export default function HistorySection() {
 
           <div className="hidden lg:flex flex-col justify-center gap-4">
             <div className="bg-primary-700 rounded-2xl p-6 text-white">
-              <div className="text-4xl font-black mb-2">1938</div>
-              <div className="text-blue-100 font-semibold text-lg mb-2">
+              <div className="text-4xl font-black mb-2">2015</div>
+              <div className="text-green-100 font-semibold text-lg mb-2">
                 {t('history.charteredYear')}
               </div>
-              <p className="text-blue-200 text-sm leading-relaxed">
+              <p className="text-green-200 text-sm leading-relaxed">
                 {t('history.charteredDesc')}
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
               <div className="text-4xl font-black text-primary-700 mb-2">
-                ~600m
+                450K+
               </div>
               <div className="text-gray-800 font-semibold text-lg mb-2">
-                {t('history.elevationLabel')}
+                {t('history.populationLabel')}
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">
-                {t('history.elevationDesc')}
+                {t('history.populationDesc')}
               </p>
             </div>
           </div>

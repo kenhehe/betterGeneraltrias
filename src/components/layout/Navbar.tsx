@@ -23,16 +23,16 @@ function formatDatetime(): string {
 }
 
 const HOTLINES = [
-  { labelKey: 'hotlines.police', number: '(046) 413-1282', tel: '0464131282' },
+  { labelKey: 'hotlines.police', number: '(046) 884-1555', tel: '0468841555' },
   {
     labelKey: 'hotlines.hospital',
-    number: '(046) 423-3195',
-    tel: '0464233195',
+    number: '(046) 884-5800',
+    tel: '0468845800',
   },
-  { labelKey: 'hotlines.fire', number: '(046) 483-1193', tel: '0464831193' },
-  { labelKey: 'hotlines.cdrrmo', number: '(046) 483-0446', tel: '0464830446' },
-  { labelKey: 'hotlines.cho', number: '(046) 483-0604', tel: '0464830604' },
-  { labelKey: 'hotlines.cswdo', number: '(046) 483-0494', tel: '0464830494' },
+  { labelKey: 'hotlines.fire', number: '(046) 884-5700', tel: '0468845700' },
+  { labelKey: 'hotlines.cdrrmo', number: '(046) 884-5600', tel: '0468845600' },
+  { labelKey: 'hotlines.cho', number: '(046) 884-5768', tel: '0468845768' },
+  { labelKey: 'hotlines.cswdo', number: '(046) 884-5400', tel: '0468845400' },
 ];
 
 const Navbar: React.FC = () => {
@@ -133,7 +133,7 @@ const Navbar: React.FC = () => {
       setTemp(cachedTemp);
     } else {
       fetch(
-        'https://api.open-meteo.com/v1/forecast?latitude=14.1153&longitude=120.9621&current_weather=true'
+        'https://api.open-meteo.com/v1/forecast?latitude=14.3833&longitude=120.8833&current_weather=true'
       )
         .then(r => r.json())
         .then(data => {
@@ -216,7 +216,7 @@ const Navbar: React.FC = () => {
           <span className="text-gray-600 hidden sm:inline">|</span>
           <span className="hidden sm:flex items-center gap-1.5 opacity-90">
             <Thermometer className="h-3 w-3 opacity-70" />
-            <span className="text-gray-300">Tagaytay</span>
+            <span className="text-gray-300">General Trias</span>
             <span className="font-semibold">{temp}</span>
           </span>
           <span className="text-gray-600 hidden sm:inline">|</span>
@@ -235,7 +235,7 @@ const Navbar: React.FC = () => {
             <Link to="/" className="flex items-center shrink-0">
               <img
                 src="/logo.png"
-                alt="BetterTagaytay"
+                alt="BetterGenTri"
                 className="h-16 w-auto"
               />
             </Link>
