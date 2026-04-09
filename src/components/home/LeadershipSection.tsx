@@ -9,22 +9,22 @@ export default function LeadershipSection() {
 
   const OFFICIALS = [
     {
-      initials: 'AT',
-      name: 'Hon. Aizack Brent D. Tolentino',
+      initials: 'LF',
+      name: 'Hon. Luis A. Ferrer IV',
       titleKey: 'leadership.cityMayor',
       badgeKey: 'leadership.electedMayor',
-      phone: '(046) 888-9500',
-      email: 'mayor@tagaytay.gov.ph',
-      tel: '0468889500',
+      phone: '(046) 884-5768',
+      email: 'mayor@generaltrias.gov.ph',
+      tel: '0468845768',
     },
     {
-      initials: 'AT',
-      name: 'Hon. Agnes D. Tolentino, DMD',
+      initials: 'JL',
+      name: 'Hon. Jonas Glyn Porto Labuguen',
       titleKey: 'leadership.cityViceMayor',
       badgeKey: 'leadership.electedViceMayor',
-      phone: '(046) 888-9500',
+      phone: '(046) 884-5768',
       email: null,
-      tel: '0468889500',
+      tel: '0468845768',
     },
   ];
 

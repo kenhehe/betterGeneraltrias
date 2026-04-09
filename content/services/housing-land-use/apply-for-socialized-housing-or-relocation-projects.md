@@ -1,10 +1,10 @@
 # Apply for Socialized Housing or Relocation Projects
 
-Tagaytay City implements socialized housing programs for qualified low-income residents, in coordination with the National Housing Authority (NHA) and the Housing and Urban Development Coordinating Council (HUDCC).
+General Trias City implements socialized housing programs for qualified low-income residents, in coordination with the National Housing Authority (NHA) and the Housing and Urban Development Coordinating Council (HUDCC).
 
 ## Who Can Apply
 
-- Tagaytay City residents who are informal settlers or living in danger zones
+- General Trias City residents who are informal settlers or living in danger zones
 - Low-income households without land ownership
 - Families affected by disaster, demolition, or government infrastructure projects
 - Priority: families living near Taal Lake danger zones
@@ -30,7 +30,7 @@ Tagaytay City implements socialized housing programs for qualified low-income re
 
 - **NHA Resettlement** — for families displaced from danger zones
 - **Community Mortgage Program (CMP)** — for organized informal settler communities
-- **Tagaytay City Local Shelter Plan** — check with CPDO for current projects
+- **General Trias City Local Shelter Plan** — check with CPDO for current projects
 
 ## Where to Go
 
@@ -38,5 +38,5 @@ Tagaytay City implements socialized housing programs for qualified low-income re
 Telephone: (046) 483-0494
 
 **City Planning and Development Office (CPDO)**
-Tagaytay City Hall, Akle St., Kaybagal South
+General Trias City Hall, Akle St., Kaybagal South
 Telephone: (046) 413-1220

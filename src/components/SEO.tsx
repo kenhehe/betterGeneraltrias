@@ -19,7 +19,7 @@ export default function SEO({
   type = 'website',
   siteName = import.meta.env.VITE_GOVERNMENT_NAME || 'Local Government Website',
 }: SEOProps) {
-  const defaultTitle = 'BetterTagaytay.org | Transparency Portal';
+  const defaultTitle = 'BetterGenTri.ph | Transparency Portal';
   const defaultDescription =
     import.meta.env.VITE_SITE_DESCRIPTION ||
     `Official website of ${siteName}. Access government services, information, and resources.`;
@@ -68,7 +68,7 @@ export default function SEO({
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="theme-color" content="#0066eb" />
+      <meta name="theme-color" content="#16643c" />
 
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />

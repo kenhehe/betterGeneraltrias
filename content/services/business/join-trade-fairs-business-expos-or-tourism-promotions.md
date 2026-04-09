@@ -1,4 +1,4 @@
-# Participate in Local Trade Fairs, Business Expos, and Tourism Promotion Activities — Tagaytay City
+# Participate in Local Trade Fairs, Business Expos, and Tourism Promotion Activities — General Trias City
 
 Showcase your products and services, meet buyers, and boost your brand by joining **city- and region-led trade fairs, business expos, and tourism promotions**.
 
@@ -110,9 +110,9 @@ Showcase your products and services, meet buyers, and boost your brand by joinin
 
 ---
 
-## Where to Watch for Calls & Schedules (Tagaytay City / Cebu)
+## Where to Watch for Calls & Schedules (General Trias City / Cebu)
 
-- **Tagaytay City**: City Information Office, Business Permits & Licensing Office (BOSS announcements), City Tourism & Cultural Affairs
+- **General Trias City**: City Information Office, Business Permits & Licensing Office (BOSS announcements), City Tourism & Cultural Affairs
 - **Negosyo Center / MSME Office**: product dev, fairs, OTOP activities
 - **Tourism Bodies**: city/regional tourism offices for travel marts, festivals, Fam tours, MICE events
 - **Chambers & Associations**: local chamber of commerce, hotel/resort associations, exporters’ groups
@@ -120,7 +120,7 @@ Showcase your products and services, meet buyers, and boost your brand by joinin
 
 ---
 
-# Key Local Contacts — Tagaytay City
+# Key Local Contacts — General Trias City
 
 Use these offices when coordinating for **trade fairs, business expos, permits, and tourism promotion activities**.
 
@@ -128,15 +128,15 @@ Use these offices when coordinating for **trade fairs, business expos, permits, 
 
 | Office / Role                                                                 | Address / Location                                              | Contact Number  | Email / Other Contact Info                                                                                                                                   |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Business Permit & Licensing Office (BPLO)**                                 | City Hall Main Building, Tagaytay City Government Complex       | (046) 888-9500  | —                                                                                                                                                            |
-| **PESO Tagaytay City** (Student Employment, Local Promotions)                 | Kaybagal South, Tagaytay City, Cavite                           | (046) 888-9500  | Facebook: [PESO Tagaytay City](https://ph.locale.online/peso-lapu-lapu-city-47947610.html)                                                                   |
-| **City Information Office / Treasurer’s Office**                              | Tagaytay City Hall / Tagaytay City Sports Complex during events | (046) 888-9500  | Updates: [Official Facebook Page](https://www.facebook.com/photo.php?fbid=122128211810564979&id=61566949391179&set=a.122105111324564979)                     |
-| **Tagaytay City Tourism Office**                                              | City Government / Tourism Department                            | +63 32 495-5593 | Email: llctourism.inquiry@gmail.com • [Instagram Location Page](https://www.instagram.com/explore/locations/2149053888682923/lapu-lapu-city-tourism-office/) |
-| **City-Wide Trade Fair / Renewal Venue** (used for permit renewals and expos) | Tagaytay City Sports Complex, Barangay Kaybagal South           | —               | News: [SunStar — Biz Permit Renewals at Tagaytay City Sports Complex](https://www.tagaytay.gov.ph/lapu-launches-new-system-for-biz-permit-renewals)          |
+| **Business Permit & Licensing Office (BPLO)**                                 | City Hall Main Building, General Trias City Government Complex       | (046) 888-9500  | —                                                                                                                                                            |
+| **PESO General Trias City** (Student Employment, Local Promotions)                 | Kaybagal South, General Trias City, Cavite                           | (046) 888-9500  | Facebook: [PESO General Trias City](https://ph.locale.online/peso-lapu-lapu-city-47947610.html)                                                                   |
+| **City Information Office / Treasurer’s Office**                              | General Trias City Hall / General Trias City Sports Complex during events | (046) 888-9500  | Updates: [Official Facebook Page](https://www.facebook.com/photo.php?fbid=122128211810564979&id=61566949391179&set=a.122105111324564979)                     |
+| **General Trias City Tourism Office**                                              | City Government / Tourism Department                            | +63 32 495-5593 | Email: llctourism.inquiry@gmail.com • [Instagram Location Page](https://www.instagram.com/explore/locations/2149053888682923/lapu-lapu-city-tourism-office/) |
+| **City-Wide Trade Fair / Renewal Venue** (used for permit renewals and expos) | General Trias City Sports Complex, Barangay Kaybagal South           | —               | News: [SunStar — Biz Permit Renewals at General Trias City Sports Complex](https://www.generaltrias.gov.ph/lapu-launches-new-system-for-biz-permit-renewals)          |
 
 ---
 
-✅ Tip: Save these contacts and follow their **Facebook pages** — most trade fair and expo announcements in Tagaytay City are posted there first.
+✅ Tip: Save these contacts and follow their **Facebook pages** — most trade fair and expo announcements in General Trias City are posted there first.
 
 ---
 
@@ -144,10 +144,10 @@ Use these offices when coordinating for **trade fairs, business expos, permits, 
 
 > **Subject:** Participation Inquiry – [Your Brand] for [Event Name/Date]  
 > Hello [Organizer Name],  
-> We’re a Tagaytay City–based [business type] offering [brief product/service]. We’d like to apply for a booth at **[Event Name]** on **[Date]**.  
+> We’re a General Trias City–based [business type] offering [brief product/service]. We’d like to apply for a booth at **[Event Name]** on **[Date]**.  
 > **Attachments:** Business registration, product list/prices, photos, compliance (FDA/accreditation).  
 > **Needs:** [table + 1 outlet + 500W], ingress day-before preferred.  
-> Thank you and we look forward to promoting Tagaytay City products/tourism at your event.  
+> Thank you and we look forward to promoting General Trias City products/tourism at your event.  
 > **Contact:** [Name, Mobile, Email, Links]
 
 ---

@@ -1,4 +1,4 @@
-# Renew Permits and Pay Local Business Taxes — Tagaytay City
+# Renew Permits and Pay Local Business Taxes — General Trias City
 
 Use this guide to renew your **Mayor’s/Business Permit** and **Local Business Taxes (LBT)** with the City Government.
 
@@ -6,7 +6,7 @@ Use this guide to renew your **Mayor’s/Business Permit** and **Local Business 
 
 ## Who Must Renew
 
-- All businesses operating in Tagaytay City: **sole proprietors, partnerships, corporations, NGOs, cooperatives, online sellers with local presence**, and professionals with a business office.
+- All businesses operating in General Trias City: **sole proprietors, partnerships, corporations, NGOs, cooperatives, online sellers with local presence**, and professionals with a business office.
 - Renewal applies to **main office and each branch**.
 
 ---

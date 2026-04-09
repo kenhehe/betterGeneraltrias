@@ -33,148 +33,148 @@ interface Spot {
 
 const SPOTS: Spot[] = [
   {
-    name: 'Taal Volcano & Lake',
+    name: 'San Francisco de Malabon Parish Church',
     description:
-      "Tagaytay's most iconic landmark — the world's smallest active volcano sitting in a lake within a lake. Best viewed from the ridge at sunrise or sunset for a breathtaking panorama.",
-    category: 'nature',
-    fee: 'Free (viewpoints); Boat ride extra',
-    hours: 'Open 24 hrs (viewpoints)',
-    tip: 'Check PHIVOLCS advisories before visiting. Best viewed early morning.',
-    gradient: 'from-slate-700 via-slate-600 to-stone-500',
-    icon: '🌋',
-    image: '/images/taal-volcano.jpg',
+      'One of the oldest churches in Cavite, built by Franciscan missionaries in 1611. This historic landmark was the site where the Philippine national anthem was first performed during the independence proclamation on June 12, 1898.',
+    category: 'religious',
+    fee: 'Free',
+    hours: 'Open daily',
+    tip: 'Visit during the town fiesta (October 4) celebrating St. Francis of Assisi for the grandest experience.',
+    gradient: 'from-stone-700 via-amber-700 to-yellow-600',
+    icon: '⛪',
+    image: '/images/san-francisco-church.jpg',
   },
   {
-    name: "People's Park in the Sky",
+    name: 'Our Lady of Guadalupe Parish Church',
     description:
-      'Situated at the highest point of Tagaytay at 709 meters above sea level. Originally planned as a Marcos mansion, it now offers unmatched 360° views of the ridge, lake, and beyond.',
+      'A beloved Catholic church in General Trias serving as the spiritual center of the community. It regularly hosts major religious celebrations, processions, and community events throughout the year.',
+    category: 'religious',
+    fee: 'Free',
+    hours: 'Open daily',
+    tip: 'Attend Sunday Mass to experience the vibrant faith community of General Trias.',
+    gradient: 'from-blue-700 via-indigo-600 to-violet-500',
+    icon: '🕊️',
+    image: '/images/guadalupe-church.jpg',
+  },
+  {
+    name: 'Eagle Ridge Golf & Country Club',
+    description:
+      'A premier 36-hole championship golf course set across the rolling terrain of Barangay Javalera. One of the finest golf clubs in the Philippines, attracting local and international golfers with its scenic fairways and world-class facilities.',
+    category: 'recreation',
+    fee: 'Green fees apply; members & guests',
+    hours: 'Tee times from 6:00 AM',
+    tip: 'Book tee times in advance, especially on weekends. Inquire about non-member access packages.',
+    gradient: 'from-green-700 via-emerald-600 to-teal-500',
+    icon: '⛳',
+    image: '/images/eagle-ridge-golf.jpg',
+  },
+  {
+    name: 'GBR Museum',
+    description:
+      'Located inside Gateway Business Park in Barangay Javalera, the GBR Museum showcases exhibits on local history, culture, and heritage. A great destination for learning about General Trias and its significance in Philippine history.',
+    category: 'art',
+    fee: 'Entrance fee applies',
+    hours: 'Check museum schedule',
+    tip: 'Call ahead to confirm opening hours before visiting.',
+    gradient: 'from-violet-700 via-purple-600 to-fuchsia-500',
+    icon: '🏛️',
+    image: '/images/gbr-museum.jpg',
+  },
+  {
+    name: 'General Trias City Park',
+    description:
+      "A central public park in the heart of General Trias providing a green space for residents and visitors. Perfect for morning jogs, family picnics, and community gatherings amid the city's tropical landscape.",
     category: 'nature',
-    fee: 'Minimal entrance fee',
-    hours: '7:00 AM – 6:00 PM',
-    tip: 'Bring a jacket — it gets windy and cold at the top.',
-    gradient: 'from-sky-600 via-blue-500 to-cyan-400',
-    icon: '☁️',
+    fee: 'Free',
+    hours: 'Open daily',
+    tip: "Visit in the early morning for a peaceful walk before the city gets busy.",
+    gradient: 'from-green-600 via-lime-500 to-emerald-400',
+    icon: '🌳',
+    image: '/images/city-park.jpg',
+  },
+  {
+    name: "City of General Trias People's Park",
+    description:
+      'Located in Barangay Biclatan, this well-maintained public park offers open spaces, walking paths, and recreational amenities for families. A favorite weekend destination for residents seeking fresh air and community activities.',
+    category: 'nature',
+    fee: 'Free',
+    hours: 'Open daily',
+    tip: 'Great for weekend family outings. Bring snacks and enjoy the open spaces.',
+    gradient: 'from-emerald-600 via-green-500 to-lime-400',
+    icon: '🌿',
     image: '/images/peoples-park.jpg',
   },
   {
-    name: 'Sky Ranch Tagaytay',
+    name: 'Valenciana Festival Street Dance',
     description:
-      'A 5-hectare family theme park featuring the Sky Eye Ferris wheel — one of the tallest in the Philippines at 207 feet — with panoramic views of Taal Lake and the Tagaytay skyline.',
-    category: 'adventure',
-    fee: 'Pay per ride',
-    hours: '10:00 AM – 9:00 PM (weekdays) · 9:00 AM – 10:00 PM (weekends)',
-    tip: 'Weekday mornings are less crowded.',
-    gradient: 'from-yellow-500 via-orange-400 to-red-400',
-    icon: '🎡',
-    image: '/images/sky-ranch.jpg',
-  },
-  {
-    name: 'Picnic Grove',
-    description:
-      'A 13-hectare outdoor park on Tagaytay Ridge with cable car rides, zip-lining, picnic cottages, and an eco-trail boardwalk — all with stunning views over Taal Volcano and Lake.',
-    category: 'recreation',
-    fee: '₱75 / person',
-    hours: '7:00 AM – 7:00 PM daily',
-    tip: 'Zip-line is ₱300 for a two-way ride. Great for families.',
-    gradient: 'from-green-600 via-emerald-500 to-teal-400',
-    icon: '🌿',
-    image: '/images/picnic-grove.jpg',
-  },
-  {
-    name: 'Museo Orlina',
-    description:
-      'A world-class museum showcasing the contemporary glass sculptures of Filipino artist Ramon Orlina. Set on the ridge with a rooftop garden offering sweeping Taal Lake views.',
+      "Held every December 11–13 to celebrate the city's founding anniversary, this vibrant street festival features colorful costumes and energetic dance performances by schools across the city, alongside the famous Valenciana Cooking Festival.",
     category: 'art',
-    fee: 'Entrance fee applies',
-    hours: 'Check museum schedule',
-    tip: 'Visit at sunset for dramatic lighting across the glass sculptures.',
-    gradient: 'from-violet-600 via-purple-500 to-fuchsia-400',
-    icon: '🎨',
-    image: '/images/museo-orlina.jpg',
+    fee: 'Free to watch',
+    hours: 'December 11–13 annually',
+    tip: "Don't miss the Valenciana Cooking Festival where all 33 barangays showcase their best version of the city's signature paella-like rice dish.",
+    gradient: 'from-orange-600 via-red-500 to-pink-400',
+    icon: '🎭',
+    image: '/images/valenciana-festival.jpg',
   },
   {
-    name: 'Puzzle Mansion',
+    name: 'Town Fiesta of St. Francis of Assisi',
     description:
-      'A Guinness World Record holder for the largest collection of jigsaw puzzles. An eccentric, fun museum spanning rooms, gardens, and hallways with thousands of puzzle displays.',
-    category: 'art',
-    fee: 'Entrance fee applies',
-    hours: 'Check museum schedule',
-    tip: 'Great for kids and puzzle enthusiasts alike.',
-    gradient: 'from-pink-500 via-rose-400 to-orange-400',
-    icon: '🧩',
-    image: '/images/puzzle-mansion.jpg',
-  },
-  {
-    name: "Sonya's Garden",
-    description:
-      'A lush organic retreat in Alfonso, Cavite offering farm-to-table dining surrounded by flower gardens, antique cottages, and edible orchids. A magical escape from the city.',
-    category: 'food',
-    fee: 'Reservation recommended',
-    hours: 'Wed–Sun; check availability',
-    tip: 'Book ahead, especially on weekends. Try the fresh salads with edible flowers.',
-    gradient: 'from-lime-500 via-green-400 to-emerald-300',
-    icon: '🌸',
-    image: '/images/sonyas-garden.jpg',
-  },
-  {
-    name: "Antonio's Restaurant",
-    description:
-      'The definitive fine dining experience in Tagaytay — a beautifully restored Spanish Colonial mansion with manicured gardens, classical French-Italian cuisine, and impeccable service.',
-    category: 'food',
-    fee: 'Reservations only',
-    hours: 'Lunch 11:30 AM · Dinner 5:30 PM',
-    tip: 'Smart casual dress code. Book well in advance.',
-    gradient: 'from-amber-700 via-yellow-600 to-amber-400',
-    icon: '🍽️',
-    image: '/images/antonios.jpg',
-  },
-  {
-    name: 'Balay Dako',
-    description:
-      'Meaning "big house" — a Filipino-Spanish villa spread across three dining levels with floor-to-ceiling windows framing unobstructed Taal Lake views. Known for heritage Filipino cuisine.',
-    category: 'food',
-    fee: 'À la carte',
-    hours: 'Lunch & Dinner',
-    tip: 'Request a window table on the upper floor for the best lake views.',
-    gradient: 'from-red-700 via-rose-600 to-pink-400',
-    icon: '🏡',
-    image: '/images/balay-dako.jpg',
-  },
-  {
-    name: 'Caleruega Church',
-    description:
-      'A picturesque Dominican retreat center inspired by the medieval church in Spain — home of Saint Dominic. Features the iconic Transfiguration Chapel, hanging bridge, koi ponds, and lush mountain gardens.',
+      "General Trias celebrates its patron saint 'Tata Kiko' on October 4 with grand parades, religious processions, concerts, and the unique 'pabialahay' — a pet blessing ceremony honoring St. Francis's connection to animals.",
     category: 'religious',
-    fee: '₱30 maintenance fee',
-    hours: 'Check schedule',
-    tip: 'Popular wedding venue. Visit on weekdays to avoid crowds.',
-    gradient: 'from-stone-600 via-amber-600 to-yellow-500',
-    icon: '⛪',
-    image: '/images/caleruega.jpg',
+    fee: 'Free',
+    hours: 'October 4 annually',
+    tip: 'Join the pet blessing ceremony for a uniquely heartwarming community experience.',
+    gradient: 'from-amber-600 via-orange-500 to-yellow-400',
+    icon: '🎉',
+    image: '/images/town-fiesta.jpg',
   },
   {
-    name: 'Mahogany Market',
+    name: "GenTri's Best Dairy Products",
     description:
-      "Tagaytay's famous public market known for the best bulalo (beef marrow soup) in the Philippines, along with tawilis (freshwater sardines), kesong puti, and fresh Batangas produce.",
+      'The General Trias Dairy Raisers Multipurpose Cooperative produces award-winning carabao milk products including yogurt, ice cream, and fresh milk. A unique local agri-tourism experience celebrating the city\'s agricultural roots.',
     category: 'food',
-    fee: 'Free entry',
-    hours: 'Daily, early morning onwards',
-    tip: "Arrive before noon for fresh stock. Don't miss the tawilis and bulalo.",
-    gradient: 'from-orange-700 via-amber-500 to-yellow-400',
-    icon: '🥣',
-    image: '/images/mahogany-market.jpg',
+    fee: 'Products for sale',
+    hours: 'Check availability',
+    tip: 'Try the carabao milk ice cream — a local delicacy you cannot find anywhere else.',
+    gradient: 'from-sky-600 via-blue-500 to-cyan-400',
+    icon: '🥛',
+    image: '/images/dairy-products.jpg',
   },
   {
-    name: 'Tagaytay Highlands',
+    name: "Eden's Pastillas",
     description:
-      'A premier resort destination commanding views of Taal Lake, Laguna de Bay, and multiple mountain ranges. Features a world-class golf course, fine dining, zip-lining, and horseback riding.',
-    category: 'recreation',
-    fee: 'Members & guests only',
-    hours: 'Check with resort',
-    tip: 'Non-members can access select restaurants. Call ahead.',
-    gradient: 'from-teal-700 via-cyan-600 to-sky-400',
-    icon: '⛳',
-    image: '/images/tagaytay-highlands.jpg',
+      "A beloved local confectionery known for its handcrafted pastillas — soft milk candies that are a signature pasalubong of General Trias. Made from carabao milk following traditional Filipino recipes passed down through generations.",
+    category: 'food',
+    fee: 'Products for sale',
+    hours: 'Check availability',
+    tip: 'Buy in bulk as pasalubong — they make great gifts and are loved by all ages.',
+    gradient: 'from-pink-500 via-rose-400 to-fuchsia-400',
+    icon: '🍬',
+    image: '/images/pastillas.jpg',
+  },
+  {
+    name: 'Jail Handicrafts Exhibition',
+    description:
+      "General Trias showcases remarkable rehabilitation programs through its jail's handicraft exhibits. The Female Dormitory produces bags and woven items while the Male Dormitory creates paintings, metal crafts, and woodworks — beautiful products with meaningful stories.",
+    category: 'art',
+    fee: 'Products for sale',
+    hours: 'Check schedule',
+    tip: 'Purchasing these items directly supports the rehabilitation of inmates and their reintegration into society.',
+    gradient: 'from-teal-600 via-cyan-500 to-sky-400',
+    icon: '🎨',
+    image: '/images/jail-handicrafts.jpg',
+  },
+  {
+    name: 'Pasong Kalabaw Historical Marker',
+    description:
+      "The site where the 'First Cry of Cavite' took place on August 31, 1896, marking the start of the Philippine Revolution against Spanish colonial rule. A deeply significant historical landmark in the birthplace of Cavite's revolutionary spirit.",
+    category: 'art',
+    fee: 'Free',
+    hours: 'Open daily',
+    tip: "Visit during August to witness commemorative events marking the anniversary of the First Cry of Cavite.",
+    gradient: 'from-red-700 via-rose-600 to-orange-500',
+    icon: '🏴',
+    image: '/images/pasong-kalabaw.jpg',
   },
 ];
 
@@ -232,33 +232,34 @@ export default function TouristSpots() {
   return (
     <>
       <SEO
-        title="Explore Tourist Spots in Tagaytay City"
-        description="Discover the top tourist destinations in Tagaytay City — from the iconic Taal Volcano to fine dining, adventure parks, and cultural landmarks."
-        keywords="Tagaytay tourist spots, Taal Volcano, Picnic Grove, Sky Ranch, Tagaytay tourism"
+        title="Explore Tourist Spots in General Trias City"
+        description="Discover the top tourist destinations in General Trias City — from historic churches and Eagle Ridge Golf Club to the Valenciana Festival and local delicacies."
+        keywords="General Trias tourist spots, Eagle Ridge Golf, San Francisco de Malabon Church, Valenciana Festival, GenTri tourism, GBR Museum"
       />
 
       {/* Hero banner */}
-      <div className="relative bg-gradient-to-br from-emerald-800 via-teal-700 to-cyan-700 text-white overflow-hidden">
+      <div className="relative text-white overflow-hidden"
+        style={{ backgroundColor: '#16643c' }}
+      >
         <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage:
-              'radial-gradient(circle, white 1px, transparent 1px)',
-            backgroundSize: '28px 28px',
+              'repeating-linear-gradient(45deg, white 0px, white 1px, transparent 1px, transparent 24px)',
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
           <div className="flex items-center gap-2 mb-3 text-white/70 text-xs font-semibold uppercase tracking-widest">
             <MapPin className="h-3.5 w-3.5" />
-            Tagaytay City, Cavite
+            General Trias City, Cavite
           </div>
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-3">
             Explore Tourist Spots
           </h1>
           <p className="text-white/80 text-base max-w-xl leading-relaxed">
-            Tagaytay sits at 700+ meters above sea level along a dramatic ridge
-            overlooking Taal Lake. Discover its iconic attractions, flavors, and
-            scenery.
+            General Trias is one of the fastest-growing cities in the
+            Philippines — rich in revolutionary history, vibrant festivals,
+            world-class golf, and authentic local flavors.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {Object.entries(CATEGORY_META).map(([key, meta]) => (

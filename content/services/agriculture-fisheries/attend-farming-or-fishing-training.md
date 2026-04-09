@@ -1,6 +1,6 @@
 # Attend Farming or Fishing Training
 
-The Tagaytay City Agriculture Office, in coordination with the Department of Agriculture (DA) and other agencies, conducts free training programs for farmers and fisherfolk to improve productivity and sustainable practices.
+The General Trias City Agriculture Office, in coordination with the Department of Agriculture (DA) and other agencies, conducts free training programs for farmers and fisherfolk to improve productivity and sustainable practices.
 
 ## Training Topics Available
 
@@ -13,7 +13,7 @@ The Tagaytay City Agriculture Office, in coordination with the Department of Agr
 
 ## Who Can Join
 
-- Registered farmers and fisherfolk in Tagaytay City
+- Registered farmers and fisherfolk in General Trias City
 - Members of farmers/fisherfolk organizations
 - Interested residents with farming or fishing activities
 
@@ -24,7 +24,7 @@ The Tagaytay City Agriculture Office, in coordination with the Department of Agr
 
 ## How to Register
 
-1. Visit the City Agriculture Office at Tagaytay City Hall
+1. Visit the City Agriculture Office at General Trias City Hall
 2. Ask about upcoming training schedules
 3. Submit your name and contact number for the training list
 4. Attend on the scheduled date
@@ -32,7 +32,7 @@ The Tagaytay City Agriculture Office, in coordination with the Department of Agr
 ## Where to Go
 
 **City Agriculture Office**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City
+General Trias City Hall, Akle St., Kaybagal South, General Trias City
 Telephone: (046) 413-1220
 
 Training venues vary — some are held at the City Hall, barangay halls, or farm demonstration sites.

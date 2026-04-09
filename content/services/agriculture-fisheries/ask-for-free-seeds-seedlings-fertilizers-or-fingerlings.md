@@ -1,6 +1,6 @@
 # Ask for Free Seeds, Seedlings, Fertilizers, or Fingerlings
 
-The Tagaytay City Agriculture Office distributes free agricultural inputs to registered farmers and fisherfolk in the city to support local food production and livelihood.
+The General Trias City Agriculture Office distributes free agricultural inputs to registered farmers and fisherfolk in the city to support local food production and livelihood.
 
 ## What is Available
 
@@ -11,20 +11,20 @@ The Tagaytay City Agriculture Office distributes free agricultural inputs to reg
 
 ## Who Can Apply
 
-- Registered farmers and fisherfolk in Tagaytay City
+- Registered farmers and fisherfolk in General Trias City
 - Residents with backyard gardens or small farm lots
 - Organized farmer/fisherfolk groups and cooperatives
 
 ## Requirements
 
 - Valid government-issued ID
-- Proof of residence in Tagaytay City
+- Proof of residence in General Trias City
 - Farm lot or garden (barangay certification may be required)
 - Registration with the City Agriculture Office (for first-time applicants)
 
 ## How to Apply
 
-1. Visit the City Agriculture Office at the Tagaytay City Hall
+1. Visit the City Agriculture Office at the General Trias City Hall
 2. Fill out the application form
 3. Submit requirements for evaluation
 4. Receive your agricultural inputs on the scheduled distribution date
@@ -32,7 +32,7 @@ The Tagaytay City Agriculture Office distributes free agricultural inputs to reg
 ## Where to Go
 
 **City Agriculture Office**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City
+General Trias City Hall, Akle St., Kaybagal South, General Trias City
 Telephone: (046) 413-1220
 
 ## Schedule

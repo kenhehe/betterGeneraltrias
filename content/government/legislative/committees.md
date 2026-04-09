@@ -1,6 +1,6 @@
 # Standing Committees — Sangguniang Panlungsod
 
-The **Sangguniang Panlungsod ng Tagaytay City** operates through standing committees that review, deliberate, and report on proposed ordinances and resolutions before they are voted on in plenary session.
+The **Sangguniang Panlungsod ng General Trias City** operates through standing committees that review, deliberate, and report on proposed ordinances and resolutions before they are voted on in plenary session.
 
 ---
 
@@ -35,6 +35,6 @@ The **Sangguniang Panlungsod ng Tagaytay City** operates through standing commit
 
 ## Contact the Sangguniang Panlungsod
 
-**Office:** City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+**Office:** City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 **Telephone:** (046) 888-9500
-**Website:** https://www.tagaytay.gov.ph
+**Website:** https://www.generaltrias.gov.ph

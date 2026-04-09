@@ -1,6 +1,6 @@
 {
-  "site_name": "BetterTagaytay",
-  "site_description": "A community transparency portal for Tagaytay City, Cavite — find government services, officials, budgets, and public information.",
+  "site_name": "BetterGenTri",
+  "site_description": "A community transparency portal for General Trias City, Cavite — find government services, officials, budgets, and public information.",
   "nav": {
     "home": "Home",
     "services": "Services",
@@ -29,9 +29,9 @@
     "cswdo": "CSWDO"
   },
   "hero": {
-    "title": "BetterTagaytay",
+    "title": "BetterGenTri",
     "welcome": "Welcome to",
-    "subtitle": "Access government services, information, and resources for the people of Tagaytay City, Cavite.",
+    "subtitle": "Access government services, information, and resources for the people of General Trias City, Cavite.",
     "browseServices": "Browse Services",
     "contactUs": "Contact Us",
     "findService": "Find a Service",
@@ -43,12 +43,12 @@
   },
   "infobar": {
     "usd": "1 USD =",
-    "location": "Tagaytay"
+    "location": "General Trias"
   },
   "services": {
     "title": "Services & Information",
     "governmentServices": "Government Services",
-    "description": "Access official Tagaytay City government services quickly and easily. Find what you need for citizenship, business, health, education, and more.",
+    "description": "Access official General Trias City government services quickly and easily. Find what you need for citizenship, business, health, education, and more.",
     "viewAll": "View All Services",
     "viewAllCategory": "View All",
     "categories": {
@@ -94,23 +94,23 @@
       },
       "tourism": {
         "name": "Tourism",
-        "description": "Tourist spots, permits for tourism-related businesses, accreditation, and visitor information for Tagaytay City."
+        "description": "Tourist spots, permits for tourism-related businesses, accreditation, and visitor information for General Trias City."
       }
     },
     "tourismSpotlight": {
       "badge": "Tourism Spotlight",
-      "title": "Discover Tagaytay City",
-      "description": "Tagaytay is the second highest city in the Philippines, offering breathtaking views of Taal Volcano, fresh highland cuisine, and year-round cool weather.",
+      "title": "Discover General Trias City",
+      "description": "General Trias is one of the fastest-growing cities in the Philippines, home to historical churches, lush parks, the Eagle Ridge Golf Club, and the vibrant Valenciana Festival.",
       "cta": "Explore Tourism Services",
-      "taal": "Taal Volcano",
-      "ridge": "Scenic Ridges",
-      "food": "Bulalo & More",
-      "spots": "Photo Spots"
+      "taal": "Historic Churches",
+      "ridge": "Eagle Ridge Golf",
+      "food": "Valenciana Dish",
+      "spots": "City Park"
     }
   },
   "governmentActivity": {
     "title": "City Government",
-    "description": "Stay updated with the latest news, departments, and activities of the Tagaytay City Government.",
+    "description": "Stay updated with the latest news, departments, and activities of the General Trias City Government.",
     "categories": {
       "departments": {
         "name": "Departments",
@@ -139,7 +139,7 @@
     }
   },
   "stats": {
-    "title": "Tagaytay at a Glance",
+    "title": "General Trias at a Glance",
     "viewProfile": "View City Profile →",
     "population": {
       "label": "Population",
@@ -150,7 +150,7 @@
       "desc": "Component barangays"
     },
     "classification": {
-      "label": "City",
+      "label": "Component City",
       "desc": "Province of Cavite"
     },
     "area": {
@@ -159,14 +159,14 @@
     }
   },
   "weatherMap": {
-    "title": "Weather and Map of Tagaytay",
-    "location": "Tagaytay City, Cavite",
-    "defaultCondition": "Cool & pleasant",
+    "title": "Weather and Map of General Trias",
+    "location": "General Trias City, Cavite",
+    "defaultCondition": "Warm & tropical",
     "loading": "Loading live weather…",
     "wind": "km/h",
-    "climate": "Cool climate",
-    "elevation": "~600m elevation",
-    "mapTitle": "Map of Tagaytay City",
+    "climate": "Tropical climate",
+    "elevation": "Low-lying terrain",
+    "mapTitle": "Map of General Trias City",
     "clear": "Clear sky",
     "partlyCloudy": "Partly cloudy",
     "foggy": "Foggy",
@@ -175,46 +175,46 @@
     "thunderstorm": "Thunderstorm"
   },
   "history": {
-    "title": "Brief History of Tagaytay City",
-    "charteredYear": "Year Chartered",
-    "charteredDesc": "Tagaytay is one of the Philippines' earliest chartered cities, established under Commonwealth Act No. 338 by President Manuel L. Quezon.",
-    "elevationLabel": "Elevation",
-    "elevationDesc": "Tagaytay sits atop a ridge at approximately 600–700 meters above sea level, giving it one of the coolest climates in Luzon and the iconic Taal Volcano views.",
+    "title": "Brief History of General Trias City",
+    "charteredYear": "Year of Cityhood",
+    "charteredDesc": "General Trias became the 145th city in the Philippines and the 7th in Cavite Province, granted cityhood on December 17, 2015 under R.A. 10675.",
+    "populationLabel": "Population",
+    "populationDesc": "General Trias is one of the fastest-growing cities in the Philippines, with over 450,000 residents as of the 2020 census, driven by rapid industrialization.",
     "events": {
-      "precolonial": {
-        "year": "Pre-colonial",
-        "title": "Tagalog Settlements",
-        "text": "Tagaytay ridge inhabited by the Tagalog people; the elevated terrain overlooking Taal Lake served as a natural vantage point and fertile agricultural land."
+      "founded": {
+        "year": "1748",
+        "title": "Municipal Foundation",
+        "text": "The area was established as the Municipality of San Francisco de Malabon on December 13, 1748. The name 'Malabon' is believed to have originated from 'Labong,' referring to bamboo shoots found abundantly in the region."
       },
-      "spanish": {
-        "year": "1630s",
-        "title": "Spanish Era",
-        "text": "Spanish missionaries establish settlements along Cavite's highland regions. Tagaytay area becomes part of the Cavite encomienda system under colonial administration."
+      "revolution": {
+        "year": "1896",
+        "title": "First Cry of Cavite",
+        "text": "The 'First Cry of Cavite' occurred in Pasong Kalabaw on August 31, 1896, led by Filipino revolutionaries. General Trias played a crucial role in the Philippine Revolution against Spanish colonial rule."
       },
-      "charter": {
-        "year": "1938",
-        "title": "City Charter",
-        "text": "Commonwealth Act No. 338 signed by President Manuel L. Quezon on July 27, 1938, constituting Tagaytay as a city — one of the earliest chartered cities in the Philippines."
+      "independence": {
+        "year": "1898",
+        "title": "Independence Proclamation",
+        "text": "The town's Franciscan-built church (est. 1611) was where the Philippine national anthem was first performed during the independence proclamation on June 12, 1898, cementing the city's place in national history."
       },
-      "summer": {
-        "year": "1948",
-        "title": "Summer Capital",
-        "text": "Tagaytay designated as the 'Summer Capital of the Philippines' due to its cool climate, scenic mountain air, and panoramic views of Taal Volcano and Lake."
+      "renamed": {
+        "year": "1920",
+        "title": "Renamed to General Trias",
+        "text": "Act No. 2889 changed the municipality's name from Malabon to General Trias on February 24, 1920, honoring General Mariano Trias — Cavite's first provincial governor under American administration."
       },
-      "capital": {
-        "year": "1975",
-        "title": "Capital Proposal",
-        "text": "The Marcos administration considers relocating the national capital to Tagaytay. The proposal, driven by its strategic elevation and climate, was ultimately not pursued."
+      "growth": {
+        "year": "1990s",
+        "title": "Industrial Growth Era",
+        "text": "General Trias emerged as a major industrial and residential hub in Cavite. Numerous economic zones, manufacturing plants, and subdivisions were established, fueling rapid population growth."
       },
-      "eruption": {
-        "year": "2020",
-        "title": "Taal Eruption",
-        "text": "Taal Volcano erupts on January 12, 2020, prompting mass evacuation of Tagaytay City residents and temporarily closing down the city's vital tourism sector."
+      "cityhood": {
+        "year": "2015",
+        "title": "Cityhood Achieved",
+        "text": "General Trias was officially converted into a component city on December 17, 2015, becoming the 145th city in the Philippines and the 7th city in the province of Cavite under R.A. 10675."
       },
-      "leadership": {
-        "year": "2022",
-        "title": "New Leadership & Recovery",
-        "text": "Mayor Aizack Brent D. Tolentino elected. The city continues recovery and development of tourism infrastructure, including completion of the world-class Tagaytay City Velodrome."
+      "recognition": {
+        "year": "2023–2024",
+        "title": "Awards & Recognition",
+        "text": "The city earned multiple honors including the Seal of Good Local Governance, Most Business-Friendly LGU Award, and the 2023 Good Financial Housekeeping Passer from DILG-R4A, reflecting strong governance."
       }
     }
   },
@@ -235,11 +235,11 @@
     "address": "Address",
     "phoneHours": "Mon–Fri  8:00 AM – 5:00 PM",
     "emailResponse": "24-hour response",
-    "addressLine1": "Akle St., Kaybagal South",
-    "addressLine2": "Tagaytay City, Cavite 4120"
+    "addressLine1": "Governor's Drive, Sampalucan",
+    "addressLine2": "General Trias City, Cavite"
   },
   "weather": {
-    "title": "Weather in Tagaytay"
+    "title": "Weather in General Trias"
   },
   "forex": {
     "title": "Foreign Exchange Rates"
@@ -248,14 +248,14 @@
     "title": "Latest News & Announcements"
   },
   "footer": {
-    "mission": "Empowering the people of Tagaytay with transparent access to government services, programs, and public funds.",
+    "mission": "Empowering the people of General Trias with transparent access to government services, programs, and public funds.",
     "quickLinks": "Quick Links",
     "resources": "Resources",
-    "cost": "Cost to the People of Tagaytay = ₱0",
-    "costLabel": "Cost to the People of Tagaytay =",
+    "cost": "Cost to the People of General Trias = ₱0",
+    "costLabel": "Cost to the People of General Trias =",
     "volunteer": "Volunteer with us",
     "contribute": "Contribute code with us",
-    "copyright": "© 2026 BetterTagaytay.ph  MIT | CC BY 4.0  All public information sourced from official government portals.",
+    "copyright": "© 2026 BetterGenTri.ph  MIT | CC BY 4.0  All public information sourced from official government portals.",
     "attribution": "All public information sourced from official government portals.",
     "builtBy": "Built by"
   },

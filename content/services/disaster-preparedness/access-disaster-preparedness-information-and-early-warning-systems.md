@@ -1,6 +1,6 @@
 # Access Disaster Preparedness Information and Early Warning Systems
 
-Stay informed and prepared through Tagaytay City's disaster risk reduction programs and early warning systems managed by the CDRRMO.
+Stay informed and prepared through General Trias City's disaster risk reduction programs and early warning systems managed by the CDRRMO.
 
 ## Early Warning Systems Available
 
@@ -8,12 +8,12 @@ Stay informed and prepared through Tagaytay City's disaster risk reduction progr
 
 - **PHIVOLCS** provides 24/7 monitoring of Taal Volcano
 - Alert levels are broadcast via radio, TV, and official government social media
-- PHIVOLCS Tagaytay Station: (046) 413-1785 / (046) 483-1401
+- PHIVOLCS General Trias Station: (046) 413-1785 / (046) 483-1401
 
 ### Weather Warnings
 
 - **PAGASA** issues typhoon signals and rainfall warnings
-- Tagaytay is prone to heavy rains — monitor Signal No. advisories
+- General Trias is prone to heavy rains — monitor Signal No. advisories
 
 ### Community Warning Systems
 
@@ -38,7 +38,7 @@ Request free copies from CDRRMO or your barangay:
 ## CDRRMO Office
 
 **City Disaster Risk Reduction and Management Office**
-Tagaytay City Hall, Akle St., Kaybagal South
+General Trias City Hall, Akle St., Kaybagal South
 Telephone: (046) 483-0446
 Available **24 hours, 7 days a week**
 

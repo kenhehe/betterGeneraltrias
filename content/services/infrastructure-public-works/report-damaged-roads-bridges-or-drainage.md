@@ -16,7 +16,7 @@ Residents can report damaged public infrastructure such as potholes, broken brid
 ### Option 1 — Visit the Office
 
 **City Engineering Office / General Services Office**
-Tagaytay City Hall, Akle St., Kaybagal South
+General Trias City Hall, Akle St., Kaybagal South
 Telephone: (046) 413-1220 / (046) 888-9500
 
 ### Option 2 — Report to Your Barangay

@@ -1,109 +1,92 @@
-# City Government of Tagaytay — Office Directory
+# City Government of General Trias — Office Directory
 
-**Tagaytay City Hall**
-Akle St., Kaybagal South, Tagaytay City, Cavite
-Main Line: **(046) 413-1220** (connecting all offices)
-Trunk Line: **(046) 888-9500**
-Email: cpdctagaytay@yahoo.com | Website: www.tagaytay.gov.ph
+**General Trias City Hall**
+Governor's Drive, Sampalucan, General Trias City, Cavite
+Main Line: **(046) 884-5768**
+Website: [www.generaltrias.gov.ph](https://www.generaltrias.gov.ph)
+
+---
+
+## Executive Leadership
+
+| Position | Name |
+| -------- | ---- |
+| **City Mayor** | Hon. Luis A. Ferrer IV |
+| **City Vice Mayor** | Hon. Jonas Glyn Porto Labuguen |
+
+**About the Mayor:** Hon. Luis "Jon-Jon" A. Ferrer IV was born on December 12, 1972. He graduated from San Beda College (Accounting, 1994) and holds a Master in Public Administration (MPA) from the Lyceum of the Philippines University. He previously served as Municipal Councilor, Provincial Board Member, Vice-Mayor, and Congressional Representative. He has received the Local Government Leadership Award and the Ramon V. Mitra Award for Legislation.
+
+**About the Vice Mayor:** Hon. Jonas Glyn Porto Labuguen was born on August 18, 1982. He studied Computer Technology at the National College of Science and Technology. He previously served as Municipal and City Councilor from 2013 to 2022, having passed 102 ordinances and 364 resolutions during his tenure.
+
+---
+
+## Sangguniang Panlungsod (City Council)
+
+| # | Member |
+| - | ------ |
+| 1 | Hon. Jesse Raphael R. Grepo |
+| 2 | Hon. Felix A. Grepo |
+| 3 | Hon. Clarissel J. Campaña-Moral |
+| 4 | Hon. Kyle Jassel J. Salazar |
+| 5 | Hon. J-M Vergel M. Columna |
+| 6 | Hon. Isagani L. Culanding |
+| 7 | Hon. Kristine Jane P. Barison |
+| 8 | Hon. Vivencio Q. Lozares |
+| 9 | Hon. Richard R. Parin |
+| 10 | Hon. Alfredo S. Ching |
+| 11 | Hon. Hernando M. Granados |
+| 12 | Hon. Martin Nicholo A. Ferrer |
+| LNB President | Hon. Ramil C. Barrientos |
+| SK Federation President | Ainsley Gwyneth G. Luces |
 
 ---
 
 ## City Hall Offices
 
-| Office                                    | Telephone                      | In-Charge                |
-| ----------------------------------------- | ------------------------------ | ------------------------ |
-| Accounting Office                         | (046) 413-4300                 | Mrs. Rosemarie V. Lerio  |
-| Administrator's Office                    | (046) 413-0025                 | Engr. Gregorio Monreal   |
-| Civil Registrar's Office                  | (046) 413-3400                 | Ms. Ma. Paz Baybay       |
-| City Planning & Development Office (CPDO) | (046) 483-0604                 | Engr. Emma Pello         |
-| City Health Office — TOPS Western         | (046) 695-6023                 | Dr. Mito Lovito Alvarez  |
-| City Nutrition Office                     | (046) 413-1296 loc. 320        | Ms. Lorna S. Toledo      |
-| City Treasurer's Office                   | (046) 682-0299                 | Mrs. Elvira Reyes        |
-| Traffic Management / CSU                  | (046) 682-0310                 | Ms. Leilani D. Diesta    |
-| TSAC (Tolentino Sports & Activity Center) | (046) 413-1220                 | Mr. Renato Bergado       |
-| DepEd — Elementary Division               | (046) 413-4080                 | Mr. Gerry Mawak          |
-| CDRRMO / Tagaytay Rescue                  | (046) 483-0446                 | Mr. Rodante Villanueva   |
-| Tagaytay City Public Market               | (046) 483-0636                 | Ms. Pacita Z. Aquino     |
-| General Services Office                   | (046) 483-0593                 | Ms. Elma Patawe          |
-| City Social Welfare & Dev. Office (CSWDO) | (046) 483-0494                 | Mr. Oscar Laurenciana    |
-| CENTRO                                    | (046) 413-2325                 | —                        |
-| Sangguniang Panlungsod                    | (046) 483-0729 / 0927-449-9128 | —                        |
-| Tourism Office                            | (046) 413-1220                 | Ms. Joan Nazareno Loyola |
-| Public Information Office (PIO)           | (046) 413-1220                 | —                        |
-
----
-
-## National Government Agencies
-
-| Agency                              | Telephone                       | In-Charge                     |
-| ----------------------------------- | ------------------------------- | ----------------------------- |
-| Bureau of Fire Protection (BFP)     | (046) 483-1193                  | C/Insp. Jerome P. Reano       |
-| Commission on Audit (COA)           | (046) 413-1356                  | Ms. Zenaida Vida              |
-| COMELEC                             | (046) 413-0072                  | Atty. Winston Gaffud          |
-| DILG                                | (046) 860-1557                  | Ms. Celia Martal              |
-| DPWH — District Engineering Office  | (046) 860-3127                  | Engr. Eric A. Ayapana         |
-| DOH — Tagaytay Regional Center      | (046) 483-1334                  | Dr. Carmencita Belgica        |
-| Fiscal's Office / MTCC              | (046) 413-1225 / (046) 860-1907 | Fiscal Ernesto Vida           |
-| PHIVOLCS                            | (046) 413-1785 / (046) 483-1401 | Mr. Alex Cabrera              |
-| PNP — Tagaytay City                 | (046) 413-1282                  | P/Supt. Ferdinand R. Quirante |
-| Post Office                         | (046) 413-0383                  | Ms. Marites Regis             |
-| Registry of Deeds                   | (046) 483-1312                  | Atty. Roberto P. Salcedo      |
-| RTC (Regional Trial Court)          | (046) 413-0029                  | Judge Jaime Santiago          |
-| SSS                                 | (02) 831-6768                   | Ms. Victorina G. Carlos       |
-| Tagaytay City Water District (TCWD) | (046) 413-2556                  | Mrs. Ruth Ambion              |
-| LTO                                 | (046) 850-3608                  | Ms. Nanette Susa              |
-| Ospital ng Tagaytay                 | (046) 413-2160 / (046) 413-9001 | —                             |
-| PA-IBIG (Imus Branch)               | (046) 471-6638                  | —                             |
-| MERALCO                             | (046) 413-1378                  | —                             |
-| DTI — Dasmariñas                    | (046) 416-3057                  | —                             |
-| DOST Regional                       | (049) 536-4997                  | —                             |
-| Cavite Governor's Office            | (046) 419-2689                  | —                             |
-| BJMP — Tagaytay                     | (046) 860-2778                  | —                             |
-| NBI — Tagaytay                      | (046) 413-2296                  | —                             |
-| PLDT                                | (046) 413-4800                  | —                             |
+| Office | Contact |
+| ------ | ------- |
+| Office of the City Mayor | (046) 884-5768 |
+| Office of the City Vice Mayor | (046) 884-5768 |
+| Office of the City Administrator | (046) 884-5768 |
+| City Business Permit & Licensing Office (BPLO) | (046) 884-5768 |
+| City Treasurer's Office | (046) 884-5768 |
+| City Accounting Office | (046) 884-5768 |
+| Civil Registrar's Office | (046) 884-5768 |
+| City Health Office (CHO) | (046) 884-5768 |
+| City Social Welfare & Development Office (CSWDO) | (046) 884-5768 |
+| City Planning & Development Office (CPDO) | (046) 884-5768 |
+| City Engineering Office | (046) 884-5768 |
+| City Environment & Natural Resources Office (CENRO) | (046) 884-5768 |
+| Public Employment Service Office (PESO) | (046) 884-5768 |
+| City Tourism Office | (046) 884-5768 |
+| City Disaster Risk Reduction & Management Office (CDRRMO) | (046) 884-5600 |
+| Sangguniang Panlungsod Secretariat | (046) 884-5768 |
 
 ---
 
 ## Emergency Hotlines
 
-| Office                        | Number             |
-| ----------------------------- | ------------------ |
-| **PNP Tagaytay**              | **(046) 413-1282** |
-| **Ospital ng Tagaytay**       | **(046) 423-3195** |
-| **Bureau of Fire Protection** | **(046) 483-1193** |
-| **CDRRMO / Rescue**           | **(046) 483-0446** |
-| **City Health Office**        | **(046) 483-0604** |
-| PHIVOLCS                      | (046) 413-1785     |
+| Office | Number |
+| ------ | ------ |
+| **PNP General Trias** | **(046) 884-1555** |
+| **City Hospital / Ambulance** | **(046) 884-5800** |
+| **Bureau of Fire Protection** | **(046) 884-5700** |
+| **CDRRMO / Rescue** | **(046) 884-5600** |
+| **City Health Office** | **(046) 884-5768** |
 
 ---
 
-## Non-Government Organizations
+## Tourism & Leisure Establishments
 
-| Organization                           | Contact       | Representative         |
-| -------------------------------------- | ------------- | ---------------------- |
-| Association of Barangay Captains       | 0999-888-9754 | Hon. Marcelo Marasigan |
-| Association of Barangay Kagawad        | 0907-438-0713 | —                      |
-| Senior Citizens Association            | 0917-525-4737 | Mrs. Lorna De Castro   |
-| PWD — Persons with Disabilities        | 0917-568-0080 | Mr. Joel Erni          |
-| Tagaytay Tourism Council               | 0917-838-0073 | Ms. Catherine Turvill  |
-| Tagaytay Kalikasan Jaycees             | 0922-843-1778 | —                      |
-| Veterans Federation of the Philippines | —             | Mr. Ruel Erni          |
+| Establishment | Location |
+| ------------- | -------- |
+| Eagle Ridge Golf & Country Club | Brgy. Javalera |
+| GBR Museum | Gateway Business Park, Brgy. Javalera |
+| General Trias City Park | General Trias City |
+| City of General Trias People's Park | Brgy. Biclatan |
+| San Francisco de Malabon Parish Church | Governor Ferrer Dr., Sampalucan |
+| Our Lady of Guadalupe Parish Church | Crisanto M. De los Reyes Ave. |
 
 ---
 
-## Key Tourism & Leisure Establishments
-
-| Establishment                            | Telephone      | Location       |
-| ---------------------------------------- | -------------- | -------------- |
-| Taal Vista Hotel                         | (046) 413-1000 | Kaybagal South |
-| Summit Ridge Hotel                       | (046) 477-3111 | Maharlika West |
-| Tagaytay Highlands Country Club          | (046) 483-0820 | Calabuso       |
-| People's Park in the Sky                 | (046) 413-1220 | Dapdap East    |
-| Picnic Grove                             | (046) 483-0346 | Sungay East    |
-| Casino Filipino                          | (046) 413-1506 | Kaybagal South |
-| Anya Resort & Residential                | (046) 810-8910 | Tolentino West |
-| Balai Taal                               | (046) 483-4162 | Sungay East    |
-| Tagaytay International Convention Center | (046) 413-0106 | Kaybagal South |
-| Paradizoo                                | (046) 413-1220 | Mendez, Cavite |
-| Philippine National Red Cross            | (046) 413-0041 | Kaybagal South |
-| DAP (Development Academy)                | (046) 483-1291 | Sungay East    |
+> **Note:** For the most current contact information for all city hall offices, please visit the official General Trias City website at [www.generaltrias.gov.ph](https://www.generaltrias.gov.ph) or call the main city hall line at **(046) 884-5768**.

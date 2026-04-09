@@ -1,19 +1,19 @@
-# Go to the Hospital for Treatment or Confinement — Tagaytay City
+# Go to the Hospital for Treatment or Confinement — General Trias City
 
-This guide covers **where to go**, **what to bring**, and **how admission works** at hospitals serving Tagaytay City residents.
+This guide covers **where to go**, **what to bring**, and **how admission works** at hospitals serving General Trias City residents.
 
 ---
 
 ## A) Government Hospital
 
-### Ospital ng Tagaytay
+### Ospital ng General Trias
 
-The **Ospital ng Tagaytay** is the city-run public hospital serving residents of Tagaytay City.
+The **Ospital ng General Trias** is the city-run public hospital serving residents of General Trias City.
 
 **Contact:**
 
 - **Tel:** (046) 423-3195 / (046) 483-2160
-- **Address:** Tagaytay City, Cavite
+- **Address:** General Trias City, Cavite
 
 **Services & Hours**
 
@@ -35,7 +35,7 @@ The **Ospital ng Tagaytay** is the city-run public hospital serving residents of
 
 ## B) City Health Office
 
-The **City Health Office (CHO)** of Tagaytay City provides primary health care, vaccinations, maternal care, and basic medicines for residents.
+The **City Health Office (CHO)** of General Trias City provides primary health care, vaccinations, maternal care, and basic medicines for residents.
 
 **Contact:** (046) 483-0604
 
@@ -47,10 +47,10 @@ For minor health concerns, visit the City Health Office before going to the hosp
 
 | Service                   | Contact                         |
 | ------------------------- | ------------------------------- |
-| Ospital ng Tagaytay       | (046) 423-3195 / (046) 483-2160 |
+| Ospital ng General Trias       | (046) 423-3195 / (046) 483-2160 |
 | City Health Office        | (046) 483-0604                  |
 | City Rescue / CDRRMO      | (046) 483-0446                  |
-| Tagaytay PNP              | (046) 413-1282 / 0915-913-7693  |
+| General Trias PNP              | (046) 413-1282 / 0915-913-7693  |
 | Bureau of Fire Protection | (046) 483-1193 / (046) 471-3747 |
 | City Hall                 | (046) 888-9500                  |
 

@@ -1,6 +1,6 @@
 # Join Disaster Drills and Evacuation Planning
 
-The City Disaster Risk Reduction and Management Office (CDRRMO) of Tagaytay City conducts regular disaster drills and community evacuation planning activities to prepare residents for emergencies, particularly given the city's proximity to Taal Volcano.
+The City Disaster Risk Reduction and Management Office (CDRRMO) of General Trias City conducts regular disaster drills and community evacuation planning activities to prepare residents for emergencies, particularly given the city's proximity to Taal Volcano.
 
 ## Types of Drills Conducted
 
@@ -19,7 +19,7 @@ The City Disaster Risk Reduction and Management Office (CDRRMO) of Tagaytay City
 
 Your barangay has a designated **Evacuation Center**. Know yours before a disaster strikes. Evacuation maps are posted at barangay halls.
 
-**Key Evacuation Centers in Tagaytay:**
+**Key Evacuation Centers in General Trias:**
 
 - Tolentino Sports and Activity Center (TSAC)
 - Designated school grounds and covered courts per barangay

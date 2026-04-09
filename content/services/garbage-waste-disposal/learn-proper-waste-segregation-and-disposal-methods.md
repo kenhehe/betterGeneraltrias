@@ -1,6 +1,6 @@
-# Guidelines for Proper Waste Segregation and Disposal — Tagaytay City
+# Guidelines for Proper Waste Segregation and Disposal — General Trias City
 
-Proper waste segregation is **mandatory** in Tagaytay City under **Republic Act 9003 (Ecological Solid Waste Management Act)** and local ordinances. Following these rules helps keep the city clean, prevents flooding, and protects health.
+Proper waste segregation is **mandatory** in General Trias City under **Republic Act 9003 (Ecological Solid Waste Management Act)** and local ordinances. Following these rules helps keep the city clean, prevents flooding, and protects health.
 
 ---
 
@@ -62,12 +62,12 @@ Proper waste segregation is **mandatory** in Tagaytay City under **Republic Act 
 ## Contact for Support
 
 - **City Environment and Natural Resources Office (CENRO)**  
-  Tagaytay City Hall, Government Complex, Brgy. Pajo  
+  General Trias City Hall, Government Complex, Brgy. Pajo  
   Phone: (046) 888-9500 (ask for CENRO)  
-  Updates via: [Tagaytay City Information Office Facebook Page](https://www.www.facebook.com/TagaytayCityGovernment)
+  Updates via: [General Trias City Information Office Facebook Page](https://www.facebook.com/GeneralTriasCityGovernment)
 
 ---
 
 ### Key Reminder
 
-✅ Proper segregation is a **shared responsibility**. By separating waste correctly, you help reduce landfill use, promote recycling, and keep Tagaytay City safe and sustainable.
+✅ Proper segregation is a **shared responsibility**. By separating waste correctly, you help reduce landfill use, promote recycling, and keep General Trias City safe and sustainable.

@@ -1,6 +1,6 @@
 {
-  "site_name": "BetterTagaytay",
-  "site_description": "Isang portal ng transparency para sa Lungsod ng Tagaytay, Cavite — hanapin ang mga serbisyo ng pamahalaan, opisyal, badyet, at pampublikong impormasyon.",
+  "site_name": "BetterGenTri",
+  "site_description": "Isang portal ng transparency para sa Lungsod ng General Trias, Cavite — hanapin ang mga serbisyo ng pamahalaan, opisyal, badyet, at pampublikong impormasyon.",
   "nav": {
     "home": "Tahanan",
     "services": "Mga Serbisyo",
@@ -29,9 +29,9 @@
     "cswdo": "CSWDO"
   },
   "hero": {
-    "title": "BetterTagaytay",
+    "title": "BetterGenTri",
     "welcome": "Maligayang pagdating sa",
-    "subtitle": "I-access ang mga serbisyo ng pamahalaan, impormasyon, at mapagkukunan para sa mga mamamayan ng Lungsod ng Tagaytay, Cavite.",
+    "subtitle": "I-access ang mga serbisyo ng pamahalaan, impormasyon, at mapagkukunan para sa mga mamamayan ng Lungsod ng General Trias, Cavite.",
     "browseServices": "Tingnan ang Mga Serbisyo",
     "contactUs": "Makipag-ugnayan",
     "findService": "Maghanap ng Serbisyo",
@@ -43,12 +43,12 @@
   },
   "infobar": {
     "usd": "1 USD =",
-    "location": "Tagaytay"
+    "location": "General Trias"
   },
   "services": {
     "title": "Mga Serbisyo at Impormasyon",
     "governmentServices": "Mga Serbisyo ng Pamahalaan",
-    "description": "I-access ang mga opisyal na serbisyo ng pamahalaan ng Lungsod ng Tagaytay nang mabilis at madali. Hanapin ang kailangan mo para sa pagkamamamayan, negosyo, kalusugan, edukasyon, at iba pa.",
+    "description": "I-access ang mga opisyal na serbisyo ng pamahalaan ng Lungsod ng General Trias nang mabilis at madali. Hanapin ang kailangan mo para sa pagkamamamayan, negosyo, kalusugan, edukasyon, at iba pa.",
     "viewAll": "Tingnan ang Lahat ng Serbisyo",
     "viewAllCategory": "Tingnan ang Lahat",
     "categories": {
@@ -94,23 +94,23 @@
       },
       "tourism": {
         "name": "Turismo",
-        "description": "Mga tourist spot, permit para sa mga negosyong may kaugnayan sa turismo, akreditasyon, at impormasyon para sa mga bisita ng Lungsod ng Tagaytay."
+        "description": "Mga tourist spot, permit para sa mga negosyong may kaugnayan sa turismo, akreditasyon, at impormasyon para sa mga bisita ng Lungsod ng General Trias."
       }
     },
     "tourismSpotlight": {
       "badge": "Tampok sa Turismo",
-      "title": "Tuklasin ang Lungsod ng Tagaytay",
-      "description": "Ang Tagaytay ay ang pangalawang pinakamataas na lungsod sa Pilipinas, na nag-aalok ng kamangha-manghang tanawin ng Bulkang Taal, sariwang lutong bundok, at malamig na panahon buong taon.",
+      "title": "Tuklasin ang Lungsod ng General Trias",
+      "description": "Ang General Trias ay isa sa pinakamabilis na lumalagong lungsod sa Pilipinas — tahanan ng mga makasaysayang simbahan, Eagle Ridge Golf Club, at ang makulay na Pista ng Valenciana.",
       "cta": "Tuklasin ang mga Serbisyong Pangturismo",
-      "taal": "Bulkang Taal",
-      "ridge": "Magagandang Bangin",
-      "food": "Bulalo at Iba Pa",
-      "spots": "Mga Photo Spot"
+      "taal": "Makasaysayang Simbahan",
+      "ridge": "Eagle Ridge Golf",
+      "food": "Pagkaing Valenciana",
+      "spots": "Parke ng Lungsod"
     }
   },
   "governmentActivity": {
     "title": "Pamahalaan ng Lungsod",
-    "description": "Manatiling updated sa pinakabagong balita, mga departamento, at mga aktibidad ng Pamahalaan ng Lungsod ng Tagaytay.",
+    "description": "Manatiling updated sa pinakabagong balita, mga departamento, at mga aktibidad ng Pamahalaan ng Lungsod ng General Trias.",
     "categories": {
       "departments": {
         "name": "Mga Departamento",
@@ -139,7 +139,7 @@
     }
   },
   "stats": {
-    "title": "Tagaytay sa Isang Tingin",
+    "title": "General Trias sa Isang Tingin",
     "viewProfile": "Tingnan ang Profil ng Lungsod →",
     "population": {
       "label": "Populasyon",
@@ -150,7 +150,7 @@
       "desc": "Mga sangkap na barangay"
     },
     "classification": {
-      "label": "Lungsod",
+      "label": "Sangkap na Lungsod",
       "desc": "Lalawigan ng Cavite"
     },
     "area": {
@@ -159,14 +159,14 @@
     }
   },
   "weatherMap": {
-    "title": "Panahon at Mapa ng Tagaytay",
-    "location": "Lungsod ng Tagaytay, Cavite",
-    "defaultCondition": "Malamig at kasiya-siya",
+    "title": "Panahon at Mapa ng General Trias",
+    "location": "Lungsod ng General Trias, Cavite",
+    "defaultCondition": "Mainit at tropikal",
     "loading": "Naglo-load ng live na panahon…",
     "wind": "km/h",
-    "climate": "Malamig na klima",
-    "elevation": "~600m taas",
-    "mapTitle": "Mapa ng Lungsod ng Tagaytay",
+    "climate": "Tropikal na klima",
+    "elevation": "Mababang lupain",
+    "mapTitle": "Mapa ng Lungsod ng General Trias",
     "clear": "Maliwanag",
     "partlyCloudy": "May ulap",
     "foggy": "Maulap",
@@ -175,46 +175,46 @@
     "thunderstorm": "Bagyo"
   },
   "history": {
-    "title": "Maikling Kasaysayan ng Lungsod ng Tagaytay",
-    "charteredYear": "Taon ng Pagkakatatag",
-    "charteredDesc": "Ang Tagaytay ay isa sa mga pinakamaagang lungsod na itinatag sa Pilipinas, na itinayo sa ilalim ng Commonwealth Act No. 338 ni Pangulong Manuel L. Quezon.",
-    "elevationLabel": "Taas sa Antas ng Dagat",
-    "elevationDesc": "Ang Tagaytay ay nakaupo sa tuktok ng isang bangin sa humigit-kumulang 600–700 metro sa antas ng dagat, na nagbibigay sa kanya ng isa sa pinakamalalamig na klima sa Luzon at ang iconic na tanawin ng Bulkang Taal.",
+    "title": "Maikling Kasaysayan ng Lungsod ng General Trias",
+    "charteredYear": "Taon ng Pagiging Lungsod",
+    "charteredDesc": "Ang General Trias ay naging ang ika-145 na lungsod sa Pilipinas at ika-7 sa Lalawigan ng Cavite, na itinangkilik bilang lungsod noong Disyembre 17, 2015 sa ilalim ng R.A. 10675.",
+    "populationLabel": "Populasyon",
+    "populationDesc": "Ang General Trias ay isa sa pinakamabilis na lumalagong lungsod sa Pilipinas, na may higit sa 450,000 mamamayan ayon sa senso ng 2020, na hinihimok ng mabilis na industriyalisasyon.",
     "events": {
-      "precolonial": {
-        "year": "Prekolonyal",
-        "title": "Mga Pamayanan ng Tagalog",
-        "text": "Ang taluktok ng Tagaytay ay tinitirhan ng mga Tagalog; ang mataas na lupain na nagmamalapit sa Lawa ng Taal ay nagsilbing likas na tanglaw at matatabang lupang pangsakahan."
+      "founded": {
+        "year": "1748",
+        "title": "Pagtatayo ng Munisipalidad",
+        "text": "Ang lugar ay itinatag bilang Munisipalidad ng San Francisco de Malabon noong Disyembre 13, 1748. Ang pangalang 'Malabon' ay pinaniniwalaaang nagmula sa salitang 'Labong,' na tumutukoy sa mga usbong ng kawayan na masagana sa rehiyon."
       },
-      "spanish": {
-        "year": "1630s",
-        "title": "Panahon ng Kastila",
-        "text": "Ang mga misyonerong Kastila ay nagtatag ng mga pamayanan sa matataas na lugar ng Cavite. Ang lugar ng Tagaytay ay naging bahagi ng sistemang encomienda ng Cavite sa ilalim ng kolonyal na pamamahala."
+      "revolution": {
+        "year": "1896",
+        "title": "Unang Sigaw ng Cavite",
+        "text": "Ang 'Unang Sigaw ng Cavite' ay naganap sa Pasong Kalabaw noong Agosto 31, 1896, na pinamunuan ng mga rebolusyonaryong Pilipino. Ang General Trias ay nagsilbing mahalagang papel sa Rebolusyong Pilipino laban sa pananakop ng Kastila."
       },
-      "charter": {
-        "year": "1938",
-        "title": "Karta ng Lungsod",
-        "text": "Ang Commonwealth Act No. 338 ay nilagdaan ni Pangulong Manuel L. Quezon noong Hulyo 27, 1938, na nagtatag sa Tagaytay bilang isang lungsod — isa sa mga pinakamaaga sa Pilipinas."
+      "independence": {
+        "year": "1898",
+        "title": "Proklamasyon ng Kalayaan",
+        "text": "Ang simbahan ng bayan na itinayo ng mga Pransiskano noong 1611 ang pinagdaluhan ng unang pagtugtog ng pambansang awit ng Pilipinas sa panahon ng proklamasyon ng kalayaan noong Hunyo 12, 1898."
       },
-      "summer": {
-        "year": "1948",
-        "title": "Kabisera ng Tag-init",
-        "text": "Ang Tagaytay ay itinakda bilang 'Kabisera ng Tag-init ng Pilipinas' dahil sa malamig nitong klima, maselyong hanging bundok, at panoramikong tanawin ng Bulkang Taal at Lawa."
+      "renamed": {
+        "year": "1920",
+        "title": "Pinalitan ng Pangalan: General Trias",
+        "text": "Ang Batas Blg. 2889 ay nagbago ng pangalan ng munisipalidad mula Malabon patungong General Trias noong Pebrero 24, 1920, bilang paggunita kay Heneral Mariano Trias — ang unang gobernador ng Cavite sa ilalim ng administrasyong Amerikano."
       },
-      "capital": {
-        "year": "1975",
-        "title": "Panukala sa Kabisera",
-        "text": "Pinag-isipan ng administrasyong Marcos ang paglipat ng pambansang kabisera sa Tagaytay. Ang panukala, na hinimok ng estratehikong taas at klima nito, ay hindi naisagawa."
+      "growth": {
+        "year": "Dekada 1990",
+        "title": "Panahon ng Industriyal na Paglago",
+        "text": "Lumitaw ang General Trias bilang isang pangunahing industriyal at tirahan na sentro sa Cavite. Maraming economic zones, planta ng pagmamanupaktura, at subdivisions ang itinatag, na nagpapabilis ng mabilis na paglago ng populasyon."
       },
-      "eruption": {
-        "year": "2020",
-        "title": "Pagsabog ng Taal",
-        "text": "Sumabog ang Bulkang Taal noong Enero 12, 2020, na nag-udyok ng malawakang paglikas ng mga mamamayan ng Lungsod ng Tagaytay at pansamantalang pagsasara ng mahalagang sektor ng turismo."
+      "cityhood": {
+        "year": "2015",
+        "title": "Naging Lungsod",
+        "text": "Ang General Trias ay opisyal na naging isang sangkap na lungsod noong Disyembre 17, 2015, na naging ika-145 na lungsod sa Pilipinas at ika-7 sa lalawigan ng Cavite sa ilalim ng R.A. 10675."
       },
-      "leadership": {
-        "year": "2022",
-        "title": "Bagong Pamunuan at Pagbabago",
-        "text": "Nahalal si Mayor Aizack Brent D. Tolentino. Patuloy ang pagbabago ng lungsod at pag-unlad ng imprastraktura ng turismo, kasama ang pagkumpleto ng world-class na Tagaytay City Velodrome."
+      "recognition": {
+        "year": "2023–2024",
+        "title": "Mga Parangal at Pagkilala",
+        "text": "Natanggap ng lungsod ang maraming karangalan kasama ang Seal of Good Local Governance, Most Business-Friendly LGU Award, at ang 2023 Good Financial Housekeeping Passer mula sa DILG-R4A, na nagpapakita ng malakas na pamamahala."
       }
     }
   },
@@ -235,11 +235,11 @@
     "address": "Address",
     "phoneHours": "Lun–Biy  8:00 AM – 5:00 PM",
     "emailResponse": "Tugon sa loob ng 24 na oras",
-    "addressLine1": "Akle St., Kaybagal South",
-    "addressLine2": "Lungsod ng Tagaytay, Cavite 4120"
+    "addressLine1": "Governor's Drive, Sampalucan",
+    "addressLine2": "Lungsod ng General Trias, Cavite"
   },
   "weather": {
-    "title": "Panahon sa Tagaytay"
+    "title": "Panahon sa General Trias"
   },
   "forex": {
     "title": "Mga Palitan ng Pera"
@@ -248,14 +248,14 @@
     "title": "Pinakabagong Balita at Anunsyo"
   },
   "footer": {
-    "mission": "Pinapalakas ang mga mamamayan ng Tagaytay sa pamamagitan ng transparent na access sa mga serbisyo, programa, at pampublikong pondo ng pamahalaan.",
+    "mission": "Pinapalakas ang mga mamamayan ng General Trias sa pamamagitan ng transparent na access sa mga serbisyo, programa, at pampublikong pondo ng pamahalaan.",
     "quickLinks": "Mabilis na Mga Link",
     "resources": "Mga Mapagkukunan",
-    "cost": "Gastos sa mga Mamamayan ng Tagaytay = ₱0",
-    "costLabel": "Gastos sa mga Mamamayan ng Tagaytay =",
+    "cost": "Gastos sa mga Mamamayan ng General Trias = ₱0",
+    "costLabel": "Gastos sa mga Mamamayan ng General Trias =",
     "volunteer": "Maging boluntaryo",
     "contribute": "Mag-ambag ng code",
-    "copyright": "© 2026 BetterTagaytay.ph  MIT | CC BY 4.0  Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan.",
+    "copyright": "© 2026 BetterGenTri.ph  MIT | CC BY 4.0  Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan.",
     "attribution": "Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan.",
     "builtBy": "Ginawa ni"
   },

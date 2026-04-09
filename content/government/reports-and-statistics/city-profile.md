@@ -1,88 +1,103 @@
-# City Profile and Statistics — Tagaytay City
+# City Profile and Statistics — General Trias City
 
 ## Overview
 
-**Tagaytay City** is a **component city** in the **Province of Cavite**, Region IV-A (CALABARZON), Philippines. It is renowned for its cool climate and the iconic view of **Taal Volcano** and **Taal Lake**, making it one of the country's most visited tourist destinations.
+**General Trias City** is a **component city** in the **Province of Cavite**, Region IV-A (CALABARZON), Philippines. It is one of the fastest-growing cities in the country, driven by rapid industrialization, a strategic location near Metro Manila, and strong local governance. The city is rich in revolutionary history and vibrant local culture.
 
 ---
 
 ## Key Facts
 
-| Category                   | Details                                       |
-| -------------------------- | --------------------------------------------- |
-| **Official Name**          | City of Tagaytay                              |
-| **Classification**         | Component City (Component of Cavite Province) |
-| **Province**               | Cavite                                        |
-| **Region**                 | Region IV-A (CALABARZON)                      |
-| **Island Group**           | Luzon                                         |
-| **Distance from Manila**   | ~60 km south                                  |
-| **Elevation**              | ~600–700 meters above sea level (ridge)       |
-| **Average Temperature**    | 18–25°C (coolest in Region IV-A)              |
-| **Land Area**              | Approx. 65.5 km²                              |
-| **Number of Barangays**    | 34                                            |
-| **Congressional District** | 1st District of Cavite                        |
-| **City Hall Address**      | Akle St., Kaybagal South, Tagaytay City       |
-| **City Hall Phone**        | (046) 888-9500                                |
-| **Official Website**       | https://www.tagaytay.gov.ph                   |
+| Category | Details |
+| -------- | ------- |
+| **Official Name** | City of General Trias |
+| **Classification** | Component City (Province of Cavite) |
+| **Province** | Cavite |
+| **Region** | Region IV-A (CALABARZON) |
+| **Island Group** | Luzon |
+| **Distance from Manila** | ~35–40 km southwest |
+| **Elevation** | Low-lying terrain |
+| **Average Temperature** | 27–33°C (tropical climate) |
+| **Land Area** | 8,890 hectares (~88.9 km²) |
+| **Number of Barangays** | 33 |
+| **Population (2020 Census)** | 450,583 |
+| **Annual Growth Rate** | 7.87% |
+| **Congressional District** | 2nd District of Cavite |
+| **Cityhood** | December 17, 2015 (R.A. 10675) |
+| **City Hall Address** | Governor's Drive, Sampalucan, General Trias City, Cavite |
+| **City Hall Phone** | (046) 884-5768 |
+| **Official Website** | https://www.generaltrias.gov.ph |
 
 ---
 
-## Barangays of Tagaytay City
+## Barangays of General Trias City
 
-Tagaytay City is divided into **34 barangays**:
+General Trias City is divided into **33 barangays**:
 
-| #   | Barangay              | #   | Barangay              |
-| --- | --------------------- | --- | --------------------- |
-| 1   | Asisan                | 18  | Maitim II Central     |
-| 2   | Bagong Tubig          | 19  | Maitim II East        |
-| 3   | Calabuso              | 20  | Maitim II West        |
-| 4   | Crisanto de los Reyes | 21  | Mendez Crossing East  |
-| 5   | Francisco             | 22  | Mendez Crossing West  |
-| 6   | Guinhawa North        | 23  | Neogan                |
-| 7   | Guinhawa South        | 24  | Patutong Malaki North |
-| 8   | Iruhin Central        | 25  | Patutong Malaki South |
-| 9   | Iruhin East           | 26  | Sambong               |
-| 10  | Iruhin West           | 27  | San Jose              |
-| 11  | Kaybagal Central      | 28  | Silang Junction North |
-| 12  | Kaybagal East         | 29  | Silang Junction South |
-| 13  | Kaybagal North        | 30  | Sungay East           |
-| 14  | Kaybagal South        | 31  | Sungay West           |
-| 15  | Limutan               | 32  | Tolentino East        |
-| 16  | Maharlika East        | 33  | Tolentino West        |
-| 17  | Maharlika West        | 34  | Zambal                |
+| # | Barangay | # | Barangay |
+| - | -------- | - | -------- |
+| 1 | Alingaro | 18 | Pasong Camachile I |
+| 2 | Arnaldo | 19 | Pasong Camachile II |
+| 3 | Bacao I | 20 | Pasong Kawayan I |
+| 4 | Bacao II | 21 | Pasong Kawayan II |
+| 5 | Bagumbayan | 22 | Pinagtipunan |
+| 6 | Biclatan | 23 | Prinza |
+| 7 | Buenavista I | 24 | Sampalucan |
+| 8 | Buenavista II | 25 | San Francisco |
+| 9 | Buenavista III | 26 | San Gabriel |
+| 10 | Corregidor | 27 | San Juan I |
+| 11 | Dulongbayan | 28 | San Juan II |
+| 12 | Governor Ferrer | 29 | Santa Clara |
+| 13 | Javalera | 30 | Santiago |
+| 14 | Manggahan | 31 | Tapia |
+| 15 | Navarro | 32 | Tejero |
+| 16 | Panungyanan | 33 | Vibora |
+| 17 | 1896 | | |
 
 ---
 
 ## Economy
 
-Tagaytay City's economy is driven primarily by **tourism** and related services:
+General Trias City's economy is driven by **industry, commerce, and services**:
 
-- **Tourism** — Hotels, resorts, restaurants, amusement parks (Sky Ranch), and attractions draw millions of visitors annually
-- **Agriculture** — Farming communities in the eastern barangays; known for vegetables, cut flowers, and livestock
-- **Real Estate** — High-value residential and commercial developments along the ridge
-- **Retail and Food Service** — Numerous restaurants, cafes, and souvenir shops serving the tourism trade
+- **Manufacturing & Economic Zones** — Major industrial estates and PEZA-registered ecozones attract large-scale manufacturers and exporters
+- **Real Estate & Housing** — Numerous residential subdivisions and mixed-use developments fueled by Metro Manila spillover
+- **Business & Commerce** — The city is recognized as one of the **Most Business-Friendly LGUs** in the province
+- **Agriculture** — Dairy farming (carabao milk products), crop production, and livestock are key agricultural activities
+- **Tourism** — Eagle Ridge Golf Club, historic churches, and local festivals attract visitors year-round
 
-### Major Tourism Landmarks
+### Notable Establishments & Landmarks
 
-- Taal Volcano and Taal Lake
-- Sky Ranch Tagaytay
-- Peoples Park in the Sky
-- Tagaytay Picnic Grove
-- Tagaytay City Velodrome (world-class sports facility)
-- Puzzle Mansion (Guinness World Record holder)
-- Mahogany Market (known for bulalo and local produce)
+- Eagle Ridge Golf & Country Club (Brgy. Javalera)
+- GBR Museum (Gateway Business Park, Brgy. Javalera)
+- San Francisco de Malabon Parish Church (est. 1611)
+- Our Lady of Guadalupe Parish Church
+- General Trias City Park
+- City of General Trias People's Park (Brgy. Biclatan)
 
 ---
 
 ## Government
 
-| Position                | Official                       |
-| ----------------------- | ------------------------------ |
-| Mayor                   | Hon. Aizack Brent D. Tolentino |
-| Vice Mayor              | Hon. Agnes D. Tolentino, DMD   |
-| No. of Councilors       | 10 elected councilors          |
-| ABC President           | Hon. Juanito N. Ramos          |
-| SK Federation President | Hon. Mark Erwin D. Mercado     |
+| Position | Official |
+| -------- | -------- |
+| Mayor | Hon. Luis A. Ferrer IV |
+| Vice Mayor | Hon. Jonas Glyn Porto Labuguen |
+| No. of Councilors | 12 elected councilors |
+| LNB President | Hon. Ramil C. Barrientos |
+| SK Federation President | Ainsley Gwyneth G. Luces |
+
+---
+
+## Recent Awards & Recognition
+
+- **Seal of Good Local Governance** — DILG, 2023
+- **Most Business-Friendly LGU Award** — Philippine Chamber of Commerce, 2023
+- **Good Financial Housekeeping Passer** — DILG-R4A, 2023
+- **Best City Fire Station** — Bureau of Fire Protection, October 2023
+- **Top 2 Performing Mayor in Cavite** — January 2024
+- **Green Banner Seal of Compliance** — Department of Health, 2022
+- **Platinum Awardee (98.20%)** — Manila Bay Clean-up Program, 2022
 
 ---
 
@@ -90,5 +105,5 @@ Tagaytay City's economy is driven primarily by **tourism** and related services:
 
 - Philippine Statistics Authority (PSA): https://psa.gov.ph
 - DILG Local Government Performance Management System
-- Official Tagaytay City Website: https://www.tagaytay.gov.ph
+- Official General Trias City Website: https://www.generaltrias.gov.ph
 - Commission on Elections (COMELEC)

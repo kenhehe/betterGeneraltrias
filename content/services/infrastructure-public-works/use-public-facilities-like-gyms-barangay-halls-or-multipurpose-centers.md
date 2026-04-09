@@ -1,12 +1,12 @@
 # Use Public Facilities like Gyms, Barangay Halls, or Multipurpose Centers
 
-Tagaytay City maintains public facilities that residents can use for community activities, sports, events, and other purposes.
+General Trias City maintains public facilities that residents can use for community activities, sports, events, and other purposes.
 
 ## Available Public Facilities
 
 ### Tolentino Sports and Activity Center (TSAC)
 
-The main sports complex of Tagaytay City.
+The main sports complex of General Trias City.
 
 - Basketball court / covered courts
 - Open grounds for events
@@ -16,7 +16,7 @@ The main sports complex of Tagaytay City.
 
 ### Barangay Halls and Multipurpose Centers
 
-Each of Tagaytay's 34 barangays has a hall that may be used for:
+Each of General Trias's 34 barangays has a hall that may be used for:
 
 - Community meetings
 - Skills training and seminars
@@ -45,5 +45,5 @@ Some facilities are free for government and community activities. Fees may apply
 ## Where to Go
 
 **General Services Office**
-Tagaytay City Hall, Akle St., Kaybagal South
+General Trias City Hall, Akle St., Kaybagal South
 Telephone: (046) 413-1220 / (046) 888-9500

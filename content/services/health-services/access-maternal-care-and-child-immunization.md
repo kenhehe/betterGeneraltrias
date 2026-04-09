@@ -1,4 +1,4 @@
-# Access Maternal Care & Child Immunization — Tagaytay City
+# Access Maternal Care & Child Immunization — General Trias City
 
 The City Health Office (CHO) and barangay health centers provide **prenatal care**, **family planning**, and **free routine child immunization** for residents.
 
@@ -45,5 +45,5 @@ Routine childhood vaccines are provided **free** under the Expanded Program on I
 
 **References**
 
-- [Tagaytay City Government – Services](https://tagaytay.gov.ph)
+- [General Trias City Government – Services](https://generaltrias.gov.ph)
 - [Department of Health – Expanded Program on Immunization](https://doh.gov.ph)

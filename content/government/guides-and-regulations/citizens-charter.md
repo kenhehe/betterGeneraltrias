@@ -1,11 +1,11 @@
-# Citizen's Charter — Tagaytay City
+# Citizen's Charter — General Trias City
 
-The **Citizen's Charter** is a document required under **Republic Act 11032** (Ease of Doing Business and Efficient Government Service Delivery Act of 2018) and **RA 9485** (Anti-Red Tape Act). It sets the service standards residents can expect from Tagaytay City government offices.
+The **Citizen's Charter** is a document required under **Republic Act 11032** (Ease of Doing Business and Efficient Government Service Delivery Act of 2018) and **RA 9485** (Anti-Red Tape Act). It sets the service standards residents can expect from General Trias City government offices.
 
 The full Citizen's Charter is posted at:
 
-- All public-facing offices in Tagaytay City Hall
-- Official Website: https://www.tagaytay.gov.ph
+- All public-facing offices in General Trias City Hall
+- Official Website: https://www.generaltrias.gov.ph
 
 ---
 
@@ -65,7 +65,7 @@ The full Citizen's Charter is posted at:
 
 ## Anti-Red Tape Commitments
 
-Under RA 11032, Tagaytay City is committed to:
+Under RA 11032, General Trias City is committed to:
 
 - **Simple transactions:** Completed within **3 working days**
 - **Complex transactions:** Completed within **7 working days** (extendable to 20 days)
@@ -88,8 +88,8 @@ If a city office fails to meet its Citizen's Charter commitments:
 
 ## Contact
 
-**Tagaytay City Hall**
-Akle St., Kaybagal South, Tagaytay City, Cavite
+**General Trias City Hall**
+Akle St., Kaybagal South, General Trias City, Cavite
 Tel: (046) 888-9500
-Website: https://www.tagaytay.gov.ph
+Website: https://www.generaltrias.gov.ph
 Hours: Monday–Friday, 8:00 AM–5:00 PM

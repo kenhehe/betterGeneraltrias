@@ -1,6 +1,6 @@
 # Join Livelihood or Skills Training Programs
 
-Tagaytay City offers livelihood and skills training programs through the City Social Welfare and Development Office (CSWDO), the Public Employment Service Office (PESO), and in partnership with TESDA and DOLE.
+General Trias City offers livelihood and skills training programs through the City Social Welfare and Development Office (CSWDO), the Public Employment Service Office (PESO), and in partnership with TESDA and DOLE.
 
 ## Available Programs
 
@@ -21,7 +21,7 @@ Free short-term technical-vocational courses including:
 
 ### City-Level Programs (CSWDO)
 
-- Handicraft and souvenir making (relevant to Tagaytay tourism)
+- Handicraft and souvenir making (relevant to General Trias tourism)
 - Pastry and baking training
 - Organic farming and urban gardening
 - Sewing and garment-making
@@ -32,7 +32,7 @@ The Public Employment Service Office connects job seekers with local employers a
 
 ## Who Can Join
 
-- Unemployed or underemployed Tagaytay City residents
+- Unemployed or underemployed General Trias City residents
 - Displaced workers
 - Women, PWDs, senior citizens (special programs available)
 - Out-of-school youth
@@ -49,6 +49,6 @@ The Public Employment Service Office connects job seekers with local employers a
 **City Social Welfare and Development Office (CSWDO)**
 Telephone: (046) 483-0494
 
-**PESO — Tagaytay City**
-Tagaytay City Hall, Akle St., Kaybagal South
+**PESO — General Trias City**
+General Trias City Hall, Akle St., Kaybagal South
 Telephone: (046) 413-1220

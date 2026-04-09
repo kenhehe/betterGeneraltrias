@@ -86,36 +86,17 @@ Reusable primitives live in `src/components/ui/`: `Section`, `Heading`, `Text`, 
 - Single quotes, 2-space indentation, trailing commas (ES5), semicolons, 80-char line width (enforced by Prettier)
 - Arrow functions omit parens for single arguments
 
-## Deployment (AWS Amplify — Manual)
+## Deployment (Vercel)
 
-This app is deployed manually to AWS Amplify (app ID: `d2hrjmoigt8q4w`, region: `ap-southeast-1`) using the `arlou` AWS CLI profile.
+This app is deployed to **Vercel**. The [`vercel.json`](vercel.json) at the project root configures the build and SPA rewrites automatically.
 
-**Always zip from inside the `dist/` folder** so `index.html` is at the root of the zip (not nested under `dist/`):
+**To deploy:**
+1. Push changes to the `main` branch on GitHub
+2. Vercel picks up the push and deploys automatically
+3. Build command: `npm run build` · Output directory: `dist`
 
+**Manual deploy via Vercel CLI:**
 ```bash
 npm run build
-rm -rf dist.zip
-cd dist && zip -r ../dist.zip . && cd ..
-```
-
-Then deploy:
-
-```bash
-# 1. Create deployment and get upload URL + jobId
-aws amplify create-deployment \
-  --app-id d2hrjmoigt8q4w \
-  --branch-name main \
-  --profile arlou \
-  --region ap-southeast-1
-
-# 2. Upload zip to the returned zipUploadUrl
-curl -T dist.zip "<zipUploadUrl>"
-
-# 3. Start the deployment with the returned jobId
-aws amplify start-deployment \
-  --app-id d2hrjmoigt8q4w \
-  --branch-name main \
-  --job-id <jobId> \
-  --profile arlou \
-  --region ap-southeast-1
+npx vercel --prod
 ```

@@ -1,6 +1,6 @@
-# Sangguniang Panlungsod ng Tagaytay City
+# Sangguniang Panlungsod ng General Trias City
 
-The **Sangguniang Panlungsod** (City Council) is the legislative body of the **City Government of Tagaytay City**. It is responsible for enacting ordinances and passing resolutions that promote the general welfare of the city.
+The **Sangguniang Panlungsod** (City Council) is the legislative body of the **City Government of General Trias City**. It is responsible for enacting ordinances and passing resolutions that promote the general welfare of the city.
 
 The City Council is presided over by the **Vice Mayor** and is composed of **10 elected councilors**.
 
@@ -11,7 +11,7 @@ The City Council is presided over by the **Vice Mayor** and is composed of **10 
 **Presiding Officer**
 
 **Hon. Agnes D. Tolentino, DMD**
-Vice Mayor, Tagaytay City
+Vice Mayor, General Trias City
 
 ---
 
@@ -46,15 +46,15 @@ The Sangguniang Panlungsod exercises the following key functions:
 - **Legislation** – Enacting city ordinances and resolutions
 - **Budget Approval** – Approving the Annual Investment Plan and city budget
 - **Oversight** – Reviewing executive actions and programs
-- **Representation** – Representing the interests of all 34 barangays of Tagaytay City
+- **Representation** – Representing the interests of all 34 barangays of General Trias City
 
 ---
 
 ## Contact the City Council
 
 **Sangguniang Panlungsod Office**
-City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 
 **Telephone:** (046) 888-9500
 
-**Website:** https://www.tagaytay.gov.ph
+**Website:** https://www.generaltrias.gov.ph

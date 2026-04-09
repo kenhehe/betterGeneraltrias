@@ -1,6 +1,6 @@
 # Public Sessions — Sangguniang Panlungsod
 
-The **Sangguniang Panlungsod ng Tagaytay City** holds regular plenary sessions that are open to the public. Residents are encouraged to attend and observe how city legislation is made.
+The **Sangguniang Panlungsod ng General Trias City** holds regular plenary sessions that are open to the public. Residents are encouraged to attend and observe how city legislation is made.
 
 ---
 
@@ -12,13 +12,13 @@ The **Sangguniang Panlungsod ng Tagaytay City** holds regular plenary sessions t
 | Special Session | As needed     | Called by the Vice Mayor or majority of council members |
 | Public Hearing  | Per committee | Held before passage of ordinances affecting the public  |
 
-> For the **exact session dates and times**, contact the Sangguniang Panlungsod office or check the official Tagaytay City website.
+> For the **exact session dates and times**, contact the Sangguniang Panlungsod office or check the official General Trias City website.
 
 ---
 
 ## How to Attend
 
-City Council sessions are held at the **Session Hall, Tagaytay City Hall**, Akle St., Kaybagal South, Tagaytay City. Sessions are open to the public unless declared executive session.
+City Council sessions are held at the **Session Hall, General Trias City Hall**, Akle St., Kaybagal South, General Trias City. Sessions are open to the public unless declared executive session.
 
 **Tips for attending:**
 
@@ -51,6 +51,6 @@ Passed ordinances and resolutions are on file at the Sangguniang Panlungsod Secr
 ## Contact
 
 **Sangguniang Panlungsod Secretariat**
-City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 **Telephone:** (046) 888-9500 / 0927-449-9128
-**Website:** https://www.tagaytay.gov.ph
+**Website:** https://www.generaltrias.gov.ph

@@ -1,6 +1,6 @@
-# Infrastructure Projects — Tagaytay City
+# Infrastructure Projects — General Trias City
 
-This page tracks **ongoing and recently completed infrastructure projects** funded by the City Government of Tagaytay, the national government, and other sources.
+This page tracks **ongoing and recently completed infrastructure projects** funded by the City Government of General Trias, the national government, and other sources.
 
 Under the **Full Disclosure Policy**, bid results for infrastructure projects and contract awards must be publicly posted.
 
@@ -10,21 +10,21 @@ Under the **Full Disclosure Policy**, bid results for infrastructure projects an
 
 Procurement documents, bid results, and contract awards are published at:
 
-- **DILG FDP Portal:** https://fdpp.blgs.gov.ph (search "Tagaytay City")
+- **DILG FDP Portal:** https://fdpp.blgs.gov.ph (search "General Trias City")
 - **PhilGEPS (Government Electronic Procurement System):** https://www.philgeps.gov.ph
-- **Official Website:** https://www.tagaytay.gov.ph
-- **City Engineering Office:** Tagaytay City Hall, Tel: (046) 888-9500
+- **Official Website:** https://www.generaltrias.gov.ph
+- **City Engineering Office:** General Trias City Hall, Tel: (046) 888-9500
 
 ---
 
 ## Notable Completed Projects
 
-### Tagaytay City Velodrome
+### General Trias City Velodrome
 
 A **world-class, internationally-certified velodrome** for competitive cycling. Recognized for meeting international standards and contributing to youth sports development in the city.
 
 **Status:** Completed
-**Funded by:** City Government of Tagaytay
+**Funded by:** City Government of General Trias
 
 ---
 

@@ -1,4 +1,4 @@
-# Freedom of Information (FOI) Releases — Tagaytay City
+# Freedom of Information (FOI) Releases — General Trias City
 
 Under **Executive Order No. 2 (2016)**, all executive branch agencies — including local government units — are required to adopt a Freedom of Information (FOI) policy and proactively disclose government information.
 
@@ -10,16 +10,16 @@ The **Freedom of Information** policy gives every Filipino the right to request 
 
 ---
 
-## How to File an FOI Request with Tagaytay City
+## How to File an FOI Request with General Trias City
 
 ### Option 1: In Person
 
-1. Go to the **Office of the City Administrator** or the relevant department at Tagaytay City Hall
+1. Go to the **Office of the City Administrator** or the relevant department at General Trias City Hall
 2. Fill out the **FOI Request Form** (available at the front desk)
 3. Submit with a valid ID
 4. Receive an acknowledgement receipt with a reference number
 
-**Location:** Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+**Location:** General Trias City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 **Tel:** (046) 888-9500
 **Hours:** Monday–Friday, 8:00 AM–5:00 PM
 
@@ -27,7 +27,7 @@ The **Freedom of Information** policy gives every Filipino the right to request 
 
 File your request at: https://www.foi.gov.ph
 
-Select **Tagaytay City** as the agency and submit your request online. You will be notified of the status via email.
+Select **General Trias City** as the agency and submit your request online. You will be notified of the status via email.
 
 ---
 
@@ -70,12 +70,12 @@ The following categories of information may be withheld:
 - National FOI Portal: https://www.foi.gov.ph
 - FOI Implementing Rules (EO 2): https://www.officialgazette.gov.ph
 - Data Privacy Act (RA 10173): https://www.privacy.gov.ph
-- Official Tagaytay City Website: https://www.tagaytay.gov.ph
+- Official General Trias City Website: https://www.generaltrias.gov.ph
 
 ---
 
 ## Contact
 
 **Office of the City Administrator**
-Tagaytay City Hall, Akle St., Kaybagal South, Tagaytay City, Cavite
+General Trias City Hall, Akle St., Kaybagal South, General Trias City, Cavite
 Tel: (046) 888-9500

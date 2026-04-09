@@ -73,7 +73,7 @@ export default function InfoBar() {
       setInfo(prev => ({ ...prev, temp: cachedTemp }));
     } else {
       fetch(
-        'https://api.open-meteo.com/v1/forecast?latitude=14.1153&longitude=120.9621&current_weather=true'
+        'https://api.open-meteo.com/v1/forecast?latitude=14.3833&longitude=120.8833&current_weather=true'
       )
         .then(r => r.json())
         .then(data => {
@@ -101,7 +101,7 @@ export default function InfoBar() {
         <span className="text-gray-600 hidden sm:inline">|</span>
         <span className="hidden sm:flex items-center gap-1.5 opacity-90">
           <Thermometer className="h-3 w-3 opacity-70" />
-          <span className="text-gray-300">Tagaytay</span>
+          <span className="text-gray-300">General Trias</span>
           <span className="font-semibold">{info.temp}</span>
         </span>
         <span className="text-gray-600 hidden sm:inline">|</span>

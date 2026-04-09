@@ -114,8 +114,8 @@ export const footerNavigation = {
         { label: 'Open Data Philippines', href: 'https://data.gov.ph' },
         { label: 'Freedom of Information', href: 'https://www.foi.gov.ph' },
         {
-          label: 'Official Tagaytay Website',
-          href: 'https://www.tagaytay.gov.ph',
+          label: 'Official General Trias Website',
+          href: 'https://www.generaltrias.gov.ph',
         },
         { label: 'DILG FDP Portal', href: 'https://fdpp.blgs.gov.ph' },
         { label: 'PhilGEPS', href: 'https://www.philgeps.gov.ph' },
@@ -129,7 +129,7 @@ export const footerNavigation = {
   socialLinks: [
     {
       label: 'Facebook',
-      href: 'https://web.facebook.com/bettertagaytay',
+      href: 'https://web.facebook.com/betterGentri',
     },
   ],
 };

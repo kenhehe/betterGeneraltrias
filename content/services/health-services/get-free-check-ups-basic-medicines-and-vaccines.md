@@ -1,6 +1,6 @@
-# Tagaytay City Government: Free Health Services
+# General Trias City Government: Free Health Services
 
-The Tagaytay City Government offers free **check-ups, medicines, and vaccines** through the City Health Office (CHO), barangay health centers, and partner programs.
+The General Trias City Government offers free **check-ups, medicines, and vaccines** through the City Health Office (CHO), barangay health centers, and partner programs.
 
 ---
 
@@ -27,7 +27,7 @@ The Tagaytay City Government offers free **check-ups, medicines, and vaccines** 
 | ----------------- | -------------------------------------------------------- | ---------------------------- | ------------------------------- | ------------------------------------------------------------ |
 | Children          | BCG, Pentavalent, OPV/IPV, MMR, Hepatitis B, PCV13 (EPI) | Barangay Health Centers      | Typically Wednesdays, 8 AM–4 PM | ECCD card (first-timers can get one onsite)                  |
 | Pregnant women    | Tetanus Toxoid vaccine + supplements                     | Barangay Health Centers      | During prenatal services        | Proof of pregnancy, ECCD/record                              |
-| Animal bite cases | Anti-rabies vaccine (first dose free)                    | Animal Bite Treatment Center | Clinic hours                    | Proof of Tagaytay City residency (e.g., voter’s certificate) |
+| Animal bite cases | Anti-rabies vaccine (first dose free)                    | Animal Bite Treatment Center | Clinic hours                    | Proof of General Trias City residency (e.g., voter’s certificate) |
 
 ---
 

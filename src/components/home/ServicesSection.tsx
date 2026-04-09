@@ -134,12 +134,12 @@ export default function ServicesSection({
               {t('services.tourismSpotlight.badge', 'Tourism Spotlight')}
             </span>
             <h3 className="text-2xl font-black mb-2 leading-tight">
-              {t('services.tourismSpotlight.title', 'Discover Tagaytay City')}
+              {t('services.tourismSpotlight.title', 'Discover General Trias City')}
             </h3>
             <p className="text-white/80 text-sm mb-5 max-w-md">
               {t(
                 'services.tourismSpotlight.description',
-                'Tagaytay is the second highest city in the Philippines, offering breathtaking views of Taal Volcano, fresh highland cuisine, and year-round cool weather.'
+                'General Trias is one of the fastest-growing cities in the Philippines, home to historical churches, lush parks, the Eagle Ridge Golf Club, and the vibrant Valenciana Festival.'
               )}
             </p>
             <Link
