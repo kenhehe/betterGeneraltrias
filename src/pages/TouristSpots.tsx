@@ -3,360 +3,322 @@ import Breadcrumbs from '../components/ui/Breadcrumbs';
 import SEO from '../components/SEO';
 import {
   MapPin,
-  Clock,
-  Ticket,
-  Mountain,
-  Utensils,
-  Palette,
-  Zap,
+  Phone,
+  ExternalLink,
   Church,
   Trees,
+  Trophy,
 } from 'lucide-react';
 
 interface Spot {
+  id: number;
   name: string;
   description: string;
-  category:
-    | 'nature'
-    | 'adventure'
-    | 'food'
-    | 'art'
-    | 'religious'
-    | 'recreation';
-  fee?: string;
-  hours?: string;
-  tip?: string;
-  gradient: string;
-  icon: string;
-  image?: string;
+  location: string;
+  contact?: string;
+  website?: string;
+  facebook?: string;
+  category: 'religious' | 'museum' | 'recreation' | 'golf';
+  accent: string;
+  emoji: string;
 }
 
 const SPOTS: Spot[] = [
   {
-    name: 'San Francisco de Malabon Parish Church',
-    description:
-      'One of the oldest churches in Cavite, built by Franciscan missionaries in 1611. This historic landmark was the site where the Philippine national anthem was first performed during the independence proclamation on June 12, 1898.',
-    category: 'religious',
-    fee: 'Free',
-    hours: 'Open daily',
-    tip: 'Visit during the town fiesta (October 4) celebrating St. Francis of Assisi for the grandest experience.',
-    gradient: 'from-stone-700 via-amber-700 to-yellow-600',
-    icon: '⛪',
-    image: '/images/san-francisco-church.jpg',
-  },
-  {
+    id: 1,
     name: 'Our Lady of Guadalupe Parish Church',
     description:
-      'A beloved Catholic church in General Trias serving as the spiritual center of the community. It regularly hosts major religious celebrations, processions, and community events throughout the year.',
+      'A beloved Catholic parish and the spiritual heart of the community. Hosts major religious celebrations, processions, and community events throughout the year. One of the most visited religious sites in General Trias.',
+    location: 'Crisanto M. De los Reyes Ave., General Trias, Cavite',
+    contact: '(046) 433-0544',
+    facebook: 'https://bit.ly/OLGPJavaleraFB',
     category: 'religious',
-    fee: 'Free',
-    hours: 'Open daily',
-    tip: 'Attend Sunday Mass to experience the vibrant faith community of General Trias.',
-    gradient: 'from-blue-700 via-indigo-600 to-violet-500',
-    icon: '🕊️',
-    image: '/images/guadalupe-church.jpg',
+    accent: 'from-blue-600 to-indigo-700',
+    emoji: '⛪',
   },
   {
-    name: 'Eagle Ridge Golf & Country Club',
+    id: 2,
+    name: 'San Francisco de Malabon Parish Church',
     description:
-      'A premier 36-hole championship golf course set across the rolling terrain of Barangay Javalera. One of the finest golf clubs in the Philippines, attracting local and international golfers with its scenic fairways and world-class facilities.',
-    category: 'recreation',
-    fee: 'Green fees apply; members & guests',
-    hours: 'Tee times from 6:00 AM',
-    tip: 'Book tee times in advance, especially on weekends. Inquire about non-member access packages.',
-    gradient: 'from-green-700 via-emerald-600 to-teal-500',
-    icon: '⛳',
-    image: '/images/eagle-ridge-golf.jpg',
+      'Built by Franciscan missionaries in 1611, this is one of the oldest churches in Cavite. A national historical landmark where the Philippine national anthem was first performed during the June 12, 1898 independence proclamation.',
+    location: 'Governor Ferrer Dr., Sampalucan, General Trias, Cavite',
+    contact: '0976 036 5475',
+    facebook: 'https://bit.ly/SanFranciscoDeMalabonFB',
+    category: 'religious',
+    accent: 'from-amber-600 to-orange-700',
+    emoji: '🕍',
   },
   {
+    id: 3,
     name: 'GBR Museum',
     description:
-      'Located inside Gateway Business Park in Barangay Javalera, the GBR Museum showcases exhibits on local history, culture, and heritage. A great destination for learning about General Trias and its significance in Philippine history.',
-    category: 'art',
-    fee: 'Entrance fee applies',
-    hours: 'Check museum schedule',
-    tip: 'Call ahead to confirm opening hours before visiting.',
-    gradient: 'from-violet-700 via-purple-600 to-fuchsia-500',
-    icon: '🏛️',
-    image: '/images/gbr-museum.jpg',
+      'Located inside the Gateway Business Park, the GBR Museum showcases exhibits on local history, culture, and heritage — offering residents and visitors a deeper look into the rich story of General Trias City.',
+    location:
+      'Gateway Business Park, Barangay Javalera, General Trias City, Cavite',
+    contact: '(046) 885-7027',
+    facebook: 'https://bit.ly/GBRMuseumFB',
+    category: 'museum',
+    accent: 'from-violet-600 to-purple-700',
+    emoji: '🏛️',
   },
   {
+    id: 4,
     name: 'General Trias City Park',
     description:
-      "A central public park in the heart of General Trias providing a green space for residents and visitors. Perfect for morning jogs, family picnics, and community gatherings amid the city's tropical landscape.",
-    category: 'nature',
-    fee: 'Free',
-    hours: 'Open daily',
-    tip: "Visit in the early morning for a peaceful walk before the city gets busy.",
-    gradient: 'from-green-600 via-lime-500 to-emerald-400',
-    icon: '🌳',
-    image: '/images/city-park.jpg',
+      'A central public park in the heart of the city, ideal for morning jogs, family picnics, and community gatherings. A green sanctuary for residents looking for fresh air and open space within the urban center.',
+    location: 'General Trias City Park, General Trias, Cavite',
+    facebook: 'https://bit.ly/GenTriCityParkFB',
+    category: 'recreation',
+    accent: 'from-emerald-600 to-green-700',
+    emoji: '🌳',
   },
   {
+    id: 5,
+    name: 'Eagle Ridge Golf & Country Club',
+    description:
+      'A premier 36-hole championship golf course in Barangay Javalera, regarded as one of the finest golf clubs in the Philippines. Draws local and international golfers with its scenic fairways and world-class facilities.',
+    location: 'Brgy. Javalera, City of General Trias, Cavite',
+    contact: '09171220723',
+    website: 'https://eagle-ridge.com.ph/',
+    category: 'golf',
+    accent: 'from-teal-600 to-cyan-700',
+    emoji: '⛳',
+  },
+  {
+    id: 6,
     name: "City of General Trias People's Park",
     description:
-      'Located in Barangay Biclatan, this well-maintained public park offers open spaces, walking paths, and recreational amenities for families. A favorite weekend destination for residents seeking fresh air and community activities.',
-    category: 'nature',
-    fee: 'Free',
-    hours: 'Open daily',
-    tip: 'Great for weekend family outings. Bring snacks and enjoy the open spaces.',
-    gradient: 'from-emerald-600 via-green-500 to-lime-400',
-    icon: '🌿',
-    image: '/images/peoples-park.jpg',
-  },
-  {
-    name: 'Valenciana Festival Street Dance',
-    description:
-      "Held every December 11–13 to celebrate the city's founding anniversary, this vibrant street festival features colorful costumes and energetic dance performances by schools across the city, alongside the famous Valenciana Cooking Festival.",
-    category: 'art',
-    fee: 'Free to watch',
-    hours: 'December 11–13 annually',
-    tip: "Don't miss the Valenciana Cooking Festival where all 33 barangays showcase their best version of the city's signature paella-like rice dish.",
-    gradient: 'from-orange-600 via-red-500 to-pink-400',
-    icon: '🎭',
-    image: '/images/valenciana-festival.jpg',
-  },
-  {
-    name: 'Town Fiesta of St. Francis of Assisi',
-    description:
-      "General Trias celebrates its patron saint 'Tata Kiko' on October 4 with grand parades, religious processions, concerts, and the unique 'pabialahay' — a pet blessing ceremony honoring St. Francis's connection to animals.",
-    category: 'religious',
-    fee: 'Free',
-    hours: 'October 4 annually',
-    tip: 'Join the pet blessing ceremony for a uniquely heartwarming community experience.',
-    gradient: 'from-amber-600 via-orange-500 to-yellow-400',
-    icon: '🎉',
-    image: '/images/town-fiesta.jpg',
-  },
-  {
-    name: "GenTri's Best Dairy Products",
-    description:
-      'The General Trias Dairy Raisers Multipurpose Cooperative produces award-winning carabao milk products including yogurt, ice cream, and fresh milk. A unique local agri-tourism experience celebrating the city\'s agricultural roots.',
-    category: 'food',
-    fee: 'Products for sale',
-    hours: 'Check availability',
-    tip: 'Try the carabao milk ice cream — a local delicacy you cannot find anywhere else.',
-    gradient: 'from-sky-600 via-blue-500 to-cyan-400',
-    icon: '🥛',
-    image: '/images/dairy-products.jpg',
-  },
-  {
-    name: "Eden's Pastillas",
-    description:
-      "A beloved local confectionery known for its handcrafted pastillas — soft milk candies that are a signature pasalubong of General Trias. Made from carabao milk following traditional Filipino recipes passed down through generations.",
-    category: 'food',
-    fee: 'Products for sale',
-    hours: 'Check availability',
-    tip: 'Buy in bulk as pasalubong — they make great gifts and are loved by all ages.',
-    gradient: 'from-pink-500 via-rose-400 to-fuchsia-400',
-    icon: '🍬',
-    image: '/images/pastillas.jpg',
-  },
-  {
-    name: 'Jail Handicrafts Exhibition',
-    description:
-      "General Trias showcases remarkable rehabilitation programs through its jail's handicraft exhibits. The Female Dormitory produces bags and woven items while the Male Dormitory creates paintings, metal crafts, and woodworks — beautiful products with meaningful stories.",
-    category: 'art',
-    fee: 'Products for sale',
-    hours: 'Check schedule',
-    tip: 'Purchasing these items directly supports the rehabilitation of inmates and their reintegration into society.',
-    gradient: 'from-teal-600 via-cyan-500 to-sky-400',
-    icon: '🎨',
-    image: '/images/jail-handicrafts.jpg',
-  },
-  {
-    name: 'Pasong Kalabaw Historical Marker',
-    description:
-      "The site where the 'First Cry of Cavite' took place on August 31, 1896, marking the start of the Philippine Revolution against Spanish colonial rule. A deeply significant historical landmark in the birthplace of Cavite's revolutionary spirit.",
-    category: 'art',
-    fee: 'Free',
-    hours: 'Open daily',
-    tip: "Visit during August to witness commemorative events marking the anniversary of the First Cry of Cavite.",
-    gradient: 'from-red-700 via-rose-600 to-orange-500',
-    icon: '🏴',
-    image: '/images/pasong-kalabaw.jpg',
+      'A well-maintained public park in Barangay Biclatan offering open spaces, walking paths, and recreational amenities for all ages. A favorite weekend destination for families seeking relaxation and community activities.',
+    location: 'Brgy. Biclatan, General Trias, Cavite',
+    category: 'recreation',
+    accent: 'from-lime-600 to-green-600',
+    emoji: '🌿',
   },
 ];
 
 const CATEGORY_META: Record<
   Spot['category'],
-  {
-    label: string;
-    color: string;
-    Icon: React.ComponentType<{ className?: string }>;
-  }
+  { label: string; Icon: React.ComponentType<{ className?: string }> }
 > = {
-  nature: {
-    label: 'Nature',
-    color: 'bg-green-100 text-green-800',
-    Icon: Trees,
-  },
-  adventure: {
-    label: 'Adventure',
-    color: 'bg-orange-100 text-orange-800',
-    Icon: Zap,
-  },
-  food: {
-    label: 'Food & Dining',
-    color: 'bg-amber-100 text-amber-800',
-    Icon: Utensils,
-  },
-  art: {
-    label: 'Arts & Culture',
-    color: 'bg-purple-100 text-purple-800',
-    Icon: Palette,
-  },
-  religious: {
-    label: 'Religious',
-    color: 'bg-blue-100 text-blue-800',
-    Icon: Church,
-  },
-  recreation: {
-    label: 'Recreation',
-    color: 'bg-teal-100 text-teal-800',
-    Icon: Mountain,
-  },
+  religious: { label: 'Religious & Historical', Icon: Church },
+  museum: { label: 'Museum & Culture', Icon: Trophy },
+  recreation: { label: 'Parks & Recreation', Icon: Trees },
+  golf: { label: 'Leisure & Sports', Icon: Trophy },
 };
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Tourism', href: '/services/tourism' },
-  {
-    label: 'Explore Tourist Spots',
-    href: '/services/tourism/explore-tourist-spots',
-  },
+  { label: 'Must-See Places', href: '/services/tourism/explore-tourist-spots' },
 ];
 
 export default function TouristSpots() {
   return (
     <>
       <SEO
-        title="Explore Tourist Spots in General Trias City"
-        description="Discover the top tourist destinations in General Trias City — from historic churches and Eagle Ridge Golf Club to the Valenciana Festival and local delicacies."
-        keywords="General Trias tourist spots, Eagle Ridge Golf, San Francisco de Malabon Church, Valenciana Festival, GenTri tourism, GBR Museum"
+        title="Must-See Places in General Trias City"
+        description="Explore the official tourist spots of General Trias City, Cavite — from century-old churches and a heritage museum to championship golf and scenic public parks."
+        keywords="General Trias tourist spots, Eagle Ridge Golf, San Francisco de Malabon Church, GBR Museum, General Trias City Park, GenTri tourism"
       />
 
-      {/* Hero banner */}
-      <div className="relative text-white overflow-hidden"
+      {/* Hero */}
+      <div
+        className="relative text-white overflow-hidden"
         style={{ backgroundColor: '#16643c' }}
       >
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0"
           style={{
             backgroundImage:
-              'repeating-linear-gradient(45deg, white 0px, white 1px, transparent 1px, transparent 24px)',
+              'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 40%)',
           }}
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
-          <div className="flex items-center gap-2 mb-3 text-white/70 text-xs font-semibold uppercase tracking-widest">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="flex items-center gap-2 mb-4 text-green-300 text-xs font-bold uppercase tracking-widest">
             <MapPin className="h-3.5 w-3.5" />
             General Trias City, Cavite
           </div>
-          <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-3">
-            Explore Tourist Spots
+          <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
+            Must-See Places
           </h1>
-          <p className="text-white/80 text-base max-w-xl leading-relaxed">
-            General Trias is one of the fastest-growing cities in the
-            Philippines — rich in revolutionary history, vibrant festivals,
-            world-class golf, and authentic local flavors.
+          <p className="text-green-100 text-base max-w-lg leading-relaxed mb-8">
+            Discover the official tourist destinations of General Trias — from
+            centuries-old churches to championship golf and lush public parks.
           </p>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {Object.entries(CATEGORY_META).map(([key, meta]) => (
-              <span
-                key={key}
-                className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-semibold px-3 py-1.5 rounded-full"
-              >
-                <meta.Icon className="h-3 w-3" />
-                {meta.label}
-              </span>
-            ))}
+
+          {/* Category pills */}
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(CATEGORY_META).map(([key, meta]) => {
+              const count = SPOTS.filter(s => s.category === key).length;
+              return (
+                <span
+                  key={key}
+                  className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full"
+                >
+                  <meta.Icon className="h-3 w-3" />
+                  {meta.label}
+                  <span className="bg-white/20 rounded-full px-1.5 py-0.5 text-[10px] font-bold">
+                    {count}
+                  </span>
+                </span>
+              );
+            })}
           </div>
+        </div>
+
+        {/* Bottom wave */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            viewBox="0 0 1440 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 40 C360 0 1080 0 1440 40 L1440 40 L0 40Z"
+              fill="#f9fafb"
+            />
+          </svg>
         </div>
       </div>
 
-      <Section className="py-10">
-        <Breadcrumbs className="mb-8" items={BREADCRUMBS} />
+      {/* Main content */}
+      <div className="bg-gray-50 min-h-screen">
+        <Section className="py-10">
+          <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
-        {/* Album masonry grid */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
-          {SPOTS.map(spot => {
-            const meta = CATEGORY_META[spot.category];
-            const CatIcon = meta.Icon;
-            return (
-              <div
-                key={spot.name}
-                className="break-inside-avoid rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white"
-              >
-                {/* Cover: photo or gradient fallback */}
-                {spot.image ? (
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={spot.image}
-                      alt={spot.name}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <span
-                      className={`absolute bottom-3 left-3 inline-flex items-center gap-1.5 text-xs font-bold px-2.5 py-1 rounded-full ${meta.color}`}
-                    >
-                      <CatIcon className="h-3 w-3" />
-                      {meta.label}
-                    </span>
-                  </div>
-                ) : (
+          {/* Spot count badge */}
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-lg font-black text-gray-900">
+              {SPOTS.length} Official Tourist Spots
+            </h2>
+            <span className="text-xs text-gray-400 font-medium">
+              Source: generaltrias.gov.ph
+            </span>
+          </div>
+
+          {/* Spots grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {SPOTS.map((spot, idx) => {
+              const meta = CATEGORY_META[spot.category];
+              const CatIcon = meta.Icon;
+              return (
+                <div
+                  key={spot.id}
+                  className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  {/* Colored top bar + number */}
                   <div
-                    className={`bg-gradient-to-br ${spot.gradient} h-36 flex items-end p-4 relative`}
+                    className={`bg-gradient-to-r ${spot.accent} p-5 flex items-start justify-between`}
                   >
-                    <span className="absolute top-4 right-4 text-4xl select-none">
-                      {spot.icon}
-                    </span>
-                    <span
-                      className={`inline-flex items-center gap-1.5 text-xs font-bold px-2.5 py-1 rounded-full ${meta.color}`}
-                    >
-                      <CatIcon className="h-3 w-3" />
-                      {meta.label}
-                    </span>
-                  </div>
-                )}
-
-                {/* Card body */}
-                <div className="p-5">
-                  <h3 className="text-base font-black text-gray-900 mb-2 leading-snug">
-                    {spot.name}
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    {spot.description}
-                  </p>
-
-                  <div className="space-y-1.5 text-xs text-gray-500">
-                    {spot.fee && (
-                      <div className="flex items-start gap-2">
-                        <Ticket className="h-3.5 w-3.5 mt-0.5 shrink-0 text-gray-400" />
-                        <span>{spot.fee}</span>
-                      </div>
-                    )}
-                    {spot.hours && (
-                      <div className="flex items-start gap-2">
-                        <Clock className="h-3.5 w-3.5 mt-0.5 shrink-0 text-gray-400" />
-                        <span>{spot.hours}</span>
-                      </div>
-                    )}
-                  </div>
-
-                  {spot.tip && (
-                    <div className="mt-4 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2 text-xs text-amber-800 leading-relaxed">
-                      <span className="font-bold">Tip: </span>
-                      {spot.tip}
+                    <div>
+                      <span className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-2.5 py-1 rounded-full mb-2">
+                        <CatIcon className="h-3 w-3" />
+                        {meta.label}
+                      </span>
+                      <h3 className="text-white font-black text-lg leading-tight">
+                        {spot.name}
+                      </h3>
                     </div>
-                  )}
+                    <span className="text-4xl ml-4 shrink-0 select-none group-hover:scale-110 transition-transform duration-200">
+                      {spot.emoji}
+                    </span>
+                  </div>
+
+                  {/* Body */}
+                  <div className="p-5">
+                    <p className="text-gray-600 text-sm leading-relaxed mb-5">
+                      {spot.description}
+                    </p>
+
+                    {/* Info rows */}
+                    <div className="space-y-2 text-xs">
+                      <div className="flex items-start gap-2 text-gray-500">
+                        <MapPin className="h-3.5 w-3.5 mt-0.5 shrink-0 text-gray-400" />
+                        <span>{spot.location}</span>
+                      </div>
+                      {spot.contact && (
+                        <a
+                          href={`tel:${spot.contact.replace(/[^0-9]/g, '')}`}
+                          className="flex items-center gap-2 text-gray-500 hover:text-primary-700 transition-colors"
+                        >
+                          <Phone className="h-3.5 w-3.5 shrink-0 text-gray-400" />
+                          <span>{spot.contact}</span>
+                        </a>
+                      )}
+                    </div>
+
+                    {/* Links */}
+                    {(spot.website || spot.facebook) && (
+                      <div className="mt-4 pt-4 border-t border-gray-100 flex flex-wrap gap-2">
+                        {spot.website && (
+                          <a
+                            href={spot.website}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary-700 bg-primary-50 hover:bg-primary-100 border border-primary-100 px-3 py-1.5 rounded-lg transition-colors"
+                          >
+                            <ExternalLink className="h-3 w-3" />
+                            Visit Website
+                          </a>
+                        )}
+                        {spot.facebook && (
+                          <a
+                            href={spot.facebook}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-100 px-3 py-1.5 rounded-lg transition-colors"
+                          >
+                            <ExternalLink className="h-3 w-3" />
+                            Facebook Page
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Bottom index */}
+                  <div className="px-5 pb-4 flex items-center justify-between">
+                    <span className="text-[10px] font-black text-gray-300 uppercase tracking-widest">
+                      Spot #{String(idx + 1).padStart(2, '0')}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      </Section>
+              );
+            })}
+          </div>
+
+          {/* CTA footer */}
+          <div className="mt-12 bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col sm:flex-row items-center gap-4 justify-between">
+            <div>
+              <p className="font-black text-gray-900 mb-1">
+                Planning a visit to General Trias?
+              </p>
+              <p className="text-sm text-gray-500">
+                Contact the City Tourism Office for more information.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 shrink-0">
+              <a
+                href="tel:0468845768"
+                className="inline-flex items-center gap-2 bg-primary-700 hover:bg-primary-600 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition-colors"
+              >
+                <Phone className="h-4 w-4" />
+                (046) 884-5768
+              </a>
+              <a
+                href="https://www.generaltrias.gov.ph/tourism/must-see-places"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-bold px-5 py-2.5 rounded-xl transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Official Site
+              </a>
+            </div>
+          </div>
+        </Section>
+      </div>
     </>
   );
 }
