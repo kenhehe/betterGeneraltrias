@@ -51,7 +51,7 @@ export default function Footer() {
           <div>
             <div className="mb-3">
               <img
-                src="/betterGeneraltrias-logo.png"
+                src="/betterGeneraltrias-white-logo.png"
                 alt="BetterGenTri"
                 className="h-9 w-auto brightness-0 invert"
               />
