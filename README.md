@@ -1,4 +1,4 @@
-# BetterGenTri.ph
+# BetterGeneralTrias.org
 
 A community transparency portal for **General Trias City, Cavite** — built to give residents fast, clear access to government services, officials, budgets, and public information.
 

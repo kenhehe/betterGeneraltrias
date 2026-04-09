@@ -1,5 +1,5 @@
 {
-  "site_name": "BetterGenTri",
+  "site_name": "BetterGeneralTrias.org",
   "site_description": "A community transparency portal for General Trias City, Cavite — find government services, officials, budgets, and public information.",
   "nav": {
     "home": "Home",
@@ -29,7 +29,7 @@
     "cswdo": "CSWDO"
   },
   "hero": {
-    "title": "BetterGenTri",
+    "title": "BetterGeneralTrias.org",
     "welcome": "Welcome to",
     "subtitle": "Access government services, information, and resources for the people of General Trias City, Cavite.",
     "browseServices": "Browse Services",
@@ -255,7 +255,7 @@
     "costLabel": "Cost to the People of General Trias =",
     "volunteer": "Volunteer with us",
     "contribute": "Contribute code with us",
-    "copyright": "© 2026 BetterGenTri.ph  MIT | CC BY 4.0  All public information sourced from official government portals.",
+    "copyright": "© 2026 BetterGeneralTrias.org  MIT | CC BY 4.0  All public information sourced from official government portals.",
     "attribution": "All public information sourced from official government portals.",
     "builtBy": "Built by"
   },
