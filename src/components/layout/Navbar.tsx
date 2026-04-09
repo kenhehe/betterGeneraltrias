@@ -234,7 +234,7 @@ const Navbar: React.FC = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center shrink-0">
               <img
-                src="/logo.png"
+                src="/betterGeneraltrias-logo.png"
                 alt="BetterGenTri"
                 className="h-16 w-auto"
               />
