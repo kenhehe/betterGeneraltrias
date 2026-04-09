@@ -1,5 +1,5 @@
 {
-  "site_name": "BetterGenTri",
+  "site_name": "BetterGeneralTrias.org",
   "site_description": "Isang portal ng transparency para sa Lungsod ng General Trias, Cavite — hanapin ang mga serbisyo ng pamahalaan, opisyal, badyet, at pampublikong impormasyon.",
   "nav": {
     "home": "Tahanan",
@@ -29,7 +29,7 @@
     "cswdo": "CSWDO"
   },
   "hero": {
-    "title": "BetterGenTri",
+    "title": "BetterGeneralTrias.org",
     "welcome": "Maligayang pagdating sa",
     "subtitle": "I-access ang mga serbisyo ng pamahalaan, impormasyon, at mapagkukunan para sa mga mamamayan ng Lungsod ng General Trias, Cavite.",
     "browseServices": "Tingnan ang Mga Serbisyo",
@@ -255,7 +255,7 @@
     "costLabel": "Gastos sa mga Mamamayan ng General Trias =",
     "volunteer": "Maging boluntaryo",
     "contribute": "Mag-ambag ng code",
-    "copyright": "© 2026 BetterGenTri.ph  MIT | CC BY 4.0  Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan.",
+    "copyright": "© 2026 BetterGeneralTrias.org  MIT | CC BY 4.0  Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan.",
     "attribution": "Lahat ng pampublikong impormasyon ay hango sa opisyal na mga portal ng pamahalaan.",
     "builtBy": "Ginawa ni"
   },

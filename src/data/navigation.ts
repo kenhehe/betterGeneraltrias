@@ -134,7 +134,7 @@ export const footerNavigation = {
   socialLinks: [
     {
       label: 'Facebook',
-      href: 'https://web.facebook.com/betterGentri',
+      href: 'https://www.facebook.com/betterGeneralTrias/',
     },
   ],
 };
