@@ -11,8 +11,8 @@ const Home: React.FC = () => {
   return (
     <>
       <SEO
-        description="BetterGenTri — a community transparency portal for General Trias City, Cavite. Access government services, officials, budgets, and public information."
-        keywords="General Trias City, Cavite, GenTri, government, services, transparency, officials, budget"
+        description="BetterGeneralTrias.org — a community transparency portal for General Trias City, Cavite. Access government services, officials, budgets, and public information."
+        keywords="General Trias City, Cavite, BetterGeneralTrias, government, services, transparency, officials, budget"
       />
       <main>
         <Hero />
