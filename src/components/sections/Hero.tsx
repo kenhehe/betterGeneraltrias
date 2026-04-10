@@ -28,36 +28,60 @@ const POPULAR_CATEGORIES = [
     label: 'Business',
     slug: 'business',
     icon: Briefcase,
+    iconBg: 'bg-indigo-50',
+    iconText: 'text-indigo-600',
+    hoverBorder: 'hover:border-indigo-300',
+    hoverBg: 'hover:bg-indigo-50',
   },
   {
     labelKey: 'services.categories.health-services.name',
     label: 'Health',
     slug: 'health-services',
     icon: Heart,
+    iconBg: 'bg-red-50',
+    iconText: 'text-red-600',
+    hoverBorder: 'hover:border-red-300',
+    hoverBg: 'hover:bg-red-50',
   },
   {
     labelKey: 'services.categories.education.name',
     label: 'Education',
     slug: 'education',
     icon: GraduationCap,
+    iconBg: 'bg-blue-50',
+    iconText: 'text-blue-600',
+    hoverBorder: 'hover:border-blue-300',
+    hoverBg: 'hover:bg-blue-50',
   },
   {
     labelKey: 'services.categories.garbage-waste-disposal.name',
     label: 'Waste',
     slug: 'garbage-waste-disposal',
     icon: Trash2,
+    iconBg: 'bg-amber-50',
+    iconText: 'text-amber-600',
+    hoverBorder: 'hover:border-amber-300',
+    hoverBg: 'hover:bg-amber-50',
   },
   {
     labelKey: 'services.categories.environment.name',
     label: 'Environment',
     slug: 'environment',
     icon: TreePine,
+    iconBg: 'bg-green-50',
+    iconText: 'text-green-700',
+    hoverBorder: 'hover:border-green-300',
+    hoverBg: 'hover:bg-green-50',
   },
   {
     labelKey: 'services.categories.housing-land-use.name',
     label: 'Housing',
     slug: 'housing-land-use',
     icon: Home,
+    iconBg: 'bg-sky-50',
+    iconText: 'text-sky-600',
+    hoverBorder: 'hover:border-sky-300',
+    hoverBg: 'hover:bg-sky-50',
   },
 ];
 
@@ -366,12 +390,12 @@ export default function Hero() {
                       <Link
                         key={cat.slug}
                         to={`/services/${cat.slug}`}
-                        className="flex flex-col items-center gap-1.5 p-3 rounded-xl border-2 border-gray-100 hover:border-primary-300 hover:bg-primary-50 transition-all text-center group"
+                        className={`flex flex-col items-center gap-1.5 p-3 rounded-xl border-2 border-gray-100 ${cat.hoverBorder} ${cat.hoverBg} transition-all text-center group`}
                       >
-                        <div className="p-2 rounded-lg bg-primary-50 text-primary-700 group-hover:bg-primary-100 group-hover:scale-110 transition-all">
+                        <div className={`p-2 rounded-lg ${cat.iconBg} ${cat.iconText} group-hover:scale-110 transition-all`}>
                           <Icon className="h-4 w-4" />
                         </div>
-                        <span className="text-[11px] font-semibold text-gray-600 leading-tight group-hover:text-primary-700 transition-colors">
+                        <span className={`text-[11px] font-semibold text-gray-600 leading-tight ${cat.iconText.replace('text-', 'group-hover:text-')} transition-colors`}>
                           {t(cat.labelKey, cat.label)}
                         </span>
                       </Link>

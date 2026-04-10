@@ -1,13 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   X,
   Menu,
   ChevronDown,
   Phone,
-  FileText,
-  Briefcase,
-  MessageSquare,
-  ExternalLink,
 } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
@@ -23,31 +19,12 @@ const HOTLINES = [
   { label: 'CSWDO', number: '(046) 884-5400', tel: '0468845400' },
 ];
 
-const QUICK_ACTIONS = [
-  { icon: FileText, label: 'FOI Request', href: 'https://www.foi.gov.ph', external: true },
-  { icon: Briefcase, label: 'Business Permits', href: '/services/business', external: false },
-  { icon: FileText, label: 'Full Disclosure', href: '/government/transparency-documents/full-disclosure', external: false },
-  { icon: MessageSquare, label: 'Contact City Hall', href: '/#contact', external: false },
-];
-
-const SMART_BAR_KEY = 'gentri_smartbar_dismissed';
-
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const [barDismissed, setBarDismissed] = useState(false);
   const { t, i18n } = useTranslation('common');
   const navigate = useNavigate();
   const location = useLocation();
-
-  useEffect(() => {
-    setBarDismissed(localStorage.getItem(SMART_BAR_KEY) === '1');
-  }, []);
-
-  const dismissBar = () => {
-    setBarDismissed(true);
-    localStorage.setItem(SMART_BAR_KEY, '1');
-  };
 
   const handleNavClick = (e: React.MouseEvent, href: string, onClose?: () => void) => {
     if (href === '/#contact') {
@@ -75,72 +52,26 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="sticky top-0 z-50">
-      {/* Smart Bar — two rows, single dismiss */}
-      {!barDismissed && (
-        <div>
-          {/* Row 1: Emergency hotlines */}
-          <div className="bg-[#1c0505] text-white text-[11px] overflow-x-auto whitespace-nowrap">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 h-7 flex items-center gap-3 min-w-max">
-              <span className="flex items-center gap-1.5 shrink-0">
-                <Phone className="h-2.5 w-2.5 text-red-400" />
-                <span className="text-red-400 font-black uppercase tracking-wider text-[10px]">
-                  Emergency Hotlines:
-                </span>
-              </span>
-              {HOTLINES.map((h, i) => (
-                <React.Fragment key={h.tel}>
-                  {i > 0 && <span className="text-white/15">·</span>}
-                  <a href={`tel:${h.tel}`} className="hover:text-white transition-colors shrink-0">
-                    <span className="font-bold text-white/70">{h.label}</span>{' '}
-                    <span className="text-white/50">{h.number}</span>
-                  </a>
-                </React.Fragment>
-              ))}
-              <button
-                onClick={dismissBar}
-                className="ml-6 shrink-0 text-white/30 hover:text-white transition-colors p-0.5"
-                aria-label="Dismiss"
-              >
-                <X className="h-3 w-3" />
-              </button>
-            </div>
-          </div>
-
-          {/* Row 2: Quick links */}
-          <div className="bg-[#0a2e18] text-white text-[11px] overflow-x-auto whitespace-nowrap border-b border-white/5">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 h-7 flex items-center gap-1 min-w-max justify-end">
-              <span className="text-green-600 font-bold uppercase tracking-widest text-[9px] mr-2 shrink-0">
-                Quick Access
-              </span>
-              {QUICK_ACTIONS.map((action, i) => {
-                const Icon = action.icon;
-                const inner = (
-                  <span className="flex items-center gap-1 px-2.5 py-0.5 rounded hover:bg-white/10 text-green-300 hover:text-white transition-colors font-medium">
-                    <Icon className="h-2.5 w-2.5 opacity-60 shrink-0" />
-                    {action.label}
-                    {action.external && <ExternalLink className="h-2 w-2 opacity-40" />}
-                  </span>
-                );
-                return (
-                  <span key={action.label} className="flex items-center">
-                    {i > 0 && <span className="text-white/10 mx-0.5">|</span>}
-                    {action.external ? (
-                      <a href={action.href} target="_blank" rel="noreferrer">{inner}</a>
-                    ) : (
-                      <Link
-                        to={action.href}
-                        onClick={e => action.href === '/#contact' ? handleNavClick(e, action.href) : undefined}
-                      >
-                        {inner}
-                      </Link>
-                    )}
-                  </span>
-                );
-              })}
-            </div>
-          </div>
+      {/* Emergency Hotlines Bar — always visible */}
+      <div className="bg-[#1c0505] text-white text-[11px] overflow-x-auto whitespace-nowrap">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-7 flex items-center gap-3 min-w-max">
+          <span className="flex items-center gap-1.5 shrink-0">
+            <Phone className="h-2.5 w-2.5 text-red-400" />
+            <span className="text-red-400 font-black uppercase tracking-wider text-[10px]">
+              Emergency Hotlines:
+            </span>
+          </span>
+          {HOTLINES.map((h, i) => (
+            <React.Fragment key={h.tel}>
+              {i > 0 && <span className="text-white/15">·</span>}
+              <a href={`tel:${h.tel}`} className="hover:text-white transition-colors shrink-0">
+                <span className="font-bold text-white/70">{h.label}</span>{' '}
+                <span className="text-white/50">{h.number}</span>
+              </a>
+            </React.Fragment>
+          ))}
         </div>
-      )}
+      </div>
 
       {/* Main Navbar — white, taller */}
       <div className="bg-white shadow-sm border-b border-gray-100">
