@@ -81,10 +81,10 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Main Navbar — glossy glass */}
-      <div className={`relative transition-all duration-300 ${
+      <div className={`relative transition-all duration-500 ${
         scrolled
-          ? 'bg-white/75 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/40 shadow-xl shadow-black/10'
-          : 'bg-white/30 backdrop-blur-xl backdrop-saturate-200 border-b border-white/20 shadow-md shadow-black/5'
+          ? 'bg-white/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/50 shadow-lg shadow-black/10'
+          : 'bg-white/[0.08] backdrop-blur-xl backdrop-saturate-150 border-b border-white/10'
       }`}>
         {/* Glossy shine line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none" />
