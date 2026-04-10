@@ -4,7 +4,8 @@ import { Download, FileText, Map, ExternalLink } from 'lucide-react';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
-  { label: 'Transparency', href: '/government/transparency-documents' },
+  { label: 'Government', href: '/government' },
+  { label: 'Transparency Documents', href: '/government/transparency-documents' },
   { label: 'Planning Docs & Downloads', href: '/government/transparency-documents/downloads' },
 ];
 

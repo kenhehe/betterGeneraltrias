@@ -4,7 +4,8 @@ import { ExternalLink, CheckCircle, DollarSign, ClipboardList, AlertTriangle } f
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
-  { label: 'Statistics', href: '/government/reports-and-statistics' },
+  { label: 'Government', href: '/government' },
+  { label: 'Reports & Statistics', href: '/government/reports-and-statistics' },
   { label: 'Infrastructure Projects', href: '/government/reports-and-statistics/infrastructure-projects' },
 ];
 

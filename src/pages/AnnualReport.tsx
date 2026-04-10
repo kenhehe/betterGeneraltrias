@@ -4,7 +4,8 @@ import { ExternalLink, Building2, Heart, Users, GraduationCap, TrendingUp, Shiel
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
-  { label: 'Statistics', href: '/government/reports-and-statistics' },
+  { label: 'Government', href: '/government' },
+  { label: 'Reports & Statistics', href: '/government/reports-and-statistics' },
   { label: 'Annual Report', href: '/government/reports-and-statistics/annual-report' },
 ];
 

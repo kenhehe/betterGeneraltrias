@@ -1,7 +1,7 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { Link } from 'react-router-dom';
-import { Users, Phone, ExternalLink, Building2, Crown, Shield } from 'lucide-react';
+import { Users, Phone, ExternalLink, Building2, Crown, Shield, Star } from 'lucide-react';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -14,16 +14,28 @@ const EXECUTIVES = [
   {
     name: 'Hon. Luis A. Ferrer IV',
     position: 'City Mayor',
-    badge: 'Elected — 2022–2025 Term',
+    badge: '2022–2025 Term',
     initials: 'LF',
-    color: 'bg-green-600',
+    accentFrom: 'from-green-800',
+    accentTo: 'to-green-600',
+    ring: 'ring-green-200',
+    badgeColor: 'bg-green-50 text-green-700 border-green-200',
+    icon: Crown,
+    iconColor: 'text-amber-400',
+    description: 'Chief Executive of General Trias City, responsible for overall governance and administration.',
   },
   {
     name: 'Hon. Jonas Glyn Porto Labuguen',
     position: 'City Vice Mayor',
-    badge: 'Elected — 2022–2025 Term',
+    badge: '2022–2025 Term',
     initials: 'JL',
-    color: 'bg-blue-600',
+    accentFrom: 'from-blue-800',
+    accentTo: 'to-blue-600',
+    ring: 'ring-blue-200',
+    badgeColor: 'bg-blue-50 text-blue-700 border-blue-200',
+    icon: Star,
+    iconColor: 'text-blue-300',
+    description: 'Presides over the Sangguniang Panlungsod and assists the Mayor in city governance.',
   },
 ];
 
@@ -43,8 +55,8 @@ const COUNCILORS = [
 ];
 
 const EX_OFFICIO = [
-  { position: 'LNB President (Liga ng mga Barangay)', name: 'Hon. Ramil C. Barrientos' },
-  { position: 'SK Federation President (Sangguniang Kabataan)', name: 'Hon. Ainsley Gwyneth G. Luces' },
+  { position: 'LNB President', full: 'Liga ng mga Barangay', name: 'Hon. Ramil C. Barrientos' },
+  { position: 'SK Federation President', full: 'Sangguniang Kabataan', name: 'Hon. Ainsley Gwyneth G. Luces' },
 ];
 
 const DEPARTMENTS = [
@@ -85,26 +97,53 @@ export default function Officials() {
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
           {/* Executive Branch */}
-          <div className="mb-10">
-            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2"><Crown className="h-5 w-5 text-amber-500" /> Executive Branch</h2>
-            <div className="h-1 w-10 bg-primary-600 rounded-full mb-5" />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
-              {EXECUTIVES.map(e => (
-                <div key={e.name} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex items-start gap-4">
-                  <div className={`${e.color} text-white w-12 h-12 rounded-xl flex items-center justify-center text-lg font-black shrink-0`}>{e.initials}</div>
-                  <div>
-                    <div className="text-base font-black text-gray-900">{e.name}</div>
-                    <div className="text-sm font-bold text-primary-700 mb-1">{e.position}</div>
-                    <span className="text-[10px] font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">{e.badge}</span>
+          <div className="mb-12">
+            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2">
+              <Crown className="h-5 w-5 text-amber-500" /> Executive Branch
+            </h2>
+            <div className="h-1 w-10 bg-primary-600 rounded-full mb-6" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {EXECUTIVES.map(e => {
+                const RoleIcon = e.icon;
+                return (
+                  <div
+                    key={e.name}
+                    className={`bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden ring-1 ${e.ring}`}
+                  >
+                    {/* Colored top bar */}
+                    <div className={`h-1.5 bg-gradient-to-r ${e.accentFrom} ${e.accentTo}`} />
+                    <div className="p-6">
+                      <div className="flex items-start gap-5">
+                        {/* Avatar */}
+                        <div className={`bg-gradient-to-br ${e.accentFrom} ${e.accentTo} text-white w-16 h-16 rounded-2xl flex items-center justify-center text-xl font-black shrink-0 shadow-md`}>
+                          {e.initials}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <RoleIcon className={`h-4 w-4 ${e.iconColor} shrink-0`} />
+                            <span className="text-sm font-black text-primary-700">{e.position}</span>
+                          </div>
+                          <div className="text-base font-black text-gray-900 leading-tight mb-2">{e.name}</div>
+                          <span className={`inline-block text-[10px] font-bold border px-2 py-0.5 rounded-full ${e.badgeColor}`}>
+                            Elected · {e.badge}
+                          </span>
+                        </div>
+                      </div>
+                      <p className="mt-4 text-xs text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
+                        {e.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
           {/* City Council */}
-          <div className="mb-10">
-            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2"><Users className="h-5 w-5 text-blue-500" /> Sangguniang Panlungsod (City Council)</h2>
+          <div className="mb-12">
+            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2">
+              <Users className="h-5 w-5 text-blue-500" /> Sangguniang Panlungsod (City Council)
+            </h2>
             <div className="h-1 w-10 bg-primary-600 rounded-full mb-2" />
             <p className="text-sm text-gray-500 mb-5">12 elected councilors presided over by the Vice Mayor — 2022–2025 term</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -118,13 +157,16 @@ export default function Officials() {
           </div>
 
           {/* Ex-Officio */}
-          <div className="mb-10">
-            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2"><Shield className="h-5 w-5 text-violet-500" /> Ex-Officio Members</h2>
+          <div className="mb-12">
+            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2">
+              <Shield className="h-5 w-5 text-violet-500" /> Ex-Officio Members
+            </h2>
             <div className="h-1 w-10 bg-primary-600 rounded-full mb-5" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
               {EX_OFFICIO.map(m => (
                 <div key={m.name} className="bg-white rounded-xl border border-gray-100 shadow-sm p-4">
-                  <div className="text-xs font-bold text-violet-600 mb-1">{m.position}</div>
+                  <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wide mb-0.5">{m.full}</div>
+                  <div className="text-xs font-bold text-violet-600 mb-1.5">{m.position}</div>
                   <div className="text-sm font-semibold text-gray-800">{m.name}</div>
                 </div>
               ))}
@@ -133,7 +175,9 @@ export default function Officials() {
 
           {/* Department Directory */}
           <div className="mb-10">
-            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2"><Building2 className="h-5 w-5 text-primary-600" /> City Government Offices</h2>
+            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2">
+              <Building2 className="h-5 w-5 text-primary-600" /> City Government Offices
+            </h2>
             <div className="h-1 w-10 bg-primary-600 rounded-full mb-5" />
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
               {DEPARTMENTS.map((d, i) => (

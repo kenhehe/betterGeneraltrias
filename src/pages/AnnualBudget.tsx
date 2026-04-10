@@ -4,7 +4,8 @@ import { ExternalLink, DollarSign, ArrowRight, Calendar } from 'lucide-react';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
-  { label: 'Transparency', href: '/government/transparency-documents' },
+  { label: 'Government', href: '/government' },
+  { label: 'Transparency Documents', href: '/government/transparency-documents' },
   { label: 'Annual Budget', href: '/government/transparency-documents/annual-budget' },
 ];
 

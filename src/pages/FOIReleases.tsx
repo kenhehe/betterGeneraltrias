@@ -4,7 +4,8 @@ import { ExternalLink, MapPin, Globe, Clock, FileText, XCircle } from 'lucide-re
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
-  { label: 'Transparency', href: '/government/transparency-documents' },
+  { label: 'Government', href: '/government' },
+  { label: 'Transparency Documents', href: '/government/transparency-documents' },
   { label: 'FOI Releases', href: '/government/transparency-documents/foi-releases' },
 ];
 

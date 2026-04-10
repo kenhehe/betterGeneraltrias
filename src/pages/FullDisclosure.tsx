@@ -4,7 +4,8 @@ import { ExternalLink, FileText, DollarSign, BarChart2, ShoppingCart, MoreHorizo
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
-  { label: 'Transparency', href: '/government/transparency-documents' },
+  { label: 'Government', href: '/government' },
+  { label: 'Transparency Documents', href: '/government/transparency-documents' },
   { label: 'Full Disclosure', href: '/government/transparency-documents/full-disclosure' },
 ];
 
