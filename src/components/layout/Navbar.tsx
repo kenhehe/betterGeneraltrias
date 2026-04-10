@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
     href === '/' ? location.pathname === '/' : location.pathname.startsWith(href);
 
   return (
-    <nav className="sticky top-0 z-50">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full">
       {/* Emergency Hotlines Bar — always visible */}
       <div className="bg-[#1c0505] text-white text-[11px] overflow-x-auto whitespace-nowrap">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-7 flex items-center gap-3 min-w-max">
@@ -80,12 +80,14 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Navbar — glass */}
-      <div className={`transition-all duration-300 ${
+      {/* Main Navbar — glossy glass */}
+      <div className={`relative transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200/60 shadow-lg shadow-black/5'
-          : 'bg-white/60 backdrop-blur-md border-b border-white/30 shadow-sm'
+          ? 'bg-white/75 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/40 shadow-xl shadow-black/10'
+          : 'bg-white/30 backdrop-blur-xl backdrop-saturate-200 border-b border-white/20 shadow-md shadow-black/5'
       }`}>
+        {/* Glossy shine line */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between py-5">
             {/* Logo + Wordmark */}

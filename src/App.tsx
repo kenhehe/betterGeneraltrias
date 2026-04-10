@@ -27,6 +27,9 @@ function App() {
           <div className="min-h-screen flex flex-col">
             <Navbar />
             <ScrollToTop />
+            {/* pt-[116px] compensates for fixed navbar on all pages.
+                The Home hero cancels this with -mt-[116px] to go full-bleed. */}
+            <div className="flex-1 flex flex-col pt-[116px]">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/services/:category" element={<Services />} />
@@ -57,6 +60,7 @@ function App() {
               <Route path="/:lang/:documentSlug" element={<Document />} />
               <Route path="/:documentSlug" element={<Document />} />
             </Routes>
+            </div>
             <Footer />
           </div>
         </NuqsAdapter>
