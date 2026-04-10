@@ -1,5 +1,6 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
+import Section from '../components/ui/Section';
 import { Link } from 'react-router-dom';
 import {
   BarChart,
@@ -25,6 +26,7 @@ import {
   TrendingUp,
   Calendar,
   ExternalLink,
+  BarChart2,
 } from 'lucide-react';
 
 const BREADCRUMBS = [
@@ -108,28 +110,37 @@ export default function CityProfile() {
             backgroundSize: '48px 48px',
           }}
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
-          <p className="text-green-300 text-xs font-bold uppercase tracking-widest mb-1">
-            Reports & Statistics
-          </p>
-          <h1 className="text-3xl sm:text-4xl font-black text-white mb-2">
-            City Profile & Statistics
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="flex items-center gap-2 mb-4 text-green-300 text-xs font-bold uppercase tracking-widest">
+            <BarChart2 className="h-3.5 w-3.5" />
+            Reports &amp; Statistics
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
+            City Profile &amp; Statistics
           </h1>
-          <p className="text-green-200 text-sm max-w-lg leading-relaxed">
+          <p className="text-green-100 text-base max-w-lg leading-relaxed mb-8">
             Demographic data, economic indicators, barangay directory, and
             recognition for General Trias City, Cavite — one of the
             fastest-growing cities in the Philippines.
           </p>
+          <div className="flex flex-wrap gap-3">
+            {[['450K+', 'Population'], ['33', 'Barangays'], ['88.9 km²', 'Land Area'], ['2015', 'Cityhood']].map(([val, lbl]) => (
+              <div key={lbl} className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2">
+                <span className="text-sm font-black text-white">{val}</span>
+                <span className="text-xs text-green-300 font-medium">{lbl}</span>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 32" fill="none" preserveAspectRatio="none">
-            <path d="M0 32 C480 0 960 0 1440 32 L1440 32 L0 32Z" fill="#f9fafb" />
+          <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 40 C360 0 1080 0 1440 40 L1440 40 L0 40Z" fill="#f9fafb" />
           </svg>
         </div>
       </div>
 
       <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <Section className="py-10">
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
           {/* Key Facts Grid */}
@@ -378,7 +389,7 @@ export default function CityProfile() {
               </Link>
             </div>
           </div>
-        </div>
+        </Section>
       </div>
     </>
   );
