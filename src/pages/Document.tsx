@@ -6,6 +6,48 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+
+// Split markdown by ## headings into individually-renderable sections
+function splitByH2(raw: string): Array<{ heading: string | null; body: string }> {
+  const withoutH1 = raw.replace(/^#\s+.+\n/, '').replace(/^\n+/, '');
+  const parts = withoutH1.split(/^(##\s+.+)$/m);
+  const sections: Array<{ heading: string | null; body: string }> = [];
+  const intro = parts[0].replace(/^---\s*\n?/gm, '').trim();
+  if (intro) sections.push({ heading: null, body: intro });
+  for (let i = 1; i < parts.length; i += 2) {
+    const heading = parts[i].replace(/^##\s+/, '');
+    const body = (parts[i + 1] || '').replace(/^---\s*\n?/gm, '').trim();
+    if (heading) sections.push({ heading, body });
+  }
+  return sections;
+}
+
+const SECTION_ACCENTS = [
+  'from-green-600 to-emerald-700',
+  'from-blue-600 to-indigo-700',
+  'from-violet-600 to-purple-700',
+  'from-amber-500 to-orange-600',
+  'from-slate-600 to-gray-700',
+  'from-teal-600 to-cyan-700',
+  'from-red-500 to-rose-600',
+  'from-pink-600 to-rose-700',
+];
+
+const PROSE = `p-5 sm:p-6 prose prose-sm max-w-none
+  prose-headings:font-black prose-headings:text-gray-900
+  prose-h1:hidden prose-h2:hidden
+  prose-h3:text-sm prose-h3:text-primary-700 prose-h3:font-black prose-h3:mt-4 prose-h3:mb-2
+  prose-p:text-gray-600 prose-p:leading-relaxed
+  prose-a:text-primary-700 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
+  prose-strong:text-gray-900 prose-strong:font-bold
+  prose-ul:text-gray-600 prose-ol:text-gray-600
+  prose-li:marker:text-primary-500
+  prose-hr:border-gray-100
+  prose-blockquote:border-primary-400 prose-blockquote:bg-primary-50 prose-blockquote:rounded-r-xl prose-blockquote:py-1
+  prose-table:text-sm prose-table:w-full
+  prose-th:bg-gray-50 prose-th:text-gray-700 prose-th:font-bold prose-th:text-xs prose-th:uppercase prose-th:tracking-wide
+  prose-tr:border-gray-100 prose-td:text-gray-600 prose-td:align-top prose-td:text-xs
+`;
 import {
   loadMarkdownContent,
   type MarkdownContent,
@@ -338,37 +380,62 @@ export default function Document({
             />
           )}
 
-          {/* Markdown content card */}
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            <div className="h-2 bg-gradient-to-r from-primary-700 to-primary-400" />
-            <div className="overflow-x-auto">
-              <div
-                className="p-6 sm:p-8 prose prose-sm max-w-none
-                prose-headings:font-black prose-headings:text-gray-900
-                prose-h1:text-2xl prose-h1:hidden
-                prose-h2:text-lg prose-h2:mt-6 prose-h2:mb-3 prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-2
-                prose-h3:text-base prose-h3:text-primary-700
-                prose-p:text-gray-600 prose-p:leading-relaxed
-                prose-a:text-primary-700 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
-                prose-strong:text-gray-900 prose-strong:font-bold
-                prose-ul:text-gray-600 prose-ol:text-gray-600
-                prose-li:marker:text-primary-500
-                prose-hr:border-gray-100
-                prose-blockquote:border-primary-400 prose-blockquote:bg-primary-50 prose-blockquote:rounded-r-xl prose-blockquote:py-1
-                prose-table:text-sm prose-table:w-full
-                prose-th:bg-primary-50 prose-th:text-primary-800 prose-th:font-bold prose-th:text-xs prose-th:uppercase prose-th:tracking-wide prose-th:px-3 prose-th:py-2
-                prose-tr:border-gray-100 prose-td:text-gray-600 prose-td:px-3 prose-td:py-2 prose-td:align-top
-              "
-              >
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  components={markdownComponents}
-                >
-                  {markdownContent.content}
-                </ReactMarkdown>
+          {/* Section cards — one per ## heading */}
+          {(() => {
+            const sections = splitByH2(markdownContent.content);
+            const hasSections = sections.some(s => s.heading !== null);
+            let accentIdx = 0;
+
+            if (!hasSections) {
+              return (
+                <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                  <div className="h-2 bg-gradient-to-r from-primary-700 to-primary-400" />
+                  <div className="overflow-x-auto">
+                    <div className={PROSE}>
+                      <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                        {markdownContent.content}
+                      </ReactMarkdown>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <div className="space-y-4">
+                {sections.map((section, i) => {
+                  const accent = section.heading
+                    ? SECTION_ACCENTS[accentIdx++ % SECTION_ACCENTS.length]
+                    : null;
+                  return (
+                    <div
+                      key={i}
+                      className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200"
+                    >
+                      {section.heading ? (
+                        <div className={`bg-gradient-to-r ${accent} px-5 py-4`}>
+                          <h2 className="text-white font-black text-base leading-tight">
+                            {section.heading}
+                          </h2>
+                        </div>
+                      ) : (
+                        <div className="h-2 bg-gradient-to-r from-primary-700 to-primary-400" />
+                      )}
+                      {section.body && (
+                        <div className="overflow-x-auto">
+                          <div className={PROSE}>
+                            <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                              {section.body}
+                            </ReactMarkdown>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
-            </div>
-          </div>
+            );
+          })()}
 
           {/* Back nav */}
           <div className="mt-6 flex items-center justify-between">
