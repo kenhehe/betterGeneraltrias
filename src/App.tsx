@@ -17,6 +17,7 @@ import FOIReleases from './pages/FOIReleases';
 import Downloads from './pages/Downloads';
 import AnnualReport from './pages/AnnualReport';
 import InfrastructureProjects from './pages/InfrastructureProjects';
+import DevelopmentProjects from './pages/DevelopmentProjects';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
               <Route path="/government/reports-and-statistics/city-profile" element={<CityProfile />} />
               <Route path="/government/reports-and-statistics/annual-report" element={<AnnualReport />} />
               <Route path="/government/reports-and-statistics/infrastructure-projects" element={<InfrastructureProjects />} />
+              <Route path="/development-projects" element={<DevelopmentProjects />} />
               <Route
                 path="/government/:category/:documentSlug"
                 element={<Document categoryType="government" />}

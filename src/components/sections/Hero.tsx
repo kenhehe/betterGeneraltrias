@@ -10,6 +10,8 @@ import {
   TreePine,
   Home,
   MapPin,
+  TrendingUp,
+  Zap,
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -403,6 +405,62 @@ export default function Hero() {
                   })}
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Development Projects teaser strip */}
+        <div
+          style={{
+            opacity: mounted ? 1 : 0,
+            transition: 'opacity 0.6s ease 460ms',
+          }}
+        >
+          <div className="border-t border-white/10 mt-12 pt-8">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <TrendingUp className="h-4 w-4 text-green-300" />
+                <span className="text-xs font-bold text-green-300 uppercase tracking-widest">
+                  Coming to General Trias
+                </span>
+              </div>
+              <Link
+                to="/development-projects"
+                className="flex items-center gap-1 text-xs font-semibold text-green-300 hover:text-white transition-colors"
+              >
+                View all <ArrowRight className="h-3 w-3" />
+              </Link>
+            </div>
+
+            <div
+              className="flex gap-3 overflow-x-auto pb-2"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
+            >
+              {[
+                { emoji: '🏬', name: 'SM City General Trias', status: 'Announced', pill: 'bg-blue-500/20 border-blue-400/30' },
+                { emoji: '🛣️', name: 'CALAX–CAVITEX Link', status: 'Under Construction', pill: 'bg-orange-500/20 border-orange-400/30' },
+                { emoji: '🏙️', name: 'Riverpark Township', status: 'Active Development', pill: 'bg-emerald-500/20 border-emerald-400/30' },
+                { emoji: '🌉', name: 'Flyover & Road Widening', status: 'Ongoing', pill: 'bg-slate-500/20 border-slate-400/30' },
+                { emoji: '🎓', name: 'Ateneo de Cavite', status: 'Announced', pill: 'bg-indigo-500/20 border-indigo-400/30' },
+              ].map(p => (
+                <Link
+                  key={p.name}
+                  to="/development-projects"
+                  className={`shrink-0 border rounded-xl px-4 py-3 hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200 ${p.pill}`}
+                >
+                  <span className="text-2xl leading-none">{p.emoji}</span>
+                  <p
+                    className="text-xs font-bold text-white mt-2 whitespace-nowrap"
+                    style={{ maxWidth: '140px', overflow: 'hidden', textOverflow: 'ellipsis' }}
+                  >
+                    {p.name}
+                  </p>
+                  <span className="flex items-center gap-1 text-[10px] text-green-300 font-medium mt-0.5">
+                    <Zap className="h-2.5 w-2.5" />
+                    {p.status}
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

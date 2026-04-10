@@ -233,10 +233,15 @@ export default function TouristSpots() {
 
                     {/* Info rows */}
                     <div className="space-y-2 text-xs">
-                      <div className="flex items-start gap-2 text-gray-500">
-                        <MapPin className="h-3.5 w-3.5 mt-0.5 shrink-0 text-gray-400" />
-                        <span>{spot.location}</span>
-                      </div>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(spot.location)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-start gap-2 text-gray-500 hover:text-primary-700 transition-colors group/map"
+                      >
+                        <MapPin className="h-3.5 w-3.5 mt-0.5 shrink-0 text-gray-400 group-hover/map:text-primary-600 transition-colors" />
+                        <span className="group-hover/map:underline">{spot.location}</span>
+                      </a>
                       {spot.contact && (
                         <a
                           href={`tel:${spot.contact.replace(/[^0-9]/g, '')}`}
