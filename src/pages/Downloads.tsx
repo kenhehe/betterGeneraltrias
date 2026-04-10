@@ -1,6 +1,7 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
-import { Download, FileText, Map, ExternalLink } from 'lucide-react';
+import { Download, FileText, Map, ExternalLink, FolderOpen } from 'lucide-react';
+import Section from '../components/ui/Section';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -45,21 +46,26 @@ const MAP_DOCS = [
   { name: 'Zoning Map', file: 'Zoning Map.pdf' },
 ];
 
-function DocSection({ title, subtitle, color, icon: Icon, docs }: {
+function DocSection({ title, subtitle, accent, emoji, icon: Icon, docs }: {
   title: string;
   subtitle: string;
-  color: string;
+  accent: string;
+  emoji: string;
   icon: React.ComponentType<{ className?: string }>;
   docs: { name: string; file: string }[];
 }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-6">
-      <div className={`px-6 py-4 border-b border-gray-100 flex items-start gap-3 ${color}`}>
-        <Icon className="h-5 w-5 mt-0.5 shrink-0" />
+    <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 mb-6">
+      <div className={`bg-gradient-to-r ${accent} px-6 py-5 flex items-start justify-between`}>
         <div>
-          <h3 className="text-sm font-black">{title}</h3>
-          <p className="text-xs opacity-70 mt-0.5">{subtitle}</p>
+          <span className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-2.5 py-1 rounded-full mb-2">
+            <Icon className="h-3 w-3" />
+            Planning Document
+          </span>
+          <h3 className="text-white font-black text-base leading-tight">{title}</h3>
+          <p className="text-white/70 text-xs mt-1">{subtitle}</p>
         </div>
+        <span className="text-3xl ml-4 shrink-0 select-none">{emoji}</span>
       </div>
       <div className="divide-y divide-gray-50">
         {docs.map(doc => (
@@ -93,11 +99,14 @@ export default function Downloads() {
 
       <div className="relative text-white overflow-hidden" style={{ background: 'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)' }}>
         <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)', backgroundSize: '48px 48px' }} />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
-          <p className="text-green-300 text-xs font-bold uppercase tracking-widest mb-1">Transparency · Documents</p>
-          <h1 className="text-3xl sm:text-4xl font-black text-white mb-2">Planning Documents & Downloads</h1>
-          <p className="text-green-200 text-sm max-w-lg leading-relaxed">Official CLUP, CDP, ELA, and land use maps guiding General Trias City's growth and development through 2030.</p>
-          <div className="flex flex-wrap gap-3 mt-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="flex items-center gap-2 mb-4 text-green-300 text-xs font-bold uppercase tracking-widest">
+            <FolderOpen className="h-3.5 w-3.5" />
+            Transparency · Planning Documents
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">Planning Documents & Downloads</h1>
+          <p className="text-green-100 text-base max-w-lg leading-relaxed mb-8">Official CLUP, CDP, ELA, and land use maps guiding General Trias City's growth and development through 2030.</p>
+          <div className="flex flex-wrap gap-3">
             {[['24', 'Documents'], ['3', 'Plan Categories'], ['2022–2030', 'Plan Period']].map(([val, lbl]) => (
               <div key={lbl} className="flex items-center gap-2 bg-white/10 border border-white/15 rounded-lg px-3 py-1.5">
                 <span className="text-sm font-black text-white">{val}</span>
@@ -107,18 +116,19 @@ export default function Downloads() {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 32" fill="none" preserveAspectRatio="none"><path d="M0 32 C480 0 960 0 1440 32 L1440 32 L0 32Z" fill="#f9fafb" /></svg>
+          <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 40 C360 0 1080 0 1440 40 L1440 40 L0 40Z" fill="#f9fafb" /></svg>
         </div>
       </div>
 
       <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <Section className="py-10">
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
           <DocSection
             title="Comprehensive Land Use Plan (CLUP) 2022–2030"
             subtitle="Primary land use policy document guiding how land is allocated across all zones"
-            color="bg-green-50 text-green-800"
+            accent="from-green-600 to-emerald-700"
+            emoji="🗺️"
             icon={Map}
             docs={CLUP_DOCS}
           />
@@ -126,7 +136,8 @@ export default function Downloads() {
           <DocSection
             title="Comprehensive Development Plan (CDP) 2020–2029"
             subtitle="City's development goals, strategies, and investment program across all sectors"
-            color="bg-blue-50 text-blue-800"
+            accent="from-blue-600 to-indigo-700"
+            emoji="📘"
             icon={FileText}
             docs={CDP_DOCS}
           />
@@ -134,7 +145,8 @@ export default function Downloads() {
           <DocSection
             title="Executive-Legislative Agenda (ELA) 2022–2025"
             subtitle="Joint program of work of the Mayor and City Council for the current term"
-            color="bg-violet-50 text-violet-800"
+            accent="from-violet-600 to-purple-700"
+            emoji="📜"
             icon={FileText}
             docs={ELA_DOCS}
           />
@@ -142,7 +154,8 @@ export default function Downloads() {
           <DocSection
             title="Land Use Maps"
             subtitle="Official zoning and general land use maps for General Trias City"
-            color="bg-amber-50 text-amber-800"
+            accent="from-amber-500 to-orange-600"
+            emoji="🗾"
             icon={Map}
             docs={MAP_DOCS}
           />
@@ -163,7 +176,7 @@ export default function Downloads() {
               </a>
             </div>
           </div>
-        </div>
+        </Section>
       </div>
     </>
   );

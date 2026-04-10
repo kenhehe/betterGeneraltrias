@@ -1,6 +1,7 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
-import { ExternalLink, FileText, DollarSign, BarChart2, ShoppingCart, MoreHorizontal } from 'lucide-react';
+import Section from '../components/ui/Section';
+import { ExternalLink, FileText, DollarSign, BarChart2, ShoppingCart, MoreHorizontal, BookOpen } from 'lucide-react';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -12,8 +13,8 @@ const BREADCRUMBS = [
 const SECTIONS = [
   {
     icon: DollarSign,
-    color: 'bg-green-50 text-green-700',
-    accent: 'border-l-4 border-green-500',
+    accent: 'from-green-600 to-emerald-700',
+    emoji: '💰',
     title: 'Budget Documents',
     docs: [
       { name: 'Annual Budget (AIP)', desc: 'Annual Investment Program — all programs, projects, and activities with funding', period: 'Current fiscal year' },
@@ -24,8 +25,8 @@ const SECTIONS = [
   },
   {
     icon: BarChart2,
-    color: 'bg-blue-50 text-blue-700',
-    accent: 'border-l-4 border-blue-500',
+    accent: 'from-blue-600 to-indigo-700',
+    emoji: '📊',
     title: 'Financial Statements',
     docs: [
       { name: 'Statement of Receipts & Expenditures', desc: 'Summary of all income and spending', period: 'Quarterly' },
@@ -36,8 +37,8 @@ const SECTIONS = [
   },
   {
     icon: ShoppingCart,
-    color: 'bg-violet-50 text-violet-700',
-    accent: 'border-l-4 border-violet-500',
+    accent: 'from-violet-600 to-purple-700',
+    emoji: '🛒',
     title: 'Procurement Documents',
     docs: [
       { name: 'Bid Results (Goods & Services)', desc: 'Results of public bidding for goods and consulting services', period: 'Per project' },
@@ -48,8 +49,8 @@ const SECTIONS = [
   },
   {
     icon: MoreHorizontal,
-    color: 'bg-amber-50 text-amber-700',
-    accent: 'border-l-4 border-amber-500',
+    accent: 'from-amber-500 to-orange-600',
+    emoji: '📎',
     title: 'Other Required Disclosures',
     docs: [
       { name: 'Manpower Complement', desc: 'List of all city government employees and positions', period: 'Annual' },
@@ -75,20 +76,38 @@ export default function FullDisclosure() {
         description="DILG-mandated Full Disclosure Policy documents for General Trias City including budget, financial statements, and procurement records."
       />
 
+      {/* Hero */}
       <div className="relative text-white overflow-hidden" style={{ background: 'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)' }}>
         <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)', backgroundSize: '48px 48px' }} />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
-          <p className="text-green-300 text-xs font-bold uppercase tracking-widest mb-1">Transparency · Full Disclosure</p>
-          <h1 className="text-3xl sm:text-4xl font-black text-white mb-2">Full Disclosure Policy Documents</h1>
-          <p className="text-green-200 text-sm max-w-lg leading-relaxed">DILG-mandated fiscal and financial documents required under MC 2013-140 and subsequent issuances.</p>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="flex items-center gap-2 mb-4 text-green-300 text-xs font-bold uppercase tracking-widest">
+            <BookOpen className="h-3.5 w-3.5" />
+            Transparency · Full Disclosure
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
+            Full Disclosure Policy Documents
+          </h1>
+          <p className="text-green-100 text-base max-w-lg leading-relaxed mb-8">
+            DILG-mandated fiscal and financial documents required under MC 2013-140 and subsequent issuances.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {[['4', 'Document Categories'], ['16', 'Required Reports'], ['Quarterly', 'Min. Frequency'], ['MC 2013-140', 'DILG Mandate']].map(([val, lbl]) => (
+              <div key={lbl} className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2">
+                <span className="text-sm font-black text-white">{val}</span>
+                <span className="text-xs text-green-300 font-medium">{lbl}</span>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 32" fill="none" preserveAspectRatio="none"><path d="M0 32 C480 0 960 0 1440 32 L1440 32 L0 32Z" fill="#f9fafb" /></svg>
+          <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 40 C360 0 1080 0 1440 40 L1440 40 L0 40Z" fill="#f9fafb" />
+          </svg>
         </div>
       </div>
 
       <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <Section className="py-10">
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
           {/* Transparency Seal badge */}
@@ -107,12 +126,16 @@ export default function FullDisclosure() {
             {SECTIONS.map(section => {
               const Icon = section.icon;
               return (
-                <div key={section.title} className={`bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden`}>
-                  <div className={`px-5 py-4 flex items-center gap-3 ${section.accent} bg-gray-50`}>
-                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${section.color}`}>
-                      <Icon className="h-4 w-4" />
+                <div key={section.title} className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                  <div className={`bg-gradient-to-r ${section.accent} p-5 flex items-start justify-between`}>
+                    <div>
+                      <span className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-2.5 py-1 rounded-full mb-2">
+                        <Icon className="h-3 w-3" />
+                        Required Disclosure
+                      </span>
+                      <h3 className="text-white font-black text-lg leading-tight">{section.title}</h3>
                     </div>
-                    <h3 className="text-sm font-black text-gray-900">{section.title}</h3>
+                    <span className="text-3xl ml-4 shrink-0">{section.emoji}</span>
                   </div>
                   <div className="divide-y divide-gray-50">
                     {section.docs.map(doc => (
@@ -160,7 +183,7 @@ export default function FullDisclosure() {
               <ExternalLink className="h-3 w-3" />Open FDP Portal
             </a>
           </div>
-        </div>
+        </Section>
       </div>
     </>
   );

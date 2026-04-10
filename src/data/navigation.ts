@@ -95,6 +95,11 @@ export const mainNavigation: NavigationItem[] = [
       },
     ],
   },
+  {
+    label: 'Development',
+    href: '/development-projects',
+    translationKey: 'nav.development',
+  },
   { label: 'Contact', href: '/#contact', translationKey: 'nav.contact' },
 ];
 

@@ -28,6 +28,7 @@ export default function Footer() {
       labelKey: 'nav.foiReleases',
       href: '/government/transparency-documents/foi-releases',
     },
+    { labelKey: 'nav.development', href: '/development-projects' },
     { labelKey: 'contact.title', href: '#contact' },
   ];
 
