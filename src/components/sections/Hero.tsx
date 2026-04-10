@@ -181,7 +181,7 @@ export default function Hero() {
 
   return (
     <div
-      className="relative text-white overflow-hidden"
+      className="relative text-white overflow-hidden -mt-[116px] min-h-screen flex flex-col"
       style={{
         background:
           'linear-gradient(135deg, #082214 0%, #0f4328 40%, #16643c 100%)',
@@ -205,7 +205,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-36 pb-20 md:pt-44 md:pb-28 flex-1">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <div>
