@@ -1,4 +1,5 @@
 import Breadcrumbs from '../components/ui/Breadcrumbs';
+import Section from '../components/ui/Section';
 import { Banner } from '@bettergov/kapwa/banner';
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -19,8 +20,9 @@ import {
   type Subcategory,
   type CategoryIndex,
 } from '../data/yamlLoader';
+import * as LucideIcons from 'lucide-react';
 import SEO from '../components/SEO';
-import { ArrowRight, ArrowLeft, FileText, AlertCircle } from 'lucide-react';
+import { ArrowRight, ArrowLeft, FileText, AlertCircle, LayoutList } from 'lucide-react';
 
 interface DocumentProps {
   theme?: string;
@@ -122,11 +124,21 @@ export default function Document({
     categoryType === 'government' ? '/government' : '/services';
   const backHref = category ? `${sectionHref}/${category}` : sectionHref;
 
+  // Resolve category icon from YAML data
+  const allCategories = [
+    ...serviceCategories.categories,
+    ...governmentCategories.categories,
+  ];
+  const categoryData = allCategories.find(c => c.slug === category);
+  const CategoryIcon = categoryData?.icon
+    ? (LucideIcons[categoryData.icon as keyof typeof LucideIcons] as React.ComponentType<{ className?: string }>)
+    : FileText;
+
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center py-32 gap-3">
         <div className="w-10 h-10 rounded-full border-4 border-primary-200 border-t-primary-700 animate-spin" />
-        <p className="text-sm text-gray-500">Loading document…</p>
+        <p className="text-sm text-gray-500">Loading…</p>
       </div>
     );
   }
@@ -152,23 +164,20 @@ export default function Document({
     );
   }
 
-  // Nested index view
+  /* ─── Nested index view ─── */
   if (nestedIndex) {
     const nestedPages: Subcategory[] = nestedIndex.pages;
     return (
       <>
         <SEO
-          title={documentSlug}
+          title={nestedIndex.title ?? documentSlug}
           keywords={`${documentSlug}, government services, local government`}
         />
 
         {/* Hero */}
         <div
           className="relative text-white overflow-hidden"
-          style={{
-            background:
-              'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)',
-          }}
+          style={{ background: 'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)' }}
         >
           <div
             className="absolute inset-0 pointer-events-none opacity-[0.04]"
@@ -178,42 +187,44 @@ export default function Document({
               backgroundSize: '48px 48px',
             }}
           />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
-            <Link
-              to={backHref}
-              className="inline-flex items-center gap-2 text-green-300 hover:text-white text-xs font-bold uppercase tracking-wide mb-4 transition-colors"
-            >
-              <ArrowLeft className="h-3.5 w-3.5" />
-              Back
-            </Link>
-            <div className="flex items-start gap-5">
-              <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center shrink-0">
-                <FileText className="h-7 w-7 text-white" />
-              </div>
-              <div>
-                <h1 className="text-3xl font-black text-white mb-2">
-                  {nestedIndex.title ?? documentSlug}
-                </h1>
-                {nestedIndex.description && (
-                  <p className="text-green-200 text-sm max-w-xl">
-                    {nestedIndex.description}
-                  </p>
-                )}
-              </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-2 mb-4 text-green-300 text-xs font-bold uppercase tracking-widest">
+              <LayoutList className="h-3.5 w-3.5" />
+              {categoryType === 'government' ? 'Government' : 'Services'} · {categoryData?.category ?? category}
             </div>
+
+            <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
+              {nestedIndex.title ?? documentSlug}
+            </h1>
+            {nestedIndex.description && (
+              <p className="text-green-100 text-base max-w-lg leading-relaxed mb-8">
+                {nestedIndex.description}
+              </p>
+            )}
+
+            {nestedPages.length > 0 && (
+              <div className="flex flex-wrap gap-3">
+                <div className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2">
+                  <span className="text-sm font-black text-white">{nestedPages.length}</span>
+                  <span className="text-xs text-green-300 font-medium">
+                    {categoryType === 'government' ? 'Documents' : 'Services'}
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
+
+          {/* Bottom wave */}
           <div className="absolute bottom-0 left-0 right-0">
-            <svg viewBox="0 0 1440 32" fill="none" preserveAspectRatio="none">
-              <path
-                d="M0 32 C480 0 960 0 1440 32 L1440 32 L0 32Z"
-                fill="#f9fafb"
-              />
+            <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 40 C360 0 1080 0 1440 40 L1440 40 L0 40Z" fill="#f9fafb" />
             </svg>
           </div>
         </div>
 
         <div className="bg-gray-50 min-h-screen">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+          <Section className="py-10">
             <Breadcrumbs className="mb-8" items={breadcrumbs} />
             <div className="space-y-3">
               {nestedPages.map((page, i) => (
@@ -239,7 +250,7 @@ export default function Document({
                 </Link>
               ))}
             </div>
-          </div>
+          </Section>
         </div>
       </>
     );
@@ -247,6 +258,7 @@ export default function Document({
 
   if (!markdownContent) return null;
 
+  /* ─── Markdown document view ─── */
   return (
     <>
       <SEO
@@ -258,13 +270,10 @@ export default function Document({
         keywords={`${documentSlug}, General Trias, government services`}
       />
 
-      {/* Document Hero */}
+      {/* Hero */}
       <div
         className="relative text-white overflow-hidden"
-        style={{
-          background:
-            'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)',
-        }}
+        style={{ background: 'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)' }}
       >
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.04]"
@@ -274,47 +283,41 @@ export default function Document({
             backgroundSize: '48px 48px',
           }}
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
-          <Link
-            to={backHref}
-            className="inline-flex items-center gap-2 text-green-300 hover:text-white text-xs font-bold uppercase tracking-wide mb-5 transition-colors"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            Back
-          </Link>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          {/* Eyebrow — category icon + label */}
+          <div className="flex items-center gap-2 mb-4 text-green-300 text-xs font-bold uppercase tracking-widest">
+            {CategoryIcon && <CategoryIcon className="h-3.5 w-3.5" />}
+            {categoryType === 'government' ? 'Government' : 'Services'} · {categoryData?.category ?? category}
+          </div>
+
           <div className="flex items-start gap-5 max-w-3xl">
-            <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center shrink-0">
+            <div className="shrink-0 w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center">
               <FileText className="h-7 w-7 text-white" />
             </div>
             <div>
-              <p className="text-green-300 text-xs font-bold uppercase tracking-widest mb-1">
-                {categoryType === 'government' ? 'Government' : 'Services'} /{' '}
-                {category}
-              </p>
-              <h1 className="text-2xl sm:text-3xl font-black text-white leading-tight mb-2">
+              <h1 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-2">
                 {markdownContent.title}
               </h1>
               {markdownContent.description && (
-                <p className="text-green-200 text-sm leading-relaxed">
+                <p className="text-green-200 text-sm leading-relaxed max-w-xl">
                   {markdownContent.description}
                 </p>
               )}
             </div>
           </div>
         </div>
+
+        {/* Bottom wave */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 32" fill="none" preserveAspectRatio="none">
-            <path
-              d="M0 32 C480 0 960 0 1440 32 L1440 32 L0 32Z"
-              fill="#f9fafb"
-            />
+          <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 40 C360 0 1080 0 1440 40 L1440 40 L0 40Z" fill="#f9fafb" />
           </svg>
         </div>
       </div>
 
       {/* Content */}
       <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <Section className="py-10">
           <Breadcrumbs className="mb-8" items={breadcrumbs} />
 
           {markdownContent.isFallbackLang && (
@@ -327,7 +330,7 @@ export default function Document({
 
           {/* Markdown content card */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-            <div className="h-1.5 bg-gradient-to-r from-primary-700 to-primary-400" />
+            <div className="h-2 bg-gradient-to-r from-primary-700 to-primary-400" />
             <div
               className="p-6 sm:p-8 prose prose-sm max-w-none
               prose-headings:font-black prose-headings:text-gray-900
@@ -359,7 +362,7 @@ export default function Document({
               className="inline-flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-primary-700 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to {category}
+              Back to {categoryData?.category ?? category}
             </Link>
             <Link
               to={sectionHref}
@@ -369,7 +372,7 @@ export default function Document({
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-        </div>
+        </Section>
       </div>
     </>
   );
