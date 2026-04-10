@@ -16,6 +16,7 @@ import {
   serviceCategories,
   governmentCategories,
   getCategorySubcategories,
+  loadCategoryIndex,
   isNestedCategory,
   type Subcategory,
   type CategoryIndex,
@@ -49,6 +50,8 @@ export default function Document({
   const [breadcrumbs, setBreadcrumbs] = useState([
     { label: 'Home', href: '/' },
   ]);
+  const [yamlPageDescription, setYamlPageDescription] = useState<string | null>(null);
+  const [yamlPageName, setYamlPageName] = useState<string | null>(null);
 
   useEffect(() => {
     if (!documentSlug || !category || !categoryType) {
@@ -88,13 +91,15 @@ export default function Document({
           return;
         }
 
-        const content = await loadMarkdownContent(
-          documentSlug,
-          category,
-          categoryType,
-          lang
-        );
+        const [content, categoryIndex] = await Promise.all([
+          loadMarkdownContent(documentSlug, category, categoryType, lang),
+          loadCategoryIndex(category),
+        ]);
         setMarkdownContent(content);
+
+        const yamlPage = categoryIndex.pages.find(p => p.slug === documentSlug);
+        if (yamlPage?.description) setYamlPageDescription(yamlPage.description);
+        if (yamlPage?.name) setYamlPageName(yamlPage.name);
 
         setBreadcrumbs([
           { label: 'Home', href: '/' },
@@ -104,7 +109,7 @@ export default function Document({
             href: `${sectionHref}/${category}`,
           },
           {
-            label: content.title ?? documentSlug,
+            label: yamlPage?.name ?? content.title ?? documentSlug,
             href: `${sectionHref}/${category}/${documentSlug}`,
           },
         ]);
@@ -123,6 +128,10 @@ export default function Document({
   const sectionHref =
     categoryType === 'government' ? '/government' : '/services';
   const backHref = category ? `${sectionHref}/${category}` : sectionHref;
+
+  // Strip basic markdown syntax for plain-text contexts (hero subtitle)
+  const stripMd = (text: string) =>
+    text.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*(.*?)\*/g, '$1').replace(/`(.*?)`/g, '$1');
 
   // Resolve category icon from YAML data
   const allCategories = [
@@ -262,9 +271,10 @@ export default function Document({
   return (
     <>
       <SEO
-        title={markdownContent.title || documentSlug}
+        title={yamlPageName ?? markdownContent.title ?? documentSlug}
         description={
-          markdownContent.description ||
+          yamlPageDescription ||
+          (markdownContent.description ? stripMd(markdownContent.description) : undefined) ||
           `Government service information for ${documentSlug}`
         }
         keywords={`${documentSlug}, General Trias, government services`}
@@ -296,11 +306,11 @@ export default function Document({
             </div>
             <div>
               <h1 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-2">
-                {markdownContent.title}
+                {yamlPageName ?? markdownContent.title}
               </h1>
-              {markdownContent.description && (
+              {(yamlPageDescription || markdownContent.description) && (
                 <p className="text-green-200 text-sm leading-relaxed max-w-xl">
-                  {markdownContent.description}
+                  {yamlPageDescription ?? (markdownContent.description ? stripMd(markdownContent.description) : null)}
                 </p>
               )}
             </div>
@@ -331,27 +341,32 @@ export default function Document({
           {/* Markdown content card */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
             <div className="h-2 bg-gradient-to-r from-primary-700 to-primary-400" />
-            <div
-              className="p-6 sm:p-8 prose prose-sm max-w-none
-              prose-headings:font-black prose-headings:text-gray-900
-              prose-h1:text-2xl prose-h2:text-xl prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-2
-              prose-h3:text-base prose-h3:text-primary-700
-              prose-p:text-gray-600 prose-p:leading-relaxed
-              prose-a:text-primary-700 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
-              prose-strong:text-gray-900
-              prose-ul:text-gray-600 prose-ol:text-gray-600
-              prose-li:marker:text-primary-500
-              prose-blockquote:border-primary-400 prose-blockquote:bg-primary-50 prose-blockquote:rounded-r-xl prose-blockquote:py-1
-              prose-table:text-sm prose-th:bg-primary-50 prose-th:text-primary-800 prose-th:font-bold
-              prose-tr:border-gray-100 prose-td:text-gray-600
-            "
-            >
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-                components={markdownComponents}
+            <div className="overflow-x-auto">
+              <div
+                className="p-6 sm:p-8 prose prose-sm max-w-none
+                prose-headings:font-black prose-headings:text-gray-900
+                prose-h1:text-2xl prose-h1:hidden
+                prose-h2:text-lg prose-h2:mt-6 prose-h2:mb-3 prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-2
+                prose-h3:text-base prose-h3:text-primary-700
+                prose-p:text-gray-600 prose-p:leading-relaxed
+                prose-a:text-primary-700 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
+                prose-strong:text-gray-900 prose-strong:font-bold
+                prose-ul:text-gray-600 prose-ol:text-gray-600
+                prose-li:marker:text-primary-500
+                prose-hr:border-gray-100
+                prose-blockquote:border-primary-400 prose-blockquote:bg-primary-50 prose-blockquote:rounded-r-xl prose-blockquote:py-1
+                prose-table:text-sm prose-table:w-full
+                prose-th:bg-primary-50 prose-th:text-primary-800 prose-th:font-bold prose-th:text-xs prose-th:uppercase prose-th:tracking-wide prose-th:px-3 prose-th:py-2
+                prose-tr:border-gray-100 prose-td:text-gray-600 prose-td:px-3 prose-td:py-2 prose-td:align-top
+              "
               >
-                {markdownContent.content}
-              </ReactMarkdown>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={markdownComponents}
+                >
+                  {markdownContent.content}
+                </ReactMarkdown>
+              </div>
             </div>
           </div>
 
