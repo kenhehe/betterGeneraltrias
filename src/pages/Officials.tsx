@@ -1,5 +1,6 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
+import Section from '../components/ui/Section';
 import { Link } from 'react-router-dom';
 import { Users, Phone, ExternalLink, Building2, Crown, Shield, Star } from 'lucide-react';
 
@@ -82,18 +83,33 @@ export default function Officials() {
       {/* Hero */}
       <div className="relative text-white overflow-hidden" style={{ background: 'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)' }}>
         <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)', backgroundSize: '48px 48px' }} />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
-          <p className="text-green-300 text-xs font-bold uppercase tracking-widest mb-1">Government · Departments</p>
-          <h1 className="text-3xl sm:text-4xl font-black text-white mb-2">Local Officials Directory</h1>
-          <p className="text-green-200 text-sm max-w-lg leading-relaxed">Elected officials and department contacts of General Trias City — 2022–2025 term.</p>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="flex items-center gap-2 mb-4 text-green-300 text-xs font-bold uppercase tracking-widest">
+            <Users className="h-3.5 w-3.5" />
+            Government · Departments
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">Local Officials Directory</h1>
+          <p className="text-green-100 text-base max-w-lg leading-relaxed mb-8">
+            Elected officials and department contacts of General Trias City — 2022–2025 term.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {[['2', 'Executives'], ['12', 'Councilors'], ['2', 'Ex-Officio'], ['2022–2025', 'Current Term']].map(([val, lbl]) => (
+              <div key={lbl} className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2">
+                <span className="text-sm font-black text-white">{val}</span>
+                <span className="text-xs text-green-300 font-medium">{lbl}</span>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 32" fill="none" preserveAspectRatio="none"><path d="M0 32 C480 0 960 0 1440 32 L1440 32 L0 32Z" fill="#f9fafb" /></svg>
+          <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 40 C360 0 1080 0 1440 40 L1440 40 L0 40Z" fill="#f9fafb" />
+          </svg>
         </div>
       </div>
 
       <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <Section className="py-10">
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
           {/* Executive Branch */}
@@ -111,7 +127,7 @@ export default function Officials() {
                     className={`bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden ring-1 ${e.ring}`}
                   >
                     {/* Colored top bar */}
-                    <div className={`h-1.5 bg-gradient-to-r ${e.accentFrom} ${e.accentTo}`} />
+                    <div className={`h-2 bg-gradient-to-r ${e.accentFrom} ${e.accentTo}`} />
                     <div className="p-6">
                       <div className="flex items-start gap-5">
                         {/* Avatar */}
@@ -203,7 +219,7 @@ export default function Officials() {
               </Link>
             </div>
           </div>
-        </div>
+        </Section>
       </div>
     </>
   );
