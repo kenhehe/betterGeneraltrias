@@ -9,6 +9,14 @@ import Document from './pages/Document';
 import Government from './pages/Government';
 import TouristSpots from './pages/TouristSpots';
 import CityProfile from './pages/CityProfile';
+import Officials from './pages/Officials';
+import FullDisclosure from './pages/FullDisclosure';
+import AnnualBudget from './pages/AnnualBudget';
+import SALN from './pages/SALN';
+import FOIReleases from './pages/FOIReleases';
+import Downloads from './pages/Downloads';
+import AnnualReport from './pages/AnnualReport';
+import InfrastructureProjects from './pages/InfrastructureProjects';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -33,10 +41,15 @@ function App() {
               />
               <Route path="/government/:category" element={<Government />} />
               <Route path="/government" element={<Government />} />
-              <Route
-                path="/government/reports-and-statistics/city-profile"
-                element={<CityProfile />}
-              />
+              <Route path="/government/departments/officials" element={<Officials />} />
+              <Route path="/government/transparency-documents/full-disclosure" element={<FullDisclosure />} />
+              <Route path="/government/transparency-documents/annual-budget" element={<AnnualBudget />} />
+              <Route path="/government/transparency-documents/saln" element={<SALN />} />
+              <Route path="/government/transparency-documents/foi-releases" element={<FOIReleases />} />
+              <Route path="/government/transparency-documents/downloads" element={<Downloads />} />
+              <Route path="/government/reports-and-statistics/city-profile" element={<CityProfile />} />
+              <Route path="/government/reports-and-statistics/annual-report" element={<AnnualReport />} />
+              <Route path="/government/reports-and-statistics/infrastructure-projects" element={<InfrastructureProjects />} />
               <Route
                 path="/government/:category/:documentSlug"
                 element={<Document categoryType="government" />}
