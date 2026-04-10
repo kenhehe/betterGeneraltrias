@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   X,
   Menu,
@@ -22,16 +22,9 @@ const HOTLINES = [
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
   const { t, i18n } = useTranslation('common');
   const navigate = useNavigate();
   const location = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   const handleNavClick = (e: React.MouseEvent, href: string, onClose?: () => void) => {
     if (href === '/#contact') {
@@ -81,11 +74,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Main Navbar — glossy glass */}
-      <div className={`relative transition-all duration-500 ${
-        scrolled
-          ? 'bg-white/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/50 shadow-lg shadow-black/10'
-          : 'bg-white/[0.08] backdrop-blur-xl backdrop-saturate-150 border-b border-white/10'
-      }`}>
+      <div className="relative bg-white/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/50 shadow-lg shadow-black/10">
         {/* Glossy shine line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
