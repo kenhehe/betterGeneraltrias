@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   X,
   Menu,
@@ -22,9 +22,16 @@ const HOTLINES = [
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
   const { t, i18n } = useTranslation('common');
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const handleNavClick = (e: React.MouseEvent, href: string, onClose?: () => void) => {
     if (href === '/#contact') {
@@ -73,8 +80,12 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Navbar — white, taller */}
-      <div className="bg-white shadow-sm border-b border-gray-100">
+      {/* Main Navbar — glass */}
+      <div className={`transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200/60 shadow-lg shadow-black/5'
+          : 'bg-white/60 backdrop-blur-md border-b border-white/30 shadow-sm'
+      }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between py-5">
             {/* Logo + Wordmark */}
@@ -165,7 +176,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden border-t border-gray-100 bg-white">
+          <div className="lg:hidden border-t border-gray-200/50 bg-white/90 backdrop-blur-xl">
             <div className="px-4 py-3 space-y-1">
               {mainNavigation.map(item => (
                 <div key={item.label}>
