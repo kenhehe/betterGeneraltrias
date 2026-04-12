@@ -4,14 +4,11 @@ import {
   Menu,
   ChevronDown,
   Phone,
-  Sun,
-  Moon,
 } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '../../context/ThemeContext';
 
 const HOTLINES = [
   { label: 'Police', number: '(046) 884-1555', tel: '0468841555' },
@@ -26,7 +23,6 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const { t, i18n } = useTranslation('common');
-  const { theme, toggle: toggleTheme } = useTheme();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -109,7 +105,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Main Navbar — glossy glass */}
-      <div className="relative bg-white/80 dark:bg-gray-900/90 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/50 dark:border-gray-700/50 shadow-lg shadow-black/10">
+      <div className="relative bg-white/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/50 shadow-lg shadow-black/10">
         {/* Glossy shine line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -141,13 +137,13 @@ const Navbar: React.FC = () => {
                         {item.translationKey ? t(item.translationKey, item.label) : item.label}
                         <ChevronDown className="h-3.5 w-3.5 opacity-60 group-hover:rotate-180 transition-transform duration-200" />
                       </button>
-                      <div className="absolute top-full left-0 mt-1 w-60 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+                      <div className="absolute top-full left-0 mt-1 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
                         <div className="py-1.5">
                           {item.children.map(child => (
                             <Link
                               key={child.label}
                               to={child.href}
-                              className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-gray-700 hover:text-primary-700 transition-colors"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
                             >
                               {child.translationKey ? t(child.translationKey, child.label) : child.label}
                             </Link>
@@ -172,17 +168,9 @@ const Navbar: React.FC = () => {
               ))}
             </div>
 
-            {/* Language + Dark mode + Mobile toggle */}
+            {/* Language + Mobile toggle */}
             <div className="flex items-center gap-2">
-              {/* Dark mode toggle */}
-              <button
-                onClick={toggleTheme}
-                aria-label="Toggle dark mode"
-                className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-              >
-                {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-              </button>
-              <div className="hidden sm:flex items-center border border-gray-200 dark:border-gray-600 rounded-md overflow-hidden">
+              <div className="hidden sm:flex items-center border border-gray-200 rounded-md overflow-hidden">
                 {(['en', 'fil'] as LanguageType[]).map((lang, idx) => (
                   <button
                     key={lang}
