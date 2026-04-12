@@ -38,7 +38,7 @@ const PROSE = `p-5 sm:p-6 prose prose-sm max-w-none
   prose-h1:hidden prose-h2:hidden
   prose-h3:text-sm prose-h3:text-primary-700 prose-h3:font-black prose-h3:mt-4 prose-h3:mb-2
   prose-p:text-gray-600 prose-p:leading-relaxed
-  prose-a:text-primary-700 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
+  prose-a:text-primary-700 prose-a:font-semibold prose-a:underline prose-a:decoration-primary-200 prose-a:underline-offset-2
   prose-strong:text-gray-900 prose-strong:font-bold
   prose-ul:text-gray-600 prose-ol:text-gray-600
   prose-li:marker:text-primary-500
@@ -65,7 +65,7 @@ import {
 } from '../data/yamlLoader';
 import * as LucideIcons from 'lucide-react';
 import SEO from '../components/SEO';
-import { ArrowRight, ArrowLeft, FileText, AlertCircle, LayoutList } from 'lucide-react';
+import { ArrowRight, ArrowLeft, FileText, AlertCircle, LayoutList, Clock } from 'lucide-react';
 
 interface DocumentProps {
   theme?: string;
@@ -94,6 +94,7 @@ export default function Document({
   ]);
   const [yamlPageDescription, setYamlPageDescription] = useState<string | null>(null);
   const [yamlPageName, setYamlPageName] = useState<string | null>(null);
+  const [pageUpdatedAt, setPageUpdatedAt] = useState<string | null>(null);
 
   useEffect(() => {
     if (!documentSlug || !category || !categoryType) {
@@ -142,6 +143,7 @@ export default function Document({
         const yamlPage = categoryIndex.pages.find(p => p.slug === documentSlug);
         if (yamlPage?.description) setYamlPageDescription(yamlPage.description);
         if (yamlPage?.name) setYamlPageName(yamlPage.name);
+        if (yamlPage?.updatedAt) setPageUpdatedAt(yamlPage.updatedAt);
 
         setBreadcrumbs([
           { label: 'Home', href: '/' },
@@ -453,6 +455,15 @@ export default function Document({
               All {categoryType === 'government' ? 'Government' : 'Services'}
               <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
+
+          {/* Last updated */}
+          <div className="mt-8 flex items-center justify-center gap-2 text-xs text-gray-400 border-t border-gray-100 pt-6">
+            <Clock className="h-3.5 w-3.5 shrink-0" />
+            <span>
+              Last updated: <span className="font-semibold text-gray-500">{pageUpdatedAt ?? 'April 2026'}</span>
+              &nbsp;·&nbsp; Information on this page is provided for transparency. For the most current details, contact the relevant city office directly.
+            </span>
           </div>
         </Section>
       </div>

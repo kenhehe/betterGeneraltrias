@@ -5,6 +5,7 @@ export interface Subcategory {
   name: string;
   slug: string;
   description?: string;
+  updatedAt?: string; // e.g. "April 2026" — shown in page footer
 }
 
 export interface Category {
