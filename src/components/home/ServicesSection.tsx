@@ -46,7 +46,10 @@ export default function ServicesSection({
     return IconComponent ? <IconComponent className="h-5 w-5" /> : null;
   };
 
-  const displayedCategories = serviceCategories.categories as Category[];
+  const FEATURED_SLUGS = ['health-services', 'agriculture-fisheries', 'environment', 'tourism'];
+  const displayedCategories = (serviceCategories.categories as Category[]).filter(c =>
+    FEATURED_SLUGS.includes(c.slug)
+  ).sort((a, b) => FEATURED_SLUGS.indexOf(a.slug) - FEATURED_SLUGS.indexOf(b.slug));
 
   return (
     <Section>
@@ -76,7 +79,7 @@ export default function ServicesSection({
 
       <div
         ref={ref}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        className="grid grid-cols-2 md:grid-cols-4 gap-4"
       >
         {displayedCategories.map((category, idx) => {
           const colors = CATEGORY_COLORS[category.slug] ?? DEFAULT_COLOR;

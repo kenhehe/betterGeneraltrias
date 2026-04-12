@@ -183,7 +183,7 @@ export default function Hero() {
 
   return (
     <div
-      className="relative text-white overflow-hidden -mt-[116px] min-h-screen flex flex-col"
+      className="relative text-white overflow-x-hidden -mt-[116px] min-h-screen flex flex-col"
       style={{
         background:
           'linear-gradient(135deg, #082214 0%, #0f4328 40%, #16643c 100%)',
@@ -314,6 +314,7 @@ export default function Hero() {
 
           {/* Right — search card */}
           <div
+            className="min-w-0 w-full"
             style={{
               opacity: mounted ? 1 : 0,
               transform: mounted ? 'translateY(0)' : 'translateY(24px)',
@@ -322,11 +323,11 @@ export default function Hero() {
           >
             <div className="bg-white rounded-2xl shadow-2xl shadow-black/30 overflow-hidden">
               {/* Card header */}
-              <div className="bg-primary-700 px-6 py-4">
+              <div className="bg-gray-900 px-6 py-4">
                 <p className="text-white font-bold text-sm">
                   {t('hero.findService', 'Search Services')}
                 </p>
-                <p className="text-green-200 text-xs mt-0.5">
+                <p className="text-gray-400 text-xs mt-0.5">
                   Access government services instantly
                 </p>
               </div>
@@ -386,19 +387,19 @@ export default function Hero() {
                 <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">
                   {t('hero.popular', 'Popular Services')}
                 </p>
-                <div className="grid grid-cols-3 gap-2">
+                <div className="flex flex-wrap gap-2">
                   {POPULAR_CATEGORIES.map(cat => {
                     const Icon = cat.icon;
                     return (
                       <Link
                         key={cat.slug}
                         to={`/services/${cat.slug}`}
-                        className={`flex flex-col items-center gap-1.5 p-3 rounded-xl border-2 border-gray-100 ${cat.hoverBorder} ${cat.hoverBg} transition-all text-center group`}
+                        className={`flex items-center gap-2 px-3 py-2 rounded-xl border-2 border-gray-100 ${cat.hoverBorder} ${cat.hoverBg} transition-all group`}
                       >
-                        <div className={`p-2 rounded-lg ${cat.iconBg} ${cat.iconText} group-hover:scale-110 transition-all`}>
-                          <Icon className="h-4 w-4" />
+                        <div className={`p-1.5 rounded-lg ${cat.iconBg} ${cat.iconText} group-hover:scale-110 transition-all shrink-0`}>
+                          <Icon className="h-3.5 w-3.5" />
                         </div>
-                        <span className={`text-[11px] font-semibold text-gray-600 leading-tight ${cat.iconText.replace('text-', 'group-hover:text-')} transition-colors`}>
+                        <span className={`text-[11px] font-semibold text-gray-600 whitespace-nowrap ${cat.iconText.replace('text-', 'group-hover:text-')} transition-colors`}>
                           {t(cat.labelKey, cat.label)}
                         </span>
                       </Link>
