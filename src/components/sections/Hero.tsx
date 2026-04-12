@@ -207,7 +207,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-36 pb-10 md:pt-44 md:pb-14 flex-1 lg:flex lg:flex-col lg:justify-center lg:pt-[116px] lg:pb-0">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 pt-36 pb-10 md:pt-44 md:pb-14 flex-1 lg:flex lg:flex-col lg:justify-center lg:pt-[116px] lg:pb-0">
         <div className="lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left */}
@@ -321,7 +321,7 @@ export default function Hero() {
               transition: 'opacity 0.7s ease 200ms, transform 0.7s ease 200ms',
             }}
           >
-            <div className="bg-white rounded-2xl shadow-2xl shadow-black/30 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-2xl shadow-black/30 overflow-hidden w-full max-w-full">
               {/* Card header */}
               <div className="bg-gray-900 px-6 py-4">
                 <p className="text-white font-bold text-sm">
@@ -399,7 +399,7 @@ export default function Hero() {
                         <div className={`p-1.5 rounded-lg ${cat.iconBg} ${cat.iconText} group-hover:scale-110 transition-all shrink-0`}>
                           <Icon className="h-3.5 w-3.5" />
                         </div>
-                        <span className={`text-[11px] font-semibold text-gray-600 whitespace-nowrap ${cat.iconText.replace('text-', 'group-hover:text-')} transition-colors`}>
+                        <span className={`text-[11px] font-semibold text-gray-600 ${cat.iconText.replace('text-', 'group-hover:text-')} transition-colors`}>
                           {t(cat.labelKey, cat.label)}
                         </span>
                       </Link>
@@ -428,44 +428,76 @@ export default function Hero() {
                   Coming to General Trias
                 </span>
               </div>
+              {/* View all — desktop only */}
               <Link
                 to="/development-projects"
-                className="flex items-center gap-1 text-xs font-semibold text-green-300 hover:text-white transition-colors"
+                className="hidden lg:flex items-center gap-1 text-xs font-semibold text-green-300 hover:text-white transition-colors"
               >
                 View all <ArrowRight className="h-3 w-3" />
               </Link>
             </div>
 
-            <div
-              className="flex gap-3 overflow-x-auto pb-2"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
-            >
-              {[
+            {(() => {
+              const projects = [
                 { emoji: '🏬', name: 'SM City General Trias', status: 'Announced', pill: 'bg-blue-500/20 border-blue-400/30' },
                 { emoji: '🛣️', name: 'CALAX–CAVITEX Link', status: 'Under Construction', pill: 'bg-orange-500/20 border-orange-400/30' },
                 { emoji: '🏙️', name: 'Riverpark Township', status: 'Active Development', pill: 'bg-emerald-500/20 border-emerald-400/30' },
                 { emoji: '🌉', name: 'Flyover & Road Widening', status: 'Ongoing', pill: 'bg-slate-500/20 border-slate-400/30' },
                 { emoji: '🎓', name: 'Ateneo de Cavite', status: 'Announced', pill: 'bg-indigo-500/20 border-indigo-400/30' },
-              ].map(p => (
-                <Link
-                  key={p.name}
-                  to="/development-projects"
-                  className={`shrink-0 border rounded-xl px-4 py-3 hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200 ${p.pill}`}
-                >
-                  <span className="text-2xl leading-none">{p.emoji}</span>
-                  <p
-                    className="text-xs font-bold text-white mt-2 whitespace-nowrap"
-                    style={{ maxWidth: '140px', overflow: 'hidden', textOverflow: 'ellipsis' }}
+              ];
+              return (
+                <>
+                  {/* Mobile: 2-col grid, first 2 cards only */}
+                  <div className="grid grid-cols-2 gap-3 lg:hidden">
+                    {projects.slice(0, 2).map(p => (
+                      <Link
+                        key={p.name}
+                        to="/development-projects"
+                        className={`border rounded-xl px-4 py-3 hover:bg-white/10 transition-all duration-200 ${p.pill}`}
+                      >
+                        <span className="text-2xl leading-none">{p.emoji}</span>
+                        <p className="text-xs font-bold text-white mt-2 truncate">{p.name}</p>
+                        <span className="flex items-center gap-1 text-[10px] text-green-300 font-medium mt-0.5">
+                          <Zap className="h-2.5 w-2.5 shrink-0" />{p.status}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                  {/* Mobile: View all button below */}
+                  <Link
+                    to="/development-projects"
+                    className="mt-3 flex lg:hidden items-center justify-center gap-2 w-full border border-white/20 rounded-xl py-2.5 text-xs font-bold text-green-300 hover:bg-white/10 transition-colors"
                   >
-                    {p.name}
-                  </p>
-                  <span className="flex items-center gap-1 text-[10px] text-green-300 font-medium mt-0.5">
-                    <Zap className="h-2.5 w-2.5" />
-                    {p.status}
-                  </span>
-                </Link>
-              ))}
-            </div>
+                    View all projects <ArrowRight className="h-3 w-3" />
+                  </Link>
+
+                  {/* Desktop: full horizontal scroll */}
+                  <div
+                    className="hidden lg:flex gap-3 overflow-x-auto pb-2"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
+                  >
+                    {projects.map(p => (
+                      <Link
+                        key={p.name}
+                        to="/development-projects"
+                        className={`shrink-0 border rounded-xl px-4 py-3 hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200 ${p.pill}`}
+                      >
+                        <span className="text-2xl leading-none">{p.emoji}</span>
+                        <p
+                          className="text-xs font-bold text-white mt-2 whitespace-nowrap"
+                          style={{ maxWidth: '140px', overflow: 'hidden', textOverflow: 'ellipsis' }}
+                        >
+                          {p.name}
+                        </p>
+                        <span className="flex items-center gap-1 text-[10px] text-green-300 font-medium mt-0.5">
+                          <Zap className="h-2.5 w-2.5" />{p.status}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              );
+            })()}
           </div>
         </div>
       </div>
