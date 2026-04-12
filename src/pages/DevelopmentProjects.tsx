@@ -69,8 +69,8 @@ export const DEVELOPMENT_PROJECTS: Project[] = [
       "Part of SM Prime's provincial expansion in CALABARZON",
       'Nearest existing SM malls: SM Bacoor, SM Dasmarinas, SM Molino',
     ],
-    source: 'https://smprimeir.com',
-    sourceLabel: 'SM Prime IR',
+    source: 'https://www.smprime.com',
+    sourceLabel: 'SM Prime Holdings',
     estimatedCompletion: 'TBA',
   },
   {
@@ -136,8 +136,8 @@ export const DEVELOPMENT_PROJECTS: Project[] = [
       "Responds to the city's rapid population and vehicle growth",
       'Various sub-projects in different stages of procurement and construction',
     ],
-    source: 'https://r4a.dpwh.gov.ph',
-    sourceLabel: 'DPWH Region IV-A',
+    source: 'https://www.dpwh.gov.ph',
+    sourceLabel: 'DPWH Official',
     estimatedCompletion: 'Varies per sub-project',
   },
   {

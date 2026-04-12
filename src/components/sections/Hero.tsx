@@ -208,9 +208,9 @@ export default function Hero() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-[116px] flex-1 flex flex-col">
-        {/* Vertically centered main content */}
-        <div className="flex-1 flex items-center py-12 md:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+        {/* On mobile: natural flow. On desktop: vertically centered. */}
+        <div className="flex-1 lg:flex lg:items-center py-10 md:py-12 lg:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left */}
           <div>
             {/* City badge */}
@@ -229,7 +229,7 @@ export default function Hero() {
             </div>
 
             <h1
-              className="text-5xl sm:text-6xl font-black leading-none mb-2"
+              className="text-4xl sm:text-5xl lg:text-6xl font-black leading-none mb-2"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? 'translateY(0)' : 'translateY(20px)',
@@ -414,7 +414,7 @@ export default function Hero() {
 
         {/* Development Projects teaser strip */}
         <div
-          className="pb-16"
+          className="pb-12 lg:pb-16"
           style={{
             opacity: mounted ? 1 : 0,
             transition: 'opacity 0.6s ease 460ms',
