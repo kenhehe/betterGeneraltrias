@@ -1,98 +1,81 @@
-# Government Services Data Management
+# Data Directory
 
-This directory contains the services data for the government portal. The data is managed in YAML format for easier editing by non-technical users.
+This directory contains the YAML configuration files and loaders that drive the site's navigation, category structure, and content routing.
+
+---
 
 ## Files
 
-- `services.yaml` - The main data file in YAML format (human-readable, easy to edit)
-- `yamlLoader.ts` - Loads and parses the YAML file for the application
-- `government.yaml` - Government activities and information data
-- `navigation.ts` - Navigation structure for the application
-- `README.md` - This documentation file
+| File | Purpose |
+|---|---|
+| `services.yaml` | All service categories — slug, display name, description, Lucide icon |
+| `government.yaml` | All government categories — same structure as services |
+| `navigation.ts` | Navbar and footer link structure |
+| `yamlLoader.ts` | Parses YAML files and loads per-category `index.yaml` files |
 
-## Content Design Principle
+---
 
-The services are designed with a user-centric approach that focuses on **what information they can get from the LGU for each service**. This way, it's framed as: **"If you ask, this is the info your LGU can give you."**
+## How Categories Work
 
-This principle ensures that:
-
-- Services are described from the citizen's perspective
-- Information is presented as accessible and available upon request
-- The language is clear and actionable
-- Users understand they can actively seek information from their local government
-
-## How to Edit Services Data
-
-### For Non-Technical Users
-
-1. **Edit the YAML file**: Open `services.yaml` in any text editor
-2. **Follow the structure**: The file has a clear hierarchy:
-   - `categories` - List of service categories
-   - Each category has:
-     - `category` - The display name
-     - `slug` - URL-friendly identifier (lowercase, hyphens)
-     - `subcategories` - List of services within the category
-3. **Add new services**: Simply add new entries under the appropriate category
-4. **Remove services**: Delete the entire entry (including the `-` at the beginning)
-5. **Modify services**: Change the `name` or `slug` fields
-
-### YAML Formatting Tips
-
-- **Indentation matters**: Use 2 spaces for each level
-- **Lists start with `-`**: Each category and subcategory starts with a dash
-- **No commas needed**: Unlike JSON, YAML doesn't require commas
-- **Comments allowed**: Lines starting with `#` are comments and will be ignored
-- **Quotes optional**: For simple text, quotes are not required
-
-### Example: Adding a New Service
-
-```yaml
-- category: 'New Category'
-  slug: 'new-category'
-  description: 'Brief description of what this category covers and what services are available.'
-  subcategories:
-    - name: 'New Service'
-      slug: 'new-service'
-    - name: 'Another Service'
-      slug: 'another-service'
-```
-
-### Example: Adding a New Subcategory
-
-To add a new service to an existing category, simply add it to the subcategories list:
-
-```yaml
-- category: 'Health Services'
-  slug: 'social-services'
-  description: 'Where to go for free check-ups, vaccines, and medicines...'
-  subcategories:
-    - name: 'Get free check-ups, basic medicines, and vaccines'
-      slug: 'get-free-check-ups-basic-medicines-and-vaccines'
-    - name: 'New Health Service' # Add this new service
-      slug: 'new-health-service' # Add this new slug
-```
-
-## Development Workflow
-
-1. Edit `services.yaml` with your changes
-2. The application automatically loads the YAML file directly - no conversion needed!
-3. Changes are reflected immediately in development mode
-
-## File Structure
+Each entry in `services.yaml` or `government.yaml` defines a top-level category:
 
 ```yaml
 categories:
-  - category: 'Category Name' # Display name
-    slug: 'category-slug' # URL identifier
-    subcategories:
-      - name: 'Service Name' # Display name
-        slug: 'service-slug' # URL identifier
+  - category: 'Health Services'
+    slug: 'health-services'
+    description: 'Free check-ups, medicines, vaccines, and hospital services.'
+    icon: 'Heart'          # Any Lucide icon name (PascalCase)
 ```
 
-## Benefits of YAML Format
+- `slug` becomes the URL segment: `/services/health-services`
+- `icon` is looked up dynamically from `lucide-react` and displayed in the hero eyebrow of subpages
 
-- ✅ **Human-readable**: Easy to understand the structure
-- ✅ **No syntax errors**: More forgiving than JSON
-- ✅ **Comments supported**: Can add explanatory notes
-- ✅ **Better hierarchy**: Clear visual structure with indentation
-- ✅ **Easy editing**: No need to worry about commas, brackets, or quotes
+---
+
+## How Pages Work (index.yaml)
+
+Each category folder under `content/services/` or `content/government/` has an `index.yaml` that lists all its pages:
+
+```yaml
+pages:
+  - name: 'Get free check-ups, basic medicines, and vaccines'
+    slug: 'get-free-check-ups-basic-medicines-and-vaccines'
+    description: 'Access free medical check-ups and vaccination services.'
+    updatedAt: 'April 2026'   # Optional — shown in page footer
+```
+
+- `name` → shown as the page title in the hero and breadcrumb
+- `slug` → must match the `.md` filename exactly
+- `description` → shown as the hero subtitle (replaces markdown-extracted text)
+- `updatedAt` → optional; defaults to a site-wide fallback if omitted
+
+---
+
+## Adding a New Category
+
+1. Add an entry to `services.yaml` or `government.yaml`
+2. Create the folder: `content/services/your-slug/`
+3. Create `content/services/your-slug/index.yaml` listing all pages
+4. Create `content/services/your-slug/[page-slug].md` for each page
+5. Register the index import in `yamlLoader.ts` under `categoryIndexMap`
+
+---
+
+## Adding a New Page to an Existing Category
+
+1. Add an entry to the category's `index.yaml`
+2. Create the markdown file at `content/services/[category]/[slug].md`
+
+No code changes needed — the router picks it up automatically via the dynamic route `/services/:category/:documentSlug`.
+
+---
+
+## Navigation Structure (`navigation.ts`)
+
+Defines the top navbar and footer links. Each item can have `children` for dropdown menus.
+
+```ts
+{ label: 'Services', href: '/services', children: [...] }
+```
+
+Translation keys (`translationKey`) map to strings in `public/locales/en/common.json` and `public/locales/fil/common.json`.

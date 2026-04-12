@@ -1,72 +1,62 @@
-# Typography System
+# lib Directory
 
-This directory contains the configurable typography system for markdown content rendering.
+Shared utilities for loading, parsing, and rendering markdown content.
 
-## Features
+---
 
-- **Configurable Themes**: Create custom typography themes with specific styling for each markdown element
-- **Theme Switching**: Live theme switching with a dropdown selector
-- **Tailwind Integration**: All themes use Tailwind CSS classes for consistent styling
-- **Type Safety**: Full TypeScript support with proper type definitions
+## Files
 
-## Usage
+| File | Purpose |
+|---|---|
+| `markdownLoader.ts` | Loads `.md` files by slug/category, handles EN/FIL fallback, template interpolation |
+| `markdownComponents.tsx` | ReactMarkdown element overrides (uses `TableWithToggle` for all tables) |
+| `TableWithToggle.tsx` | Renders markdown tables as cards by default, with a "Table view" toggle |
+| `typographyThemes.ts` | Typography theme interface and default theme definition |
 
-### Basic Usage
+---
 
-```tsx
-import Document from './pages/Document';
+## markdownLoader.ts
 
-// Use default theme
-<Document />
+Loads markdown content for a given `documentSlug` + `categorySlug` + `categoryType`.
 
-// Use specific theme
-<Document theme="government" />
-```
+**Language fallback:**
+1. If `lang !== 'en'`, tries `[slug].[lang].md` first (e.g. `get-free-check-ups.fil.md`)
+2. Falls back to `[slug].md` (English) and sets `isFallbackLang: true`
+3. If `isFallbackLang` is true, `Document.tsx` shows a Filipino-language info banner
 
-### Available Themes
+**Template interpolation:**
+If a `[slug].json` companion file exists alongside the `.md`, its keys are available as `{KEY}` placeholders in the markdown (resolved from `VITE_*` env vars too).
 
-1. **Default**: Clean, modern styling with good readability
-2. **Government**: Formal, structured styling suitable for official documents
-3. **Minimal**: Clean, minimal styling with light typography
+---
 
-### Creating Custom Themes
+## TableWithToggle.tsx
 
-```typescript
-import { TypographyTheme } from './typographyThemes';
+Replaces all markdown tables with a card-based layout to avoid horizontal scroll on mobile.
 
-const customTheme: TypographyTheme = {
-  name: 'custom',
-  components: {
-    h1: 'text-4xl font-bold text-blue-900 mb-6',
-    h2: 'text-3xl font-semibold text-blue-800 mb-4',
-    p: 'text-gray-700 mb-4 leading-relaxed',
-    // ... other components
-  },
-};
-```
+**Card layout logic:**
+- First column becomes the card's title
+- If the first column is a serial/number column (`#`, `Step`, `No.`, or all-digit values), it renders as a numbered green badge and the second column becomes the title instead
+- Remaining columns render as labeled field rows inside the card
+- Empty/`—` fields are hidden
+- A small **"Table view"** button lets users switch to the raw scrollable table
 
-### Theme Configuration
+**Parse strategy:**
+Traverses the React element tree directly (no DOM) — finds `thead`/`tbody`/`tr`/`th`/`td` by type string. This works because `markdownComponents.tsx` does **not** override `thead`, `tbody`, `tr`, `th`, or `td` — only `table` is overridden to pass children into `TableWithToggle`.
 
-Each theme can customize the following elements:
+---
 
-- **Headings**: h1, h2, h3, h4, h5, h6
-- **Text**: p, strong, em
-- **Lists**: ul, ol, li
-- **Code**: code, pre
-- **Links**: a
-- **Quotes**: blockquote
-- **Tables**: table, thead, tbody, tr, th, td
-- **Other**: hr
+## markdownComponents.tsx
 
-### Adding New Themes
+Maps ReactMarkdown element types to custom React components. Key overrides:
 
-1. Create your theme configuration in `typographyThemes.ts`
-2. Add it to the `typographyThemes` object
-3. The theme will automatically appear in the theme selector
+- `table` → `TableWithToggle` (card view)
+- `ul` → handles task list items (checkbox → ✅ emoji)
+- `a` → adds `target="_blank" rel="noopener noreferrer"` for external links automatically
 
-## Components
+`thead`, `tbody`, `tr`, `th`, `td` are intentionally **not** overridden so `TableWithToggle` can find them by native element type.
 
-- `typographyThemes.ts`: Theme definitions and utilities
-- `markdownComponents.tsx`: ReactMarkdown component mapping
-- `ThemeSelector.tsx`: UI component for theme switching
-- `markdownLoader.ts`: Markdown content loading utilities
+---
+
+## typographyThemes.ts
+
+Defines the `TypographyTheme` interface used by `markdownComponents.tsx`. Currently only the `default` theme is used — Document.tsx applies prose styling via Tailwind CSS classes directly rather than switching themes.
