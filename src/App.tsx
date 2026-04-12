@@ -1,5 +1,6 @@
 import { NuqsAdapter } from 'nuqs/adapters/react';
 import { HelmetProvider } from 'react-helmet-async';
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
@@ -18,10 +19,12 @@ import Downloads from './pages/Downloads';
 import AnnualReport from './pages/AnnualReport';
 import InfrastructureProjects from './pages/InfrastructureProjects';
 import DevelopmentProjects from './pages/DevelopmentProjects';
+import WhereToStay from './pages/WhereToStay';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
+    <ThemeProvider>
     <HelmetProvider>
       <Router>
         <NuqsAdapter>
@@ -35,10 +38,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/services/:category" element={<Services />} />
               <Route path="/services" element={<Services />} />
-              <Route
-                path="/services/tourism/explore-tourist-spots"
-                element={<TouristSpots />}
-              />
+              <Route path="/services/tourism/explore-tourist-spots" element={<TouristSpots />} />
+              <Route path="/services/tourism/where-to-stay" element={<WhereToStay />} />
               <Route
                 path="/services/:category/:documentSlug"
                 element={<Document categoryType="service" />}
@@ -68,6 +69,7 @@ function App() {
         </NuqsAdapter>
       </Router>
     </HelmetProvider>
+    </ThemeProvider>
   );
 }
 

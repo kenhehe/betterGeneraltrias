@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@variant dark (&:where(.dark, .dark *));
 @plugin '@tailwindcss/typography';
 
 @source '../node_modules/@bettergov/kapwa/dist';
@@ -157,6 +158,24 @@
   --font-sans: var(--font-kapwa-sans);
   --font-mono: var(--font-kapwa-mono);
 }
+
+/* Dark mode base */
+.dark body {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+.dark .bg-gray-50 { background-color: #111827; }
+.dark .bg-white { background-color: #1f2937; }
+.dark .border-gray-100 { border-color: #374151; }
+.dark .border-gray-50 { border-color: #374151; }
+.dark .text-gray-900 { color: #f9fafb; }
+.dark .text-gray-800 { color: #f3f4f6; }
+.dark .text-gray-700 { color: #e5e7eb; }
+.dark .text-gray-600 { color: #d1d5db; }
+.dark .text-gray-500 { color: #9ca3af; }
+.dark .text-gray-400 { color: #6b7280; }
+.dark .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.4); }
 
 /* Animation utilities */
 .anim-fade-in-up {

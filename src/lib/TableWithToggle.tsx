@@ -109,7 +109,19 @@ export const TableWithToggle = ({
   }
 
   // ── Card view (default) ────────────────────────────────────────────────────
-  const [titleHeader, ...fieldHeaders] = headers;
+  // If first column is a serial number (#, No., Step, or bare digit values),
+  // skip it as title and use the second column as the card title instead.
+  const isSerialCol = (header: string, values: string[]) => {
+    const h = header.trim().toLowerCase();
+    if (['#', 'no', 'no.', 'step', 'num', 'number'].includes(h)) return true;
+    return values.every(v => /^\d+$/.test(v.trim()));
+  };
+
+  const serialFirst = isSerialCol(headers[0], rows.map(r => r[0]));
+  // If first col is serial and there are ≥2 cols, use col[1] as title
+  const titleIdx = serialFirst && headers.length >= 2 ? 1 : 0;
+  const titleHeader = headers[titleIdx];
+  const fieldHeaders = headers.filter((_, i) => i !== titleIdx && !(serialFirst && i === 0));
 
   return (
     <div className="mb-5">
@@ -125,35 +137,53 @@ export const TableWithToggle = ({
 
       <div className="space-y-3">
         {rows.map((row, ri) => {
-          const [title, ...fields] = row;
+          const title = row[titleIdx] || '—';
+          const fields = fieldHeaders.map((_, fi) => {
+            // map back to original column index
+            const originalIdx = headers.indexOf(fieldHeaders[fi]);
+            return row[originalIdx] || '—';
+          });
+          const serialLabel = serialFirst ? row[0] : null;
+
           return (
             <div
               key={ri}
-              className="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm"
             >
               {/* Card title row */}
-              <div className="px-4 py-3 bg-gray-50 border-b border-gray-100">
-                <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-0.5">
-                  {titleHeader}
-                </div>
-                <div className="text-sm font-black text-gray-900 leading-snug">
-                  {title || '—'}
+              <div className="px-4 py-3 bg-gray-50 border-b border-gray-100 flex items-start gap-3">
+                {serialLabel !== null && (
+                  <span className="shrink-0 w-7 h-7 rounded-lg bg-primary-600 text-white text-xs font-black flex items-center justify-center mt-0.5">
+                    {serialLabel}
+                  </span>
+                )}
+                <div className="flex-1 min-w-0">
+                  <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-0.5">
+                    {titleHeader}
+                  </div>
+                  <div className="text-sm font-black text-gray-900 leading-snug">
+                    {title}
+                  </div>
                 </div>
               </div>
 
               {/* Field rows */}
-              <div className="divide-y divide-gray-50">
-                {fieldHeaders.map((header, fi) => (
-                  <div key={fi} className="px-4 py-2.5 flex items-start gap-3">
-                    <span className="text-[10px] font-bold text-primary-600 uppercase tracking-wide w-24 shrink-0 pt-0.5">
-                      {header}
-                    </span>
-                    <span className="text-xs text-gray-700 leading-relaxed flex-1">
-                      {fields[fi] || '—'}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              {fields.some(f => f && f !== '—') && (
+                <div className="divide-y divide-gray-50">
+                  {fieldHeaders.map((header, fi) => (
+                    fields[fi] && fields[fi] !== '—' ? (
+                      <div key={fi} className="px-4 py-2.5 flex items-start gap-3">
+                        <span className="text-[10px] font-bold text-primary-600 uppercase tracking-wide w-24 shrink-0 pt-0.5">
+                          {header}
+                        </span>
+                        <span className="text-xs text-gray-700 leading-relaxed flex-1">
+                          {fields[fi]}
+                        </span>
+                      </div>
+                    ) : null
+                  ))}
+                </div>
+              )}
             </div>
           );
         })}
