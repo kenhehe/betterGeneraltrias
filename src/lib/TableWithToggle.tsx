@@ -11,16 +11,17 @@ import { type TypographyTheme } from './typographyThemes';
 
 // ─── Tree helpers ──────────────────────────────────────────────────────────────
 
-type AnyEl = { type: unknown; props: { children?: ReactNode } };
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type AnyEl = { type: unknown; props: Record<string, any> };
 
-function asEl(n: ReactNode): AnyEl | null {
+function asEl(n: unknown): AnyEl | null {
   if (typeof n === 'object' && n !== null && 'type' in n && 'props' in n) {
     return n as AnyEl;
   }
   return null;
 }
 
-function extractText(node: ReactNode): string {
+function extractText(node: unknown): string {
   if (!node) return '';
   if (typeof node === 'string') return node.trim();
   if (typeof node === 'number') return String(node);
@@ -30,9 +31,9 @@ function extractText(node: ReactNode): string {
   return '';
 }
 
-function findByType(node: ReactNode, tag: string): AnyEl[] {
+function findByType(node: unknown, tag: string): AnyEl[] {
   const results: AnyEl[] = [];
-  function walk(n: ReactNode) {
+  function walk(n: unknown) {
     if (!n) return;
     if (Array.isArray(n)) { n.forEach(walk); return; }
     const el = asEl(n);
