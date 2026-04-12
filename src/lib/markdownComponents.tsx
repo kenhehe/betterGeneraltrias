@@ -279,47 +279,5 @@ export function createMarkdownComponents(theme: TypographyTheme) {
         {children}
       </TableWithToggle>
     ),
-    thead: ({
-      children,
-      ...props
-    }: { children?: ReactNode } & HTMLAttributes<HTMLTableSectionElement>) => (
-      <thead className={theme.components.thead} {...props}>
-        {children}
-      </thead>
-    ),
-    tbody: ({
-      children,
-      ...props
-    }: { children?: ReactNode } & HTMLAttributes<HTMLTableSectionElement>) => (
-      <tbody className={theme.components.tbody} {...props}>
-        {children}
-      </tbody>
-    ),
-    tr: ({
-      children,
-      ...props
-    }: { children?: ReactNode } & HTMLAttributes<HTMLTableRowElement>) => (
-      <tr className={theme.components.tr} {...props}>
-        {children}
-      </tr>
-    ),
-    th: ({
-      children,
-      ...props
-    }: {
-      children?: ReactNode;
-    } & HTMLAttributes<HTMLTableHeaderCellElement>) => (
-      <th className={theme.components.th} {...props}>
-        {children}
-      </th>
-    ),
-    td: ({
-      children,
-      ...props
-    }: { children?: ReactNode } & HTMLAttributes<HTMLTableDataCellElement>) => (
-      <td className={theme.components.td} {...props}>
-        {children}
-      </td>
-    ),
   };
 }
