@@ -1,6 +1,5 @@
 import { NuqsAdapter } from 'nuqs/adapters/react';
 import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
@@ -24,7 +23,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <ThemeProvider>
     <HelmetProvider>
       <Router>
         <NuqsAdapter>
@@ -69,7 +67,6 @@ function App() {
         </NuqsAdapter>
       </Router>
     </HelmetProvider>
-    </ThemeProvider>
   );
 }
 
