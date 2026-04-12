@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat .github/workflows/*.yml)",
+      "Bash(ls .github/workflows/)",
+      "Bash(cat vercel.json)",
+      "Bash(cat netlify.toml)",
+      "Bash(cat .env.production)",
+      "Bash(node -e \"const l = require\\('./node_modules/lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\('table'\\)\\)\\)\")",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}
