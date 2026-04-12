@@ -207,9 +207,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-[116px] flex-1 flex flex-col">
-        {/* On mobile: natural flow. On desktop: vertically centered. */}
-        <div className="flex-1 lg:flex lg:items-center py-10 md:py-12 lg:py-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-[116px] flex-1 flex flex-col justify-center">
+        <div className="py-10 md:py-14 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left */}
           <div>
@@ -410,7 +409,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        </div>{/* end flex-1 centering wrapper */}
+        </div>
 
         {/* Development Projects teaser strip */}
         <div
