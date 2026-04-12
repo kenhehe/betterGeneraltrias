@@ -207,8 +207,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-[116px] flex-1 flex flex-col justify-center">
-        <div className="py-10 md:py-14 lg:py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-36 pb-10 md:pt-44 md:pb-14 flex-1 lg:flex lg:flex-col lg:justify-center lg:pt-[116px] lg:pb-0">
+        <div className="lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left */}
           <div>
