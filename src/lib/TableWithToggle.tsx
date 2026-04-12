@@ -11,27 +11,29 @@ import { type TypographyTheme } from './typographyThemes';
 
 // ─── Tree helpers ──────────────────────────────────────────────────────────────
 
+type AnyEl = { type: unknown; props: { children?: ReactNode } };
+
+function isEl(n: ReactNode): n is AnyEl {
+  return typeof n === 'object' && n !== null && 'type' in n && 'props' in n;
+}
+
 function extractText(node: ReactNode): string {
   if (!node) return '';
   if (typeof node === 'string') return node.trim();
   if (typeof node === 'number') return String(node);
   if (Array.isArray(node)) return node.map(extractText).filter(Boolean).join(' ');
-  if (typeof node === 'object' && 'props' in (node as object)) {
-    const el = node as React.ReactElement;
-    return extractText(el.props?.children);
-  }
+  if (isEl(node)) return extractText(node.props.children);
   return '';
 }
 
-function findByType(node: ReactNode, tag: string): React.ReactElement[] {
-  const results: React.ReactElement[] = [];
+function findByType(node: ReactNode, tag: string): AnyEl[] {
+  const results: AnyEl[] = [];
   function walk(n: ReactNode) {
     if (!n) return;
     if (Array.isArray(n)) { n.forEach(walk); return; }
-    if (typeof n !== 'object' || !('type' in (n as object))) return;
-    const el = n as React.ReactElement;
-    if (el.type === tag) results.push(el);
-    else walk(el.props?.children);
+    if (!isEl(n)) return;
+    if (n.type === tag) results.push(n);
+    else walk(n.props.children);
   }
   walk(node);
   return results;
@@ -44,17 +46,17 @@ function parseTable(children: ReactNode): { headers: string[]; rows: string[][] 
   // thead > tr > th
   const theads = findByType(children, 'thead');
   theads.forEach(thead => {
-    findByType(thead.props?.children, 'th').forEach(th => {
-      headers.push(extractText(th.props?.children));
+    findByType(thead.props.children, 'th').forEach(th => {
+      headers.push(extractText(th.props.children));
     });
   });
 
   // tbody > tr > td
   const tbodies = findByType(children, 'tbody');
   tbodies.forEach(tbody => {
-    findByType(tbody.props?.children, 'tr').forEach(tr => {
-      const cells = findByType(tr.props?.children, 'td').map(td =>
-        extractText(td.props?.children)
+    findByType(tbody.props.children, 'tr').forEach(tr => {
+      const cells = findByType(tr.props.children, 'td').map(td =>
+        extractText(td.props.children)
       );
       if (cells.length > 0) rows.push(cells);
     });
