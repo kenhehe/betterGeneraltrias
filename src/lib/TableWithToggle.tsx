@@ -13,8 +13,11 @@ import { type TypographyTheme } from './typographyThemes';
 
 type AnyEl = { type: unknown; props: { children?: ReactNode } };
 
-function isEl(n: ReactNode): n is AnyEl {
-  return typeof n === 'object' && n !== null && 'type' in n && 'props' in n;
+function asEl(n: ReactNode): AnyEl | null {
+  if (typeof n === 'object' && n !== null && 'type' in n && 'props' in n) {
+    return n as AnyEl;
+  }
+  return null;
 }
 
 function extractText(node: ReactNode): string {
@@ -22,7 +25,8 @@ function extractText(node: ReactNode): string {
   if (typeof node === 'string') return node.trim();
   if (typeof node === 'number') return String(node);
   if (Array.isArray(node)) return node.map(extractText).filter(Boolean).join(' ');
-  if (isEl(node)) return extractText(node.props.children);
+  const el = asEl(node);
+  if (el) return extractText(el.props.children);
   return '';
 }
 
@@ -31,9 +35,10 @@ function findByType(node: ReactNode, tag: string): AnyEl[] {
   function walk(n: ReactNode) {
     if (!n) return;
     if (Array.isArray(n)) { n.forEach(walk); return; }
-    if (!isEl(n)) return;
-    if (n.type === tag) results.push(n);
-    else walk(n.props.children);
+    const el = asEl(n);
+    if (!el) return;
+    if (el.type === tag) results.push(el);
+    else walk(el.props.children);
   }
   walk(node);
   return results;
