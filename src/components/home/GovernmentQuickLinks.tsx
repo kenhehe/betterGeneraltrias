@@ -77,6 +77,7 @@ export default function GovernmentQuickLinks() {
             </h2>
             <div className="mt-2 h-1 w-12 bg-primary-600 rounded-full" />
           </div>
+          {/* All Documents — desktop only */}
           <Link
             to="/government/transparency-documents"
             className="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-primary-700 hover:text-primary-800 transition-colors"
@@ -96,7 +97,7 @@ export default function GovernmentQuickLinks() {
               <Link
                 key={link.href + idx}
                 to={link.href}
-                className={`group flex items-start gap-4 bg-white rounded-2xl border ${link.accent.split(' ')[2]} hover:shadow-lg hover:-translate-y-1 transition-all duration-200 p-5`}
+                className={`group flex items-start gap-4 bg-white rounded-2xl border ${link.accent.split(' ')[2]} hover:shadow-lg hover:-translate-y-1 transition-all duration-200 p-5 ${idx >= 3 ? 'hidden sm:flex' : ''}`}
                 style={{
                   opacity: inView ? 1 : 0,
                   transform: inView ? 'translateY(0)' : 'translateY(20px)',
@@ -120,6 +121,17 @@ export default function GovernmentQuickLinks() {
               </Link>
             );
           })}
+        </div>
+
+        {/* All Documents — mobile only, below cards */}
+        <div className="mt-4 sm:hidden">
+          <Link
+            to="/government/transparency-documents"
+            className="flex items-center justify-center gap-2 w-full border border-primary-200 text-primary-700 font-bold text-sm px-5 py-3 rounded-xl hover:bg-primary-50 transition-colors"
+          >
+            All Documents
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>
