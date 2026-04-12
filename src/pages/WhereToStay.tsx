@@ -1,7 +1,7 @@
 import Section from '../components/ui/Section';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import SEO from '../components/SEO';
-import { MapPin, Phone, ExternalLink, Hotel, Trees } from 'lucide-react';
+import { Phone, ExternalLink, Hotel, Trees } from 'lucide-react';
 
 interface Place {
   id: number;
