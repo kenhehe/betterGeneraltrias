@@ -1,5 +1,6 @@
 import { NuqsAdapter } from 'nuqs/adapters/react';
 import { HelmetProvider } from 'react-helmet-async';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
@@ -29,6 +30,7 @@ function App() {
           <div className="min-h-screen flex flex-col">
             <Navbar />
             <ScrollToTop />
+            <SpeedInsights />
             {/* pt-[116px] compensates for fixed navbar on all pages.
                 The Home hero cancels this with -mt-[116px] to go full-bleed. */}
             <div className="flex-1 flex flex-col pt-[116px]">
