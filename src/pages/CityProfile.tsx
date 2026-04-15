@@ -39,13 +39,9 @@ const BREADCRUMBS = [
   { label: 'Home', href: '/' },
   { label: 'Government', href: '/government' },
   { label: 'Reports & Statistics', href: '/government/reports-and-statistics' },
-  {
-    label: 'City Profile',
-    href: '/government/reports-and-statistics/city-profile',
-  },
+  { label: 'City Profile', href: '/government/reports-and-statistics/city-profile' },
 ];
 
-// Population data from PSA + CLUP projections
 const POPULATION_DATA = [
   { year: '2010', population: 248819 },
   { year: '2015', population: 336587 },
@@ -53,7 +49,6 @@ const POPULATION_DATA = [
   { year: '2023*', population: 565587 },
 ];
 
-// Economy sector breakdown (illustrative based on CLUP)
 const ECONOMY_DATA = [
   { name: 'Industry & Manufacturing', value: 42, color: '#16643c' },
   { name: 'Commerce & Services', value: 35, color: '#25a864' },
@@ -61,7 +56,6 @@ const ECONOMY_DATA = [
   { name: 'Agriculture', value: 8, color: '#d0eeda' },
 ];
 
-// Awards
 const AWARDS = [
   { year: '2024', title: 'Top 2 Performing Mayor in Cavite' },
   { year: '2023', title: 'Seal of Good Local Governance — DILG' },
@@ -84,15 +78,14 @@ const BARANGAYS = [
 ];
 
 const KEY_FACTS = [
-  { icon: Users, value: '450,583', label: 'Population (2020 Census)', sub: 'Projected 565,587 by 2023' },
-  { icon: TrendingUp, value: '7.87%', label: 'Annual Growth Rate', sub: 'One of fastest-growing in PH' },
-  { icon: MapPin, value: '33', label: 'Barangays', sub: 'Administrative divisions' },
-  { icon: Map, value: '8,890 ha', label: 'Land Area', sub: '~88.9 km²' },
-  { icon: Building2, value: 'Component City', label: 'Classification', sub: 'Province of Cavite' },
-  { icon: Calendar, value: 'Dec 17, 2015', label: 'Cityhood', sub: 'R.A. 10675' },
+  { icon: Users,     value: '450,583',        label: 'Population',      sub: '2020 PSA Census',           accent: 'from-blue-500 to-blue-400',    iconBg: 'bg-blue-50 text-blue-600' },
+  { icon: TrendingUp,value: '7.87%',           label: 'Growth Rate',     sub: 'One of fastest-growing',    accent: 'from-emerald-500 to-green-400',iconBg: 'bg-emerald-50 text-emerald-700' },
+  { icon: MapPin,    value: '33',              label: 'Barangays',       sub: 'Administrative divisions',  accent: 'from-violet-500 to-purple-400',iconBg: 'bg-violet-50 text-violet-600' },
+  { icon: Map,       value: '88.9 km²',        label: 'Land Area',       sub: '8,890 hectares',            accent: 'from-teal-500 to-cyan-400',    iconBg: 'bg-teal-50 text-teal-700' },
+  { icon: Building2, value: 'Component City',  label: 'Classification',  sub: 'Province of Cavite',        accent: 'from-indigo-500 to-blue-400',  iconBg: 'bg-indigo-50 text-indigo-600' },
+  { icon: Calendar,  value: 'Dec 17, 2015',    label: 'Cityhood',        sub: 'R.A. 10675',                accent: 'from-amber-500 to-yellow-400', iconBg: 'bg-amber-50 text-amber-600' },
 ];
 
-// WMO weather code → label
 function weatherLabel(code: number): string {
   if (code === 0) return 'Clear Sky';
   if (code <= 2) return 'Partly Cloudy';
@@ -126,35 +119,39 @@ function WeatherWidget() {
   }, []);
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col gap-4">
-      <div className="flex items-center gap-2">
-        <CloudSun className="h-5 w-5 text-amber-500" />
-        <h3 className="text-base font-black text-gray-900">Current Weather</h3>
+    <div className="rounded-2xl overflow-hidden shadow-sm border border-amber-100">
+      <div className="bg-gradient-to-r from-amber-500 to-orange-400 px-5 py-4 flex items-center gap-2">
+        <CloudSun className="h-5 w-5 text-white" />
+        <div>
+          <p className="text-white font-black text-sm leading-none">Current Weather</p>
+          <p className="text-amber-100 text-[10px] mt-0.5">General Trias City, Cavite · Live</p>
+        </div>
       </div>
-      <p className="text-xs text-gray-400 -mt-2">General Trias City, Cavite · Live via Open-Meteo</p>
-      {weather ? (
-        <div className="grid grid-cols-3 gap-3">
-          <div className="flex flex-col items-center bg-amber-50 rounded-xl p-3">
-            <Thermometer className="h-5 w-5 text-amber-500 mb-1" />
-            <span className="text-xl font-black text-gray-900">{weather.temp}°C</span>
-            <span className="text-[10px] text-gray-500 mt-0.5">{weatherLabel(weather.code)}</span>
+      <div className="bg-white p-5">
+        {weather ? (
+          <div className="grid grid-cols-3 gap-3">
+            <div className="flex flex-col items-center bg-amber-50 border border-amber-100 rounded-xl p-3">
+              <Thermometer className="h-5 w-5 text-amber-500 mb-1" />
+              <span className="text-2xl font-black text-gray-900">{weather.temp}°C</span>
+              <span className="text-[10px] text-gray-500 mt-0.5 text-center">{weatherLabel(weather.code)}</span>
+            </div>
+            <div className="flex flex-col items-center bg-blue-50 border border-blue-100 rounded-xl p-3">
+              <Droplets className="h-5 w-5 text-blue-500 mb-1" />
+              <span className="text-2xl font-black text-gray-900">{weather.humidity}%</span>
+              <span className="text-[10px] text-gray-500 mt-0.5">Humidity</span>
+            </div>
+            <div className="flex flex-col items-center bg-green-50 border border-green-100 rounded-xl p-3">
+              <Wind className="h-5 w-5 text-green-600 mb-1" />
+              <span className="text-2xl font-black text-gray-900">{weather.wind}</span>
+              <span className="text-[10px] text-gray-500 mt-0.5">km/h Wind</span>
+            </div>
           </div>
-          <div className="flex flex-col items-center bg-blue-50 rounded-xl p-3">
-            <Droplets className="h-5 w-5 text-blue-500 mb-1" />
-            <span className="text-xl font-black text-gray-900">{weather.humidity}%</span>
-            <span className="text-[10px] text-gray-500 mt-0.5">Humidity</span>
+        ) : (
+          <div className="flex items-center justify-center h-24">
+            <div className="w-6 h-6 rounded-full border-2 border-amber-200 border-t-amber-500 animate-spin" />
           </div>
-          <div className="flex flex-col items-center bg-green-50 rounded-xl p-3">
-            <Wind className="h-5 w-5 text-green-600 mb-1" />
-            <span className="text-xl font-black text-gray-900">{weather.wind}</span>
-            <span className="text-[10px] text-gray-500 mt-0.5">km/h Wind</span>
-          </div>
-        </div>
-      ) : (
-        <div className="flex items-center justify-center h-20">
-          <div className="w-6 h-6 rounded-full border-2 border-amber-200 border-t-amber-500 animate-spin" />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
@@ -171,9 +168,7 @@ export default function CityProfile() {
       {/* Hero */}
       <div
         className="relative text-white overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)',
-        }}
+        style={{ background: 'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)' }}
       >
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.04]"
@@ -216,56 +211,27 @@ export default function CityProfile() {
         <Section className="py-10">
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
-          {/* Key Facts Grid */}
-          <div className="mb-10">
-            <h2 className="text-lg font-black text-gray-900 mb-1">Key Facts</h2>
-            <div className="h-1 w-10 bg-primary-600 rounded-full mb-5" />
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {KEY_FACTS.map(({ icon: Icon, value, label, sub }) => (
-                <div
-                  key={label}
-                  className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col items-start gap-3 hover:shadow-md hover:-translate-y-1 transition-all duration-200"
-                >
-                  <div className="bg-primary-50 text-primary-700 w-9 h-9 rounded-xl flex items-center justify-center">
-                    <Icon className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <div className="text-xl font-black text-gray-900 leading-none mb-0.5">
-                      {value}
-                    </div>
-                    <div className="text-xs font-bold text-gray-700 mb-0.5">
-                      {label}
-                    </div>
-                    <div className="text-[10px] text-gray-400 leading-snug">
-                      {sub}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Weather + Map row */}
+          {/* Weather + Map — above the numbers */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
             <WeatherWidget />
             {/* City Map */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col">
-              <div className="px-6 pt-5 pb-3">
-                <div className="flex items-center gap-2 mb-0.5">
-                  <MapPin className="h-5 w-5 text-primary-600" />
-                  <h3 className="text-base font-black text-gray-900">City Map</h3>
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-primary-100 flex flex-col">
+              <div className="bg-gradient-to-r from-primary-700 to-primary-500 px-5 py-4 flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-white" />
+                <div>
+                  <p className="text-white font-black text-sm leading-none">City Map</p>
+                  <p className="text-green-200 text-[10px] mt-0.5">General Trias City · 88.9 km² · Cavite Province</p>
                 </div>
-                <p className="text-xs text-gray-400">General Trias City · 88.9 km² land area · Cavite Province</p>
               </div>
-              <div className="flex-1 min-h-[220px]">
+              <div className="flex-1 min-h-[200px]">
                 <iframe
                   title="General Trias City Map"
                   src="https://www.openstreetmap.org/export/embed.html?bbox=120.8283%2C14.3375%2C120.9383%2C14.4375&layer=mapnik&marker=14.3875%2C120.8833"
-                  className="w-full h-full min-h-[220px] border-0"
+                  className="w-full h-full min-h-[200px] border-0"
                   loading="lazy"
                 />
               </div>
-              <div className="px-6 py-3 border-t border-gray-50">
+              <div className="bg-white px-5 py-3 border-t border-gray-100">
                 <a
                   href="https://www.openstreetmap.org/?mlat=14.3875&mlon=120.8833#map=13/14.3875/120.8833"
                   target="_blank"
@@ -279,190 +245,140 @@ export default function CityProfile() {
             </div>
           </div>
 
-          {/* Charts row */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
-            {/* Population growth chart */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-              <h3 className="text-base font-black text-gray-900 mb-1">
-                Population Growth
-              </h3>
-              <p className="text-xs text-gray-400 mb-5">
-                PSA Census data + CLUP 2022–2030 projections (*estimated)
-              </p>
-              <ResponsiveContainer width="100%" height={220}>
-                <BarChart
-                  data={POPULATION_DATA}
-                  margin={{ top: 0, right: 0, left: -10, bottom: 0 }}
+          {/* Key Facts Grid */}
+          <div className="mb-10">
+            <div className="flex items-center gap-2 mb-5">
+              <span className="text-xs font-black text-primary-600 uppercase tracking-widest bg-primary-50 border border-primary-100 px-3 py-1 rounded-full">Key Facts</span>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {KEY_FACTS.map(({ icon: Icon, value, label, sub, accent, iconBg }) => (
+                <div
+                  key={label}
+                  className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-200"
                 >
-                  <CartesianGrid strokeDasharray="3 3" stroke="#f1f3f5" />
-                  <XAxis
-                    dataKey="year"
-                    tick={{ fontSize: 11, fill: '#6b7280' }}
-                    axisLine={false}
-                    tickLine={false}
-                  />
-                  <YAxis
-                    tickFormatter={v => `${(v / 1000).toFixed(0)}K`}
-                    tick={{ fontSize: 11, fill: '#6b7280' }}
-                    axisLine={false}
-                    tickLine={false}
-                  />
-                  <Tooltip
-                    formatter={v => [Number(v).toLocaleString(), 'Population']}
-                    contentStyle={{
-                      borderRadius: '12px',
-                      border: '1px solid #e9ecef',
-                      fontSize: 12,
-                    }}
-                  />
-                  <Bar dataKey="population" fill="#16643c" radius={[6, 6, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
+                  <div className={`h-1 bg-gradient-to-r ${accent}`} />
+                  <div className="p-5 flex flex-col gap-3">
+                    <div className={`${iconBg} w-9 h-9 rounded-xl flex items-center justify-center`}>
+                      <Icon className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <div className="text-xl font-black text-gray-900 leading-none mb-0.5">{value}</div>
+                      <div className="text-xs font-bold text-gray-700 mb-0.5">{label}</div>
+                      <div className="text-[10px] text-gray-400 leading-snug">{sub}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Charts row */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            {/* Population growth chart */}
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-blue-100">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-500 px-5 py-4">
+                <p className="text-white font-black text-sm">Population Growth</p>
+                <p className="text-blue-200 text-[10px] mt-0.5">PSA Census + CLUP 2022–2030 projections (*estimated)</p>
+              </div>
+              <div className="bg-white p-5">
+                <ResponsiveContainer width="100%" height={220}>
+                  <BarChart data={POPULATION_DATA} margin={{ top: 0, right: 0, left: -10, bottom: 0 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#f1f3f5" />
+                    <XAxis dataKey="year" tick={{ fontSize: 11, fill: '#6b7280' }} axisLine={false} tickLine={false} />
+                    <YAxis tickFormatter={v => `${(v / 1000).toFixed(0)}K`} tick={{ fontSize: 11, fill: '#6b7280' }} axisLine={false} tickLine={false} />
+                    <Tooltip formatter={v => [Number(v).toLocaleString(), 'Population']} contentStyle={{ borderRadius: '12px', border: '1px solid #e9ecef', fontSize: 12 }} />
+                    <Bar dataKey="population" fill="#3b82f6" radius={[6, 6, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
             </div>
 
             {/* Economy pie chart */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-              <h3 className="text-base font-black text-gray-900 mb-1">
-                Economic Sectors
-              </h3>
-              <p className="text-xs text-gray-400 mb-5">
-                Approximate distribution based on CLUP 2022–2030 data
-              </p>
-              <ResponsiveContainer width="100%" height={220}>
-                <PieChart>
-                  <Pie
-                    data={ECONOMY_DATA}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={55}
-                    outerRadius={85}
-                    paddingAngle={3}
-                    dataKey="value"
-                  >
-                    {ECONOMY_DATA.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Legend
-                    iconType="circle"
-                    iconSize={8}
-                    formatter={value => (
-                      <span style={{ fontSize: 11, color: '#374151' }}>
-                        {value}
-                      </span>
-                    )}
-                  />
-                  <Tooltip
-                    formatter={v => [`${v}%`, 'Share']}
-                    contentStyle={{
-                      borderRadius: '12px',
-                      border: '1px solid #e9ecef',
-                      fontSize: 12,
-                    }}
-                  />
-                </PieChart>
-              </ResponsiveContainer>
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-emerald-100">
+              <div className="bg-gradient-to-r from-emerald-600 to-green-500 px-5 py-4">
+                <p className="text-white font-black text-sm">Economic Sectors</p>
+                <p className="text-green-200 text-[10px] mt-0.5">Approximate distribution based on CLUP 2022–2030 data</p>
+              </div>
+              <div className="bg-white p-5">
+                <ResponsiveContainer width="100%" height={220}>
+                  <PieChart>
+                    <Pie data={ECONOMY_DATA} cx="50%" cy="50%" innerRadius={55} outerRadius={85} paddingAngle={3} dataKey="value">
+                      {ECONOMY_DATA.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={entry.color} />
+                      ))}
+                    </Pie>
+                    <Legend iconType="circle" iconSize={8} formatter={value => <span style={{ fontSize: 11, color: '#374151' }}>{value}</span>} />
+                    <Tooltip formatter={v => [`${v}%`, 'Share']} contentStyle={{ borderRadius: '12px', border: '1px solid #e9ecef', fontSize: 12 }} />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
             </div>
           </div>
 
           {/* Population trend line */}
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-10">
-            <h3 className="text-base font-black text-gray-900 mb-1">
-              Population Trend (2010–2023)
-            </h3>
-            <p className="text-xs text-gray-400 mb-5">
-              7.87% annual growth rate — among the highest in the Philippines
-            </p>
-            <ResponsiveContainer width="100%" height={160}>
-              <LineChart
-                data={POPULATION_DATA}
-                margin={{ top: 0, right: 20, left: -10, bottom: 0 }}
-              >
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f3f5" />
-                <XAxis
-                  dataKey="year"
-                  tick={{ fontSize: 11, fill: '#6b7280' }}
-                  axisLine={false}
-                  tickLine={false}
-                />
-                <YAxis
-                  tickFormatter={v => `${(v / 1000).toFixed(0)}K`}
-                  tick={{ fontSize: 11, fill: '#6b7280' }}
-                  axisLine={false}
-                  tickLine={false}
-                />
-                <Tooltip
-                  formatter={v => [Number(v).toLocaleString(), 'Population']}
-                  contentStyle={{
-                    borderRadius: '12px',
-                    border: '1px solid #e9ecef',
-                    fontSize: 12,
-                  }}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="population"
-                  stroke="#16643c"
-                  strokeWidth={3}
-                  dot={{ fill: '#16643c', r: 5, strokeWidth: 2, stroke: '#fff' }}
-                  activeDot={{ r: 7 }}
-                />
-              </LineChart>
-            </ResponsiveContainer>
+          <div className="rounded-2xl overflow-hidden shadow-sm border border-teal-100 mb-10">
+            <div className="bg-gradient-to-r from-teal-600 to-cyan-500 px-5 py-4">
+              <p className="text-white font-black text-sm">Population Trend (2010–2023)</p>
+              <p className="text-teal-100 text-[10px] mt-0.5">7.87% annual growth rate — among the highest in the Philippines</p>
+            </div>
+            <div className="bg-white p-5">
+              <ResponsiveContainer width="100%" height={160}>
+                <LineChart data={POPULATION_DATA} margin={{ top: 0, right: 20, left: -10, bottom: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#f1f3f5" />
+                  <XAxis dataKey="year" tick={{ fontSize: 11, fill: '#6b7280' }} axisLine={false} tickLine={false} />
+                  <YAxis tickFormatter={v => `${(v / 1000).toFixed(0)}K`} tick={{ fontSize: 11, fill: '#6b7280' }} axisLine={false} tickLine={false} />
+                  <Tooltip formatter={v => [Number(v).toLocaleString(), 'Population']} contentStyle={{ borderRadius: '12px', border: '1px solid #e9ecef', fontSize: 12 }} />
+                  <Line type="monotone" dataKey="population" stroke="#0d9488" strokeWidth={3} dot={{ fill: '#0d9488', r: 5, strokeWidth: 2, stroke: '#fff' }} activeDot={{ r: 7 }} />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
           </div>
 
           {/* Barangays + Awards row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
             {/* Barangays */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-              <div className="flex items-center justify-between mb-4">
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-violet-100">
+              <div className="bg-gradient-to-r from-violet-600 to-purple-500 px-5 py-4 flex items-center justify-between">
                 <div>
-                  <h3 className="text-base font-black text-gray-900">
-                    33 Barangays
-                  </h3>
-                  <p className="text-xs text-gray-400 mt-0.5">
-                    Administrative divisions of General Trias City
-                  </p>
+                  <p className="text-white font-black text-sm">33 Barangays</p>
+                  <p className="text-violet-200 text-[10px] mt-0.5">Administrative divisions of General Trias City</p>
                 </div>
-                <span className="text-3xl font-black text-primary-100">33</span>
+                <span className="text-4xl font-black text-white/20">33</span>
               </div>
-              <div className="grid grid-cols-2 gap-x-4 gap-y-1">
-                {BARANGAYS.map((b, i) => (
-                  <div
-                    key={b}
-                    className="flex items-center gap-2 py-1 border-b border-gray-50"
-                  >
-                    <span className="text-[10px] font-black text-primary-400 w-5 shrink-0">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className="text-xs text-gray-700">{b}</span>
-                  </div>
-                ))}
+              <div className="bg-white p-5">
+                <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+                  {BARANGAYS.map((b, i) => (
+                    <div key={b} className="flex items-center gap-2 py-1 border-b border-gray-50">
+                      <span className="text-[10px] font-black text-violet-400 w-5 shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-xs text-gray-700">{b}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
             {/* Awards */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <Award className="h-5 w-5 text-amber-500" />
-                <h3 className="text-base font-black text-gray-900">
-                  Awards & Recognition
-                </h3>
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-amber-100">
+              <div className="bg-gradient-to-r from-amber-500 to-yellow-400 px-5 py-4 flex items-center gap-2">
+                <Award className="h-5 w-5 text-white" />
+                <div>
+                  <p className="text-white font-black text-sm">Awards & Recognition</p>
+                  <p className="text-amber-100 text-[10px] mt-0.5">Official recognitions and honors</p>
+                </div>
               </div>
-              <div className="space-y-3">
-                {AWARDS.map(award => (
-                  <div
-                    key={award.title}
-                    className="flex items-start gap-3 pb-3 border-b border-gray-50 last:border-0"
-                  >
-                    <span className="shrink-0 text-[10px] font-black text-amber-600 bg-amber-50 border border-amber-100 px-2 py-1 rounded-full">
-                      {award.year}
-                    </span>
-                    <span className="text-sm text-gray-700 leading-snug">
-                      {award.title}
-                    </span>
-                  </div>
-                ))}
+              <div className="bg-white p-5">
+                <div className="space-y-3">
+                  {AWARDS.map(award => (
+                    <div key={award.title} className="flex items-start gap-3 pb-3 border-b border-gray-50 last:border-0">
+                      <span className="shrink-0 text-[10px] font-black text-amber-600 bg-amber-50 border border-amber-100 px-2 py-1 rounded-full">
+                        {award.year}
+                      </span>
+                      <span className="text-sm text-gray-700 leading-snug">{award.title}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -470,12 +386,9 @@ export default function CityProfile() {
           {/* Data sources + links */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
-              <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">
-                Data Sources
-              </p>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Data Sources</p>
               <p className="text-sm text-gray-600">
-                Philippine Statistics Authority (PSA) · DILG · CLUP 2022–2030 ·
-                Official General Trias City Website
+                Philippine Statistics Authority (PSA) · DILG · CLUP 2022–2030 · Official General Trias City Website
               </p>
             </div>
             <div className="flex flex-wrap gap-2 shrink-0">
@@ -485,8 +398,7 @@ export default function CityProfile() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 bg-primary-50 hover:bg-primary-100 border border-primary-100 px-3 py-2 rounded-lg transition-colors"
               >
-                <ExternalLink className="h-3 w-3" />
-                Official Site
+                <ExternalLink className="h-3 w-3" />Official Site
               </a>
               <Link
                 to="/government/transparency-documents/downloads"
