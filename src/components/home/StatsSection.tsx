@@ -83,10 +83,10 @@ export default function StatsSection() {
         {/* Weather — centered 3-column layout */}
         <div className="mb-8">
           <div className="bg-white/10 border border-white/20 rounded-2xl p-6 backdrop-blur-sm">
-            <p className="text-center text-xs font-bold text-green-300 uppercase tracking-widest mb-5">
-              <CloudSun className="inline h-3.5 w-3.5 mr-1.5 text-amber-300" />
-              Current Weather · General Trias City, Cavite
-            </p>
+            <div className="flex items-center justify-center gap-1.5 mb-5">
+              <CloudSun className="h-3.5 w-3.5 text-amber-300 shrink-0" />
+              <span className="text-xs font-bold text-green-300 uppercase tracking-widest">Current Weather · General Trias City, Cavite</span>
+            </div>
             {weather ? (
               <div className="flex items-center justify-center gap-6 sm:gap-12">
                 {/* Left details */}
