@@ -1,4 +1,4 @@
-import { Users, MapPin, Building2, Map, ArrowRight, Wind, Droplets, Thermometer, CloudSun } from 'lucide-react';
+import { Users, MapPin, Building2, Map, ArrowRight, Wind, Droplets, CloudSun } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useInView } from '../../hooks/useInView';
@@ -80,50 +80,45 @@ export default function StatsSection() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-10">
-        {/* Weather row — above the numbers */}
+        {/* Weather — centered 3-column layout */}
         <div className="mb-8">
-          <div className="bg-white/10 border border-white/20 rounded-2xl p-5 backdrop-blur-sm">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              <div className="flex items-center gap-3 shrink-0">
-                <CloudSun className="h-6 w-6 text-amber-300" />
-                <div>
-                  <p className="text-white font-black text-sm leading-none">Current Weather</p>
-                  <p className="text-green-300 text-[10px] mt-0.5">General Trias City, Cavite · Live</p>
+          <div className="bg-white/10 border border-white/20 rounded-2xl p-6 backdrop-blur-sm">
+            <p className="text-center text-xs font-bold text-green-300 uppercase tracking-widest mb-5">
+              <CloudSun className="inline h-3.5 w-3.5 mr-1.5 text-amber-300" />
+              Current Weather · General Trias City, Cavite
+            </p>
+            {weather ? (
+              <div className="flex items-center justify-center gap-6 sm:gap-12">
+                {/* Left details */}
+                <div className="flex flex-col items-center gap-3">
+                  <div className="flex flex-col items-center gap-1">
+                    <Droplets className="h-5 w-5 text-blue-300" />
+                    <span className="text-white font-black text-lg leading-none">{weather.humidity}%</span>
+                    <span className="text-green-400 text-[10px] uppercase tracking-wide">Humidity</span>
+                  </div>
+                </div>
+
+                {/* Center — big icon + temp */}
+                <div className="flex flex-col items-center">
+                  <span className="text-6xl sm:text-7xl leading-none mb-2">{weatherEmoji(weather.code)}</span>
+                  <span className="text-5xl sm:text-6xl font-black text-white leading-none">{weather.temp}°C</span>
+                  <span className="text-green-200 text-sm mt-2 font-medium">{weatherLabel(weather.code)}</span>
+                </div>
+
+                {/* Right details */}
+                <div className="flex flex-col items-center gap-3">
+                  <div className="flex flex-col items-center gap-1">
+                    <Wind className="h-5 w-5 text-green-300" />
+                    <span className="text-white font-black text-lg leading-none">{weather.wind}</span>
+                    <span className="text-green-400 text-[10px] uppercase tracking-wide">km/h Wind</span>
+                  </div>
                 </div>
               </div>
-              {weather ? (
-                <>
-                  <div className="hidden sm:block w-px h-10 bg-white/20 shrink-0" />
-                  <div className="flex items-center gap-2">
-                    <span className="text-3xl leading-none">{weatherEmoji(weather.code)}</span>
-                    <span className="text-3xl font-black text-white">{weather.temp}°C</span>
-                    <span className="text-green-200 text-sm ml-1">{weatherLabel(weather.code)}</span>
-                  </div>
-                  <div className="hidden sm:block w-px h-10 bg-white/20 shrink-0" />
-                  <div className="flex gap-4">
-                    <div className="flex items-center gap-1.5">
-                      <Droplets className="h-4 w-4 text-blue-300" />
-                      <span className="text-white text-sm font-bold">{weather.humidity}%</span>
-                      <span className="text-green-300 text-xs">humidity</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Wind className="h-4 w-4 text-green-300" />
-                      <span className="text-white text-sm font-bold">{weather.wind} km/h</span>
-                      <span className="text-green-300 text-xs">wind</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Thermometer className="h-4 w-4 text-amber-300" />
-                      <span className="text-green-300 text-xs">Tropical climate</span>
-                    </div>
-                  </div>
-                </>
-              ) : (
-                <div className="flex items-center gap-2 text-green-300 text-xs">
-                  <div className="w-4 h-4 rounded-full border-2 border-white/20 border-t-white/80 animate-spin" />
-                  Loading weather…
-                </div>
-              )}
-            </div>
+            ) : (
+              <div className="flex items-center justify-center h-24">
+                <div className="w-6 h-6 rounded-full border-2 border-white/20 border-t-white/80 animate-spin" />
+              </div>
+            )}
           </div>
         </div>
 
@@ -152,7 +147,7 @@ export default function StatsSection() {
           ))}
         </div>
 
-        <div className="border-t border-white/10 pt-4 pb-2 flex justify-center mb-8">
+        <div className="border-t border-white/10 pt-4 pb-2 flex justify-center">
           <Link
             to="/government/reports-and-statistics/city-profile"
             className="inline-flex items-center gap-1.5 text-xs font-bold text-green-300 hover:text-white transition-colors uppercase tracking-wide"
@@ -160,22 +155,6 @@ export default function StatsSection() {
             {t('stats.viewProfile')}
             <ArrowRight className="h-3.5 w-3.5" />
           </Link>
-        </div>
-
-        {/* Map — very bottom */}
-        <div className="rounded-2xl overflow-hidden border border-white/20">
-          <div className="px-4 py-3 bg-white/10 border-b border-white/10 flex items-center gap-2">
-            <MapPin className="h-4 w-4 text-green-300" />
-            <p className="text-white font-bold text-xs">General Trias City, Cavite</p>
-            <span className="text-green-400 text-[10px] ml-1">· 88.9 km²</span>
-          </div>
-          <iframe
-            title="General Trias City Map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=120.8283%2C14.3375%2C120.9383%2C14.4375&layer=mapnik&marker=14.3875%2C120.8833"
-            className="w-full border-0"
-            style={{ height: '280px' }}
-            loading="lazy"
-          />
         </div>
       </div>
     </section>
