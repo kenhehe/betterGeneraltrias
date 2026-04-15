@@ -177,6 +177,7 @@ export default function Downloads() {
               </a>
             </div>
           </div>
+          <DisclaimerBar />
         </Section>
       </div>
     </>
