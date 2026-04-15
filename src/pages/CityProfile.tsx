@@ -4,34 +4,12 @@ import Section from '../components/ui/Section';
 import DisclaimerBar from '../components/ui/DisclaimerBar';
 import { Link } from 'react-router-dom';
 import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  PieChart,
-  Pie,
-  Cell,
-  Legend,
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
+  ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell, Legend,
 } from 'recharts';
 import {
-  Users,
-  MapPin,
-  Building2,
-  Map,
-  Award,
-  TrendingUp,
-  Calendar,
-  ExternalLink,
-  BarChart2,
-  Wind,
-  Droplets,
-  Thermometer,
-  CloudSun,
+  Users, MapPin, Building2, Map, Award, TrendingUp, Calendar,
+  ExternalLink, BarChart2, Wind, Droplets, Thermometer, CloudSun,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -78,12 +56,12 @@ const BARANGAYS = [
 ];
 
 const KEY_FACTS = [
-  { icon: Users,     value: '450,583',        label: 'Population',      sub: '2020 PSA Census',           accent: 'from-blue-500 to-blue-400',    iconBg: 'bg-blue-50 text-blue-600' },
-  { icon: TrendingUp,value: '7.87%',           label: 'Growth Rate',     sub: 'One of fastest-growing',    accent: 'from-emerald-500 to-green-400',iconBg: 'bg-emerald-50 text-emerald-700' },
-  { icon: MapPin,    value: '33',              label: 'Barangays',       sub: 'Administrative divisions',  accent: 'from-violet-500 to-purple-400',iconBg: 'bg-violet-50 text-violet-600' },
-  { icon: Map,       value: '88.9 km²',        label: 'Land Area',       sub: '8,890 hectares',            accent: 'from-teal-500 to-cyan-400',    iconBg: 'bg-teal-50 text-teal-700' },
-  { icon: Building2, value: 'Component City',  label: 'Classification',  sub: 'Province of Cavite',        accent: 'from-indigo-500 to-blue-400',  iconBg: 'bg-indigo-50 text-indigo-600' },
-  { icon: Calendar,  value: 'Dec 17, 2015',    label: 'Cityhood',        sub: 'R.A. 10675',                accent: 'from-amber-500 to-yellow-400', iconBg: 'bg-amber-50 text-amber-600' },
+  { icon: Users,      value: '450,583',       label: 'Population',     sub: '2020 PSA Census',          accent: 'from-blue-500 to-blue-400',     iconBg: 'bg-blue-50 text-blue-600' },
+  { icon: TrendingUp, value: '7.87%',          label: 'Growth Rate',    sub: 'One of fastest-growing',   accent: 'from-emerald-500 to-green-400', iconBg: 'bg-emerald-50 text-emerald-700' },
+  { icon: MapPin,     value: '33',             label: 'Barangays',      sub: 'Administrative divisions', accent: 'from-violet-500 to-purple-400', iconBg: 'bg-violet-50 text-violet-600' },
+  { icon: Map,        value: '88.9 km²',       label: 'Land Area',      sub: '8,890 hectares',           accent: 'from-teal-500 to-cyan-400',     iconBg: 'bg-teal-50 text-teal-700' },
+  { icon: Building2,  value: 'Component City', label: 'Classification', sub: 'Province of Cavite',       accent: 'from-indigo-500 to-blue-400',   iconBg: 'bg-indigo-50 text-indigo-600' },
+  { icon: Calendar,   value: 'Dec 17, 2015',   label: 'Cityhood',       sub: 'R.A. 10675',               accent: 'from-amber-500 to-yellow-400',  iconBg: 'bg-amber-50 text-amber-600' },
 ];
 
 function weatherLabel(code: number): string {
@@ -99,7 +77,17 @@ function weatherLabel(code: number): string {
   return 'Unknown';
 }
 
-function WeatherWidget() {
+function weatherEmoji(code: number): string {
+  if (code === 0) return '☀️';
+  if (code <= 2) return '⛅';
+  if (code === 3) return '☁️';
+  if (code <= 49) return '🌫️';
+  if (code <= 69) return '🌧️';
+  if (code <= 84) return '🌦️';
+  return '⛈️';
+}
+
+function useWeather() {
   const [weather, setWeather] = useState<{
     temp: number; humidity: number; wind: number; code: number;
   } | null>(null);
@@ -118,45 +106,12 @@ function WeatherWidget() {
       .catch(() => {});
   }, []);
 
-  return (
-    <div className="rounded-2xl overflow-hidden shadow-sm border border-amber-100">
-      <div className="bg-gradient-to-r from-amber-500 to-orange-400 px-5 py-4 flex items-center gap-2">
-        <CloudSun className="h-5 w-5 text-white" />
-        <div>
-          <p className="text-white font-black text-sm leading-none">Current Weather</p>
-          <p className="text-amber-100 text-[10px] mt-0.5">General Trias City, Cavite · Live</p>
-        </div>
-      </div>
-      <div className="bg-white p-5">
-        {weather ? (
-          <div className="grid grid-cols-3 gap-3">
-            <div className="flex flex-col items-center bg-amber-50 border border-amber-100 rounded-xl p-3">
-              <Thermometer className="h-5 w-5 text-amber-500 mb-1" />
-              <span className="text-2xl font-black text-gray-900">{weather.temp}°C</span>
-              <span className="text-[10px] text-gray-500 mt-0.5 text-center">{weatherLabel(weather.code)}</span>
-            </div>
-            <div className="flex flex-col items-center bg-blue-50 border border-blue-100 rounded-xl p-3">
-              <Droplets className="h-5 w-5 text-blue-500 mb-1" />
-              <span className="text-2xl font-black text-gray-900">{weather.humidity}%</span>
-              <span className="text-[10px] text-gray-500 mt-0.5">Humidity</span>
-            </div>
-            <div className="flex flex-col items-center bg-green-50 border border-green-100 rounded-xl p-3">
-              <Wind className="h-5 w-5 text-green-600 mb-1" />
-              <span className="text-2xl font-black text-gray-900">{weather.wind}</span>
-              <span className="text-[10px] text-gray-500 mt-0.5">km/h Wind</span>
-            </div>
-          </div>
-        ) : (
-          <div className="flex items-center justify-center h-24">
-            <div className="w-6 h-6 rounded-full border-2 border-amber-200 border-t-amber-500 animate-spin" />
-          </div>
-        )}
-      </div>
-    </div>
-  );
+  return weather;
 }
 
 export default function CityProfile() {
+  const weather = useWeather();
+
   return (
     <>
       <SEO
@@ -165,7 +120,7 @@ export default function CityProfile() {
         keywords="General Trias City profile, population statistics, barangays, economy, Cavite"
       />
 
-      {/* Hero */}
+      {/* Hero — left: title/stats, right: weather widget */}
       <div
         className="relative text-white overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #082214 0%, #0f4328 50%, #16643c 100%)' }}
@@ -178,26 +133,74 @@ export default function CityProfile() {
             backgroundSize: '48px 48px',
           }}
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center gap-2 mb-4 text-green-300 text-xs font-bold uppercase tracking-widest">
-            <BarChart2 className="h-3.5 w-3.5" />
-            Reports &amp; Statistics
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
-            City Profile &amp; Statistics
-          </h1>
-          <p className="text-green-100 text-base max-w-lg leading-relaxed mb-8">
-            Demographic data, economic indicators, barangay directory, and
-            recognition for General Trias City, Cavite — one of the
-            fastest-growing cities in the Philippines.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {[['450K+', 'Population'], ['33', 'Barangays'], ['88.9 km²', 'Land Area'], ['2015', 'Cityhood']].map(([val, lbl]) => (
-              <div key={lbl} className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2">
-                <span className="text-sm font-black text-white">{val}</span>
-                <span className="text-xs text-green-300 font-medium">{lbl}</span>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            {/* Left — title */}
+            <div>
+              <div className="flex items-center gap-2 mb-4 text-green-300 text-xs font-bold uppercase tracking-widest">
+                <BarChart2 className="h-3.5 w-3.5" />
+                Reports &amp; Statistics
               </div>
-            ))}
+              <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4">
+                City Profile &amp; Statistics
+              </h1>
+              <p className="text-green-100 text-base max-w-lg leading-relaxed mb-8">
+                Demographic data, economic indicators, barangay directory, and
+                recognition for General Trias City — one of the fastest-growing
+                cities in the Philippines.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {[['450K+', 'Population'], ['33', 'Barangays'], ['88.9 km²', 'Land Area'], ['2015', 'Cityhood']].map(([val, lbl]) => (
+                  <div key={lbl} className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2">
+                    <span className="text-sm font-black text-white">{val}</span>
+                    <span className="text-xs text-green-300 font-medium">{lbl}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right — live weather */}
+            <div className="bg-white/10 border border-white/20 rounded-2xl p-5 backdrop-blur-sm">
+              <div className="flex items-center gap-2 mb-4">
+                <CloudSun className="h-5 w-5 text-amber-300" />
+                <div>
+                  <p className="text-white font-black text-sm leading-none">Current Weather</p>
+                  <p className="text-green-300 text-[10px] mt-0.5">General Trias City · Live</p>
+                </div>
+              </div>
+              {weather ? (
+                <>
+                  <div className="flex items-end gap-3 mb-5">
+                    <span className="text-6xl leading-none">{weatherEmoji(weather.code)}</span>
+                    <div>
+                      <span className="text-5xl font-black text-white leading-none">{weather.temp}°C</span>
+                      <p className="text-green-200 text-sm mt-1">{weatherLabel(weather.code)}</p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="bg-white/10 rounded-xl p-3 flex flex-col items-center">
+                      <Thermometer className="h-4 w-4 text-amber-300 mb-1" />
+                      <span className="text-white font-black text-sm">{weather.temp}°C</span>
+                      <span className="text-green-300 text-[10px]">Feels like</span>
+                    </div>
+                    <div className="bg-white/10 rounded-xl p-3 flex flex-col items-center">
+                      <Droplets className="h-4 w-4 text-blue-300 mb-1" />
+                      <span className="text-white font-black text-sm">{weather.humidity}%</span>
+                      <span className="text-green-300 text-[10px]">Humidity</span>
+                    </div>
+                    <div className="bg-white/10 rounded-xl p-3 flex flex-col items-center">
+                      <Wind className="h-4 w-4 text-green-300 mb-1" />
+                      <span className="text-white font-black text-sm">{weather.wind}</span>
+                      <span className="text-green-300 text-[10px]">km/h</span>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div className="flex items-center justify-center h-32">
+                  <div className="w-8 h-8 rounded-full border-2 border-white/20 border-t-white/80 animate-spin" />
+                </div>
+              )}
+            </div>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
@@ -211,40 +214,6 @@ export default function CityProfile() {
         <Section className="py-10">
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
-          {/* Weather + Map — above the numbers */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
-            <WeatherWidget />
-            {/* City Map */}
-            <div className="rounded-2xl overflow-hidden shadow-sm border border-primary-100 flex flex-col">
-              <div className="bg-gradient-to-r from-primary-700 to-primary-500 px-5 py-4 flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-white" />
-                <div>
-                  <p className="text-white font-black text-sm leading-none">City Map</p>
-                  <p className="text-green-200 text-[10px] mt-0.5">General Trias City · 88.9 km² · Cavite Province</p>
-                </div>
-              </div>
-              <div className="flex-1 min-h-[200px]">
-                <iframe
-                  title="General Trias City Map"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=120.8283%2C14.3375%2C120.9383%2C14.4375&layer=mapnik&marker=14.3875%2C120.8833"
-                  className="w-full h-full min-h-[200px] border-0"
-                  loading="lazy"
-                />
-              </div>
-              <div className="bg-white px-5 py-3 border-t border-gray-100">
-                <a
-                  href="https://www.openstreetmap.org/?mlat=14.3875&mlon=120.8833#map=13/14.3875/120.8833"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 hover:text-primary-800 transition-colors"
-                >
-                  <ExternalLink className="h-3 w-3" />
-                  Open larger map
-                </a>
-              </div>
-            </div>
-          </div>
-
           {/* Key Facts Grid */}
           <div className="mb-10">
             <div className="flex items-center gap-2 mb-5">
@@ -252,10 +221,7 @@ export default function CityProfile() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {KEY_FACTS.map(({ icon: Icon, value, label, sub, accent, iconBg }) => (
-                <div
-                  key={label}
-                  className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-200"
-                >
+                <div key={label} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-200">
                   <div className={`h-1 bg-gradient-to-r ${accent}`} />
                   <div className="p-5 flex flex-col gap-3">
                     <div className={`${iconBg} w-9 h-9 rounded-xl flex items-center justify-center`}>
@@ -274,7 +240,6 @@ export default function CityProfile() {
 
           {/* Charts row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            {/* Population growth chart */}
             <div className="rounded-2xl overflow-hidden shadow-sm border border-blue-100">
               <div className="bg-gradient-to-r from-blue-600 to-blue-500 px-5 py-4">
                 <p className="text-white font-black text-sm">Population Growth</p>
@@ -293,7 +258,6 @@ export default function CityProfile() {
               </div>
             </div>
 
-            {/* Economy pie chart */}
             <div className="rounded-2xl overflow-hidden shadow-sm border border-emerald-100">
               <div className="bg-gradient-to-r from-emerald-600 to-green-500 px-5 py-4">
                 <p className="text-white font-black text-sm">Economic Sectors</p>
@@ -336,7 +300,6 @@ export default function CityProfile() {
 
           {/* Barangays + Awards row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
-            {/* Barangays */}
             <div className="rounded-2xl overflow-hidden shadow-sm border border-violet-100">
               <div className="bg-gradient-to-r from-violet-600 to-purple-500 px-5 py-4 flex items-center justify-between">
                 <div>
@@ -349,9 +312,7 @@ export default function CityProfile() {
                 <div className="grid grid-cols-2 gap-x-4 gap-y-1">
                   {BARANGAYS.map((b, i) => (
                     <div key={b} className="flex items-center gap-2 py-1 border-b border-gray-50">
-                      <span className="text-[10px] font-black text-violet-400 w-5 shrink-0">
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
+                      <span className="text-[10px] font-black text-violet-400 w-5 shrink-0">{String(i + 1).padStart(2, '0')}</span>
                       <span className="text-xs text-gray-700">{b}</span>
                     </div>
                   ))}
@@ -359,7 +320,6 @@ export default function CityProfile() {
               </div>
             </div>
 
-            {/* Awards */}
             <div className="rounded-2xl overflow-hidden shadow-sm border border-amber-100">
               <div className="bg-gradient-to-r from-amber-500 to-yellow-400 px-5 py-4 flex items-center gap-2">
                 <Award className="h-5 w-5 text-white" />
@@ -368,18 +328,43 @@ export default function CityProfile() {
                   <p className="text-amber-100 text-[10px] mt-0.5">Official recognitions and honors</p>
                 </div>
               </div>
-              <div className="bg-white p-5">
-                <div className="space-y-3">
-                  {AWARDS.map(award => (
-                    <div key={award.title} className="flex items-start gap-3 pb-3 border-b border-gray-50 last:border-0">
-                      <span className="shrink-0 text-[10px] font-black text-amber-600 bg-amber-50 border border-amber-100 px-2 py-1 rounded-full">
-                        {award.year}
-                      </span>
-                      <span className="text-sm text-gray-700 leading-snug">{award.title}</span>
-                    </div>
-                  ))}
-                </div>
+              <div className="bg-white p-5 space-y-3">
+                {AWARDS.map(award => (
+                  <div key={award.title} className="flex items-start gap-3 pb-3 border-b border-gray-50 last:border-0">
+                    <span className="shrink-0 text-[10px] font-black text-amber-600 bg-amber-50 border border-amber-100 px-2 py-1 rounded-full">{award.year}</span>
+                    <span className="text-sm text-gray-700 leading-snug">{award.title}</span>
+                  </div>
+                ))}
               </div>
+            </div>
+          </div>
+
+          {/* City Map — above data sources */}
+          <div className="rounded-2xl overflow-hidden shadow-sm border border-primary-100 mb-6">
+            <div className="bg-gradient-to-r from-primary-700 to-primary-500 px-5 py-4 flex items-center gap-2">
+              <MapPin className="h-5 w-5 text-white" />
+              <div>
+                <p className="text-white font-black text-sm">City Map</p>
+                <p className="text-green-200 text-[10px] mt-0.5">General Trias City · 88.9 km² land area · Cavite Province</p>
+              </div>
+            </div>
+            <div className="min-h-[320px]">
+              <iframe
+                title="General Trias City Map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=120.8283%2C14.3375%2C120.9383%2C14.4375&layer=mapnik&marker=14.3875%2C120.8833"
+                className="w-full min-h-[320px] border-0"
+                loading="lazy"
+              />
+            </div>
+            <div className="bg-white px-5 py-3 border-t border-gray-100">
+              <a
+                href="https://www.openstreetmap.org/?mlat=14.3875&mlon=120.8833#map=13/14.3875/120.8833"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 hover:text-primary-800 transition-colors"
+              >
+                <ExternalLink className="h-3 w-3" />Open larger map
+              </a>
             </div>
           </div>
 
@@ -392,18 +377,12 @@ export default function CityProfile() {
               </p>
             </div>
             <div className="flex flex-wrap gap-2 shrink-0">
-              <a
-                href="https://www.generaltrias.gov.ph"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 bg-primary-50 hover:bg-primary-100 border border-primary-100 px-3 py-2 rounded-lg transition-colors"
-              >
+              <a href="https://www.generaltrias.gov.ph" target="_blank" rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 bg-primary-50 hover:bg-primary-100 border border-primary-100 px-3 py-2 rounded-lg transition-colors">
                 <ExternalLink className="h-3 w-3" />Official Site
               </a>
-              <Link
-                to="/government/transparency-documents/downloads"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-lg transition-colors"
-              >
+              <Link to="/government/transparency-documents/downloads"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-lg transition-colors">
                 Planning Docs
               </Link>
             </div>
