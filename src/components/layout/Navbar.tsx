@@ -53,8 +53,8 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full">
       {/* Emergency Hotlines Bar — always visible */}
-      {/* Mobile: marquee ticker */}
-      <div className="sm:hidden bg-[#1c0505] text-white text-[11px] h-7 overflow-hidden flex items-center">
+      {/* < 1120px: marquee ticker */}
+      <div className="min-[1120px]:hidden bg-[#1c0505] text-white text-[11px] h-7 overflow-hidden flex items-center">
         <style>{`
           @keyframes hotline-ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
           .hotline-track { animation: hotline-ticker 28s linear infinite; display: flex; align-items: center; gap: 12px; white-space: nowrap; }
@@ -83,8 +83,8 @@ const Navbar: React.FC = () => {
           ))}
         </div>
       </div>
-      {/* Desktop: static scrollable bar */}
-      <div className="hidden sm:block bg-[#1c0505] text-white text-[11px] overflow-x-auto whitespace-nowrap">
+      {/* >= 1120px: static scrollable bar */}
+      <div className="hidden min-[1120px]:block bg-[#1c0505] text-white text-[11px] overflow-x-auto whitespace-nowrap">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-7 flex items-center gap-3 min-w-max">
           <span className="flex items-center gap-1.5 shrink-0">
             <Phone className="h-2.5 w-2.5 text-red-400" />

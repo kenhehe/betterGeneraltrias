@@ -53,6 +53,7 @@ const Services: React.FC = () => {
         <ServicesSection
           title="All City Services"
           description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
+          showAll
         />
       </>
     );

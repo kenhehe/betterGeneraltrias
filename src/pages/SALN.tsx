@@ -1,6 +1,7 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Section from '../components/ui/Section';
+import DisclaimerBar from '../components/ui/DisclaimerBar';
 import { ExternalLink, Scale, Clock, FileText, Users, ShieldCheck } from 'lucide-react';
 
 const BREADCRUMBS = [
@@ -177,6 +178,7 @@ export default function SALN() {
               </a>
             </div>
           </div>
+          <DisclaimerBar />
         </Section>
       </div>
     </>

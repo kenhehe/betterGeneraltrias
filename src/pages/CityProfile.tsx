@@ -1,6 +1,7 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Section from '../components/ui/Section';
+import DisclaimerBar from '../components/ui/DisclaimerBar';
 import { Link } from 'react-router-dom';
 import {
   BarChart,
@@ -27,7 +28,12 @@ import {
   Calendar,
   ExternalLink,
   BarChart2,
+  Wind,
+  Droplets,
+  Thermometer,
+  CloudSun,
 } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -85,6 +91,73 @@ const KEY_FACTS = [
   { icon: Building2, value: 'Component City', label: 'Classification', sub: 'Province of Cavite' },
   { icon: Calendar, value: 'Dec 17, 2015', label: 'Cityhood', sub: 'R.A. 10675' },
 ];
+
+// WMO weather code → label
+function weatherLabel(code: number): string {
+  if (code === 0) return 'Clear Sky';
+  if (code <= 2) return 'Partly Cloudy';
+  if (code === 3) return 'Overcast';
+  if (code <= 49) return 'Foggy';
+  if (code <= 59) return 'Drizzle';
+  if (code <= 69) return 'Rain';
+  if (code <= 79) return 'Snow';
+  if (code <= 84) return 'Rain Showers';
+  if (code <= 99) return 'Thunderstorm';
+  return 'Unknown';
+}
+
+function WeatherWidget() {
+  const [weather, setWeather] = useState<{
+    temp: number; humidity: number; wind: number; code: number;
+  } | null>(null);
+
+  useEffect(() => {
+    fetch(
+      'https://api.open-meteo.com/v1/forecast?latitude=14.3875&longitude=120.8833&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Asia%2FManila'
+    )
+      .then(r => r.json())
+      .then(d => setWeather({
+        temp: d.current.temperature_2m,
+        humidity: d.current.relative_humidity_2m,
+        wind: d.current.wind_speed_10m,
+        code: d.current.weather_code,
+      }))
+      .catch(() => {});
+  }, []);
+
+  return (
+    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col gap-4">
+      <div className="flex items-center gap-2">
+        <CloudSun className="h-5 w-5 text-amber-500" />
+        <h3 className="text-base font-black text-gray-900">Current Weather</h3>
+      </div>
+      <p className="text-xs text-gray-400 -mt-2">General Trias City, Cavite · Live via Open-Meteo</p>
+      {weather ? (
+        <div className="grid grid-cols-3 gap-3">
+          <div className="flex flex-col items-center bg-amber-50 rounded-xl p-3">
+            <Thermometer className="h-5 w-5 text-amber-500 mb-1" />
+            <span className="text-xl font-black text-gray-900">{weather.temp}°C</span>
+            <span className="text-[10px] text-gray-500 mt-0.5">{weatherLabel(weather.code)}</span>
+          </div>
+          <div className="flex flex-col items-center bg-blue-50 rounded-xl p-3">
+            <Droplets className="h-5 w-5 text-blue-500 mb-1" />
+            <span className="text-xl font-black text-gray-900">{weather.humidity}%</span>
+            <span className="text-[10px] text-gray-500 mt-0.5">Humidity</span>
+          </div>
+          <div className="flex flex-col items-center bg-green-50 rounded-xl p-3">
+            <Wind className="h-5 w-5 text-green-600 mb-1" />
+            <span className="text-xl font-black text-gray-900">{weather.wind}</span>
+            <span className="text-[10px] text-gray-500 mt-0.5">km/h Wind</span>
+          </div>
+        </div>
+      ) : (
+        <div className="flex items-center justify-center h-20">
+          <div className="w-6 h-6 rounded-full border-2 border-amber-200 border-t-amber-500 animate-spin" />
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function CityProfile() {
   return (
@@ -169,6 +242,40 @@ export default function CityProfile() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Weather + Map row */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+            <WeatherWidget />
+            {/* City Map */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col">
+              <div className="px-6 pt-5 pb-3">
+                <div className="flex items-center gap-2 mb-0.5">
+                  <MapPin className="h-5 w-5 text-primary-600" />
+                  <h3 className="text-base font-black text-gray-900">City Map</h3>
+                </div>
+                <p className="text-xs text-gray-400">General Trias City · 88.9 km² land area · Cavite Province</p>
+              </div>
+              <div className="flex-1 min-h-[220px]">
+                <iframe
+                  title="General Trias City Map"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=120.8283%2C14.3375%2C120.9383%2C14.4375&layer=mapnik&marker=14.3875%2C120.8833"
+                  className="w-full h-full min-h-[220px] border-0"
+                  loading="lazy"
+                />
+              </div>
+              <div className="px-6 py-3 border-t border-gray-50">
+                <a
+                  href="https://www.openstreetmap.org/?mlat=14.3875&mlon=120.8833#map=13/14.3875/120.8833"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 hover:text-primary-800 transition-colors"
+                >
+                  <ExternalLink className="h-3 w-3" />
+                  Open larger map
+                </a>
+              </div>
             </div>
           </div>
 
@@ -389,6 +496,7 @@ export default function CityProfile() {
               </Link>
             </div>
           </div>
+          <DisclaimerBar />
         </Section>
       </div>
     </>

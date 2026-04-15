@@ -32,9 +32,11 @@ const DEFAULT_COLOR = { accent: 'from-primary-600 to-primary-400', iconBg: 'bg-p
 export default function ServicesSection({
   title,
   description,
+  showAll = false,
 }: {
   title?: string;
   description?: string;
+  showAll?: boolean;
 }) {
   const { t } = useTranslation();
   const { ref, inView } = useInView<HTMLDivElement>();
@@ -47,9 +49,12 @@ export default function ServicesSection({
   };
 
   const FEATURED_SLUGS = ['health-services', 'agriculture-fisheries', 'environment', 'tourism'];
-  const displayedCategories = (serviceCategories.categories as Category[]).filter(c =>
-    FEATURED_SLUGS.includes(c.slug)
-  ).sort((a, b) => FEATURED_SLUGS.indexOf(a.slug) - FEATURED_SLUGS.indexOf(b.slug));
+  const allCategories = serviceCategories.categories as Category[];
+  const displayedCategories = showAll
+    ? allCategories
+    : allCategories
+        .filter(c => FEATURED_SLUGS.includes(c.slug))
+        .sort((a, b) => FEATURED_SLUGS.indexOf(a.slug) - FEATURED_SLUGS.indexOf(b.slug));
 
   return (
     <Section>
@@ -64,13 +69,15 @@ export default function ServicesSection({
           </h2>
           <div className="mt-2 h-1 w-12 bg-primary-600 rounded-full" />
         </div>
-        <Link
-          to="/services"
-          className="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-primary-700 hover:text-primary-800 transition-colors"
-        >
-          {t('services.viewAll', 'View All')}
-          <LucideIcons.ArrowRight className="h-4 w-4" />
-        </Link>
+        {!showAll && (
+          <Link
+            to="/services"
+            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-primary-700 hover:text-primary-800 transition-colors"
+          >
+            {t('services.viewAll', 'View All')}
+            <LucideIcons.ArrowRight className="h-4 w-4" />
+          </Link>
+        )}
       </div>
 
       {description && (
@@ -116,15 +123,17 @@ export default function ServicesSection({
         })}
       </div>
 
-      <div className="mt-6 sm:hidden flex justify-center">
-        <Link
-          to="/services"
-          className="inline-flex items-center gap-1.5 text-sm font-bold text-primary-700 border border-primary-200 px-5 py-2.5 rounded-xl hover:bg-primary-50 transition-colors"
-        >
-          {t('services.viewAll', 'View All Services')}
-          <LucideIcons.ArrowRight className="h-4 w-4" />
-        </Link>
-      </div>
+      {!showAll && (
+        <div className="mt-6 sm:hidden flex justify-center">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-primary-700 border border-primary-200 px-5 py-2.5 rounded-xl hover:bg-primary-50 transition-colors"
+          >
+            {t('services.viewAll', 'View All Services')}
+            <LucideIcons.ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      )}
     </Section>
   );
 }

@@ -1,4 +1,5 @@
 import Section from '../components/ui/Section';
+import DisclaimerBar from '../components/ui/DisclaimerBar';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import SEO from '../components/SEO';
 import {
@@ -373,6 +374,7 @@ export default function DevelopmentProjects() {
               </div>
             </div>
           </div>
+          <DisclaimerBar />
         </Section>
       </div>
     </>

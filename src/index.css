@@ -183,6 +183,12 @@
   }
 }
 
+/* SVGs used as layout elements (wave arcs, icons) should be block to prevent
+   the default inline baseline gap that shows as a black line at the arc edge */
+svg {
+  display: block;
+}
+
 /* Checklist styling */
 .task-list-item {
   @apply text-base text-gray-700 leading-relaxed relative flex items-start gap-3 font-sans rounded-md mb-5 transition-all duration-200 border border-transparent cursor-pointer items-center;

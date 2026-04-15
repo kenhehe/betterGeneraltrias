@@ -1,6 +1,7 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Section from '../components/ui/Section';
+import DisclaimerBar from '../components/ui/DisclaimerBar';
 import { ExternalLink, FileText, DollarSign, BarChart2, ShoppingCart, MoreHorizontal, BookOpen } from 'lucide-react';
 
 const BREADCRUMBS = [
@@ -183,6 +184,7 @@ export default function FullDisclosure() {
               <ExternalLink className="h-3 w-3" />Open FDP Portal
             </a>
           </div>
+          <DisclaimerBar />
         </Section>
       </div>
     </>

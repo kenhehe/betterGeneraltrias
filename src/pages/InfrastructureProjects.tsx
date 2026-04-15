@@ -1,6 +1,7 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Section from '../components/ui/Section';
+import DisclaimerBar from '../components/ui/DisclaimerBar';
 import { ExternalLink, CheckCircle, DollarSign, ClipboardList, AlertTriangle, Construction } from 'lucide-react';
 
 const BREADCRUMBS = [
@@ -199,6 +200,7 @@ export default function InfrastructureProjects() {
               </div>
             </div>
           </div>
+          <DisclaimerBar />
         </Section>
       </div>
     </>

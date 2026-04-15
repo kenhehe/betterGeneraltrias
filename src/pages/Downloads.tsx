@@ -2,6 +2,7 @@ import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { Download, FileText, Map, ExternalLink, FolderOpen } from 'lucide-react';
 import Section from '../components/ui/Section';
+import DisclaimerBar from '../components/ui/DisclaimerBar';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },

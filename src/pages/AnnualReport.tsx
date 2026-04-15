@@ -1,6 +1,7 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Section from '../components/ui/Section';
+import DisclaimerBar from '../components/ui/DisclaimerBar';
 import { ExternalLink, Building2, Heart, Users, GraduationCap, TrendingUp, Shield, TreePine, Mic, ClipboardList } from 'lucide-react';
 
 const BREADCRUMBS = [
@@ -217,6 +218,7 @@ export default function AnnualReport() {
               <ExternalLink className="h-3 w-3" />Official Site
             </a>
           </div>
+          <DisclaimerBar />
         </Section>
       </div>
     </>

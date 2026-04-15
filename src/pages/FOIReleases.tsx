@@ -1,6 +1,7 @@
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Section from '../components/ui/Section';
+import DisclaimerBar from '../components/ui/DisclaimerBar';
 import { ExternalLink, MapPin, Globe, Clock, FileText, XCircle, Eye } from 'lucide-react';
 
 const BREADCRUMBS = [
@@ -219,6 +220,7 @@ export default function FOIReleases() {
               <ExternalLink className="h-3 w-3" />File FOI Request
             </a>
           </div>
+          <DisclaimerBar />
         </Section>
       </div>
     </>
