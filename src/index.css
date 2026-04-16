@@ -189,13 +189,6 @@ svg {
   display: block;
 }
 
-/* Website Carbon Badge — override default styles to fit dark footer */
-.wcb-footer-wrap #wcb.carbonbadge {
-  --b1: #1f2937;
-  --b2: #16643c;
-  font-size: 11px !important;
-}
-
 /* Checklist styling */
 .task-list-item {
   @apply text-base text-gray-700 leading-relaxed relative flex items-start gap-3 font-sans rounded-md mb-5 transition-all duration-200 border border-transparent cursor-pointer items-center;

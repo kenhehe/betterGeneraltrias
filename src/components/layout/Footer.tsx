@@ -1,5 +1,6 @@
 import { Facebook, Github, Heart, Eye } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { WebsiteCarbonBadge } from 'react-websitecarbon-badge';
 
 function DiscordIcon({ className }: { className?: string }) {
   return (
@@ -34,22 +35,9 @@ function useVisitCounter() {
   return count;
 }
 
-function useCarbonBadge() {
-  useEffect(() => {
-    const id = 'wcb-script';
-    if (document.getElementById(id)) return;
-    const s = document.createElement('script');
-    s.id = id;
-    s.src = 'https://unpkg.com/website-carbon-badges@1.1.3/b.min.js';
-    s.defer = true;
-    document.body.appendChild(s);
-  }, []);
-}
-
 export default function Footer() {
   const { t } = useTranslation('common');
   const visitCount = useVisitCounter();
-  useCarbonBadge();
 
   const QUICK_LINKS = [
     { labelKey: 'nav.services', href: '/services' },
@@ -208,8 +196,8 @@ export default function Footer() {
                 {t('footer.contribute')}
               </a>
             </div>
-            <div className="mt-4 wcb-footer-wrap">
-              <div id="wcb" className="carbonbadge wcb-d"></div>
+            <div className="mt-4">
+              <WebsiteCarbonBadge dark url="https://www.bettergeneraltrias.org" />
             </div>
           </div>
         </div>
