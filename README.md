@@ -8,40 +8,44 @@ Live site: **[bettergeneraltrias.org](https://www.bettergeneraltrias.org)**
 
 ## What's on the Site
 
+### Home Page
+- **Hero section** — full-bleed green gradient with search card (service finder with live autocomplete), popular service shortcuts, and a "Coming to General Trias" development projects teaser strip
+- **City Stats** — live weather widget (Open-Meteo API, cached 30 min), population/barangay/land area numbers, link to full city profile
+- **Featured Services** — Health Services, Agriculture & Fisheries, Environment, Tourism
+- **Government Quick Links** — Full Disclosure, City Officials, City Profile, FOI Releases, Planning Documents, Barangay Directory
+- **History, Leadership, Contact** sections
+
 ### Services
-Citizen-facing guides for all LGU services, organized by category:
+Citizen-facing guides for all 11 LGU service categories, organized by category:
 
 | Category | What's Covered |
 |---|---|
-| Health Services | Free check-ups, medicines, vaccines, hospital admission, maternal care, health programs |
+| Health Services | Free check-ups, medicines, vaccines, hospital admission, maternal care |
 | Education | Daycare/preschool enrollment, scholarships, supplementary programs |
 | Business | Business permits, renewals, public market stalls, trade fairs |
-| Social Welfare | Senior citizen / PWD / solo parent assistance, disaster relief, livelihood programs |
+| Social Welfare | Senior citizen / PWD / solo parent assistance, disaster relief, livelihood |
 | Agriculture & Fisheries | Veterinary services, free seeds/fingerlings, farming training, equipment loans |
 | Infrastructure & Public Works | Road projects, drainage, public facilities |
 | Garbage & Waste Disposal | Waste collection schedules, proper disposal |
 | Environment | Tree planting, CENRO services, environmental compliance |
 | Disaster Preparedness | CDRRMO programs, evacuation, early warning |
 | Housing & Land Use | Zoning, housing programs, land use guidance |
-| Tourism | Must-see places, where to stay, local products, tourism permits, visitor safety |
+| Tourism | Must-see places, where to stay, local products, tourism permits |
 
 ### Government
-- **Departments & Officials** — Mayor, Vice Mayor, City Council, ex-officio members, department directory with contact numbers
-- **Transparency Documents** — Full Disclosure Policy (FDP), Annual Budget, SALN, FOI Releases, Planning Docs & Downloads (CLUP, CDP, ELA, land use maps)
-- **Reports & Statistics** — City Profile & Statistics (population charts, economy, awards, barangay directory), Annual Accomplishment Report, Infrastructure Projects
+- **Departments & Officials** — Mayor, Vice Mayor, City Council, ex-officio members, department directory
+- **Transparency Documents** — Full Disclosure Policy (FDP), Annual Budget, SALN, FOI Releases, Planning Downloads (CLUP, CDP, ELA, maps)
+- **Reports & Statistics** — City Profile & Statistics (live weather, population charts, economy, awards, barangay directory, map), Annual Accomplishment Report, Infrastructure Projects
 - **Guides & Regulations** — Legislative information, city ordinances
-- **Legislative** — Sangguniang Panlungsod information
+
+### City Profile Page
+- **Live weather widget** in hero (temperature, humidity, wind via Open-Meteo API — no API key required)
+- Population growth charts, economic sector breakdown, population trend line
+- 33 barangays directory, awards & recognition
+- OpenStreetMap embed showing General Trias City (88.9 km² land area)
 
 ### Development Projects
-Dedicated page covering 5 major incoming projects:
-- SM City General Trias
-- CALAX–CAVITEX Connector
-- Riverpark Township (next-gen city of the south)
-- Flyover & Road Widening
-- Ateneo de Cavite (Riverpark Campus)
-
-### City Profile
-Population data (PSA census + CLUP projections), economic sector breakdown, 33 barangays directory, awards & recognition, interactive charts.
+5 major incoming projects: SM City General Trias, CALAX–CAVITEX Connector, Riverpark Township, Flyover & Road Widening, Ateneo de Cavite.
 
 ---
 
@@ -57,6 +61,8 @@ Population data (PSA census + CLUP projections), economic sector breakdown, 33 b
 | Content | Markdown (remark-gfm) + YAML |
 | Charts | Recharts |
 | Icons | Lucide React |
+| Weather | Open-Meteo API (free, no key) |
+| Visit Counter | CounterAPI (free, no database) |
 | Deployment | Vercel (auto-deploy on push to `main`) |
 
 ---
@@ -169,9 +175,9 @@ Add `updatedAt: 'Month Year'` to the page entry in `index.yaml`. If omitted, the
 ```
 src/
 ├── components/
-│   ├── layout/         Navbar, Footer, InfoBar (hotlines ticker)
-│   ├── sections/       Hero, ServicesSection, GovernmentActivitySection, etc.
-│   ├── ui/             Breadcrumbs, Section, ScrollToTop
+│   ├── layout/         Navbar, Footer (with visit counter), InfoBar (hotlines ticker)
+│   ├── home/           Hero, ServicesSection, StatsSection (weather+stats), GovernmentQuickLinks, etc.
+│   ├── ui/             Breadcrumbs, Section, ScrollToTop, DisclaimerBar
 │   └── SEO.tsx
 ├── context/
 │   └── ThemeContext.tsx
@@ -187,13 +193,13 @@ src/
 │   └── typographyThemes.ts     Typography configuration
 ├── pages/
 │   ├── Home.tsx
-│   ├── Services.tsx            Category listing page
+│   ├── Services.tsx            All 11 categories listing page
 │   ├── Government.tsx          Government section listing
-│   ├── Document.tsx            Markdown + nested index renderer (all subpages)
+│   ├── Document.tsx            Markdown + nested index renderer
 │   ├── TouristSpots.tsx        Must-see places (custom card UI)
 │   ├── WhereToStay.tsx         Hotels & resorts (custom card UI)
 │   ├── Officials.tsx           Officials directory
-│   ├── CityProfile.tsx         Stats, charts, barangays, awards
+│   ├── CityProfile.tsx         Stats, charts, weather, map, barangays, awards
 │   ├── AnnualBudget.tsx        Budget sources, allocations, cycle
 │   ├── AnnualReport.tsx        Program areas & SOCA
 │   ├── InfrastructureProjects.tsx
@@ -204,6 +210,44 @@ src/
 │   └── DevelopmentProjects.tsx Upcoming major projects
 └── App.tsx
 ```
+
+---
+
+## Key Features
+
+### Responsive Design
+- Mobile-first layout across all pages
+- Hotlines ticker (animated marquee) on viewports < 1120px; static bar at ≥ 1120px
+- Hero search card uses flex-wrap for popular categories — works at 320px+
+
+### DisclaimerBar
+Reusable `src/components/ui/DisclaimerBar.tsx` shown on all transparency/report pages:
+> Last updated: April 2026 · Information on this page is provided for transparency. For the most current details, contact the relevant city office directly.
+
+### Visit Counter
+Footer displays a live visit count powered by [CounterAPI](https://counterapi.dev) — no database, no API key. Increments once per browser session via `sessionStorage`.
+
+### Live Weather
+Open-Meteo API (free, no API key) fetches current temperature, humidity, and wind for General Trias City coordinates. Results cached in `localStorage` for 30 minutes.
+
+### Table Cards
+All markdown tables render as mobile-friendly cards by default (via `TableWithToggle.tsx`), with a toggle to switch to raw table view.
+
+---
+
+## SEO
+
+All pages use `react-helmet-async` via `src/components/SEO.tsx`:
+- Unique title, description, keywords per page
+- Open Graph + Twitter Card meta tags
+- `robots: index, follow`
+- `theme-color: #16643c`
+
+**Missing (future work):**
+- `public/sitemap.xml`
+- `public/robots.txt`
+- Per-page canonical URLs
+- `og:image` (1200×630px)
 
 ---
 
