@@ -34,9 +34,22 @@ function useVisitCounter() {
   return count;
 }
 
+function useCarbonBadge() {
+  useEffect(() => {
+    const id = 'wcb-script';
+    if (document.getElementById(id)) return;
+    const s = document.createElement('script');
+    s.id = id;
+    s.src = 'https://unpkg.com/website-carbon-badges@1.1.3/b.min.js';
+    s.defer = true;
+    document.body.appendChild(s);
+  }, []);
+}
+
 export default function Footer() {
   const { t } = useTranslation('common');
   const visitCount = useVisitCounter();
+  useCarbonBadge();
 
   const QUICK_LINKS = [
     { labelKey: 'nav.services', href: '/services' },
