@@ -18,9 +18,7 @@ function useVisitCounter() {
     // Only increment once per session
     const sessionKey = 'bt_visit_counted';
     const hasVisited = sessionStorage.getItem(sessionKey);
-    const url = hasVisited
-      ? 'https://api.counterapi.dev/v1/bettergeneraltrias/visits'
-      : 'https://api.counterapi.dev/v1/bettergeneraltrias/visits/up';
+    const url = hasVisited ? '/api/visits' : '/api/visits?up=1';
 
     fetch(url)
       .then(r => r.json())
