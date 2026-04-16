@@ -1,4 +1,5 @@
-import { Facebook, Github, Heart } from 'lucide-react';
+import { Facebook, Github, Heart, Eye } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 function DiscordIcon({ className }: { className?: string }) {
   return (
@@ -10,8 +11,34 @@ function DiscordIcon({ className }: { className?: string }) {
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+function useVisitCounter() {
+  const [count, setCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Only increment once per session
+    const sessionKey = 'bt_visit_counted';
+    const hasVisited = sessionStorage.getItem(sessionKey);
+    const url = hasVisited
+      ? 'https://api.counterapi.dev/v1/bettergeneraltrias/visits'
+      : 'https://api.counterapi.dev/v1/bettergeneraltrias/visits/up';
+
+    fetch(url)
+      .then(r => r.json())
+      .then(d => {
+        if (d?.count !== undefined) {
+          setCount(d.count);
+          if (!hasVisited) sessionStorage.setItem(sessionKey, '1');
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  return count;
+}
+
 export default function Footer() {
   const { t } = useTranslation('common');
+  const visitCount = useVisitCounter();
 
   const QUICK_LINKS = [
     { labelKey: 'nav.services', href: '/services' },
@@ -181,6 +208,13 @@ export default function Footer() {
             MIT | CC BY 4.0
             <span className="mx-2 opacity-40">|</span>
             {t('footer.attribution')}
+          </span>
+          <span className="flex items-center gap-1.5 bg-gray-800 border border-gray-700 rounded-full px-3 py-1.5">
+            <Eye className="h-3 w-3 text-primary-400" />
+            <span className="text-gray-300 font-bold">
+              {visitCount !== null ? visitCount.toLocaleString() : '—'}
+            </span>
+            <span className="text-gray-500">visits</span>
           </span>
           <a
             href="https://www.kennethangelramirez.com/"
