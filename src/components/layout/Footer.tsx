@@ -195,6 +195,9 @@ export default function Footer() {
                 {t('footer.contribute')}
               </a>
             </div>
+            <div className="mt-4 wcb-footer-wrap">
+              <div id="wcb" className="carbonbadge wcb-d"></div>
+            </div>
           </div>
         </div>
 
