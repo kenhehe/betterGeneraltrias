@@ -119,29 +119,6 @@ export const DEVELOPMENT_PROJECTS: Project[] = [
     estimatedCompletion: 'Multi-phase (ongoing)',
   },
   {
-    id: 4,
-    name: 'Flyover & Road Widening Projects',
-    developer: 'DPWH Region IV-A / City Government of General Trias',
-    location: "Governor's Drive & C. De Los Reyes Avenue, General Trias City",
-    status: 'ongoing',
-    statusLabel: 'Various Stages',
-    category: 'infrastructure',
-    emoji: '🌉',
-    accent: 'from-slate-600 to-gray-700',
-    description:
-      "A series of road infrastructure projects addressing traffic congestion along General Trias' major corridors. Includes road widening along Governor's Drive (a national highway), flyover proposals at key intersections, and improvements along C. De Los Reyes Avenue to ease the city's growing traffic load.",
-    highlights: [
-      "Governor's Drive road widening — national highway, DPWH-led",
-      'Flyover proposals at high-congestion intersections',
-      'C. De Los Reyes Avenue corridor improvements',
-      "Responds to the city's rapid population and vehicle growth",
-      'Various sub-projects in different stages of procurement and construction',
-    ],
-    source: 'https://www.dpwh.gov.ph',
-    sourceLabel: 'DPWH Official',
-    estimatedCompletion: 'Varies per sub-project',
-  },
-  {
     id: 5,
     name: 'Ateneo de Cavite — Riverpark Campus',
     developer: 'Ateneo de Cavite / Riverpark Development Corporation',
@@ -173,8 +150,8 @@ export default function DevelopmentProjects() {
     <>
       <SEO
         title="Development Projects — General Trias City"
-        description="Major development projects shaping General Trias City — SM City GenTrias, CALAX-CAVITEX expressway, Riverpark township, road infrastructure, and Ateneo de Cavite."
-        keywords="General Trias development projects, SM City General Trias, CALAX CAVITEX, Riverpark township, Ateneo de Cavite, Governor's Drive flyover"
+        description="Major development projects shaping General Trias City — SM City GenTrias, CALAX-CAVITEX expressway, Riverpark township, and Ateneo de Cavite."
+        keywords="General Trias development projects, SM City General Trias, CALAX CAVITEX, Riverpark township, Ateneo de Cavite"
       />
 
       {/* Hero */}

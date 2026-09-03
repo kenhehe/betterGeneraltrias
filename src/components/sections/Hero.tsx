@@ -442,7 +442,6 @@ export default function Hero() {
                 { emoji: '🏬', name: 'SM City General Trias', status: 'Announced', pill: 'bg-blue-500/20 border-blue-400/30' },
                 { emoji: '🛣️', name: 'CALAX–CAVITEX Link', status: 'Under Construction', pill: 'bg-orange-500/20 border-orange-400/30' },
                 { emoji: '🏙️', name: 'Riverpark Township', status: 'Active Development', pill: 'bg-emerald-500/20 border-emerald-400/30' },
-                { emoji: '🌉', name: 'Flyover & Road Widening', status: 'Ongoing', pill: 'bg-slate-500/20 border-slate-400/30' },
                 { emoji: '🎓', name: 'Ateneo de Cavite', status: 'Announced', pill: 'bg-indigo-500/20 border-indigo-400/30' },
               ];
               return (

@@ -45,7 +45,7 @@ Citizen-facing guides for all 11 LGU service categories, organized by category:
 - OpenStreetMap embed showing General Trias City (88.9 km² land area)
 
 ### Development Projects
-5 major incoming projects: SM City General Trias, CALAX–CAVITEX Connector, Riverpark Township, Flyover & Road Widening, Ateneo de Cavite.
+4 major incoming projects: SM City General Trias, CALAX–CAVITEX Connector, Riverpark Township, Ateneo de Cavite.
 
 ---
 
