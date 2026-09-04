@@ -16,18 +16,10 @@ function useVisitCounter() {
   const [count, setCount] = useState<number | null>(null);
 
   useEffect(() => {
-    // Only increment once per session
-    const sessionKey = 'bt_visit_counted';
-    const hasVisited = sessionStorage.getItem(sessionKey);
-    const url = hasVisited ? '/api/visits' : '/api/visits?up=1';
-
-    fetch(url)
+    fetch('/api/visits')
       .then(r => r.json())
       .then(d => {
-        if (d?.count !== undefined) {
-          setCount(d.count);
-          if (!hasVisited) sessionStorage.setItem(sessionKey, '1');
-        }
+        if (d?.count !== undefined && d.count !== null) setCount(d.count);
       })
       .catch(() => {});
   }, []);
